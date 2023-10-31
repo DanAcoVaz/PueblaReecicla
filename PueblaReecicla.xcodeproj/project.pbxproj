@@ -16,6 +16,8 @@
 		83582AF02AF1A903006E57A8 /* PueblaReeciclaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582AEF2AF1A903006E57A8 /* PueblaReeciclaTests.swift */; };
 		83582AFA2AF1A903006E57A8 /* PueblaReeciclaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582AF92AF1A903006E57A8 /* PueblaReeciclaUITests.swift */; };
 		83582AFC2AF1A903006E57A8 /* PueblaReeciclaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582AFB2AF1A903006E57A8 /* PueblaReeciclaUITestsLaunchTests.swift */; };
+		83582B092AF1B720006E57A8 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83582B082AF1B720006E57A8 /* MainViewController.xib */; };
+		83582B0B2AF1B73A006E57A8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582B0A2AF1B73A006E57A8 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		83582AF52AF1A903006E57A8 /* PueblaReeciclaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PueblaReeciclaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83582AF92AF1A903006E57A8 /* PueblaReeciclaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PueblaReeciclaUITests.swift; sourceTree = "<group>"; };
 		83582AFB2AF1A903006E57A8 /* PueblaReeciclaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PueblaReeciclaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		83582B082AF1B720006E57A8 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		83582B0A2AF1B73A006E57A8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +106,11 @@
 				83582AD82AF1A901006E57A8 /* AppDelegate.swift */,
 				83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */,
 				83582ADC2AF1A901006E57A8 /* ViewController.swift */,
+				83582B0A2AF1B73A006E57A8 /* MainViewController.swift */,
 				83582ADE2AF1A901006E57A8 /* Main.storyboard */,
-				83582AE12AF1A902006E57A8 /* Assets.xcassets */,
+				83582B082AF1B720006E57A8 /* MainViewController.xib */,
 				83582AE32AF1A902006E57A8 /* LaunchScreen.storyboard */,
+				83582AE12AF1A902006E57A8 /* Assets.xcassets */,
 				83582AE62AF1A902006E57A8 /* Info.plist */,
 			);
 			path = PueblaReecicla;
@@ -234,6 +240,7 @@
 				83582AE52AF1A902006E57A8 /* LaunchScreen.storyboard in Resources */,
 				83582AE22AF1A902006E57A8 /* Assets.xcassets in Resources */,
 				83582AE02AF1A901006E57A8 /* Main.storyboard in Resources */,
+				83582B092AF1B720006E57A8 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +268,7 @@
 				83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */,
 				83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */,
 				83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */,
+				83582B0B2AF1B73A006E57A8 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
