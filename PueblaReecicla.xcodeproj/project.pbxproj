@@ -20,6 +20,7 @@
 		83582B0B2AF1B73A006E57A8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582B0A2AF1B73A006E57A8 /* MainViewController.swift */; };
 		83582B0D2AF2C31A006E57A8 /* testViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83582B0C2AF2C31A006E57A8 /* testViewController.xib */; };
 		83582B0F2AF2C332006E57A8 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582B0E2AF2C332006E57A8 /* testViewController.swift */; };
+		83582B112AF2F5E7006E57A8 /* splashScreenReecicla.png in Resources */ = {isa = PBXBuildFile; fileRef = 83582B102AF2F5E7006E57A8 /* splashScreenReecicla.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		83582B0A2AF1B73A006E57A8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		83582B0C2AF2C31A006E57A8 /* testViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testViewController.xib; sourceTree = "<group>"; };
 		83582B0E2AF2C332006E57A8 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
+		83582B102AF2F5E7006E57A8 /* splashScreenReecicla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashScreenReecicla.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				83582AE62AF1A902006E57A8 /* Info.plist */,
 				83582B0C2AF2C31A006E57A8 /* testViewController.xib */,
 				83582B0E2AF2C332006E57A8 /* testViewController.swift */,
+				83582B102AF2F5E7006E57A8 /* splashScreenReecicla.png */,
 			);
 			path = PueblaReecicla;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				83582AE22AF1A902006E57A8 /* Assets.xcassets in Resources */,
 				83582AE02AF1A901006E57A8 /* Main.storyboard in Resources */,
 				83582B092AF1B720006E57A8 /* MainViewController.xib in Resources */,
+				83582B112AF2F5E7006E57A8 /* splashScreenReecicla.png in Resources */,
 				83582B0D2AF2C31A006E57A8 /* testViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,16 +460,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MTTJ5XQH2Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PueblaReecicla/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Reecicla App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -485,16 +491,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MTTJ5XQH2Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PueblaReecicla/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Reecicla App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

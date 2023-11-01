@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
@@ -18,18 +18,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        emailTxt.delegate = self
         emailTxt.backgroundColor = .white
         emailTxt.textColor = .black
         emailTxt.layer.cornerRadius = 17
         emailTxt.clipsToBounds = true
         
+        passwordTxt.delegate = self
         passwordTxt.backgroundColor = .white
         passwordTxt.textColor = .black
         passwordTxt.layer.cornerRadius = 17
         passwordTxt.clipsToBounds = true
         
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
 }
 
