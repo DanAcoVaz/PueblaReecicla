@@ -1,13 +1,13 @@
 //
-//  MainViewController.swift
+//  SignInViewController.swift
 //  PueblaReecicla
 //
-//  Created by Administrador on 31/10/23.
+//  Created by Administrador on 01/11/23.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,4 +16,3 @@ class MainViewController: UIViewController {
 
 
 }
-

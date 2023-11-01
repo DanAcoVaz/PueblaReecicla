@@ -11,7 +11,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
-    
+    @IBOutlet weak var signUpLbl: UILabel!
     
 
     override func viewDidLoad() {
@@ -40,5 +40,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
 
+    @IBAction func signUpTap(_ sender: UITapGestureRecognizer) {
+        let signInView = SignInViewController()
+        self.navigationController?.pushViewController(signInView, animated: true)
+    }
 }
 

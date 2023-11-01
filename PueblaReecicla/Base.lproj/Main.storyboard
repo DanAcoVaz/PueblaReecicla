@@ -81,9 +81,13 @@
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxz-aB-TL6">
                                 <rect key="frame" x="265.33333333333331" y="418.66666666666663" width="98" height="24"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7Oj-U7-PdC" appends="YES" id="C0H-tb-m0B"/>
+                                </connections>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -109,9 +113,15 @@
                     <connections>
                         <outlet property="emailTxt" destination="KzZ-No-jMu" id="hCH-3L-G7t"/>
                         <outlet property="passwordTxt" destination="3Rg-bJ-izo" id="bi8-jj-L47"/>
+                        <outlet property="signUpLbl" destination="Vxz-aB-TL6" id="vHR-pN-F3L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7Oj-U7-PdC">
+                    <connections>
+                        <action selector="signUpTap:" destination="BYZ-38-t0r" id="y8S-aq-vQJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1057.2519083969464" y="-34.507042253521128"/>
         </scene>
