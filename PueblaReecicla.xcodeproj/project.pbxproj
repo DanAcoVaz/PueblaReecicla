@@ -18,6 +18,8 @@
 		83582AFC2AF1A903006E57A8 /* PueblaReeciclaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582AFB2AF1A903006E57A8 /* PueblaReeciclaUITestsLaunchTests.swift */; };
 		83582B092AF1B720006E57A8 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83582B082AF1B720006E57A8 /* MainViewController.xib */; };
 		83582B0B2AF1B73A006E57A8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582B0A2AF1B73A006E57A8 /* MainViewController.swift */; };
+		83582B0D2AF2C31A006E57A8 /* testViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83582B0C2AF2C31A006E57A8 /* testViewController.xib */; };
+		83582B0F2AF2C332006E57A8 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582B0E2AF2C332006E57A8 /* testViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		83582AFB2AF1A903006E57A8 /* PueblaReeciclaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PueblaReeciclaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		83582B082AF1B720006E57A8 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		83582B0A2AF1B73A006E57A8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		83582B0C2AF2C31A006E57A8 /* testViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testViewController.xib; sourceTree = "<group>"; };
+		83582B0E2AF2C332006E57A8 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				83582AE32AF1A902006E57A8 /* LaunchScreen.storyboard */,
 				83582AE12AF1A902006E57A8 /* Assets.xcassets */,
 				83582AE62AF1A902006E57A8 /* Info.plist */,
+				83582B0C2AF2C31A006E57A8 /* testViewController.xib */,
+				83582B0E2AF2C332006E57A8 /* testViewController.swift */,
 			);
 			path = PueblaReecicla;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				83582AE22AF1A902006E57A8 /* Assets.xcassets in Resources */,
 				83582AE02AF1A901006E57A8 /* Main.storyboard in Resources */,
 				83582B092AF1B720006E57A8 /* MainViewController.xib in Resources */,
+				83582B0D2AF2C31A006E57A8 /* testViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +275,7 @@
 				83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */,
 				83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */,
 				83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */,
+				83582B0F2AF2C332006E57A8 /* testViewController.swift in Sources */,
 				83582B0B2AF1B73A006E57A8 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +458,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MTTJ5XQH2Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PueblaReecicla/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -478,6 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MTTJ5XQH2Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PueblaReecicla/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
