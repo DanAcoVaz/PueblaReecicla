@@ -332,6 +332,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signUpTap:" destination="VwD-EM-NeQ" eventType="touchUpInside" id="akS-9F-29n"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jxd-Uj-REs"/>
