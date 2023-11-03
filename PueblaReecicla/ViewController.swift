@@ -41,10 +41,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
 
     @IBAction func signUpTap(_ sender: UITapGestureRecognizer) {
         let signUpVC = storyboard?.instantiateViewController(withIdentifier: "SignUp") as? SignUpViewController
         navigationController?.pushViewController(signUpVC!, animated: true)
     }
+    
+    @IBAction func logInTap(_ sender: Any) {
+        if (emailTxt.text!.isEmpty || passwordTxt.text!.isEmpty) {
+            let alert = UIAlertController(title: "Error", message: "Hay campos vacios", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .destructive))
+            self.present(alert, animated: true)
+        }
+    }
+    
 }
 

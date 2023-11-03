@@ -24,6 +24,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phoneTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var confirmpwdTxt: UITextField!
+    @IBOutlet weak var bdayPicker: UIDatePicker!
+    @IBOutlet weak var termsSwitch: UISwitch!
     
     
     override func viewDidLoad() {
@@ -45,14 +47,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
+    func setDestructiveAlert(alertTitle: String, alertMessage: String){
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .destructive))
+        self.present(alert, animated: true)
+    }
+    
     @IBAction func signUpTap(_ sender: Any) {
-        let alert = UIAlertController(title: "¿Confirmar registro?", message: "¿Desea confirmar el registro de su cuenta?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancelar", comment: "Default action"), style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { action in
-            
-            self.confirmSignUp()
-        }))
-        self.present(alert, animated: true, completion: nil)
+        if (nameTxt.text!.isEmpty || lastnameTxt.text!.isEmpty || emailTxt.text!.isEmpty || phoneTxt.text!.isEmpty || passwordTxt.text!.isEmpty || confirmpwdTxt.text!.isEmpty) {
+            setDestructiveAlert(alertTitle: "Error", alertMessage: "Hay campos vacios")
+        } else if !termsSwitch.isOn {
+            setDestructiveAlert(alertTitle: "Error", alertMessage: "No has aceptado los términos y condiciones y/o la política de privacidad")
+        } else if passwordTxt.text! != confirmpwdTxt.text! {
+            setDestructiveAlert(alertTitle: "Error", alertMessage: "Las contraseñas no coinciden")
+        } else {
+            let alert = UIAlertController(title: "¿Confirmar registro?", message: "¿Desea confirmar el registro de su cuenta?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Cancelar", comment: "Default action"), style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { action in
+                
+                self.confirmSignUp()
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func confirmSignUp() {

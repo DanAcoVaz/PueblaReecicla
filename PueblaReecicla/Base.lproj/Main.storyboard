@@ -79,6 +79,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logInTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PBH-5t-Sh0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxz-aB-TL6">
                                 <rect key="frame" x="265.33333333333331" y="418.66666666666663" width="98" height="24"/>
@@ -162,7 +165,7 @@
                                                     <constraint firstAttribute="height" constant="34" id="dSF-1o-0FO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                <textInputTraits key="textInputTraits" textContentType="given-name"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="30"/>
@@ -362,12 +365,14 @@
                         <barButtonItem key="backBarButtonItem" title="  " id="d5X-h0-jBI"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bdayPicker" destination="NUa-ch-R9d" id="enw-Pd-bMn"/>
                         <outlet property="confirmpwdTxt" destination="IQI-TU-B0y" id="U6m-Hi-e6y"/>
                         <outlet property="emailTxt" destination="OfI-lU-eoc" id="2D0-pp-hMi"/>
                         <outlet property="lastnameTxt" destination="ZUI-FE-NkJ" id="r9R-FH-PXD"/>
                         <outlet property="nameTxt" destination="Y1p-SE-AH7" id="meo-Hp-EEo"/>
                         <outlet property="passwordTxt" destination="gtK-2a-fE8" id="za3-7O-xwH"/>
                         <outlet property="phoneTxt" destination="bg4-N8-YaP" id="jnE-q2-YMq"/>
+                        <outlet property="termsSwitch" destination="NHp-Wl-bYu" id="eag-ww-Pqr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nla-RC-LV9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
