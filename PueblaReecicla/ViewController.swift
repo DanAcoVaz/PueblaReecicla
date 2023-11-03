@@ -53,6 +53,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let alert = UIAlertController(title: "Error", message: "Hay campos vacios", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .destructive))
             self.present(alert, animated: true)
+        } else {
+            let homeVC = storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeViewController
+            homeVC?.modalPresentationStyle = .fullScreen
+            navigationController?.present(homeVC!, animated: true)
         }
     }
     

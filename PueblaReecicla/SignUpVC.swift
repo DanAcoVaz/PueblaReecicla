@@ -85,7 +85,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             //Mostrar que se ha activado la cuenta
             
             let activeAlert = UIAlertController(title: "Cuenta Activada", message: "Listo! Has concluido el proceso de registro. Puedes comenzar a usar la aplicación", preferredStyle: .alert)
-            activeAlert.addAction(UIAlertAction(title: "Continuar", style: .default, handler: nil))
+            activeAlert.addAction(UIAlertAction(title: "Continuar", style: .default, handler: { action in
+                
+                let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeViewController
+                homeVC?.modalPresentationStyle = .fullScreen
+                self.navigationController?.present(homeVC!, animated: true)
+            }))
             self.present(activeAlert, animated: true)
         }))
         self.present(confirmAlert, animated: true, completion: nil)
