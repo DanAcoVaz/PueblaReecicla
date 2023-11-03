@@ -30,6 +30,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         passwordTxt.layer.cornerRadius = 17
         passwordTxt.clipsToBounds = true
         
+        navigationItem.backButtonDisplayMode = .minimal
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -41,8 +43,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func signUpTap(_ sender: UITapGestureRecognizer) {
-        let signInView = SignInViewController()
-        self.navigationController?.pushViewController(signInView, animated: true)
+        let signUpVC = storyboard?.instantiateViewController(withIdentifier: "SignUp") as? SignUpViewController
+        navigationController?.pushViewController(signUpVC!, animated: true)
     }
 }
 
