@@ -21,12 +21,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         emailTxt.delegate = self
         emailTxt.backgroundColor = .white
         emailTxt.textColor = .black
+        emailTxt.layer.borderColor = UIColor.black.cgColor
+        emailTxt.layer.borderWidth = 1
         emailTxt.layer.cornerRadius = 17
         emailTxt.clipsToBounds = true
         
         passwordTxt.delegate = self
         passwordTxt.backgroundColor = .white
         passwordTxt.textColor = .black
+        passwordTxt.layer.borderColor = UIColor.black.cgColor
+        passwordTxt.layer.borderWidth = 1
         passwordTxt.layer.cornerRadius = 17
         passwordTxt.clipsToBounds = true
         

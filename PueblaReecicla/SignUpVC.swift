@@ -11,6 +11,8 @@ extension UITextField {
     func setPreferences() {
         self.backgroundColor = .white
         self.textColor = .black
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 1
         self.layer.cornerRadius = 17
         self.clipsToBounds = true
     }
