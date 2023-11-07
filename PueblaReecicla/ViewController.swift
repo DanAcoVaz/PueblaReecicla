@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: .destructive))
             self.present(alert, animated: true)
         } else {
-            let homeVC = storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeViewController
+            let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeTab") //as? HomeViewController
             homeVC?.modalPresentationStyle = .fullScreen
             navigationController?.present(homeVC!, animated: true)
         }

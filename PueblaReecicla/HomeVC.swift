@@ -15,6 +15,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        //navToolbar.layer.borderColor = UIColor.black.cgColor
+        //navToolbar.layer.borderWidth = 1
+        
     }
 
 
