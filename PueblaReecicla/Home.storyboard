@@ -44,9 +44,20 @@
                     <tabBarItem key="tabBarItem" title="Inicio" image="Home" landscapeImage="Home" largeContentSizeImage="Home" selectedImage="Home" id="lZm-IY-jsL">
                         <color key="badgeColor" name="AccentColor"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CwQ-Le-oI2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CwQ-Le-oI2">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.2666666667" green="0.53725490200000003" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.2784313725" green="0.72941176470000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.2666666667" green="0.53725490200000003" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="3Za-mO-iSG"/>
@@ -61,14 +72,14 @@
             <objects>
                 <viewController storyboardIdentifier="Home" title="Home" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="ApK-zC-UXA">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9a-dO-VPo">
-                                <rect key="frame" x="46" y="68.666666666666671" width="183" height="33"/>
+                                <rect key="frame" x="46" y="39.666666666666657" width="183" height="33"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Hola">
                                         <attributes>
@@ -116,12 +127,12 @@
                             <constraint firstItem="r9a-dO-VPo" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" multiplier="0.7" id="78j-sf-AgG"/>
                             <constraint firstAttribute="trailing" secondItem="ApK-zC-UXA" secondAttribute="trailing" id="Niu-kd-Tnt"/>
                             <constraint firstAttribute="bottom" secondItem="ApK-zC-UXA" secondAttribute="bottom" id="Rfe-xv-V2T"/>
-                            <constraint firstItem="r9a-dO-VPo" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.2" id="m2r-Lv-t9d"/>
+                            <constraint firstItem="r9a-dO-VPo" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.15" id="m2r-Lv-t9d"/>
                             <constraint firstItem="ApK-zC-UXA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="sJO-SW-Kzy"/>
                             <constraint firstItem="ApK-zC-UXA" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="tWg-zj-azD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2Y3-2Y-ZXg"/>
+                    <navigationItem key="navigationItem" title="Inicio" id="2Y3-2Y-ZXg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

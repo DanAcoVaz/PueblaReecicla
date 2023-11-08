@@ -18,9 +18,20 @@
                         <color key="badgeColor" name="AccentColor"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CWF-bt-JVf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CWF-bt-JVf">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.2666666667" green="0.53725490200000003" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.2784313725" green="0.72941176470000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.2666666667" green="0.53725490200000003" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Ke3-lU-QtS"/>
@@ -35,33 +46,25 @@
             <objects>
                 <viewController title="Settings" id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="g5Q-ot-BIu">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNc-6L-Fue">
-                                <rect key="frame" x="136" y="415.66666666666669" width="121" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="g5Q-ot-BIu" secondAttribute="trailing" id="0BC-Lw-vS5"/>
-                            <constraint firstItem="DNc-6L-Fue" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="0gd-Fv-QQZ"/>
                             <constraint firstItem="g5Q-ot-BIu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HHq-e6-biS"/>
-                            <constraint firstItem="DNc-6L-Fue" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LSB-sO-1GK"/>
                             <constraint firstItem="g5Q-ot-BIu" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="WY4-x9-RZz"/>
                             <constraint firstItem="g5Q-ot-BIu" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="dCD-Ak-V0b"/>
                             <constraint firstAttribute="bottom" secondItem="g5Q-ot-BIu" secondAttribute="bottom" id="juE-3N-d6p"/>
                             <constraint firstItem="g5Q-ot-BIu" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="o65-kI-poY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3qB-48-Ctq"/>
+                    <navigationItem key="navigationItem" title="Ajustes" id="3qB-48-Ctq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
