@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pwS-WM-PFg">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RecycleNav-->
+        <scene sceneID="lcZ-Qf-NQv">
+            <objects>
+                <navigationController storyboardIdentifier="RecycleNav" title="RecycleNav" id="pwS-WM-PFg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reciclaje" image="Recycle" landscapeImage="Recycle" largeContentSizeImage="Recycle" selectedImage="Recycle" id="XrZ-rO-CKV">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OgE-4Q-r2U">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="M6s-RG-uKO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYm-e0-UN2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-827" y="4"/>
+        </scene>
+        <!--Recycle-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Recycle" title="Recycle" id="Y6W-OH-hqX" customClass="RecycleViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="0hl-ud-vbD">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recycle Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLe-dA-zwW">
+                                <rect key="frame" x="137.66666666666666" y="415.66666666666669" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0hl-ud-vbD" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="ID6-Ur-22G"/>
+                            <constraint firstAttribute="bottom" secondItem="0hl-ud-vbD" secondAttribute="bottom" id="Ktu-LP-rSy"/>
+                            <constraint firstItem="0hl-ud-vbD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="QKa-4c-b15"/>
+                            <constraint firstItem="uLe-dA-zwW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="c7o-hc-MbT"/>
+                            <constraint firstAttribute="trailing" secondItem="0hl-ud-vbD" secondAttribute="trailing" id="jps-Bq-Huj"/>
+                            <constraint firstItem="uLe-dA-zwW" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="nYZ-oK-rrE"/>
+                            <constraint firstItem="0hl-ud-vbD" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="oQN-6C-ZFc"/>
+                            <constraint firstItem="0hl-ud-vbD" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="qWp-7T-CBg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7oS-ic-CcA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FONDO-B-PRESENTA" width="1414" height="2508"/>
+        <image name="Recycle" width="30" height="30"/>
+        <namedColor name="AccentColor">
+            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
