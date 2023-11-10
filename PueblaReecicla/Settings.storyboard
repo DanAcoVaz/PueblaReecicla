@@ -31,6 +31,12 @@
                         </textAttributes>
                         <navigationBarAppearance key="scrollEdgeAppearance">
                             <color key="backgroundColor" red="0.2666666667" green="0.53725490200000003" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </textAttributes>
+                            <textAttributes key="largeTitleTextAttributes">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </textAttributes>
                         </navigationBarAppearance>
                     </navigationBar>
                     <connections>
@@ -52,23 +58,38 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="g5Q-ot-BIu">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w20-L1-9Vp">
+                                <rect key="frame" x="108.66666666666669" y="21" width="176" height="33"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Hola &lt;Usuario&gt;">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Avenir-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="g5Q-ot-BIu" secondAttribute="trailing" id="0BC-Lw-vS5"/>
                             <constraint firstItem="g5Q-ot-BIu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HHq-e6-biS"/>
+                            <constraint firstItem="w20-L1-9Vp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Umc-Q3-0dj"/>
                             <constraint firstItem="g5Q-ot-BIu" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="WY4-x9-RZz"/>
                             <constraint firstItem="g5Q-ot-BIu" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="dCD-Ak-V0b"/>
                             <constraint firstAttribute="bottom" secondItem="g5Q-ot-BIu" secondAttribute="bottom" id="juE-3N-d6p"/>
                             <constraint firstItem="g5Q-ot-BIu" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="o65-kI-poY"/>
+                            <constraint firstItem="w20-L1-9Vp" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.1" id="zbr-iO-FwX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ajustes" id="3qB-48-Ctq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="4"/>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
