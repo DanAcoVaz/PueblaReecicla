@@ -13,14 +13,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HistorialCollectionViewCell" id="yoV-R6-jVD" customClass="HistorialCollectionViewCell" customModule="PueblaReecicla" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="465" height="136"/>
+            <rect key="frame" x="0.0" y="0.0" width="465" height="152"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="465" height="136"/>
+                <rect key="frame" x="0.0" y="0.0" width="465" height="152"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d46-Vn-f4A">
-                        <rect key="frame" x="0.0" y="0.0" width="465" height="136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="465" height="152"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Orden de Reciclaje" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq6-Qz-kB0">
@@ -69,13 +69,13 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnA-hF-05a">
-                        <rect key="frame" x="360" y="102" width="88" height="18"/>
+                        <rect key="frame" x="360" y="102" width="88" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" name="AccentColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 materiales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-4N-jDb">
-                        <rect key="frame" x="16" y="103" width="80" height="17"/>
+                        <rect key="frame" x="16" y="98" width="80" height="38"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -88,6 +88,7 @@
                 <constraint firstAttribute="trailing" secondItem="Dcq-0o-dzd" secondAttribute="trailing" constant="26" id="3wE-ju-UlJ"/>
                 <constraint firstItem="d46-Vn-f4A" firstAttribute="top" secondItem="yoV-R6-jVD" secondAttribute="top" id="45X-ji-RLT"/>
                 <constraint firstItem="gq6-Qz-kB0" firstAttribute="leading" secondItem="yoV-R6-jVD" secondAttribute="leading" constant="16" id="79a-Dv-okm"/>
+                <constraint firstItem="tPc-4N-jDb" firstAttribute="top" secondItem="0Hz-qv-5EU" secondAttribute="bottom" constant="28" id="GoA-9J-a1n"/>
                 <constraint firstItem="gq6-Qz-kB0" firstAttribute="top" secondItem="yoV-R6-jVD" secondAttribute="top" constant="16" id="KqF-Gv-Tfb"/>
                 <constraint firstItem="Gxi-kv-M0x" firstAttribute="leading" secondItem="yoV-R6-jVD" secondAttribute="leading" constant="16" id="Lb9-lj-zdP"/>
                 <constraint firstItem="OnA-hF-05a" firstAttribute="centerX" secondItem="Dcq-0o-dzd" secondAttribute="centerX" id="UEf-ia-BiD"/>

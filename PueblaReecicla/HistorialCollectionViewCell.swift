@@ -21,18 +21,18 @@ class HistorialCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        estadoColorView.layer.cornerRadius = 8 // se redondea el cuadrado del estado
+        estadoColorView.layer.cornerRadius = 20 // se redondea el cuadrado del estado
         
-        fondoRecoleccion.layer.cornerRadius = 8 // se redondea el cuadrado del fondo de la recolección
-        fondoRecoleccion.layer.borderWidth = 1.0  // Set the width of the stroke
-        fondoRecoleccion.layer.borderColor = UIColor(named: "gray")!.cgColor
+        fondoRecoleccion.layer.cornerRadius = 20 // se redondea el cuadrado del fondo de la recolección
+        fondoRecoleccion.layer.borderWidth = 0.5  // Set the width of the stroke
+        fondoRecoleccion.layer.borderColor = UIColor(named: "ColorDeFondo")!.cgColor
         
         // se agrega una sombra al fondo de la recolecciòn
-        fondoRecoleccion.backgroundColor = UIColor(named: "white")  // Set the background color
+        fondoRecoleccion.backgroundColor = UIColor.white // Set the background color
 
     }
     
-    public func configure(with estadoColor: UIColor, fecha: String, horario: String, materiales: String, estadoTexto: String, estadoTextoColor: UIColor) {
+    public func configure(with estadoColor: UIColor, fecha: String, horario: String, totalMateriales: String, estadoTexto: String) {
         
         // se cambia el color del cuadro de color del estado
         estadoColorView.backgroundColor? = estadoColor
@@ -40,11 +40,11 @@ class HistorialCollectionViewCell: UICollectionViewCell {
         // se cambia el texto de las siguientes labels
         fechaLabel.text = fecha
         horarioLabel.text = horario
-        materialesLabel.text = materiales
+        materialesLabel.text = totalMateriales
         
         // texto debajo del cuadro de color, se cambia su texto y color
         estadoTextoLabel.text = estadoTexto
-        estadoTextoLabel.textColor = estadoTextoColor
+        estadoTextoLabel.textColor = estadoColor
     }
     
     static func nib() -> UINib {
