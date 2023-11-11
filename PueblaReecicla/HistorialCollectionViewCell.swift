@@ -24,17 +24,12 @@ class HistorialCollectionViewCell: UICollectionViewCell {
         estadoColorView.layer.cornerRadius = 8 // se redondea el cuadrado del estado
         
         fondoRecoleccion.layer.cornerRadius = 8 // se redondea el cuadrado del fondo de la recolección
-        fondoRecoleccion.layer.borderWidth = 2.0  // Set the width of the stroke
+        fondoRecoleccion.layer.borderWidth = 1.0  // Set the width of the stroke
         fondoRecoleccion.layer.borderColor = UIColor(named: "gray")!.cgColor
         
         // se agrega una sombra al fondo de la recolecciòn
         fondoRecoleccion.backgroundColor = UIColor(named: "white")  // Set the background color
 
-        // Add a shadow to the UIView
-        fondoRecoleccion.layer.shadowColor = UIColor(named: "black")!.cgColor  // Set the color of the shadow
-        fondoRecoleccion.layer.shadowOpacity = 0.5  // Set the opacity of the shadow
-        fondoRecoleccion.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)  // Set the offset of the shadow
-        fondoRecoleccion.layer.shadowRadius = 5.0  // Set the radius of the shadow
     }
     
     public func configure(with estadoColor: UIColor, fecha: String, horario: String, materiales: String, estadoTexto: String, estadoTextoColor: UIColor) {

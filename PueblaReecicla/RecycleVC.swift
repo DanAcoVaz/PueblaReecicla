@@ -14,20 +14,25 @@ class RecycleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let imgFondoBlanco : UIImageView = {
+            let iv = UIImageView()
+            iv.image = UIImage(named:"FONDO-B-PRESENTA")
+            iv.contentMode = .scaleAspectFill
+            return iv
+        }()
+        
+        collectionView.backgroundView = imgFondoBlanco
+        
         collectionView.register(HistorialCollectionViewCell.nib(), forCellWithReuseIdentifier: HistorialCollectionViewCell.identifier)
         
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-
-
 }
-
 
 extension RecycleViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        
         
         print("You tapped me in row: ")
         print(indexPath.row)
@@ -46,14 +51,12 @@ extension RecycleViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
-    
 }
 
 extension RecycleViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width - 20 // Adjust left and right margins
-        return CGSize(width: width, height: 140-20)
+        return CGSize(width: width, height: 140)
     }
 }
 

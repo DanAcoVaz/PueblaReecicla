@@ -60,7 +60,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xgS-qL-FtL">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="8" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="2h5-lC-zI1">
                                     <size key="itemSize" width="128" height="128"/>
@@ -85,12 +85,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yKC-n2-W8X" secondAttribute="trailing" id="BGa-hj-0HU"/>
+                            <constraint firstItem="xgS-qL-FtL" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="FXg-tJ-uyy"/>
+                            <constraint firstItem="xgS-qL-FtL" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="8" id="L2u-1W-iSx"/>
                             <constraint firstItem="yKC-n2-W8X" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="SUQ-fw-fDe"/>
+                            <constraint firstItem="xgS-qL-FtL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XjT-19-LPR"/>
                             <constraint firstItem="xgS-qL-FtL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XyE-4l-m26"/>
+                            <constraint firstItem="xgS-qL-FtL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="cSm-xc-QHs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xgS-qL-FtL" secondAttribute="trailing" id="gbx-29-m3W"/>
                             <constraint firstItem="yKC-n2-W8X" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="guz-ao-XdZ"/>
-                            <constraint firstItem="xgS-qL-FtL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tUJ-Yl-aQ8"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="xgS-qL-FtL" secondAttribute="bottom" id="tmU-YM-qKx"/>
                             <constraint firstAttribute="bottom" secondItem="yKC-n2-W8X" secondAttribute="bottom" id="uBa-ZU-OI3"/>
                         </constraints>
                     </view>
