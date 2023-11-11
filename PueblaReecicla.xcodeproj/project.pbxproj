@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832298EC2AFEED2D00F3DF85 /* HistorialItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832298EB2AFEED2D00F3DF85 /* HistorialItemCell.xib */; };
 		83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582AD82AF1A901006E57A8 /* AppDelegate.swift */; };
 		83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */; };
 		83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582ADC2AF1A901006E57A8 /* ViewController.swift */; };
@@ -22,6 +23,8 @@
 		83943EB62AF565D400E9E258 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83943EB52AF565D400E9E258 /* SignUpVC.swift */; };
 		83943EB82AF5A90800E9E258 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83943EB72AF5A90800E9E258 /* Home.storyboard */; };
 		83943EBA2AF5A91600E9E258 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83943EB92AF5A91600E9E258 /* HomeVC.swift */; };
+		83C1343A2AFEBB66008FBFDB /* HistorialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */; };
+		83C1343B2AFEBB66008FBFDB /* HistorialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C134392AFEBB66008FBFDB /* HistorialCollectionViewCell.xib */; };
 		B33858F02AFAD95D00048E56 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33858EF2AFAD95D00048E56 /* Map.storyboard */; };
 		B33858F22AFADB2900048E56 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33858F12AFADB2900048E56 /* MapVC.swift */; };
 		B37D42532AFC1CF5002F7479 /* Recycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D42522AFC1CF5002F7479 /* Recycle.storyboard */; };
@@ -48,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		832298EB2AFEED2D00F3DF85 /* HistorialItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistorialItemCell.xib; sourceTree = "<group>"; };
 		83582AD52AF1A901006E57A8 /* PueblaReecicla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PueblaReecicla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83582AD82AF1A901006E57A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 		83943EB52AF565D400E9E258 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		83943EB72AF5A90800E9E258 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		83943EB92AF5A91600E9E258 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialCollectionViewCell.swift; sourceTree = "<group>"; };
+		83C134392AFEBB66008FBFDB /* HistorialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistorialCollectionViewCell.xib; sourceTree = "<group>"; };
 		B33858EF2AFAD95D00048E56 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		B33858F12AFADB2900048E56 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		B37D42522AFC1CF5002F7479 /* Recycle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recycle.storyboard; sourceTree = "<group>"; };
@@ -133,8 +139,10 @@
 				83943EB92AF5A91600E9E258 /* HomeVC.swift */,
 				B33858EF2AFAD95D00048E56 /* Map.storyboard */,
 				B33858F12AFADB2900048E56 /* MapVC.swift */,
-				B37D42522AFC1CF5002F7479 /* Recycle.storyboard */,
 				B37D42542AFC1DEF002F7479 /* RecycleVC.swift */,
+				B37D42522AFC1CF5002F7479 /* Recycle.storyboard */,
+				83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */,
+				83C134392AFEBB66008FBFDB /* HistorialCollectionViewCell.xib */,
 				B37D42562AFC1EE9002F7479 /* Settings.storyboard */,
 				B37D42582AFC1F76002F7479 /* SettingsVC.swift */,
 				83582AE12AF1A902006E57A8 /* Assets.xcassets */,
@@ -142,6 +150,7 @@
 				83582B0C2AF2C31A006E57A8 /* testViewController.xib */,
 				83582B0E2AF2C332006E57A8 /* testViewController.swift */,
 				83582B102AF2F5E7006E57A8 /* splashScreenReecicla.png */,
+				832298EB2AFEED2D00F3DF85 /* HistorialItemCell.xib */,
 			);
 			path = PueblaReecicla;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 				B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */,
 				83582B112AF2F5E7006E57A8 /* splashScreenReecicla.png in Resources */,
 				83582B0D2AF2C31A006E57A8 /* testViewController.xib in Resources */,
+				83C1343B2AFEBB66008FBFDB /* HistorialCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832298EC2AFEED2D00F3DF85 /* HistorialItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */,
+				83C1343A2AFEBB66008FBFDB /* HistorialCollectionViewCell.swift in Sources */,
 				83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */,
 				B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */,
 				83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */,
