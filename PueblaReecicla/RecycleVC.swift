@@ -33,12 +33,18 @@ class RecycleViewController: UIViewController {
     
     // popups
     var popUpIniciada: RV_iniciada!
+    var popUpEnProceso: RV_enProceso!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // inicializan los Popups
         self.popUpIniciada = RV_iniciada(frame: self.view.frame, inView: self)
+        
+        self.popUpEnProceso = RV_enProceso(frame: self.view.frame, inView: self)
+        popUpEnProceso.scrollView.layer.cornerRadius = 30
+        popUpEnProceso.imageRecolector.layer.cornerRadius = min(popUpEnProceso.imageRecolector.frame.width, popUpEnProceso.imageRecolector.frame.height) / 2.0
+        popUpEnProceso.imageRecolector.layer.masksToBounds = true
         
         let imgFondoBlanco : UIImageView = {
             let iv = UIImageView()
@@ -71,17 +77,25 @@ class RecycleViewController: UIViewController {
         if estado == RecycleViewController.iniciada {
             popUpIniciada.isUserInteractionEnabled = true
             // inicializar PopUps
-            popUpIniciada.continuarBtn.addTarget(self, action: #selector(continuarBtn), for: .touchUpInside)
+            popUpIniciada.continuarBtn.addTarget(self, action: #selector(continuarBtnIni), for: .touchUpInside)
             self.view.addSubview(popUpIniciada)
             
             // Add tap gesture recognizer to handle taps outside the popup
-            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopup))
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopupIni))
             tapGestureRecognizer.cancelsTouchesInView = false
             popUpIniciada.addGestureRecognizer(tapGestureRecognizer)
             
         }
         else if estado == RecycleViewController.enProceso {
-            print(estado)
+            popUpEnProceso.isUserInteractionEnabled = true
+            // inicializar PopUps
+            popUpEnProceso.continuarBtn.addTarget(self, action: #selector(continuarBtnEnPro), for: .touchUpInside)
+            self.view.addSubview(popUpEnProceso)
+            
+            // Add tap gesture recognizer to handle taps outside the popup
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopupEnPro))
+            tapGestureRecognizer.cancelsTouchesInView = false
+            popUpEnProceso.addGestureRecognizer(tapGestureRecognizer)
         }
         else if estado == RecycleViewController.completada {
             print(estado)
@@ -93,7 +107,7 @@ class RecycleViewController: UIViewController {
     }
     
     // Handle taps outside of popUpIniciada
-    @objc func handleTapOutsidePopup(_ sender: UITapGestureRecognizer) {
+    @objc func handleTapOutsidePopupIni(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             let location = sender.location(in: popUpIniciada.container)
             if !popUpIniciada.container.bounds.contains(location) {
@@ -101,10 +115,24 @@ class RecycleViewController: UIViewController {
             }
         }
     }
+    
+    // Handle taps outside of popUpIniciada
+    @objc func handleTapOutsidePopupEnPro(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            let location = sender.location(in: popUpEnProceso.scrollView)
+            if !popUpEnProceso.scrollView.bounds.contains(location) {
+                popUpEnProceso.removeFromSuperview()
+            }
+        }
+    }
 
     
-    @objc func continuarBtn(){
+    @objc func continuarBtnIni(){
         self.popUpIniciada.removeFromSuperview()
+    }
+    
+    @objc func continuarBtnEnPro(){
+        self.popUpEnProceso.removeFromSuperview()
     }
 
 }

@@ -12,11 +12,17 @@ class RV_enProceso: UIView {
     var vc: UIViewController!
     var view: UIView!
     
-    @IBOutlet var verDetallesBtn: UIButton!
-    @IBOutlet var cancelarBtn: UIButton!
-    @IBOutlet var continuarBtn: UIButton!
+
+    @IBOutlet weak var nameRecolector: UILabel!
+    @IBOutlet weak var imageRecolector: UIImageView!
+    @IBOutlet weak var telefonoRecolector: UILabel!
+    @IBOutlet weak var calificacionRecolector: UILabel!
     
-    @IBOutlet var container: ViewStyle!
+    @IBOutlet weak var verDetallesBtn: ButtonStyle!
+    @IBOutlet weak var continuarBtn: ButtonStyle!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -39,7 +45,7 @@ class RV_enProceso: UIView {
     
     func loadNibView() -> UIView {
         let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "RV_iniciada", bundle: bundle)
+        let nib = UINib(nibName: "RV_enProceso", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         return view
     }

@@ -6,15 +6,19 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RV_iniciada" customModule="PueblaReecicla" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RV_enProceso" customModule="PueblaReecicla" customModuleProvider="target">
             <connections>
-                <outlet property="cancelarBtn" destination="THS-8K-4O6" id="dyU-51-29S"/>
-                <outlet property="container" destination="SNk-LH-eBL" id="tUP-vt-UxA"/>
-                <outlet property="continuarBtn" destination="nwe-cJ-Paa" id="uyk-6s-fZS"/>
-                <outlet property="verDetallesBtn" destination="0V3-X4-EHW" id="03A-Xp-Ew1"/>
+                <outlet property="calificacionRecolector" destination="ahD-EW-ouz" id="MRz-DD-N2Z"/>
+                <outlet property="continuarBtn" destination="LSM-PE-raS" id="GpJ-Oc-YC6"/>
+                <outlet property="imageRecolector" destination="K78-Dx-fvS" id="qty-bV-meb"/>
+                <outlet property="nameRecolector" destination="ZmN-AS-g4x" id="7zd-BB-Ctb"/>
+                <outlet property="scrollView" destination="v4r-74-3Wx" id="sJf-36-mWP"/>
+                <outlet property="telefonoRecolector" destination="Wnk-1V-uvu" id="1pB-y9-D33"/>
+                <outlet property="verDetallesBtn" destination="98q-wS-duy" id="0JX-IO-woh"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,32 +26,182 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNk-LH-eBL" customClass="ViewStyle" customModule="PueblaReecicla" customModuleProvider="target">
-                    <rect key="frame" x="30" y="209" width="333" height="400"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4r-74-3Wx">
+                    <rect key="frame" x="30" y="89" width="333" height="600"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="Lo sentimos, aún no se ha encontrado un Recolector, el estado de la recolección cambiará tan rápido como encontremos uno." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzU-8a-CBy">
-                            <rect key="frame" x="20" y="68.666666666666686" width="293" height="86"/>
-                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V3-X4-EHW" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
-                            <rect key="frame" x="20" y="178.66666666666669" width="293" height="50"/>
-                            <color key="backgroundColor" name="ColorSecundario"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GM0-8L-VZu" userLabel="ContentView" customClass="ViewStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="333" height="670"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Orden de Reciclaje" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeI-dV-whC">
+                                    <rect key="frame" x="36.666666666666686" y="24" width="260" height="28.666666666666671"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="UB6-2x-Mga"/>
+                                        <constraint firstAttribute="width" constant="260" id="ihN-qj-yqN"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Recolector:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlc-Ld-MCn">
+                                    <rect key="frame" x="36.666666666666686" y="84.666666666666657" width="260" height="20.333333333333329"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="260" id="6at-bZ-4a6"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="Seu-si-IHb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Télefono del Recolector:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8u-9s-uGp">
+                                    <rect key="frame" x="20" y="311.33333333333331" width="293" height="20.333333333333314"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Recolector:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdZ-13-mbL">
+                                    <rect key="frame" x="20" y="372" width="293" height="20.333333333333314"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Juan Ramirez kirby" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmN-AS-g4x">
+                                    <rect key="frame" x="20" y="109" width="293" height="20.333333333333343"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Permanezca cerca del celular y la apliación por cualquier cambio." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HY-ZN-YNh">
+                                    <rect key="frame" x="20" y="442.33333333333337" width="293" height="43"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Juan Ramirez kirby" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnk-1V-uvu">
+                                    <rect key="frame" x="20" y="335.66666666666669" width="293" height="20.333333333333314"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_person2" translatesAutoresizingMaskIntoConstraints="NO" id="K78-Dx-fvS">
+                                    <rect key="frame" x="91.666666666666686" y="145.33333333333334" width="150" height="150.00000000000003"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="150" id="EN9-CS-eOv"/>
+                                        <constraint firstAttribute="height" constant="150" id="qbh-15-IdF"/>
+                                    </constraints>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lZ-JR-iNS">
+                                    <rect key="frame" x="134" y="396.33333333333331" width="65.333333333333314" height="30"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahD-EW-ouz">
+                                            <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_star" translatesAutoresizingMaskIntoConstraints="NO" id="upC-w8-Cp5">
+                                            <rect key="frame" x="35.333333333333343" y="0.0" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="UyU-B7-gv4"/>
+                                                <constraint firstAttribute="height" constant="30" id="sdl-FV-Txt"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="upC-w8-Cp5" secondAttribute="trailing" id="0Wx-Qu-j2C"/>
+                                        <constraint firstItem="ahD-EW-ouz" firstAttribute="top" secondItem="0lZ-JR-iNS" secondAttribute="top" id="5yn-Qh-sez"/>
+                                        <constraint firstItem="ahD-EW-ouz" firstAttribute="leading" secondItem="0lZ-JR-iNS" secondAttribute="leading" id="AmD-ei-5zZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="upC-w8-Cp5" secondAttribute="bottom" id="PzJ-iu-gIy"/>
+                                        <constraint firstItem="upC-w8-Cp5" firstAttribute="top" secondItem="0lZ-JR-iNS" secondAttribute="top" id="RKs-uW-6cF"/>
+                                        <constraint firstAttribute="bottom" secondItem="ahD-EW-ouz" secondAttribute="bottom" id="U6K-bX-Ptd"/>
+                                        <constraint firstItem="upC-w8-Cp5" firstAttribute="trailing" secondItem="ahD-EW-ouz" secondAttribute="trailing" constant="40" id="sxq-ID-Yen"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98q-wS-duy" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="509.33333333333337" width="293" height="50"/>
+                                    <color key="backgroundColor" name="ColorSecundario"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="A51-YJ-znX"/>
+                                    </constraints>
+                                    <color key="tintColor" name="ColorSecundario"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Ver Detalles">
+                                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="baseBackgroundColor" name="ColorSecundario"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ver Detalles"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSM-PE-raS" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="575.33333333333337" width="293" height="50"/>
+                                    <color key="backgroundColor" name="ColorSecundario"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="Ovh-6o-Tfg"/>
+                                    </constraints>
+                                    <color key="tintColor" name="ColorSecundario"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="baseBackgroundColor" name="AccentColor"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Continuar"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="MvB-O9-2xk"/>
-                                <constraint firstAttribute="height" constant="50" id="eLd-Po-ns7"/>
+                                <constraint firstAttribute="trailing" secondItem="Wnk-1V-uvu" secondAttribute="trailing" constant="20" id="0Ah-q5-LHw"/>
+                                <constraint firstItem="K78-Dx-fvS" firstAttribute="top" secondItem="ZmN-AS-g4x" secondAttribute="bottom" constant="16" id="2k2-a0-tzz"/>
+                                <constraint firstItem="mdZ-13-mbL" firstAttribute="leading" secondItem="GM0-8L-VZu" secondAttribute="leading" constant="20" id="4Me-fM-yOT"/>
+                                <constraint firstItem="98q-wS-duy" firstAttribute="leading" secondItem="GM0-8L-VZu" secondAttribute="leading" constant="20" id="5XM-zc-c2O"/>
+                                <constraint firstItem="Wnk-1V-uvu" firstAttribute="top" secondItem="h8u-9s-uGp" secondAttribute="bottom" constant="4" id="73p-aJ-2Df"/>
+                                <constraint firstItem="h8u-9s-uGp" firstAttribute="leading" secondItem="GM0-8L-VZu" secondAttribute="leading" constant="20" id="FZ6-Hf-EA5"/>
+                                <constraint firstItem="mdZ-13-mbL" firstAttribute="top" secondItem="Wnk-1V-uvu" secondAttribute="bottom" constant="16" id="H3T-RI-fdr"/>
+                                <constraint firstItem="Wnk-1V-uvu" firstAttribute="leading" secondItem="GM0-8L-VZu" secondAttribute="leading" constant="20" id="JgB-h0-ekj"/>
+                                <constraint firstAttribute="trailing" secondItem="LSM-PE-raS" secondAttribute="trailing" constant="20" id="K0g-MI-TCz"/>
+                                <constraint firstItem="8HY-ZN-YNh" firstAttribute="top" secondItem="0lZ-JR-iNS" secondAttribute="bottom" constant="16" id="QxB-oz-XRK"/>
+                                <constraint firstAttribute="trailing" secondItem="ZmN-AS-g4x" secondAttribute="trailing" constant="20" id="SGN-iT-kDs"/>
+                                <constraint firstItem="LSM-PE-raS" firstAttribute="top" secondItem="98q-wS-duy" secondAttribute="bottom" constant="16" id="TpB-f2-tKf"/>
+                                <constraint firstAttribute="trailing" secondItem="98q-wS-duy" secondAttribute="trailing" constant="20" id="VKR-Ru-B8i"/>
+                                <constraint firstAttribute="height" constant="670" id="Wda-tc-uJy"/>
+                                <constraint firstItem="K78-Dx-fvS" firstAttribute="centerX" secondItem="GM0-8L-VZu" secondAttribute="centerX" id="aKb-sI-QrT"/>
+                                <constraint firstItem="h8u-9s-uGp" firstAttribute="top" secondItem="K78-Dx-fvS" secondAttribute="bottom" constant="16" id="d9J-um-l4O"/>
+                                <constraint firstItem="8HY-ZN-YNh" firstAttribute="leading" secondItem="GM0-8L-VZu" secondAttribute="leading" constant="20" id="dvr-En-SWt"/>
+                                <constraint firstItem="JeI-dV-whC" firstAttribute="centerX" secondItem="GM0-8L-VZu" secondAttribute="centerX" id="eh5-7j-fwa"/>
+                                <constraint firstItem="Xlc-Ld-MCn" firstAttribute="top" secondItem="JeI-dV-whC" secondAttribute="bottom" constant="32" id="g2O-Kz-xmI"/>
+                                <constraint firstItem="0lZ-JR-iNS" firstAttribute="centerX" secondItem="GM0-8L-VZu" secondAttribute="centerX" id="g5o-Tc-gq2"/>
+                                <constraint firstItem="0lZ-JR-iNS" firstAttribute="top" secondItem="mdZ-13-mbL" secondAttribute="bottom" constant="4" id="gAG-kh-HmO"/>
+                                <constraint firstItem="JeI-dV-whC" firstAttribute="top" secondItem="GM0-8L-VZu" secondAttribute="top" constant="24" id="gYX-RW-9w6"/>
+                                <constraint firstItem="LSM-PE-raS" firstAttribute="leading" secondItem="GM0-8L-VZu" secondAttribute="leading" constant="20" id="iQ1-3W-JtT"/>
+                                <constraint firstItem="98q-wS-duy" firstAttribute="top" secondItem="8HY-ZN-YNh" secondAttribute="bottom" constant="24" id="kbS-lR-DwW"/>
+                                <constraint firstAttribute="trailing" secondItem="8HY-ZN-YNh" secondAttribute="trailing" constant="20" id="kjl-Hn-ORl"/>
+                                <constraint firstItem="ZmN-AS-g4x" firstAttribute="top" secondItem="Xlc-Ld-MCn" secondAttribute="bottom" constant="4" id="mxz-Xg-k4v"/>
+                                <constraint firstItem="ZmN-AS-g4x" firstAttribute="leading" secondItem="GM0-8L-VZu" secondAttribute="leading" constant="20" id="qi9-bc-6bf"/>
+                                <constraint firstAttribute="trailing" secondItem="mdZ-13-mbL" secondAttribute="trailing" constant="20" id="wRh-2v-6Ii"/>
+                                <constraint firstItem="Xlc-Ld-MCn" firstAttribute="centerX" secondItem="GM0-8L-VZu" secondAttribute="centerX" id="wzD-nW-WDo"/>
+                                <constraint firstAttribute="trailing" secondItem="h8u-9s-uGp" secondAttribute="trailing" constant="20" id="zYJ-UW-TKH"/>
                             </constraints>
-                            <color key="tintColor" name="ColorSecundario"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Ver Detalles">
-                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="baseBackgroundColor" name="ColorSecundario"/>
-                            </buttonConfiguration>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ver Detalles"/>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="25"/>
+                                    <real key="value" value="30"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                     <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,119 +210,41 @@
                                     <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
-                        </button>
-                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THS-8K-4O6" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
-                            <rect key="frame" x="20" y="244.66666666666669" width="293" height="50"/>
-                            <color key="backgroundColor" name="ColorNegativo"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="iXh-cX-IX6"/>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="iz8-rR-gqa"/>
-                            </constraints>
-                            <color key="tintColor" name="ColorNegativo"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Cancelar Orden">
-                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="baseBackgroundColor" name="ColorNegativo"/>
-                            </buttonConfiguration>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="25"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Cancelar Orden"/>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </button>
-                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwe-cJ-Paa" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
-                            <rect key="frame" x="20" y="310.66666666666663" width="293" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Bfc-H5-nhh"/>
-                                <constraint firstAttribute="height" constant="50" id="kot-q5-qpK"/>
-                            </constraints>
-                            <color key="tintColor" name="AccentColor"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Continuar">
-                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
-                            </buttonConfiguration>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Continuar"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="25"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Orden de Reciclaje" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A57-JK-mX1">
-                            <rect key="frame" x="36.666666666666686" y="24" width="260" height="28.666666666666671"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="260" id="2Ps-5U-TzV"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="bzU-8a-CBy" secondAttribute="trailing" constant="20" id="3lx-wz-bGS"/>
-                        <constraint firstItem="bzU-8a-CBy" firstAttribute="top" secondItem="A57-JK-mX1" secondAttribute="bottom" constant="16" id="6Md-2h-god"/>
-                        <constraint firstItem="nwe-cJ-Paa" firstAttribute="top" secondItem="THS-8K-4O6" secondAttribute="bottom" constant="16" id="GHa-3z-QFR"/>
-                        <constraint firstItem="nwe-cJ-Paa" firstAttribute="leading" secondItem="SNk-LH-eBL" secondAttribute="leading" constant="20" id="J6i-rS-lUW"/>
-                        <constraint firstItem="A57-JK-mX1" firstAttribute="centerX" secondItem="SNk-LH-eBL" secondAttribute="centerX" id="LlD-Ze-9Z6"/>
-                        <constraint firstItem="THS-8K-4O6" firstAttribute="leading" secondItem="SNk-LH-eBL" secondAttribute="leading" constant="20" id="MGd-yb-jTz"/>
-                        <constraint firstAttribute="height" constant="400" id="Uli-QH-KYr"/>
-                        <constraint firstItem="bzU-8a-CBy" firstAttribute="leading" secondItem="SNk-LH-eBL" secondAttribute="leading" constant="20" id="Vza-ZV-khc"/>
-                        <constraint firstItem="0V3-X4-EHW" firstAttribute="top" secondItem="bzU-8a-CBy" secondAttribute="bottom" constant="24" id="hmG-uM-0H9"/>
-                        <constraint firstItem="THS-8K-4O6" firstAttribute="top" secondItem="0V3-X4-EHW" secondAttribute="bottom" constant="16" id="mB5-Rz-n3O"/>
-                        <constraint firstAttribute="trailing" secondItem="nwe-cJ-Paa" secondAttribute="trailing" constant="20" id="mwa-dx-jf9"/>
-                        <constraint firstAttribute="trailing" secondItem="THS-8K-4O6" secondAttribute="trailing" constant="20" id="oDV-2K-NMV"/>
-                        <constraint firstItem="A57-JK-mX1" firstAttribute="top" secondItem="SNk-LH-eBL" secondAttribute="top" constant="24" id="rV0-4H-fea"/>
-                        <constraint firstItem="0V3-X4-EHW" firstAttribute="leading" secondItem="SNk-LH-eBL" secondAttribute="leading" constant="20" id="sBV-o1-v4p"/>
-                        <constraint firstAttribute="trailing" secondItem="0V3-X4-EHW" secondAttribute="trailing" constant="20" id="wgo-li-dY0"/>
+                        <constraint firstAttribute="height" constant="600" id="RMC-5f-8gG"/>
+                        <constraint firstAttribute="trailing" secondItem="GM0-8L-VZu" secondAttribute="trailing" id="cAk-sK-a6Q"/>
+                        <constraint firstItem="GM0-8L-VZu" firstAttribute="top" secondItem="v4r-74-3Wx" secondAttribute="top" id="iKo-6S-ggQ"/>
+                        <constraint firstItem="GM0-8L-VZu" firstAttribute="leading" secondItem="v4r-74-3Wx" secondAttribute="leading" id="lnW-Rh-C26"/>
+                        <constraint firstAttribute="bottom" secondItem="GM0-8L-VZu" secondAttribute="bottom" id="tTd-3c-Zi1"/>
                     </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="30"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.34851998050196642" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="SNk-LH-eBL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="N18-NZ-ZlT"/>
-                <constraint firstItem="SNk-LH-eBL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ot9-lg-XgY"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SNk-LH-eBL" secondAttribute="trailing" constant="30" id="jVF-Rj-r9z"/>
-                <constraint firstItem="SNk-LH-eBL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="150" id="tdJ-aj-EZx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="v4r-74-3Wx" secondAttribute="trailing" constant="30" id="7ih-Jo-pKj"/>
+                <constraint firstItem="GM0-8L-VZu" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.847328" id="ejV-BS-5eL"/>
+                <constraint firstItem="v4r-74-3Wx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="hiK-Fp-6kk"/>
+                <constraint firstItem="v4r-74-3Wx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="rUF-ho-GHl"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="127" y="-7"/>
+            <point key="canvasLocation" x="125.95419847328243" y="-7.042253521126761"/>
         </view>
     </objects>
     <resources>
+        <image name="icon_star" width="289" height="330"/>
+        <image name="img_person2" width="1707" height="2560"/>
         <namedColor name="AccentColor">
-            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ColorNegativo">
-            <color red="0.89411764705882357" green="0.11764705882352941" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ColorSecundario">
             <color red="0.26666666666666666" green="0.53725490196078429" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
