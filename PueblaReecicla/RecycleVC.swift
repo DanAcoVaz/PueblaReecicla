@@ -31,8 +31,14 @@ class RecycleViewController: UIViewController {
     // arreglo para almacenar los elementos del collection view
     var recolecciones: Recolecciones!
     
+    // popups
+    var popUpIniciada: RV_iniciada!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // inicializan los Popups
+        self.popUpIniciada = RV_iniciada(frame: self.view.frame, inView: self)
         
         let imgFondoBlanco : UIImageView = {
             let iv = UIImageView()
@@ -41,10 +47,9 @@ class RecycleViewController: UIViewController {
             return iv
         }()
         
+        // se configura el collection view
         collectionView.backgroundView = imgFondoBlanco
-        
         collectionView.register(HistorialCollectionViewCell.nib(), forCellWithReuseIdentifier: HistorialCollectionViewCell.identifier)
-        
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -58,17 +63,65 @@ class RecycleViewController: UIViewController {
             self.collectionView.reloadData()
         }
     }
+    
+    // función para mostrar el pop up correcto acorde al estado dado
+    func showCorrectPopup(estado: String) {
+        
+        // Customize your pop-up based on the state
+        if estado == RecycleViewController.iniciada {
+            popUpIniciada.isUserInteractionEnabled = true
+            // inicializar PopUps
+            popUpIniciada.continuarBtn.addTarget(self, action: #selector(continuarBtn), for: .touchUpInside)
+            self.view.addSubview(popUpIniciada)
+            
+            // Add tap gesture recognizer to handle taps outside the popup
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopup))
+            tapGestureRecognizer.cancelsTouchesInView = false
+            popUpIniciada.addGestureRecognizer(tapGestureRecognizer)
+            
+        }
+        else if estado == RecycleViewController.enProceso {
+            print(estado)
+        }
+        else if estado == RecycleViewController.completada {
+            print(estado)
+        }
+        else {
+            print(estado)
+        }
+        
+    }
+    
+    // Handle taps outside of popUpIniciada
+    @objc func handleTapOutsidePopup(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            let location = sender.location(in: popUpIniciada.container)
+            if !popUpIniciada.container.bounds.contains(location) {
+                popUpIniciada.removeFromSuperview()
+            }
+        }
+    }
+
+    
+    @objc func continuarBtn(){
+        self.popUpIniciada.removeFromSuperview()
+    }
+
 }
 
+// función para manejar el click en una de las recolecciones
 extension RecycleViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        print("You tapped me in row: ")
-        print(indexPath.row)
+        let recoleccion = recolecciones.recoleccionArray[indexPath.row]
+        
+        showCorrectPopup(estado: recoleccion.estado)
+        
     }
 }
 
+// función para establecer los valores decada recolección en el collection view
 extension RecycleViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recolecciones.recoleccionArray.count
@@ -96,6 +149,7 @@ extension RecycleViewController: UICollectionViewDataSource {
     }
 }
 
+// función para definir los margenes de cada recolección
 extension RecycleViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width - 20 // Adjust left and right margins
@@ -103,6 +157,7 @@ extension RecycleViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// función para regresar el color correcto acorde al estado dado
 func getColorForEstado(estado: String) -> UIColor {
     if(estado == RecycleViewController.iniciada) {
         return RecycleViewController.golden!
@@ -117,14 +172,3 @@ func getColorForEstado(estado: String) -> UIColor {
         return RecycleViewController.red!
     }
 }
-
-struct RecycleItem {
-    let color: UIColor
-    let fecha: String
-    let horario: String
-    let materiales: String
-    let estadoTexto: String
-    let estadoTextoColor: UIColor
-}
-
-

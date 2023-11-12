@@ -17,6 +17,11 @@
 		832298FD2AFFE93100F3DF85 /* Recoleccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832298FC2AFFE93100F3DF85 /* Recoleccion.swift */; };
 		832298FF2AFFEF9F00F3DF85 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832298FE2AFFEF9F00F3DF85 /* Material.swift */; };
 		832299012AFFEFC200F3DF85 /* Recolector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832299002AFFEFC200F3DF85 /* Recolector.swift */; };
+		832299062B00325900F3DF85 /* RV_iniciada.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832299052B00325900F3DF85 /* RV_iniciada.xib */; };
+		832299082B003A2000F3DF85 /* RV_iniciada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832299072B003A2000F3DF85 /* RV_iniciada.swift */; };
+		8322990A2B005B9F00F3DF85 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832299092B005B9F00F3DF85 /* Style.swift */; };
+		8322990D2B006C3800F3DF85 /* RV_enProceso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322990B2B006C3800F3DF85 /* RV_enProceso.swift */; };
+		8322990E2B006C3800F3DF85 /* RV_enProceso.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8322990C2B006C3800F3DF85 /* RV_enProceso.xib */; };
 		83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582AD82AF1A901006E57A8 /* AppDelegate.swift */; };
 		83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */; };
 		83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582ADC2AF1A901006E57A8 /* ViewController.swift */; };
@@ -66,6 +71,11 @@
 		832298FC2AFFE93100F3DF85 /* Recoleccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recoleccion.swift; sourceTree = "<group>"; };
 		832298FE2AFFEF9F00F3DF85 /* Material.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
 		832299002AFFEFC200F3DF85 /* Recolector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recolector.swift; sourceTree = "<group>"; };
+		832299052B00325900F3DF85 /* RV_iniciada.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RV_iniciada.xib; sourceTree = "<group>"; };
+		832299072B003A2000F3DF85 /* RV_iniciada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RV_iniciada.swift; sourceTree = "<group>"; };
+		832299092B005B9F00F3DF85 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		8322990B2B006C3800F3DF85 /* RV_enProceso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RV_enProceso.swift; sourceTree = "<group>"; };
+		8322990C2B006C3800F3DF85 /* RV_enProceso.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RV_enProceso.xib; sourceTree = "<group>"; };
 		83582AD52AF1A901006E57A8 /* PueblaReecicla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PueblaReecicla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83582AD82AF1A901006E57A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,8 +137,9 @@
 		832298F82AFFE75A00F3DF85 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				832298F92AFFE76600F3DF85 /* Recolecciones */,
 				832298FE2AFFEF9F00F3DF85 /* Material.swift */,
+				832299002AFFEFC200F3DF85 /* Recolector.swift */,
+				832298F92AFFE76600F3DF85 /* Recolecciones */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,9 +149,20 @@
 			children = (
 				832298FA2AFFE77700F3DF85 /* Recolecciones.swift */,
 				832298FC2AFFE93100F3DF85 /* Recoleccion.swift */,
-				832299002AFFEFC200F3DF85 /* Recolector.swift */,
 			);
 			path = Recolecciones;
+			sourceTree = "<group>";
+		};
+		832299022B002EA600F3DF85 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				8322990B2B006C3800F3DF85 /* RV_enProceso.swift */,
+				8322990C2B006C3800F3DF85 /* RV_enProceso.xib */,
+				832299072B003A2000F3DF85 /* RV_iniciada.swift */,
+				832299052B00325900F3DF85 /* RV_iniciada.xib */,
+				832299092B005B9F00F3DF85 /* Style.swift */,
+			);
+			path = Popups;
 			sourceTree = "<group>";
 		};
 		83582ACC2AF1A901006E57A8 = {
@@ -177,6 +199,7 @@
 				83943EB92AF5A91600E9E258 /* HomeVC.swift */,
 				B33858EF2AFAD95D00048E56 /* Map.storyboard */,
 				B33858F12AFADB2900048E56 /* MapVC.swift */,
+				832299022B002EA600F3DF85 /* Popups */,
 				B37D42542AFC1DEF002F7479 /* RecycleVC.swift */,
 				B37D42522AFC1CF5002F7479 /* Recycle.storyboard */,
 				83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */,
@@ -330,9 +353,11 @@
 				83582AE22AF1A902006E57A8 /* Assets.xcassets in Resources */,
 				83582AE02AF1A901006E57A8 /* Main.storyboard in Resources */,
 				83943EB82AF5A90800E9E258 /* Home.storyboard in Resources */,
+				8322990E2B006C3800F3DF85 /* RV_enProceso.xib in Resources */,
 				B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */,
 				83582B112AF2F5E7006E57A8 /* splashScreenReecicla.png in Resources */,
 				832298F72AFFDC4600F3DF85 /* GoogleService-Info.plist in Resources */,
+				832299062B00325900F3DF85 /* RV_iniciada.xib in Resources */,
 				83582B0D2AF2C31A006E57A8 /* testViewController.xib in Resources */,
 				83C1343B2AFEBB66008FBFDB /* HistorialCollectionViewCell.xib in Resources */,
 			);
@@ -364,9 +389,12 @@
 				83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */,
 				83C1343A2AFEBB66008FBFDB /* HistorialCollectionViewCell.swift in Sources */,
 				83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */,
+				832299082B003A2000F3DF85 /* RV_iniciada.swift in Sources */,
 				B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */,
 				83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */,
+				8322990A2B005B9F00F3DF85 /* Style.swift in Sources */,
 				832298FB2AFFE77700F3DF85 /* Recolecciones.swift in Sources */,
+				8322990D2B006C3800F3DF85 /* RV_enProceso.swift in Sources */,
 				832298FD2AFFE93100F3DF85 /* Recoleccion.swift in Sources */,
 				83943EBA2AF5A91600E9E258 /* HomeVC.swift in Sources */,
 				832299012AFFEFC200F3DF85 /* Recolector.swift in Sources */,

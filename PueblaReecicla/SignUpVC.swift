@@ -80,6 +80,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
         confirmAlert.addAction(UIAlertAction(title: "Activar", style: .default, handler: { [weak confirmAlert] (_) in
             let textField = confirmAlert?.textFields![0]
+            print(textField ?? "")
             //Acciones a realizar al pulsar el boton activar en la alerta:
             
             //print("Text field: \(textField?.text)")

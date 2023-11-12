@@ -27,7 +27,7 @@ class HistorialCollectionViewCell: UICollectionViewCell {
         fondoRecoleccion.layer.borderWidth = 0.5  // Set the width of the stroke
         fondoRecoleccion.layer.borderColor = UIColor(named: "ColorDeFondo")!.cgColor
         
-        // se agrega una sombra al fondo de la recolecciòn
+        // se agrega una sombra al fondo de la recolección
         fondoRecoleccion.backgroundColor = UIColor.white // Set the background color
 
     }
