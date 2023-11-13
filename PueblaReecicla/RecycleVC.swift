@@ -24,6 +24,7 @@ class RecycleViewController: UIViewController {
     static let blue = UIColor(named: "ColorSecundario")
     static let green = UIColor(named: "AccentColor")
     static let red = UIColor(named: "ColorNegativo")
+    static let light_green = UIColor(named: "light_green")
     
     // user id
     let userID = "user_id_2"  // se debe cambiar por el obtenido en FirebaseAuth
@@ -34,6 +35,10 @@ class RecycleViewController: UIViewController {
     // popups
     var popUpIniciada: RV_iniciada!
     var popUpEnProceso: RV_enProceso!
+    var popUpCompletada: RV_completada!
+    
+    // referencia al elemento actual del collection view
+    var curItem: Recoleccion!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +50,11 @@ class RecycleViewController: UIViewController {
         popUpEnProceso.scrollView.layer.cornerRadius = 30
         popUpEnProceso.imageRecolector.layer.cornerRadius = min(popUpEnProceso.imageRecolector.frame.width, popUpEnProceso.imageRecolector.frame.height) / 2.0
         popUpEnProceso.imageRecolector.layer.masksToBounds = true
+        
+        self.popUpCompletada = RV_completada(frame: self.view.frame, inView: self)
+        popUpCompletada.scrollView.layer.cornerRadius = 30
+        popUpCompletada.imageRecolector.layer.cornerRadius = min(popUpCompletada.imageRecolector.frame.width, popUpCompletada.imageRecolector.frame.height) / 2.0
+        popUpCompletada.imageRecolector.layer.masksToBounds = true
         
         let imgFondoBlanco : UIImageView = {
             let iv = UIImageView()
@@ -71,33 +81,67 @@ class RecycleViewController: UIViewController {
     }
     
     // función para mostrar el pop up correcto acorde al estado dado
-    func showCorrectPopup(estado: String) {
+    func showCorrectPopup(recoleccion: Recoleccion) {
+        self.curItem = recoleccion
+        let estado = curItem.estado
         
         // Customize your pop-up based on the state
         if estado == RecycleViewController.iniciada {
             popUpIniciada.isUserInteractionEnabled = true
-            // inicializar PopUps
-            popUpIniciada.continuarBtn.addTarget(self, action: #selector(continuarBtnIni), for: .touchUpInside)
+            
+            // funciones para botones de los popups
+            popUpIniciada.continuarBtn.addTarget(self, action: #selector(continuarBtn), for: .touchUpInside)
             self.view.addSubview(popUpIniciada)
             
+            popUpIniciada.cancelarBtn.addTarget(self, action: #selector(cancelarBtn), for: .touchUpInside)
+            self.view.addSubview(popUpIniciada)
+            
+            
             // Add tap gesture recognizer to handle taps outside the popup
-            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopupIni))
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopup))
             tapGestureRecognizer.cancelsTouchesInView = false
             popUpIniciada.addGestureRecognizer(tapGestureRecognizer)
             
         }
         else if estado == RecycleViewController.enProceso {
+            // se cambian las partes del Popup con la info de FB
+            popUpEnProceso.nameRecolector.text = "\(curItem.recolector.nombre) \(curItem.recolector.apellidos)"
+            popUpEnProceso.telefonoRecolector.text = curItem.recolector.telefono
+            popUpEnProceso.calificacionRecolector.text = String(format: "%.1f", curItem.recolector.suma_reseñas / curItem.recolector.cantidad_reseñas)
+
+            
             popUpEnProceso.isUserInteractionEnabled = true
             // inicializar PopUps
-            popUpEnProceso.continuarBtn.addTarget(self, action: #selector(continuarBtnEnPro), for: .touchUpInside)
+            popUpEnProceso.continuarBtn.addTarget(self, action: #selector(continuarBtn), for: .touchUpInside)
             self.view.addSubview(popUpEnProceso)
             
             // Add tap gesture recognizer to handle taps outside the popup
-            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopupEnPro))
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopup))
             tapGestureRecognizer.cancelsTouchesInView = false
             popUpEnProceso.addGestureRecognizer(tapGestureRecognizer)
         }
         else if estado == RecycleViewController.completada {
+            
+            if (curItem.calificado == true) {
+                popUpCompletada.seccionCalificacion.isHidden = true
+                popUpCompletada.continuarBtn.backgroundColor = RecycleViewController.green
+            } else {
+                popUpCompletada.seccionCalificacion.isHidden = false
+                popUpCompletada.continuarBtn.backgroundColor = RecycleViewController.light_green
+            }
+            // se cambian las partes del Popup con la info de FB
+            popUpCompletada.nameRecolector.text = "\(curItem.recolector.nombre) \(curItem.recolector.apellidos)"
+
+            
+            popUpCompletada.isUserInteractionEnabled = true
+            // inicializar PopUps
+            popUpCompletada.continuarBtn.addTarget(self, action: #selector(continuarBtn), for: .touchUpInside)
+            self.view.addSubview(popUpCompletada)
+            
+            // Add tap gesture recognizer to handle taps outside the popup
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopup))
+            tapGestureRecognizer.cancelsTouchesInView = false
+            popUpCompletada.addGestureRecognizer(tapGestureRecognizer)
             print(estado)
         }
         else {
@@ -105,35 +149,98 @@ class RecycleViewController: UIViewController {
         }
         
     }
-    
+
     // Handle taps outside of popUpIniciada
-    @objc func handleTapOutsidePopupIni(_ sender: UITapGestureRecognizer) {
-        if sender.state == .ended {
-            let location = sender.location(in: popUpIniciada.container)
-            if !popUpIniciada.container.bounds.contains(location) {
-                popUpIniciada.removeFromSuperview()
+    @objc func handleTapOutsidePopup(_ sender: UITapGestureRecognizer) {
+        // Customize your pop-up based on the state
+        if curItem.estado == RecycleViewController.iniciada {
+            if sender.state == .ended {
+                let location = sender.location(in: popUpIniciada.container)
+                if !popUpIniciada.container.bounds.contains(location) {
+                    popUpIniciada.removeFromSuperview()
+                }
             }
         }
-    }
-    
-    // Handle taps outside of popUpIniciada
-    @objc func handleTapOutsidePopupEnPro(_ sender: UITapGestureRecognizer) {
-        if sender.state == .ended {
-            let location = sender.location(in: popUpEnProceso.scrollView)
-            if !popUpEnProceso.scrollView.bounds.contains(location) {
-                popUpEnProceso.removeFromSuperview()
+        else if curItem.estado == RecycleViewController.enProceso {
+            if sender.state == .ended {
+                let location = sender.location(in: popUpEnProceso.scrollView)
+                if !popUpEnProceso.scrollView.bounds.contains(location) {
+                    popUpEnProceso.removeFromSuperview()
+                }
             }
+        }
+        else if curItem.estado == RecycleViewController.completada {
+            if sender.state == .ended {
+                let location = sender.location(in: popUpCompletada.scrollView)
+                if !popUpCompletada.scrollView.bounds.contains(location) {
+                    popUpCompletada.removeFromSuperview()
+                }
+            }
+        }
+        else {
+            
         }
     }
 
     
-    @objc func continuarBtnIni(){
-        self.popUpIniciada.removeFromSuperview()
+    @objc func continuarBtn(){
+        
+        // Customize your pop-up based on the state
+        if curItem.estado == RecycleViewController.iniciada {
+            self.popUpIniciada.removeFromSuperview()
+        }
+        else if curItem.estado == RecycleViewController.enProceso {
+            self.popUpEnProceso.removeFromSuperview()
+        }
+        else if curItem.estado == RecycleViewController.completada {
+            self.popUpCompletada.removeFromSuperview()
+        }
+        else {
+            
+        }
     }
     
-    @objc func continuarBtnEnPro(){
-        self.popUpEnProceso.removeFromSuperview()
+    @objc func cancelarBtn(){
+        popUpIniciada.removeFromSuperview()
+        showPopup()
     }
+    
+    func showPopup() {
+        let alertController = UIAlertController(title: "Cancelar Orden", message: "¿Deseas Cancelar la Orden?", preferredStyle: .alert)
+
+        // Add an "Accept" action
+        let acceptAction = UIAlertAction(title: "Confirmar", style: .default) { (action) in
+            // Handle accept action
+            let db = Firestore.firestore()
+            let collection = db.collection("recolecciones")
+            let documentID = self.curItem.documentID
+            // Define the field you want to update
+            let fieldToUpdate = "estado"
+            let updatedValue = RecycleViewController.cancelada
+
+            // Create a dictionary with the field to update
+            let updateData = [fieldToUpdate: updatedValue]
+
+            // Update the document
+            collection.document(documentID).updateData(updateData) { error in
+                if let error = error {
+                    print("Error updating document: \(error)")
+                }
+            }
+        }
+        alertController.addAction(acceptAction)
+
+        // Add a "Cancel" action
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel) { (action) in
+            // Handle cancel action
+            print("Cancel tapped")
+        }
+        alertController.addAction(cancelAction)
+
+        // Present the alert controller
+        present(alertController, animated: true, completion: nil)
+    }
+    
 
 }
 
@@ -144,7 +251,7 @@ extension RecycleViewController: UICollectionViewDelegate {
         
         let recoleccion = recolecciones.recoleccionArray[indexPath.row]
         
-        showCorrectPopup(estado: recoleccion.estado)
+        showCorrectPopup(recoleccion: recoleccion)
         
     }
 }

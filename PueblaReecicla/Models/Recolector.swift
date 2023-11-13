@@ -11,10 +11,10 @@ class Recolector {
     var nombre: String
     var apellidos: String
     var telefono: String
-    var cantidad_reseñas: Int
-    var suma_reseñas: Int
+    var cantidad_reseñas: Float
+    var suma_reseñas: Float
 
-    init(nombre: String, apellidos: String, telefono: String, cantidad_reseñas: Int, suma_reseñas: Int) {
+    init(nombre: String, apellidos: String, telefono: String, cantidad_reseñas: Float, suma_reseñas: Float) {
         self.nombre = nombre
         self.apellidos = apellidos
         self.telefono = telefono
@@ -37,8 +37,8 @@ class Recolector {
             nombre: dictionary["nombre"] as? String ?? "",
             apellidos: dictionary["apellidos"] as? String ?? "",
             telefono: dictionary["telefono"] as? String ?? "",
-            cantidad_reseñas: dictionary["cantidad_reseñas"] as? Int ?? 0,
-            suma_reseñas: dictionary["suma_reseñas"] as? Int ?? 0
+            cantidad_reseñas: dictionary["cantidad_reseñas"] as? Float ?? 0.0,
+            suma_reseñas: dictionary["suma_reseñas"] as? Float ?? 0.0
         )
     }
 }

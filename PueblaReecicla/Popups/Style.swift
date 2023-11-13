@@ -29,6 +29,11 @@ class ButtonStyle: UIButton {
             self.layer.borderColor = borderColor.cgColor
         }
     }
+    @IBInspectable var backgroundColorOverride: UIColor = UIColor.clear {
+         didSet {
+             self.backgroundColor = backgroundColorOverride
+         }
+     }
 }
 
 class ViewStyle: UIView {
