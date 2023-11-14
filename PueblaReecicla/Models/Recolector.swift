@@ -13,13 +13,15 @@ class Recolector {
     var telefono: String
     var cantidad_reseñas: Float
     var suma_reseñas: Float
+    var id: String
 
-    init(nombre: String, apellidos: String, telefono: String, cantidad_reseñas: Float, suma_reseñas: Float) {
+    init(nombre: String, apellidos: String, telefono: String, cantidad_reseñas: Float, suma_reseñas: Float, id: String) {
         self.nombre = nombre
         self.apellidos = apellidos
         self.telefono = telefono
         self.cantidad_reseñas = cantidad_reseñas
         self.suma_reseñas = suma_reseñas
+        self.id = id
     }
 
     convenience init() {
@@ -28,7 +30,8 @@ class Recolector {
             apellidos: "",
             telefono: "",
             cantidad_reseñas: 0,
-            suma_reseñas: 0
+            suma_reseñas: 0,
+            id: ""
         )
     }
 
@@ -38,7 +41,8 @@ class Recolector {
             apellidos: dictionary["apellidos"] as? String ?? "",
             telefono: dictionary["telefono"] as? String ?? "",
             cantidad_reseñas: dictionary["cantidad_reseñas"] as? Float ?? 0.0,
-            suma_reseñas: dictionary["suma_reseñas"] as? Float ?? 0.0
+            suma_reseñas: dictionary["suma_reseñas"] as? Float ?? 0.0,
+            id: dictionary["id"] as? String ?? ""
         )
     }
 }

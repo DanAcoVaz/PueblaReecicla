@@ -36,6 +36,7 @@ class RecycleViewController: UIViewController {
     var popUpIniciada: RV_iniciada!
     var popUpEnProceso: RV_enProceso!
     var popUpCompletada: RV_completada!
+    var popUpCompletadaSinCalif: RV_comp_sinCalif!
     
     // referencia al elemento actual del collection view
     var curItem: Recoleccion!
@@ -44,17 +45,23 @@ class RecycleViewController: UIViewController {
         super.viewDidLoad()
         
         // inicializan los Popups
+        // INICIADA
         self.popUpIniciada = RV_iniciada(frame: self.view.frame, inView: self)
         
+        // EN PROCESO
         self.popUpEnProceso = RV_enProceso(frame: self.view.frame, inView: self)
         popUpEnProceso.scrollView.layer.cornerRadius = 30
         popUpEnProceso.imageRecolector.layer.cornerRadius = min(popUpEnProceso.imageRecolector.frame.width, popUpEnProceso.imageRecolector.frame.height) / 2.0
         popUpEnProceso.imageRecolector.layer.masksToBounds = true
         
+        // COMPLETADA SIN CALIFICAR
         self.popUpCompletada = RV_completada(frame: self.view.frame, inView: self)
-        popUpCompletada.scrollView.layer.cornerRadius = 30
-        popUpCompletada.imageRecolector.layer.cornerRadius = min(popUpCompletada.imageRecolector.frame.width, popUpCompletada.imageRecolector.frame.height) / 2.0
-        popUpCompletada.imageRecolector.layer.masksToBounds = true
+        popUpCompletada.ScrollVW.layer.cornerRadius = 30
+        popUpCompletada.imgRecolector.layer.cornerRadius = min(popUpCompletada.imgRecolector.frame.width, popUpCompletada.imgRecolector.frame.height) / 2.0
+        popUpCompletada.imgRecolector.layer.masksToBounds = true
+        
+        // COMPLETADA CON CALIFICAR
+        self.popUpCompletadaSinCalif = RV_comp_sinCalif(frame: self.view.frame, inView: self)
         
         let imgFondoBlanco : UIImageView = {
             let iv = UIImageView()
@@ -121,28 +128,31 @@ class RecycleViewController: UIViewController {
             popUpEnProceso.addGestureRecognizer(tapGestureRecognizer)
         }
         else if estado == RecycleViewController.completada {
-            
-            if (curItem.calificado == true) {
-                popUpCompletada.seccionCalificacion.isHidden = true
-                popUpCompletada.continuarBtn.backgroundColor = RecycleViewController.green
+            if(!curItem.calificado) {
+                popUpCompletada.rating = 0
+                // se cambian las partes del Popup con la info de FB
+                popUpCompletada.nameRecollector.text = "\(curItem.recolector.nombre) \(curItem.recolector.apellidos)"
+                
+                popUpCompletada.isUserInteractionEnabled = true
+                // inicializar PopUps
+                popUpCompletada.continuarButton.addTarget(self, action: #selector(continuarBtn), for: .touchUpInside)
+                self.view.addSubview(popUpCompletada)
+                
+                // Add tap gesture recognizer to handle taps outside the popup
+                let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopup))
+                tapGestureRecognizer.cancelsTouchesInView = false
+                popUpCompletada.addGestureRecognizer(tapGestureRecognizer)
             } else {
-                popUpCompletada.seccionCalificacion.isHidden = false
-                popUpCompletada.continuarBtn.backgroundColor = RecycleViewController.light_green
+                popUpCompletadaSinCalif.isUserInteractionEnabled = true
+                // inicializar PopUps
+                popUpCompletadaSinCalif.continuarBtn.addTarget(self, action: #selector(continuarBtn), for: .touchUpInside)
+                self.view.addSubview(popUpCompletadaSinCalif)
+                
+                // Add tap gesture recognizer to handle taps outside the popup
+                let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopup))
+                tapGestureRecognizer.cancelsTouchesInView = false
+                popUpCompletadaSinCalif.addGestureRecognizer(tapGestureRecognizer)
             }
-            // se cambian las partes del Popup con la info de FB
-            popUpCompletada.nameRecolector.text = "\(curItem.recolector.nombre) \(curItem.recolector.apellidos)"
-
-            
-            popUpCompletada.isUserInteractionEnabled = true
-            // inicializar PopUps
-            popUpCompletada.continuarBtn.addTarget(self, action: #selector(continuarBtn), for: .touchUpInside)
-            self.view.addSubview(popUpCompletada)
-            
-            // Add tap gesture recognizer to handle taps outside the popup
-            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopup))
-            tapGestureRecognizer.cancelsTouchesInView = false
-            popUpCompletada.addGestureRecognizer(tapGestureRecognizer)
-            print(estado)
         }
         else {
             print(estado)
@@ -170,10 +180,19 @@ class RecycleViewController: UIViewController {
             }
         }
         else if curItem.estado == RecycleViewController.completada {
-            if sender.state == .ended {
-                let location = sender.location(in: popUpCompletada.scrollView)
-                if !popUpCompletada.scrollView.bounds.contains(location) {
-                    popUpCompletada.removeFromSuperview()
+            if (!curItem.calificado) {
+                if sender.state == .ended {
+                    let location = sender.location(in: popUpCompletada.ScrollVW)
+                    if !popUpCompletada.ScrollVW.bounds.contains(location) {
+                        popUpCompletada.removeFromSuperview()
+                    }
+                }
+            } else {
+                if sender.state == .ended {
+                    let location = sender.location(in: popUpCompletadaSinCalif.container)
+                    if !popUpCompletadaSinCalif.container.bounds.contains(location) {
+                        popUpCompletadaSinCalif.removeFromSuperview()
+                    }
                 }
             }
         }
@@ -193,7 +212,16 @@ class RecycleViewController: UIViewController {
             self.popUpEnProceso.removeFromSuperview()
         }
         else if curItem.estado == RecycleViewController.completada {
-            self.popUpCompletada.removeFromSuperview()
+            if(!curItem.calificado){
+                if(popUpCompletada.rating != 0) {
+                    self.popUpCompletada.removeFromSuperview()
+                    updateCalificacion()
+                } else {
+                    showPopupCalificar()
+                }
+            } else {
+                self.popUpCompletadaSinCalif.removeFromSuperview()
+            }
         }
         else {
             
@@ -202,10 +230,64 @@ class RecycleViewController: UIViewController {
     
     @objc func cancelarBtn(){
         popUpIniciada.removeFromSuperview()
-        showPopup()
+        showPopupCancelarOrden()
     }
     
-    func showPopup() {
+    func updateCalificacion() {
+        // Assuming you have a Firestore collection reference
+        let recolectores = Firestore.firestore().collection("recolectores")
+
+        // Assuming you have a document ID for the document you want to update
+        let recolecorID = curItem.recolector.id
+
+        // Assuming you have the increment value
+        let rating: Int64 = Int64(popUpCompletada.rating)
+
+        // Use the updateData method with FieldValue.increment to increment the field
+        let sumaRating = ["suma_reseñas": FieldValue.increment(rating)]
+
+        // Update the document with the incremented value
+        recolectores.document(recolecorID).updateData(sumaRating) { error in
+            if let error = error {
+                print("Error updating suma_reseñas field: \(error)")
+            } else {
+                print("suma_reseñas field successfully updated")
+            }
+        }
+        
+        // Assuming you have an increment value
+        let cantidad: Int64 = 1
+        // Use the updateData method with FieldValue.increment to increment the field
+        let cantidadRating = ["cantidad_reseñas": FieldValue.increment(cantidad)]
+        
+        recolectores.document(recolecorID).updateData(cantidadRating) { error in
+            if let error = error {
+                print("Error cantidad_reseñas boolean field: \(error)")
+            } else {
+                print("cantidad_reseñas field successfully updated")
+            }
+        }
+        
+        // Assuming you have a Firestore collection reference
+        let recolecciones = Firestore.firestore().collection("recolecciones")
+        // Assuming you have a document ID for the document you want to update
+        let recoleeccionID = curItem.documentID
+        // Assuming you have another field name you want to set to true
+        let booleanFieldName = "calificado"
+
+        // Update the document to set the specified boolean field to true
+        let booleanFieldUpdate = [booleanFieldName: true]
+
+        recolecciones.document(recoleeccionID).updateData(booleanFieldUpdate) { error in
+            if let error = error {
+                print("Error updating boolean field: \(error)")
+            } else {
+                print("Boolean field successfully updated")
+            }
+        }
+    }
+    
+    func showPopupCancelarOrden() {
         let alertController = UIAlertController(title: "Cancelar Orden", message: "¿Deseas Cancelar la Orden?", preferredStyle: .alert)
 
         // Add an "Accept" action
@@ -236,6 +318,18 @@ class RecycleViewController: UIViewController {
             print("Cancel tapped")
         }
         alertController.addAction(cancelAction)
+
+        // Present the alert controller
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func showPopupCalificar() {
+        let alertController = UIAlertController(title: "Debe calificar al Recolector", message: "Califique a su recolector con base a su desempeño", preferredStyle: .alert)
+
+        // Add an "Accept" action
+        let acceptAction = UIAlertAction(title: "Comprendo", style: .default) { (action) in
+        }
+        alertController.addAction(acceptAction)
 
         // Present the alert controller
         present(alertController, animated: true, completion: nil)

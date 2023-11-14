@@ -12,22 +12,21 @@ class RV_completada: UIView {
     var vc: UIViewController!
     var view: UIView!
     
-    @IBOutlet weak var nameRecolector: UILabel!
-    @IBOutlet weak var imageRecolector: UIImageView!
-    @IBOutlet weak var verDetallesBtn: ButtonStyle!
-    @IBOutlet weak var continuarBtn: ButtonStyle!
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var nameRecollector: UILabel!
+    @IBOutlet weak var imgRecolector: UIImageView!
+    @IBOutlet weak var verDetallesButton: ButtonStyle!
+    @IBOutlet weak var continuarButton: ButtonStyle!
     
-    @IBOutlet weak var seccionCalificacion: UIStackView!
+    @IBOutlet weak var ScrollVW: UIScrollView!
     
-    @IBOutlet var starButtonCollection: [UIButton]!
+    @IBOutlet weak var sectCalificado: UIStackView!
+
+    @IBOutlet var starBtnCollect: [UIButton]!
     
     var rating = 0 {
         didSet {
-            continuarBtn.backgroundColor = RecycleViewController.green
-            
-            for starButton in starButtonCollection {
+            for starButton in starBtnCollect {
                 let imgName = (starButton.tag < rating ? "icon_star" : "icon_star_empty")
                 starButton.setImage(UIImage(named: imgName), for: .normal)
             }
@@ -61,10 +60,11 @@ class RV_completada: UIView {
         return view
     }
     
-    @IBAction func starButtonPressed(_ sender: UIButton) {
-        //continuarBtn.backgroundColor = RecycleViewController.green
-        rating = sender.tag + 1
-    }
+    
+    @IBAction func starBtnPressed(_ sender: UIButton) {
+            //continuarBtn.backgroundColor = RecycleViewController.green
+            rating = sender.tag + 1
+        }
     
 }
 

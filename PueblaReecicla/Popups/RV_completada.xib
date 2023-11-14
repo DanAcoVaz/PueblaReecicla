@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,21 +12,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RV_completada" customModule="PueblaReecicla" customModuleProvider="target">
             <connections>
-                <outlet property="continuarBtn" destination="LSM-PE-raS" id="5uO-Tl-UJF"/>
-                <outlet property="imageRecolector" destination="K78-Dx-fvS" id="W0H-ZT-xt9"/>
-                <outlet property="nameRecolector" destination="ZmN-AS-g4x" id="dyU-Ba-b6z"/>
-                <outlet property="scrollView" destination="v4r-74-3Wx" id="qGO-cO-4jr"/>
-                <outlet property="seccionCalificacion" destination="TSX-sa-xsm" id="U9O-0v-jSc"/>
-                <outlet property="verDetallesBtn" destination="98q-wS-duy" id="VFj-ld-vYm"/>
-                <outletCollection property="starButtonCollection" destination="Uqa-kQ-LXM" collectionClass="NSMutableArray" id="E5I-6u-fcq"/>
-                <outletCollection property="starButtonCollection" destination="ctV-jt-Fyo" collectionClass="NSMutableArray" id="fHY-O6-ES5"/>
-                <outletCollection property="starButtonCollection" destination="Cm9-c8-BXM" collectionClass="NSMutableArray" id="0wQ-3c-aaH"/>
-                <outletCollection property="starButtonCollection" destination="zQm-vr-LSh" collectionClass="NSMutableArray" id="lib-1w-C0d"/>
-                <outletCollection property="starButtonCollection" destination="Kgb-Jj-jYk" collectionClass="NSMutableArray" id="FMj-a8-qyT"/>
+                <outlet property="ScrollVW" destination="v4r-74-3Wx" id="kB5-Df-tJg"/>
+                <outlet property="continuarButton" destination="LSM-PE-raS" id="Uof-wZ-Xbe"/>
+                <outlet property="imgRecolector" destination="K78-Dx-fvS" id="26r-Kp-eGl"/>
+                <outlet property="nameRecollector" destination="ZmN-AS-g4x" id="ZFc-Id-ddB"/>
+                <outlet property="sectCalificado" destination="TSX-sa-xsm" id="y8C-gP-SO4"/>
+                <outlet property="verDetallesButton" destination="98q-wS-duy" id="nbb-2n-aYC"/>
+                <outletCollection property="starBtnCollect" destination="Uqa-kQ-LXM" collectionClass="NSMutableArray" id="9pi-ia-Ct1"/>
+                <outletCollection property="starBtnCollect" destination="ctV-jt-Fyo" collectionClass="NSMutableArray" id="kck-4H-DDq"/>
+                <outletCollection property="starBtnCollect" destination="Cm9-c8-BXM" collectionClass="NSMutableArray" id="rXs-kC-VuJ"/>
+                <outletCollection property="starBtnCollect" destination="zQm-vr-LSh" collectionClass="NSMutableArray" id="2w2-wx-SIk"/>
+                <outletCollection property="starBtnCollect" destination="Kgb-Jj-jYk" collectionClass="NSMutableArray" id="DOb-hJ-y1Z"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RV_completada" customModule="PueblaReecicla" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -45,12 +46,6 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“Felicidades! Su orden ha sido completada, gracias por ayudar a cuidar el medio ambiente." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJH-fm-I7d">
-                                    <rect key="frame" x="20" y="68.666666666666657" width="293" height="61"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSM-PE-raS" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
                                     <rect key="frame" x="20" y="512.33333333333337" width="293" height="50"/>
                                     <color key="backgroundColor" name="ColorSecundario"/>
@@ -61,7 +56,7 @@
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="filled" title="Continuar">
                                         <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <color key="baseBackgroundColor" name="light_green"/>
+                                        <color key="baseBackgroundColor" name="AccentColor"/>
                                     </buttonConfiguration>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="title" value="Continuar"/>
@@ -110,7 +105,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="icon_star_empty" imagePadding="0.0"/>
                                                     <connections>
-                                                        <action selector="starButtonPressed:" destination="-1" eventType="touchUpInside" id="aWs-ZR-TKK"/>
+                                                        <action selector="starBtnPressed:" destination="-1" eventType="touchUpInside" id="z1U-NN-p4o"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctV-jt-Fyo">
@@ -122,7 +117,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="icon_star_empty" imagePadding="0.0"/>
                                                     <connections>
-                                                        <action selector="starButtonPressed:" destination="-1" eventType="touchUpInside" id="Awy-11-IQt"/>
+                                                        <action selector="starBtnPressed:" destination="-1" eventType="touchUpInside" id="fKr-EU-Nfd"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cm9-c8-BXM">
@@ -134,7 +129,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="icon_star_empty" imagePadding="0.0"/>
                                                     <connections>
-                                                        <action selector="starButtonPressed:" destination="-1" eventType="touchUpInside" id="OWl-A6-Ial"/>
+                                                        <action selector="starBtnPressed:" destination="-1" eventType="touchUpInside" id="788-r5-DIi"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQm-vr-LSh">
@@ -146,7 +141,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="icon_star_empty" imagePadding="0.0"/>
                                                     <connections>
-                                                        <action selector="starButtonPressed:" destination="-1" eventType="touchUpInside" id="Zg4-UU-xlJ"/>
+                                                        <action selector="starBtnPressed:" destination="-1" eventType="touchUpInside" id="fxo-bQ-qIx"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgb-Jj-jYk">
@@ -158,7 +153,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="icon_star_empty" imagePadding="0.0"/>
                                                     <connections>
-                                                        <action selector="starButtonPressed:" destination="-1" eventType="touchUpInside" id="Kye-in-Z3w"/>
+                                                        <action selector="starBtnPressed:" destination="-1" eventType="touchUpInside" id="8gK-BS-RDi"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -190,6 +185,12 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“Felicidades! Su orden ha sido completada, gracias por ayudar a cuidar el medio ambiente." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJH-fm-I7d">
+                                    <rect key="frame" x="20" y="68.666666666666657" width="293" height="61"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -247,11 +248,11 @@
     <resources>
         <image name="icon_star_empty" width="27" height="30"/>
         <image name="img_person2" width="1707" height="2560"/>
+        <namedColor name="AccentColor">
+            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ColorSecundario">
             <color red="0.26666666666666666" green="0.53725490196078429" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="light_green">
-            <color red="0.72156862745098038" green="1" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
