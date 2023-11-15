@@ -105,12 +105,20 @@
             </objects>
             <point key="canvasLocation" x="138" y="4"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="Mhk-xQ-Y62">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="HomeTab" storyboardName="Home" id="jDG-zr-fsF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z3L-Wn-NDu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="295"/>
+        </scene>
     </scenes>
     <resources>
         <image name="FONDO-B-PRESENTA" width="1414" height="2508"/>
         <image name="Recycle" width="30" height="30"/>
         <namedColor name="AccentColor">
-            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.27843137254901962" green="0.72941176470588232" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import FirebaseStorage
 
 class RecycleViewController: UIViewController {
 
@@ -37,6 +38,7 @@ class RecycleViewController: UIViewController {
     var popUpEnProceso: RV_enProceso!
     var popUpCompletada: RV_completada!
     var popUpCompletadaSinCalif: RV_comp_sinCalif!
+    var popUpCancelada: RV_cancelada!
     
     // referencia al elemento actual del collection view
     var curItem: Recoleccion!
@@ -62,6 +64,9 @@ class RecycleViewController: UIViewController {
         
         // COMPLETADA CON CALIFICAR
         self.popUpCompletadaSinCalif = RV_comp_sinCalif(frame: self.view.frame, inView: self)
+        
+        // CANCELADA
+        self.popUpCancelada = RV_cancelada(frame: self.view.frame, inView: self)
         
         let imgFondoBlanco : UIImageView = {
             let iv = UIImageView()
@@ -111,6 +116,9 @@ class RecycleViewController: UIViewController {
             
         }
         else if estado == RecycleViewController.enProceso {
+            
+            loadImage(from: curItem.recolector.fotoUrl, into: popUpEnProceso.imageRecolector, placeholder: "icon_loading", defaultImage: "icon_user_gray")
+            
             // se cambian las partes del Popup con la info de FB
             popUpEnProceso.nameRecolector.text = "\(curItem.recolector.nombre) \(curItem.recolector.apellidos)"
             popUpEnProceso.telefonoRecolector.text = curItem.recolector.telefono
@@ -129,6 +137,7 @@ class RecycleViewController: UIViewController {
         }
         else if estado == RecycleViewController.completada {
             if(!curItem.calificado) {
+                loadImage(from: curItem.recolector.fotoUrl, into: popUpCompletada.imgRecolector, placeholder: "icon_loading", defaultImage: "icon_user_gray")
                 popUpCompletada.rating = 0
                 // se cambian las partes del Popup con la info de FB
                 popUpCompletada.nameRecollector.text = "\(curItem.recolector.nombre) \(curItem.recolector.apellidos)"
@@ -155,10 +164,66 @@ class RecycleViewController: UIViewController {
             }
         }
         else {
-            print(estado)
+            popUpCancelada.isUserInteractionEnabled = true
+            
+            // funciones para botones de los popups
+            popUpCancelada.continuarBtn.addTarget(self, action: #selector(continuarBtn), for: .touchUpInside)
+            self.view.addSubview(popUpCancelada)
+            
+            popUpCancelada.verCentrosBtn.addTarget(self, action: #selector(verCentrosBtn), for: .touchUpInside)
+            self.view.addSubview(popUpCancelada)
+            
+            
+            // Add tap gesture recognizer to handle taps outside the popup
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopup))
+            tapGestureRecognizer.cancelsTouchesInView = false
+            popUpCancelada.addGestureRecognizer(tapGestureRecognizer)
+                
         }
         
     }
+    
+    func loadImage(from imageUrlString: String, into imageView: UIImageView, placeholder: String, defaultImage: String) {
+        // Set a placeholder image while loading.
+        imageView.image = UIImage(named: placeholder)
+
+        // Convert the URL string to a URL object.
+        guard let imageUrl = URL(string: imageUrlString) else {
+            // Display a default image if the URL is invalid.
+            imageView.image = UIImage(named: defaultImage)
+            print("Invalid URL for image: \(imageUrlString)")
+            return
+        }
+
+        // Create a URL session configuration.
+        let sessionConfig = URLSessionConfiguration.default
+        let session = URLSession(configuration: sessionConfig)
+
+        // Create a data task to download the image.
+        let dataTask = session.dataTask(with: imageUrl) { [] (data, response, error) in
+            // Check for errors and ensure there is data.
+            guard error == nil, let imageData = data else {
+                // Display a default image if there's an error.
+                DispatchQueue.main.async {
+                    imageView.image = UIImage(named: defaultImage)
+                }
+                print("Error downloading image: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+
+            // Create a UIImage from the downloaded data.
+            if let image = UIImage(data: imageData) {
+                // Update the image view on the main thread.
+                DispatchQueue.main.async {
+                    imageView.image = image
+                }
+            }
+        }
+
+        // Start the data task.
+        dataTask.resume()
+    }
+
 
     // Handle taps outside of popUpIniciada
     @objc func handleTapOutsidePopup(_ sender: UITapGestureRecognizer) {
@@ -197,7 +262,12 @@ class RecycleViewController: UIViewController {
             }
         }
         else {
-            
+            if sender.state == .ended {
+                let location = sender.location(in: popUpCancelada.container)
+                if !popUpCancelada.container.bounds.contains(location) {
+                    popUpCancelada.removeFromSuperview()
+                }
+            }
         }
     }
 
@@ -224,13 +294,35 @@ class RecycleViewController: UIViewController {
             }
         }
         else {
-            
+            self.popUpCancelada.removeFromSuperview()
         }
     }
     
     @objc func cancelarBtn(){
         popUpIniciada.removeFromSuperview()
         showPopupCancelarOrden()
+    }
+    
+    @objc func verCentrosBtn(){
+        popUpCancelada.removeFromSuperview()
+
+        if let HomeVC = storyboard?.instantiateViewController(withIdentifier: "HomeTab") {
+            // Check if HomeVC is a UITabBarController
+            if let tabBarController = HomeVC as? UITabBarController {
+                // Assuming HomeVC is a UITabBarController
+                tabBarController.selectedIndex = 1 // Change 2 to the index of the tab you want to select
+                print(HomeVC)
+                print(tabBarController)
+                print(tabBarController.selectedIndex)
+                HomeVC.modalPresentationStyle = .fullScreen
+                navigationController?.present(HomeVC, animated: true)
+            } else {
+                print("HomeVC is not a UITabBarController")
+            }
+        } else {
+            print("Failed to instantiate HomeVC")
+        }
+
     }
     
     func updateCalificacion() {

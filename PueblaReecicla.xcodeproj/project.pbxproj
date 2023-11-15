@@ -38,6 +38,8 @@
 		836313CD2B02D48300382606 /* RV_completada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836313CB2B02D48300382606 /* RV_completada.swift */; };
 		836313D32B030E6300382606 /* RV_comp_sinCalif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836313D22B030E6300382606 /* RV_comp_sinCalif.swift */; };
 		836313D52B030E7800382606 /* RV_comp_sinCalif.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836313D42B030E7800382606 /* RV_comp_sinCalif.xib */; };
+		836313DD2B042A5700382606 /* RV_cancelada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836313DC2B042A5700382606 /* RV_cancelada.swift */; };
+		836313DF2B042A6000382606 /* RV_cancelada.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836313DE2B042A6000382606 /* RV_cancelada.xib */; };
 		83943EB62AF565D400E9E258 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83943EB52AF565D400E9E258 /* SignUpVC.swift */; };
 		83943EB82AF5A90800E9E258 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83943EB72AF5A90800E9E258 /* Home.storyboard */; };
 		83943EBA2AF5A91600E9E258 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83943EB92AF5A91600E9E258 /* HomeVC.swift */; };
@@ -100,6 +102,8 @@
 		836313CB2B02D48300382606 /* RV_completada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RV_completada.swift; sourceTree = "<group>"; };
 		836313D22B030E6300382606 /* RV_comp_sinCalif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RV_comp_sinCalif.swift; sourceTree = "<group>"; };
 		836313D42B030E7800382606 /* RV_comp_sinCalif.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RV_comp_sinCalif.xib; sourceTree = "<group>"; };
+		836313DC2B042A5700382606 /* RV_cancelada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RV_cancelada.swift; sourceTree = "<group>"; };
+		836313DE2B042A6000382606 /* RV_cancelada.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RV_cancelada.xib; sourceTree = "<group>"; };
 		83943EB52AF565D400E9E258 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		83943EB72AF5A90800E9E258 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		83943EB92AF5A91600E9E258 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 		832299022B002EA600F3DF85 /* Popups */ = {
 			isa = PBXGroup;
 			children = (
+				836313DC2B042A5700382606 /* RV_cancelada.swift */,
+				836313DE2B042A6000382606 /* RV_cancelada.xib */,
 				836313D22B030E6300382606 /* RV_comp_sinCalif.swift */,
 				836313D42B030E7800382606 /* RV_comp_sinCalif.xib */,
 				836313CB2B02D48300382606 /* RV_completada.swift */,
@@ -363,6 +369,7 @@
 				836313D52B030E7800382606 /* RV_comp_sinCalif.xib in Resources */,
 				83582AE52AF1A902006E57A8 /* LaunchScreen.storyboard in Resources */,
 				B33858F02AFAD95D00048E56 /* Map.storyboard in Resources */,
+				836313DF2B042A6000382606 /* RV_cancelada.xib in Resources */,
 				836313CC2B02D48300382606 /* RV_completada.xib in Resources */,
 				83582AE22AF1A902006E57A8 /* Assets.xcassets in Resources */,
 				83582AE02AF1A901006E57A8 /* Main.storyboard in Resources */,
@@ -399,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836313DD2B042A5700382606 /* RV_cancelada.swift in Sources */,
 				832298FF2AFFEF9F00F3DF85 /* Material.swift in Sources */,
 				83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */,
 				83C1343A2AFEBB66008FBFDB /* HistorialCollectionViewCell.swift in Sources */,
