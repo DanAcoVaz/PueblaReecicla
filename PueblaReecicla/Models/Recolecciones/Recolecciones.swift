@@ -30,9 +30,37 @@ class Recolecciones {
                 
                 let recoleccion = Recoleccion(dictionary: document.data())
                 recoleccion.documentID = document.documentID
+                
+                if (recoleccion.recolector.id != "" && recoleccion.estado == RecycleViewController.iniciada) {
+                    recoleccion.estado = RecycleViewController.enProceso
+                    Recolecciones.updateEstado(recoleccion: recoleccion, estado: RecycleViewController.enProceso)
+                } else if (recoleccion.estado == RecycleViewController.enProceso && recoleccion.recolectada) {
+                    recoleccion.estado = RecycleViewController.completada
+                    Recolecciones.updateEstado(recoleccion: recoleccion, estado: RecycleViewController.completada)
+                }
+                
                 self.recoleccionArray.append(recoleccion)
             }
             return completed()
+        }
+    }
+    
+    static func updateEstado(recoleccion: Recoleccion, estado: String) {
+        // Handle accept action
+        let db = Firestore.firestore()
+        let collection = db.collection("recolecciones")
+        let documentID = recoleccion.documentID
+        // Define the field you want to update
+        let fieldToUpdate = "estado"
+
+        // Create a dictionary with the field to update
+        let updateData = [fieldToUpdate: estado]
+
+        // Update the document
+        collection.document(documentID).updateData(updateData) { error in
+            if let error = error {
+                print("Error updating document: \(error)")
+            }
         }
     }
 }

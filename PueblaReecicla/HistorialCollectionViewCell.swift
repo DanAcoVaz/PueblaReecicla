@@ -25,7 +25,7 @@ class HistorialCollectionViewCell: UICollectionViewCell {
         
         fondoRecoleccion.layer.cornerRadius = 20 // se redondea el cuadrado del fondo de la recolección
         fondoRecoleccion.layer.borderWidth = 0.5  // Set the width of the stroke
-        fondoRecoleccion.layer.borderColor = UIColor(named: "ColorDeFondo")!.cgColor
+        fondoRecoleccion.layer.borderColor = RecycleViewController.color_fondo!.cgColor
         
         // se agrega una sombra al fondo de la recolección
         fondoRecoleccion.backgroundColor = UIColor.white // Set the background color

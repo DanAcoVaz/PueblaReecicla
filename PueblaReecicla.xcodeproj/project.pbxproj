@@ -34,6 +34,7 @@
 		83582B0D2AF2C31A006E57A8 /* testViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83582B0C2AF2C31A006E57A8 /* testViewController.xib */; };
 		83582B0F2AF2C332006E57A8 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582B0E2AF2C332006E57A8 /* testViewController.swift */; };
 		83582B112AF2F5E7006E57A8 /* splashScreenReecicla.png in Resources */ = {isa = PBXBuildFile; fileRef = 83582B102AF2F5E7006E57A8 /* splashScreenReecicla.png */; };
+		836130102B046E200024E6A6 /* VerDetallesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8361300F2B046E200024E6A6 /* VerDetallesVC.swift */; };
 		836313CC2B02D48300382606 /* RV_completada.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836313CA2B02D48300382606 /* RV_completada.xib */; };
 		836313CD2B02D48300382606 /* RV_completada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836313CB2B02D48300382606 /* RV_completada.swift */; };
 		836313D32B030E6300382606 /* RV_comp_sinCalif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836313D22B030E6300382606 /* RV_comp_sinCalif.swift */; };
@@ -98,6 +99,7 @@
 		83582B0C2AF2C31A006E57A8 /* testViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testViewController.xib; sourceTree = "<group>"; };
 		83582B0E2AF2C332006E57A8 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		83582B102AF2F5E7006E57A8 /* splashScreenReecicla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashScreenReecicla.png; sourceTree = "<group>"; };
+		8361300F2B046E200024E6A6 /* VerDetallesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerDetallesVC.swift; sourceTree = "<group>"; };
 		836313CA2B02D48300382606 /* RV_completada.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RV_completada.xib; sourceTree = "<group>"; };
 		836313CB2B02D48300382606 /* RV_completada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RV_completada.swift; sourceTree = "<group>"; };
 		836313D22B030E6300382606 /* RV_comp_sinCalif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RV_comp_sinCalif.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				B33858EF2AFAD95D00048E56 /* Map.storyboard */,
 				B33858F12AFADB2900048E56 /* MapVC.swift */,
 				832299022B002EA600F3DF85 /* Popups */,
+				8361300E2B046DA20024E6A6 /* HistorialViewControllers */,
 				B37D42542AFC1DEF002F7479 /* RecycleVC.swift */,
 				B37D42522AFC1CF5002F7479 /* Recycle.storyboard */,
 				83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */,
@@ -250,6 +253,14 @@
 				83582AFB2AF1A903006E57A8 /* PueblaReeciclaUITestsLaunchTests.swift */,
 			);
 			path = PueblaReeciclaUITests;
+			sourceTree = "<group>";
+		};
+		8361300E2B046DA20024E6A6 /* HistorialViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8361300F2B046E200024E6A6 /* VerDetallesVC.swift */,
+			);
+			path = HistorialViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +430,7 @@
 				832298FB2AFFE77700F3DF85 /* Recolecciones.swift in Sources */,
 				8322990D2B006C3800F3DF85 /* RV_enProceso.swift in Sources */,
 				832298FD2AFFE93100F3DF85 /* Recoleccion.swift in Sources */,
+				836130102B046E200024E6A6 /* VerDetallesVC.swift in Sources */,
 				83943EBA2AF5A91600E9E258 /* HomeVC.swift in Sources */,
 				832299012AFFEFC200F3DF85 /* Recolector.swift in Sources */,
 				B33858F22AFADB2900048E56 /* MapVC.swift in Sources */,

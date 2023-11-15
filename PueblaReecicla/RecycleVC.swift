@@ -26,9 +26,10 @@ class RecycleViewController: UIViewController {
     static let green = UIColor(named: "AccentColor")
     static let red = UIColor(named: "ColorNegativo")
     static let light_green = UIColor(named: "light_green")
+    static let color_fondo = UIColor(named: "ColorDeFondo")
     
     // user id
-    let userID = "user_id_2"  // se debe cambiar por el obtenido en FirebaseAuth
+    static let userID = "user_id_2"  // se debe cambiar por el obtenido en FirebaseAuth
     
     // arreglo para almacenar los elementos del collection view
     var recolecciones: Recolecciones!
@@ -42,6 +43,9 @@ class RecycleViewController: UIViewController {
     
     // referencia al elemento actual del collection view
     var curItem: Recoleccion!
+    
+    // Timer to activate a task every given interval of time
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,11 +87,14 @@ class RecycleViewController: UIViewController {
         
         // Populate the array with sample data
         recolecciones = Recolecciones()
+        
+        timer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateStatusTask), userInfo: nil, repeats: true)
+            
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        recolecciones.loadData(userID: userID) {
+        recolecciones.loadData(userID: RecycleViewController.userID) {
             self.collectionView.reloadData()
         }
     }
@@ -385,22 +392,8 @@ class RecycleViewController: UIViewController {
         // Add an "Accept" action
         let acceptAction = UIAlertAction(title: "Confirmar", style: .default) { (action) in
             // Handle accept action
-            let db = Firestore.firestore()
-            let collection = db.collection("recolecciones")
-            let documentID = self.curItem.documentID
-            // Define the field you want to update
-            let fieldToUpdate = "estado"
-            let updatedValue = RecycleViewController.cancelada
-
-            // Create a dictionary with the field to update
-            let updateData = [fieldToUpdate: updatedValue]
-
-            // Update the document
-            collection.document(documentID).updateData(updateData) { error in
-                if let error = error {
-                    print("Error updating document: \(error)")
-                }
-            }
+            
+            Recolecciones.updateEstado(recoleccion: self.curItem, estado: RecycleViewController.cancelada)
         }
         alertController.addAction(acceptAction)
 
@@ -427,6 +420,39 @@ class RecycleViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    @objc func updateStatusTask() {
+        // print("Async Task")
+        // Get the current date and time in CST
+         let cstTimeZone = TimeZone(identifier: "America/Chicago")!
+        var currentCalendar = Calendar(identifier: .gregorian)
+         currentCalendar.timeZone = cstTimeZone
+         let currentDate = Date()
+
+         let dateFormat = DateFormatter()
+         dateFormat.dateFormat = "dd/MM/yyyy HH:mm"
+
+         // Iterate through itemList and update as needed
+        for item in self.recolecciones.recoleccionArray {
+            let fechaRecoleccionString = item.fechaRecoleccion
+            let horaRecoleccionFinalString = item.horaRecoleccionFinal
+             guard let horaRecoleccionFinal = dateFormat.date(from: "\(fechaRecoleccionString) \(horaRecoleccionFinalString)") else {
+                 fatalError("Error parsing date")
+             }
+
+             if currentDate > horaRecoleccionFinal && item.estado == "Iniciada" && item.estado != "Cancelada" {
+                 // Update the 'estado' attribute to "Cancelada"
+                 let estado = RecycleViewController.cancelada
+                 item.estado = estado
+                 
+                 Recolecciones.updateEstado(recoleccion: item, estado: estado)
+             }
+         }
+     }
+
+    // Don't forget to invalidate the timer when your view controller is deallocated or not needed anymore
+    deinit {
+        timer?.invalidate()
+    }
 
 }
 
@@ -455,10 +481,8 @@ extension RecycleViewController: UICollectionViewDataSource {
         let recoleccion = recolecciones.recoleccionArray[indexPath.row]
         
         let materialesCount = recoleccion.materiales.count
-        var totalMateriales = ""
-        if(materialesCount > 1) {
-            totalMateriales = "\(materialesCount) materiales"
-        } else {
+        var totalMateriales = "\(materialesCount) materiales"
+        if(materialesCount <= 1) {
             totalMateriales = "\(materialesCount) material"
         }
         
