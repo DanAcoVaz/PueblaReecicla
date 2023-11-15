@@ -114,9 +114,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-X5-lVJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-X5-lVJ">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_reciclaje" translatesAutoresizingMaskIntoConstraints="NO" id="ap3-hO-gMD">
                                 <rect key="frame" x="20" y="79" width="80" height="80"/>
@@ -195,16 +194,93 @@
                                     <constraint firstAttribute="height" constant="30" id="jFE-XO-TO7"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJt-bz-zKO" customClass="ViewStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                                <rect key="frame" x="20" y="179" width="353" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrega en persona" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SC2-Lu-35I">
+                                        <rect key="frame" x="53" y="14.333333333333345" width="163" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" name="ColorSecundario"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_user_blue" translatesAutoresizingMaskIntoConstraints="NO" id="Pfi-j7-In9">
+                                        <rect key="frame" x="232" y="5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="L08-kZ-u8Y"/>
+                                            <constraint firstAttribute="height" constant="40" id="qYm-35-1x1"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="17N-2c-D7l"/>
+                                    <constraint firstItem="SC2-Lu-35I" firstAttribute="leading" secondItem="iJt-bz-zKO" secondAttribute="leading" constant="53" id="XhK-gA-REn"/>
+                                    <constraint firstItem="Pfi-j7-In9" firstAttribute="centerY" secondItem="iJt-bz-zKO" secondAttribute="centerY" id="c05-ma-5sd"/>
+                                    <constraint firstItem="SC2-Lu-35I" firstAttribute="centerY" secondItem="iJt-bz-zKO" secondAttribute="centerY" id="gfq-oh-Yyo"/>
+                                    <constraint firstItem="Pfi-j7-In9" firstAttribute="leading" secondItem="SC2-Lu-35I" secondAttribute="trailing" constant="16" id="teJ-wK-xcm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="ColorDeFondo"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Materiales Escogidos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYu-Rb-1WU">
+                                <rect key="frame" x="100.66666666666669" y="245" width="192" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-6S-cHK">
+                                <rect key="frame" x="0.0" y="277" width="393" height="541"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gm1-iE-Nkj">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="iZi-T1-cS1" customClass="MaterialCollectionViewCell" customModule="PueblaReecicla" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="owF-9J-ukk">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TXi-z8-rMe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KcO-WZ-1qr" firstAttribute="trailing" secondItem="TXi-z8-rMe" secondAttribute="trailing" id="2mQ-7J-yiu"/>
+                            <constraint firstItem="6q4-X5-lVJ" firstAttribute="top" secondItem="cgR-Ol-pAI" secondAttribute="top" id="7zP-uf-4NI"/>
+                            <constraint firstAttribute="bottom" secondItem="6q4-X5-lVJ" secondAttribute="bottom" id="8KC-NU-n7o"/>
+                            <constraint firstItem="iJt-bz-zKO" firstAttribute="leading" secondItem="TXi-z8-rMe" secondAttribute="leading" constant="20" id="A6D-Yz-Zoq"/>
                             <constraint firstItem="TXi-z8-rMe" firstAttribute="trailing" secondItem="IiV-Cn-xsg" secondAttribute="trailing" id="AHf-1B-bJD"/>
+                            <constraint firstItem="Eex-6S-cHK" firstAttribute="top" secondItem="lYu-Rb-1WU" secondAttribute="bottom" constant="8" id="C0p-4t-8NP"/>
+                            <constraint firstItem="iJt-bz-zKO" firstAttribute="top" secondItem="ap3-hO-gMD" secondAttribute="bottom" constant="20" id="C5b-p2-fg4"/>
+                            <constraint firstItem="6q4-X5-lVJ" firstAttribute="trailing" secondItem="TXi-z8-rMe" secondAttribute="trailing" id="DHO-fg-VLP"/>
+                            <constraint firstItem="TXi-z8-rMe" firstAttribute="trailing" secondItem="iJt-bz-zKO" secondAttribute="trailing" constant="20" id="EXq-rx-PFB"/>
+                            <constraint firstItem="Eex-6S-cHK" firstAttribute="leading" secondItem="TXi-z8-rMe" secondAttribute="leading" id="Hrn-ZA-5dQ"/>
+                            <constraint firstItem="TXi-z8-rMe" firstAttribute="bottom" secondItem="Eex-6S-cHK" secondAttribute="bottom" id="JM5-yA-Tzt"/>
+                            <constraint firstItem="6q4-X5-lVJ" firstAttribute="leading" secondItem="TXi-z8-rMe" secondAttribute="leading" id="QDg-aZ-a7j"/>
                             <constraint firstItem="ap3-hO-gMD" firstAttribute="leading" secondItem="TXi-z8-rMe" secondAttribute="leading" constant="20" id="RMJ-4D-5y6"/>
                             <constraint firstItem="IiV-Cn-xsg" firstAttribute="leading" secondItem="ap3-hO-gMD" secondAttribute="trailing" id="SzI-yM-gGZ"/>
+                            <constraint firstItem="lYu-Rb-1WU" firstAttribute="top" secondItem="iJt-bz-zKO" secondAttribute="bottom" constant="16" id="bQj-Fj-nam"/>
                             <constraint firstItem="IiV-Cn-xsg" firstAttribute="top" secondItem="TXi-z8-rMe" secondAttribute="top" constant="20" id="dCA-zp-HQ5"/>
+                            <constraint firstItem="TXi-z8-rMe" firstAttribute="trailing" secondItem="Eex-6S-cHK" secondAttribute="trailing" id="dKV-Mf-weR"/>
                             <constraint firstItem="ap3-hO-gMD" firstAttribute="top" secondItem="TXi-z8-rMe" secondAttribute="top" constant="20" id="o9L-KF-nT9"/>
+                            <constraint firstItem="lYu-Rb-1WU" firstAttribute="centerX" secondItem="cgR-Ol-pAI" secondAttribute="centerX" id="p6M-LW-4rU"/>
+                            <constraint firstItem="iJt-bz-zKO" firstAttribute="centerX" secondItem="6q4-X5-lVJ" secondAttribute="centerX" id="rl4-yG-hfc"/>
                             <constraint firstItem="KcO-WZ-1qr" firstAttribute="leading" secondItem="ap3-hO-gMD" secondAttribute="trailing" id="xje-La-Eh2"/>
                             <constraint firstItem="KcO-WZ-1qr" firstAttribute="top" secondItem="IiV-Cn-xsg" secondAttribute="bottom" constant="16" id="zHn-hW-nPj"/>
                         </constraints>
@@ -212,6 +288,9 @@
                     <navigationItem key="navigationItem" title="Ver Detalles" id="VrS-7H-Lh5">
                         <barButtonItem key="backBarButtonItem" title="  " id="xbu-Xa-rTS"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="materialCollectionView" destination="Eex-6S-cHK" id="2Js-ux-qtp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a58-If-qV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,9 +302,16 @@
         <image name="Recycle" width="30" height="30"/>
         <image name="icon_calendar" width="128" height="128"/>
         <image name="icon_clock" width="128" height="128"/>
+        <image name="icon_user_blue" width="252" height="252"/>
         <image name="img_reciclaje" width="120" height="120"/>
         <namedColor name="AccentColor">
             <color red="0.27843137254901962" green="0.72941176470588232" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorDeFondo">
+            <color red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorSecundario">
+            <color red="0.26666666666666666" green="0.53725490196078429" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

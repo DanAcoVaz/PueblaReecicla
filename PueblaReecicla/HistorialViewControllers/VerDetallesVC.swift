@@ -9,10 +9,15 @@ import UIKit
 
 class VerDetallesVC: UIViewController {
 
+    @IBOutlet var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(MaterialCollectionViewCell.nib(), forCellWithReuseIdentifier: MaterialCollectionViewCell.identifier)
+        
     }
     
 
@@ -26,4 +31,38 @@ class VerDetallesVC: UIViewController {
     }
     */
 
+}
+
+// función para manejar el click en una de las recolecciones
+extension VerDetallesVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        print("You tapped me")
+
+    }
+}
+
+// función para establecer los valores decada recolección en el collection view
+extension VerDetallesVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MaterialCollectionViewCell.identifier, for: indexPath) as! MaterialCollectionViewCell
+        
+        cell.configure(with: UIImage(named: "material_aceite_usado")!, nombreM: "Aceite de Auto", unidadM: "Unidad: 4", cantidadM: "Cantidad: 2")
+        
+        return cell
+    }
+    
+}
+
+// función para definir los margenes de cada recolección
+extension VerDetallesVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width - 20 // Adjust left and right margins
+        return CGSize(width: width, height: 140)
+    }
 }
