@@ -17,10 +17,13 @@ class MaterialCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var verFotoBtn: UIButton!
     
+    var verFotoButtonTapped: (() -> Void)?
+    
     static let identifier = "MaterialCollectionViewCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
         fondoRecoleccion.layer.cornerRadius = 20 // se redondea el cuadrado del fondo de la recolección
         fondoRecoleccion.layer.borderWidth = 0.5  // Set the width of the stroke
@@ -30,7 +33,24 @@ class MaterialCollectionViewCell: UICollectionViewCell {
         fondoRecoleccion.backgroundColor = UIColor.white // Set the background color
 
         imgMaterial.layer.cornerRadius = min(imgMaterial.frame.width, imgMaterial.frame.height) / 2.0
-        imgMaterial.layer.masksToBounds = true
+        
+        let borderLayer = CALayer()
+        let borderFrame = CGRect(x: -3.0, y: -3.0, width: imgMaterial.frame.size.height + 6.0, height: imgMaterial.frame.size.height + 6.0)
+        borderLayer.backgroundColor = UIColor.clear.cgColor
+        borderLayer.frame = borderFrame
+        borderLayer.cornerRadius = (imgMaterial.frame.width + 6.0) / 2.0
+        borderLayer.borderWidth = 4.0
+        borderLayer.borderColor = RecycleViewController.blue?.cgColor
+        imgMaterial.layer.addSublayer(borderLayer)
+        
+        imgMaterial.layer.masksToBounds = false
+        
+        verFotoBtn.layer.cornerRadius = 20
+        verFotoBtn.layer.masksToBounds = true
+    }
+    
+    @IBAction func verFoto(_ sender: Any) {
+        verFotoButtonTapped?()
     }
 
     public func configure(with imgM: UIImage, nombreM: String, unidadM: String, cantidadM: String) {
@@ -45,4 +65,5 @@ class MaterialCollectionViewCell: UICollectionViewCell {
     static func nib() -> UINib {
         return UINib(nibName: MaterialCollectionViewCell.identifier, bundle: nil)
     }
+    
 }

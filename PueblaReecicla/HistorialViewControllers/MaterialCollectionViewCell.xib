@@ -22,70 +22,65 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIW-XS-o1O">
                         <rect key="frame" x="0.0" y="0.0" width="465" height="119"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="material_aceite_auto" translatesAutoresizingMaskIntoConstraints="NO" id="w2S-Sh-eum">
-                                <rect key="frame" x="30" y="8" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="JMa-IN-qQK"/>
-                                    <constraint firstAttribute="height" constant="70" id="tvj-eA-rQx"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aceite de Auto" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECZ-Po-9eV">
-                                <rect key="frame" x="10.999999999999993" y="90" width="108.33333333333331" height="19.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <color key="textColor" name="ColorSecundario"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GlE-gK-8oL">
-                                <rect key="frame" x="146.66666666666666" y="29.666666666666671" width="139.99999999999997" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="8zU-hD-sLM">
+                                <rect key="frame" x="11.666666666666657" y="15" width="441.66666666666674" height="89"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidad: Bolsas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdu-w6-Yu0">
-                                        <rect key="frame" x="13.000000000000007" y="0.0" width="113.66666666666669" height="35"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Cantidad: 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7e-fi-gf5">
-                                        <rect key="frame" x="25.666666666666679" y="39" width="88.333333333333314" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bre-wv-87z">
+                                        <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="89"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="material_aceite_auto" translatesAutoresizingMaskIntoConstraints="NO" id="w2S-Sh-eum">
+                                                <rect key="frame" x="37.333333333333343" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="vPK-0L-spe"/>
+                                                    <constraint firstAttribute="width" secondItem="w2S-Sh-eum" secondAttribute="height" multiplier="731:730" id="xMk-4A-ECW"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aceite de Auto" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECZ-Po-9eV">
+                                                <rect key="frame" x="19.000000000000007" y="72" width="96.666666666666686" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" name="ColorSecundario"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="coP-u2-wjk">
+                                        <rect key="frame" x="153.66666666666669" y="22.666666666666664" width="134.33333333333331" height="43.999999999999993"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidad: Bolsas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdu-w6-Yu0">
+                                                <rect key="frame" x="15.999999999999993" y="0.0" width="102.33333333333331" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Cantidad: 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7e-fi-gf5">
+                                                <rect key="frame" x="27.333333333333321" y="26" width="79.666666666666686" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rve-xT-Sn8">
+                                        <rect key="frame" x="307" y="24.666666666666664" width="134.66666666666663" height="39.999999999999993"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="dAn-n7-PcP"/>
+                                        </constraints>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Ver Foto">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="verFoto:" destination="gTV-IL-0wX" eventType="touchUpInside" id="YHi-Gf-bUZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="E7e-fi-gf5" firstAttribute="centerX" secondItem="GlE-gK-8oL" secondAttribute="centerX" id="03H-OC-Ogv"/>
-                                    <constraint firstAttribute="bottom" secondItem="E7e-fi-gf5" secondAttribute="bottom" id="Hur-EW-CIE"/>
-                                    <constraint firstItem="Hdu-w6-Yu0" firstAttribute="top" secondItem="GlE-gK-8oL" secondAttribute="top" id="VcN-y6-9yh"/>
-                                    <constraint firstItem="Hdu-w6-Yu0" firstAttribute="centerX" secondItem="GlE-gK-8oL" secondAttribute="centerX" id="eVr-Kq-5GH"/>
-                                    <constraint firstItem="E7e-fi-gf5" firstAttribute="top" secondItem="Hdu-w6-Yu0" secondAttribute="bottom" constant="4" id="gIz-xX-8eM"/>
-                                    <constraint firstAttribute="height" constant="60" id="w4H-Kh-LF1"/>
-                                    <constraint firstAttribute="width" constant="140" id="y4S-Jn-MlA"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rve-xT-Sn8">
-                                <rect key="frame" x="302.66666666666669" y="39.666666666666664" width="142.33333333333331" height="39.999999999999993"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="LFX-0L-PaP"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Ver Foto">
-                                    <backgroundConfiguration key="background" cornerRadius="20">
-                                        <color key="backgroundColor" red="0.2784313725" green="0.72941176470000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
-                                </buttonConfiguration>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="w2S-Sh-eum" firstAttribute="top" secondItem="IIW-XS-o1O" secondAttribute="top" constant="8" id="3Lb-mk-Jla"/>
-                            <constraint firstItem="w2S-Sh-eum" firstAttribute="leading" secondItem="IIW-XS-o1O" secondAttribute="leading" constant="30" id="5Ab-TJ-IH0"/>
-                            <constraint firstItem="GlE-gK-8oL" firstAttribute="centerY" secondItem="IIW-XS-o1O" secondAttribute="centerY" id="6aV-jh-upt"/>
-                            <constraint firstItem="ECZ-Po-9eV" firstAttribute="top" secondItem="w2S-Sh-eum" secondAttribute="bottom" constant="12" id="Gya-bL-9LJ"/>
-                            <constraint firstAttribute="trailing" secondItem="Rve-xT-Sn8" secondAttribute="trailing" constant="20" id="PG2-F1-Q1A"/>
-                            <constraint firstItem="GlE-gK-8oL" firstAttribute="centerX" secondItem="IIW-XS-o1O" secondAttribute="centerX" constant="-16" id="Rzv-fV-Kh2"/>
-                            <constraint firstItem="Rve-xT-Sn8" firstAttribute="centerY" secondItem="IIW-XS-o1O" secondAttribute="centerY" id="bCs-DH-q2l"/>
-                            <constraint firstItem="ECZ-Po-9eV" firstAttribute="centerX" secondItem="w2S-Sh-eum" secondAttribute="centerX" id="pqu-Iq-USE"/>
-                            <constraint firstItem="Rve-xT-Sn8" firstAttribute="leading" secondItem="GlE-gK-8oL" secondAttribute="trailing" constant="16" id="sXz-ZT-XYt"/>
+                            <constraint firstItem="8zU-hD-sLM" firstAttribute="centerY" secondItem="IIW-XS-o1O" secondAttribute="centerY" id="knd-6m-1MG"/>
+                            <constraint firstItem="8zU-hD-sLM" firstAttribute="centerX" secondItem="IIW-XS-o1O" secondAttribute="centerX" id="vht-jR-L2L"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -93,6 +88,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="IIW-XS-o1O" secondAttribute="bottom" id="Jg8-Ol-zd4"/>
+                <constraint firstItem="8zU-hD-sLM" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" multiplier="0.95" id="Lcz-9O-k8i"/>
                 <constraint firstItem="IIW-XS-o1O" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SIw-HS-cEC"/>
                 <constraint firstAttribute="trailing" secondItem="IIW-XS-o1O" secondAttribute="trailing" id="le4-GV-yqa"/>
                 <constraint firstItem="IIW-XS-o1O" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lrK-ZA-WP3"/>
@@ -111,6 +107,9 @@
     </objects>
     <resources>
         <image name="material_aceite_auto" width="731" height="730"/>
+        <namedColor name="AccentColor">
+            <color red="0.27843137254901962" green="0.72941176470588232" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ColorSecundario">
             <color red="0.26666666666666666" green="0.53725490196078429" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

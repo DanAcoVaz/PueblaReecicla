@@ -115,6 +115,9 @@ class RecycleViewController: UIViewController {
             popUpIniciada.cancelarBtn.addTarget(self, action: #selector(cancelarBtn), for: .touchUpInside)
             self.view.addSubview(popUpIniciada)
             
+            popUpIniciada.verDetallesBtn.addTarget(self, action: #selector(verDetallesBtn), for: .touchUpInside)
+            self.view.addSubview(popUpIniciada)
+            
             
             // Add tap gesture recognizer to handle taps outside the popup
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopup))
@@ -133,8 +136,11 @@ class RecycleViewController: UIViewController {
 
             
             popUpEnProceso.isUserInteractionEnabled = true
-            // inicializar PopUps
+            // agregar funciones a los botones
             popUpEnProceso.continuarBtn.addTarget(self, action: #selector(continuarBtn), for: .touchUpInside)
+            self.view.addSubview(popUpEnProceso)
+            
+            popUpEnProceso.verDetallesBtn.addTarget(self, action: #selector(verDetallesBtn), for: .touchUpInside)
             self.view.addSubview(popUpEnProceso)
             
             // Add tap gesture recognizer to handle taps outside the popup
@@ -154,6 +160,9 @@ class RecycleViewController: UIViewController {
                 popUpCompletada.continuarButton.addTarget(self, action: #selector(continuarBtn), for: .touchUpInside)
                 self.view.addSubview(popUpCompletada)
                 
+                popUpCompletada.verDetallesButton.addTarget(self, action: #selector(verDetallesBtn), for: .touchUpInside)
+                self.view.addSubview(popUpCompletada)
+                
                 // Add tap gesture recognizer to handle taps outside the popup
                 let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopup))
                 tapGestureRecognizer.cancelsTouchesInView = false
@@ -162,6 +171,9 @@ class RecycleViewController: UIViewController {
                 popUpCompletadaSinCalif.isUserInteractionEnabled = true
                 // inicializar PopUps
                 popUpCompletadaSinCalif.continuarBtn.addTarget(self, action: #selector(continuarBtn), for: .touchUpInside)
+                self.view.addSubview(popUpCompletadaSinCalif)
+                
+                popUpCompletadaSinCalif.verDetalles.addTarget(self, action: #selector(verDetallesBtn), for: .touchUpInside)
                 self.view.addSubview(popUpCompletadaSinCalif)
                 
                 // Add tap gesture recognizer to handle taps outside the popup
@@ -180,12 +192,31 @@ class RecycleViewController: UIViewController {
             popUpCancelada.verCentrosBtn.addTarget(self, action: #selector(verCentrosBtn), for: .touchUpInside)
             self.view.addSubview(popUpCancelada)
             
+            popUpCancelada.verDetallesBtn.addTarget(self, action: #selector(verDetallesBtn), for: .touchUpInside)
+            self.view.addSubview(popUpCancelada)
             
             // Add tap gesture recognizer to handle taps outside the popup
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsidePopup))
             tapGestureRecognizer.cancelsTouchesInView = false
             popUpCancelada.addGestureRecognizer(tapGestureRecognizer)
                 
+        }
+        
+    }
+    
+    @objc func verDetallesBtn(){
+        popUpIniciada.removeFromSuperview()
+        popUpCancelada.removeFromSuperview()
+        popUpCompletada.removeFromSuperview()
+        popUpEnProceso.removeFromSuperview()
+        popUpCompletadaSinCalif.removeFromSuperview()
+        // Programmatically navigate to VerDetallesViewController
+        let storyboard = UIStoryboard(name: "Recycle", bundle: nil)
+        if let verDetallesViewController = storyboard.instantiateViewController(withIdentifier: "VerDetalles") as? VerDetallesVC {
+            // Set the data on the destination view controller
+            verDetallesViewController.materiales = self.curItem.materiales
+            verDetallesViewController.curItem = self.curItem
+            self.navigationController?.pushViewController(verDetallesViewController, animated: true)
         }
         
     }
@@ -460,11 +491,9 @@ class RecycleViewController: UIViewController {
 extension RecycleViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        
         let recoleccion = recolecciones.recoleccionArray[indexPath.row]
         
         showCorrectPopup(recoleccion: recoleccion)
-        
     }
 }
 
@@ -497,7 +526,7 @@ extension RecycleViewController: UICollectionViewDataSource {
 // función para definir los margenes de cada recolección
 extension RecycleViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width - 20 // Adjust left and right margins
+        let width = collectionView.frame.width - 16 // Adjust left and right margins
         return CGSize(width: width, height: 140)
     }
 }
