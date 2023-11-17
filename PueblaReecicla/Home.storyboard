@@ -13,7 +13,7 @@
         <!--HomeTab-->
         <scene sceneID="fgy-yF-qoi">
             <objects>
-                <tabBarController storyboardIdentifier="HomeTab" title="HomeTab" id="Fu0-il-fnY" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeTab" title="HomeTab" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fu0-il-fnY" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="DUv-Pg-Gx8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -76,7 +76,7 @@
         <!--Home-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="Home" title="Home" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,25 +124,40 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZa-Ej-PpL">
+                                <rect key="frame" x="132.66666666666666" y="357.33333333333331" width="127.66666666666666" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cerrar Sesión" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" name="ColorNegativo"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeSessionButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kcb-Bg-jmb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="UZa-Ej-PpL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0GP-Uh-U45"/>
                             <constraint firstItem="ApK-zC-UXA" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="0dZ-YK-3O3"/>
                             <constraint firstItem="ApK-zC-UXA" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="6eV-lZ-guv"/>
                             <constraint firstItem="r9a-dO-VPo" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" multiplier="0.7" id="78j-sf-AgG"/>
                             <constraint firstAttribute="trailing" secondItem="ApK-zC-UXA" secondAttribute="trailing" id="Niu-kd-Tnt"/>
                             <constraint firstAttribute="bottom" secondItem="ApK-zC-UXA" secondAttribute="bottom" id="Rfe-xv-V2T"/>
+                            <constraint firstItem="UZa-Ej-PpL" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="e00-5l-Bv6"/>
                             <constraint firstItem="r9a-dO-VPo" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.15" id="m2r-Lv-t9d"/>
                             <constraint firstItem="ApK-zC-UXA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="sJO-SW-Kzy"/>
                             <constraint firstItem="ApK-zC-UXA" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="tWg-zj-azD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Inicio" id="2Y3-2Y-ZXg"/>
+                    <connections>
+                        <outlet property="closeSessionButton" destination="UZa-Ej-PpL" id="JP1-k9-YTq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-595" y="-137"/>
+            <point key="canvasLocation" x="-596.18320610687022" y="-137.32394366197184"/>
         </scene>
         <!--Map-->
         <scene sceneID="9Bk-WM-YAY">
@@ -179,10 +194,13 @@
         <image name="FONDO-B-PRESENTA" width="1414" height="2508"/>
         <image name="Home" width="30" height="30"/>
         <namedColor name="AccentColor">
-            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorNegativo">
+            <color red="0.89411764705882357" green="0.11764705882352941" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

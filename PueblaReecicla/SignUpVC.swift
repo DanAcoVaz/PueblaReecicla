@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+
 
 extension UITextField {
     func setPreferences() {
@@ -15,6 +18,24 @@ extension UITextField {
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 17
         self.clipsToBounds = true
+    }
+    
+    func isValidEmail() -> Bool {
+        // Basic email validation using a regular expression
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self.text)
+    }
+    
+    func isValidPhoneNumber() -> Bool {
+        // Validate that the phone number has exactly 10 digits
+        let phoneRegex = "^\\d{10}$"
+        return NSPredicate(format: "SELF MATCHES %@", phoneRegex).evaluate(with: self.text)
+    }
+    
+    func isValidPassword() -> Bool {
+        // Validate password: minimum 8 characters, at least one uppercase letter, and at least one digit
+        let passwordRegex = "^(?=.*[A-Z])(?=.*\\d).{8,}$"
+        return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: self.text)
     }
 }
 
@@ -62,11 +83,16 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             setDestructiveAlert(alertTitle: "Error", alertMessage: "No has aceptado los términos y condiciones y/o la política de privacidad")
         } else if passwordTxt.text! != confirmpwdTxt.text! {
             setDestructiveAlert(alertTitle: "Error", alertMessage: "Las contraseñas no coinciden")
+        } else if !emailTxt.isValidEmail() {
+            setDestructiveAlert(alertTitle: "Error", alertMessage: "Correo electrónico no válido")
+        } else if !phoneTxt.isValidPhoneNumber() {
+            setDestructiveAlert(alertTitle: "Error", alertMessage: "Número de teléfono inválido. Debe tener 10 dígitos.")
+        } else if !passwordTxt.isValidPassword() {
+            setDestructiveAlert(alertTitle: "Error", alertMessage: "Contraseña inválida. Debe tener al menos 8 caracteres, una mayúscula y un número.")
         } else {
             let alert = UIAlertController(title: "¿Confirmar registro?", message: "¿Desea confirmar el registro de su cuenta?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("Cancelar", comment: "Default action"), style: .cancel, handler: nil))
             alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { action in
-                
                 self.confirmSignUp()
             }))
             self.present(alert, animated: true, completion: nil)
@@ -74,28 +100,59 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     func confirmSignUp() {
-        let confirmAlert = UIAlertController(title: "Activa tu cuenta", message: "Te hemos enviado un correo de confirmación con un código al correo que proporcionaste. Introduce el código a continuación para activar tu cuenta:" , preferredStyle: .alert)
-        confirmAlert.addTextField { (textField) in
-            textField.text = ""
+        if let email = emailTxt.text, let password = passwordTxt.text{
+            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                if let result = result, error == nil {
+                    //Extract UID from result
+                    let uid = result.user.uid
+                    //Create a Firestore document for the user
+                    let db = Firestore.firestore()
+                    let userRef = db.collection("usuarios").document(uid)
+                    //Set additional user data
+                    let userData: [String: Any] = [
+                        "nombre_s": self.nameTxt.text!,
+                        "apellido_s": self.lastnameTxt.text!,
+                        "correo": self.emailTxt.text!,
+                        "telefono": self.phoneTxt.text!,
+                        "fecha_nacimiento": self.bdayPicker.date,
+                        "rank_points": 0,
+                        "highest1": 0,
+                    ]
+                    //Save data to Firestore
+                    userRef.setData(userData)
+                    
+                    let confirmAlert = UIAlertController(title: "Activa tu cuenta", message: "Te hemos enviado un correo de confirmación con un código al correo que proporcionaste. Introduce el código a continuación para activar tu cuenta:" , preferredStyle: .alert)
+                    confirmAlert.addTextField { (textField) in
+                        textField.text = ""
+                    }
+                    confirmAlert.addAction(UIAlertAction(title: "Activar", style: .default, handler: { [weak confirmAlert] (_) in
+                        let textField = confirmAlert?.textFields![0]
+                        //Acciones a realizar al pulsar el boton activar en la alerta:
+                        
+                        //print("Text field: \(textField?.text)")
+                        
+                        //Mostrar que se ha activado la cuenta
+                        
+                        let activeAlert = UIAlertController(title: "Cuenta Activada", message: "Listo! Has concluido el proceso de registro. Puedes comenzar a usar la aplicación", preferredStyle: .alert)
+                        activeAlert.addAction(UIAlertAction(title: "Continuar", style: .default, handler: { action in
+                            
+                            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                            let vc = storyboard.instantiateViewController(withIdentifier: "HomeTab")
+                            vc.modalPresentationStyle = .overFullScreen
+                            self.present(vc, animated: true)
+                            
+                        }))
+                        self.present(activeAlert, animated: true)
+                    }))
+                    self.present(confirmAlert, animated: true, completion: nil)
+                } else {
+                    let alertController = UIAlertController(title: "Error", message:
+                                                                "Se ha producido un error registrando al usuario", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
         }
-        confirmAlert.addAction(UIAlertAction(title: "Activar", style: .default, handler: { [weak confirmAlert] (_) in
-            let textField = confirmAlert?.textFields![0]
-            //Acciones a realizar al pulsar el boton activar en la alerta:
-            
-            //print("Text field: \(textField?.text)")
-            
-            //Mostrar que se ha activado la cuenta
-            
-            let activeAlert = UIAlertController(title: "Cuenta Activada", message: "Listo! Has concluido el proceso de registro. Puedes comenzar a usar la aplicación", preferredStyle: .alert)
-            activeAlert.addAction(UIAlertAction(title: "Continuar", style: .default, handler: { action in
-                
-                let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeTab") //as? HomeViewController
-                homeVC?.modalPresentationStyle = .fullScreen
-                self.navigationController?.present(homeVC!, animated: true)
-            }))
-            self.present(activeAlert, animated: true)
-        }))
-        self.present(confirmAlert, animated: true, completion: nil)
     }
     
 

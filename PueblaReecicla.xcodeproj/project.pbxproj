@@ -40,6 +40,7 @@
 		B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D42542AFC1DEF002F7479 /* RecycleVC.swift */; };
 		B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D42562AFC1EE9002F7479 /* Settings.storyboard */; };
 		B37D42592AFC1F76002F7479 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D42582AFC1F76002F7479 /* SettingsVC.swift */; };
+		FBA8E1242B06DC340091638D /* LaunchScreen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA8E1232B06DC340091638D /* LaunchScreen2.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		B37D42542AFC1DEF002F7479 /* RecycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleVC.swift; sourceTree = "<group>"; };
 		B37D42562AFC1EE9002F7479 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		B37D42582AFC1F76002F7479 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		FBA8E1232B06DC340091638D /* LaunchScreen2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen2.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				83582B102AF2F5E7006E57A8 /* splashScreenReecicla.png */,
 				832298F62AFFDC4600F3DF85 /* GoogleService-Info.plist */,
 				832298EB2AFEED2D00F3DF85 /* HistorialItemCell.xib */,
+				FBA8E1232B06DC340091638D /* LaunchScreen2.storyboard */,
 			);
 			path = PueblaReecicla;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				83943EB82AF5A90800E9E258 /* Home.storyboard in Resources */,
 				B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */,
 				83582B112AF2F5E7006E57A8 /* splashScreenReecicla.png in Resources */,
+				FBA8E1242B06DC340091638D /* LaunchScreen2.storyboard in Resources */,
 				832298F72AFFDC4600F3DF85 /* GoogleService-Info.plist in Resources */,
 				83582B0D2AF2C31A006E57A8 /* testViewController.xib in Resources */,
 				83C1343B2AFEBB66008FBFDB /* HistorialCollectionViewCell.xib in Resources */,

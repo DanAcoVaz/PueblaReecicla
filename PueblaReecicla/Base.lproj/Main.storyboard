@@ -13,7 +13,7 @@
         <!--Iniciar Sesión-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Eres nuevo usuario?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2Z-Pu-y8Y">
-                                <rect key="frame" x="48" y="418.66666666666663" width="199" height="24"/>
+                                <rect key="frame" x="48" y="438.66666666666663" width="199" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -60,8 +60,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQb-rn-bAA">
-                                <rect key="frame" x="56.666666666666657" y="476.66666666666663" width="280" height="57.666666666666629"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxz-aB-TL6">
+                                <rect key="frame" x="265.33333333333331" y="438.66666666666663" width="98" height="24"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7Oj-U7-PdC" appends="YES" id="C0H-tb-m0B"/>
+                                </connections>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvv-4X-yUM">
+                                <rect key="frame" x="56.666666666666657" y="365.66666666666669" width="280" height="57.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="xRE-1z-zbA"/>
+                                </constraints>
+                                <color key="tintColor" name="ColorNegativo"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule" buttonSize="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Ingresar con Google">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="24" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQb-rn-bAA">
+                                <rect key="frame" x="56" y="290" width="280" height="57.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="5OI-vC-8ZN"/>
                                 </constraints>
@@ -70,7 +99,7 @@
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule" buttonSize="large">
                                     <backgroundConfiguration key="background"/>
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Continuar">
+                                        <fragment content="Ingresar">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <font key="NSFont" size="24" name="Helvetica-Bold"/>
@@ -84,26 +113,17 @@
                                     <action selector="logInTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PBH-5t-Sh0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxz-aB-TL6">
-                                <rect key="frame" x="265.33333333333331" y="418.66666666666663" width="98" height="24"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" name="AccentColor"/>
-                                <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="7Oj-U7-PdC" appends="YES" id="C0H-tb-m0B"/>
-                                </connections>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iQb-rn-bAA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.35" id="3d4-ps-3EB"/>
-                            <constraint firstItem="D2Z-Pu-y8Y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.15" id="5wT-uz-AHt"/>
+                            <constraint firstItem="iQb-rn-bAA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.35" constant="-187.69999999999999" id="3d4-ps-3EB"/>
+                            <constraint firstItem="D2Z-Pu-y8Y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.15" constant="20" id="5wT-uz-AHt"/>
                             <constraint firstItem="EhC-kA-zVm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6qg-Wn-lsA"/>
                             <constraint firstItem="EhC-kA-zVm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BZ3-6r-McV"/>
                             <constraint firstItem="3Rg-bJ-izo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.63" id="CRm-tB-GA7"/>
                             <constraint firstAttribute="trailing" secondItem="EhC-kA-zVm" secondAttribute="trailing" id="KVK-9p-9Lt"/>
+                            <constraint firstItem="Tvv-4X-yUM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="KXh-Ua-L59"/>
                             <constraint firstItem="DvO-Cn-x3S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.2" id="Mas-Rc-ndf"/>
                             <constraint firstItem="xUV-O6-wlN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="Mga-pt-gke"/>
                             <constraint firstItem="EhC-kA-zVm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T1i-0V-JQa"/>
@@ -111,10 +131,11 @@
                             <constraint firstItem="Vxz-aB-TL6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.6" id="g5b-UL-DKP"/>
                             <constraint firstItem="EhC-kA-zVm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gcy-fW-Tgz"/>
                             <constraint firstItem="KzZ-No-jMu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.97" id="iT9-fr-jlR"/>
+                            <constraint firstItem="Tvv-4X-yUM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lGr-vi-nLv"/>
                             <constraint firstItem="3Rg-bJ-izo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.97" id="mEH-fd-xJa"/>
                             <constraint firstItem="DvO-Cn-x3S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="miB-DN-Ah1"/>
                             <constraint firstItem="D2Z-Pu-y8Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.75" id="n11-2I-G67"/>
-                            <constraint firstItem="Vxz-aB-TL6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.15" id="rnJ-en-cjp"/>
+                            <constraint firstItem="Vxz-aB-TL6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.15" constant="20" id="rnJ-en-cjp"/>
                             <constraint firstAttribute="bottom" secondItem="EhC-kA-zVm" secondAttribute="bottom" id="w1K-t8-lgt"/>
                             <constraint firstItem="xUV-O6-wlN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.6" id="xry-cB-kFh"/>
                             <constraint firstItem="KzZ-No-jMu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.33" id="zYR-Z2-vTP"/>
@@ -429,7 +450,10 @@
     <resources>
         <image name="FONDO-B-PRESENTA" width="1414" height="2508"/>
         <namedColor name="AccentColor">
-            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorNegativo">
+            <color red="0.89411764705882357" green="0.11764705882352941" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
