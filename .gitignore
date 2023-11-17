@@ -17,6 +17,8 @@ DerivedData/
 *.ipa
 *.xccheckout
 *.xcscmblueprint
+./PueblaReecicla.xcodeproj/xcuserdata/Alumno.xcuserdatad/xcschemes/xcschememanagement.plist
+PueblaReecicla.xcodeproj/xcuserdata/Alumno.xcuserdatad/ 
 
 # CocoaPods
 Pods/
