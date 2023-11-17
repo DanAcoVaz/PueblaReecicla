@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -58,21 +59,57 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="gLk-k0-3uN">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                             </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWo-LM-3I8">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="698"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLa-XF-8Si" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                                <rect key="frame" x="76" y="622" width="241" height="35"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="FILTROS">
+                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="QED-4F-6Ig" appends="YES" id="uPg-eT-dmj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gLk-k0-3uN" secondAttribute="trailing" id="DIZ-py-t93"/>
+                            <constraint firstItem="jLa-XF-8Si" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="622" id="Wa1-Vc-MNa"/>
                             <constraint firstAttribute="bottom" secondItem="gLk-k0-3uN" secondAttribute="bottom" id="Wai-dh-MYH"/>
+                            <constraint firstItem="jLa-XF-8Si" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="76" id="YKs-Ez-AXR"/>
+                            <constraint firstItem="jLa-XF-8Si" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.613232" id="faM-th-Ofv"/>
                             <constraint firstItem="gLk-k0-3uN" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="h7I-Ob-UVN"/>
+                            <constraint firstItem="jLa-XF-8Si" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.046729" id="hjN-rl-GXR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jLa-XF-8Si" secondAttribute="trailing" constant="76" id="uyj-pp-3Ie"/>
                             <constraint firstItem="gLk-k0-3uN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xPm-Z3-rv8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mapa de Reciclaje" id="ZoV-ZJ-5ao"/>
+                    <connections>
+                        <outlet property="FiltersButton" destination="jLa-XF-8Si" id="Bxq-Fv-y8F"/>
+                        <outlet property="MapOS" destination="bWo-LM-3I8" id="b7i-5d-rJ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="QED-4F-6Ig">
+                    <connections>
+                        <action selector="openCategorySheet:" destination="Y6W-OH-hqX" id="O4m-s5-dJd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="138" y="4"/>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
