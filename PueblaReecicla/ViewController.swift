@@ -12,7 +12,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var signUpLbl: UILabel!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()

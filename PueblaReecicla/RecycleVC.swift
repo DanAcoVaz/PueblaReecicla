@@ -14,6 +14,10 @@ class RecycleViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
     
+    @IBOutlet weak var newOrderBtn: UIButton!
+    
+    static var activityIndicator: UIActivityIndicatorView!
+    
     // constantes para definir los estas de las recolecciones
     static let iniciada = "Iniciada"
     static let enProceso = "En Proceso"
@@ -49,6 +53,19 @@ class RecycleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.backButtonDisplayMode = .minimal
+        
+        RecycleViewController.activityIndicator = UIActivityIndicatorView(style: .large)
+        RecycleViewController.activityIndicator.center = view.center
+        RecycleViewController.activityIndicator.color = RecycleViewController.green
+        RecycleViewController.activityIndicator.hidesWhenStopped = true
+        self.view.addSubview(RecycleViewController.activityIndicator)
+    
+        newOrderBtn.layer.shadowColor = UIColor.black.cgColor
+        newOrderBtn.layer.shadowOpacity = 0.5
+        newOrderBtn.layer.shadowOffset = CGSize(width: 0, height: 2)
+        newOrderBtn.layer.shadowRadius = 4
         
         // inicializan los Popups
         // INICIADA

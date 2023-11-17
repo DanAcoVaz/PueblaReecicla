@@ -18,9 +18,12 @@ class Recolecciones {
     }
     
     func loadData(userID: String,completed: @escaping () -> ()) {
+        RecycleViewController.activityIndicator.startAnimating()
+        
         db.collection("recolecciones").whereField("idUsuarioCliente", isEqualTo: userID).order(by: "timeStamp", descending: true).limit(to: 50).addSnapshotListener { (querySnapshot, error) in
             guard error == nil else {
                 print("ERROR: adding the snapshot listener \(error!.localizedDescription)")
+                RecycleViewController.activityIndicator.stopAnimating()
                 return completed()
             }
             
@@ -41,6 +44,7 @@ class Recolecciones {
                 
                 self.recoleccionArray.append(recoleccion)
             }
+            RecycleViewController.activityIndicator.stopAnimating()
             return completed()
         }
     }

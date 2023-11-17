@@ -38,6 +38,7 @@
 		836130162B0556C00024E6A6 /* MaterialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836130142B0556C00024E6A6 /* MaterialCollectionViewCell.xib */; };
 		836130182B0692E00024E6A6 /* VD_verFoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836130172B0692E00024E6A6 /* VD_verFoto.xib */; };
 		8361301A2B0692EC0024E6A6 /* VD_verFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836130192B0692EC0024E6A6 /* VD_verFoto.swift */; };
+		8361301F2B06B6F30024E6A6 /* HorarioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8361301E2B06B6F30024E6A6 /* HorarioVC.swift */; };
 		836313CC2B02D48300382606 /* RV_completada.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836313CA2B02D48300382606 /* RV_completada.xib */; };
 		836313CD2B02D48300382606 /* RV_completada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836313CB2B02D48300382606 /* RV_completada.swift */; };
 		836313D32B030E6300382606 /* RV_comp_sinCalif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836313D22B030E6300382606 /* RV_comp_sinCalif.swift */; };
@@ -106,6 +107,7 @@
 		836130142B0556C00024E6A6 /* MaterialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialCollectionViewCell.xib; sourceTree = "<group>"; };
 		836130172B0692E00024E6A6 /* VD_verFoto.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VD_verFoto.xib; sourceTree = "<group>"; };
 		836130192B0692EC0024E6A6 /* VD_verFoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VD_verFoto.swift; sourceTree = "<group>"; };
+		8361301E2B06B6F30024E6A6 /* HorarioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioVC.swift; sourceTree = "<group>"; };
 		836313CA2B02D48300382606 /* RV_completada.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RV_completada.xib; sourceTree = "<group>"; };
 		836313CB2B02D48300382606 /* RV_completada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RV_completada.swift; sourceTree = "<group>"; };
 		836313D22B030E6300382606 /* RV_comp_sinCalif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RV_comp_sinCalif.swift; sourceTree = "<group>"; };
@@ -231,8 +233,6 @@
 				8361300E2B046DA20024E6A6 /* HistorialViewControllers */,
 				B37D42542AFC1DEF002F7479 /* RecycleVC.swift */,
 				B37D42522AFC1CF5002F7479 /* Recycle.storyboard */,
-				83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */,
-				83C134392AFEBB66008FBFDB /* HistorialCollectionViewCell.xib */,
 				B37D42562AFC1EE9002F7479 /* Settings.storyboard */,
 				B37D42582AFC1F76002F7479 /* SettingsVC.swift */,
 				83582AE12AF1A902006E57A8 /* Assets.xcassets */,
@@ -265,11 +265,22 @@
 		8361300E2B046DA20024E6A6 /* HistorialViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8361301B2B06B63C0024E6A6 /* CollectionViewsElements */,
 				8361300F2B046E200024E6A6 /* VerDetallesVC.swift */,
-				836130132B0556C00024E6A6 /* MaterialCollectionViewCell.swift */,
-				836130142B0556C00024E6A6 /* MaterialCollectionViewCell.xib */,
+				8361301E2B06B6F30024E6A6 /* HorarioVC.swift */,
 			);
 			path = HistorialViewControllers;
+			sourceTree = "<group>";
+		};
+		8361301B2B06B63C0024E6A6 /* CollectionViewsElements */ = {
+			isa = PBXGroup;
+			children = (
+				836130132B0556C00024E6A6 /* MaterialCollectionViewCell.swift */,
+				836130142B0556C00024E6A6 /* MaterialCollectionViewCell.xib */,
+				83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */,
+				83C134392AFEBB66008FBFDB /* HistorialCollectionViewCell.xib */,
+			);
+			path = CollectionViewsElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +445,7 @@
 				836130152B0556C00024E6A6 /* MaterialCollectionViewCell.swift in Sources */,
 				836313CD2B02D48300382606 /* RV_completada.swift in Sources */,
 				83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */,
+				8361301F2B06B6F30024E6A6 /* HorarioVC.swift in Sources */,
 				8361301A2B0692EC0024E6A6 /* VD_verFoto.swift in Sources */,
 				832299082B003A2000F3DF85 /* RV_iniciada.swift in Sources */,
 				B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */,
