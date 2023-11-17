@@ -40,6 +40,18 @@
 		B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D42542AFC1DEF002F7479 /* RecycleVC.swift */; };
 		B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D42562AFC1EE9002F7479 /* Settings.storyboard */; };
 		B37D42592AFC1F76002F7479 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D42582AFC1F76002F7479 /* SettingsVC.swift */; };
+		FB41CB912B08006000CE5949 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB902B08006000CE5949 /* Center.swift */; };
+		FB41CB9D2B08008300CE5949 /* CustomWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB922B08008200CE5949 /* CustomWindowView.swift */; };
+		FB41CB9E2B08008300CE5949 /* CustomInfoCenters.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB41CB932B08008300CE5949 /* CustomInfoCenters.xib */; };
+		FB41CB9F2B08008300CE5949 /* StyleCenterPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB942B08008300CE5949 /* StyleCenterPopUp.swift */; };
+		FB41CBA02B08008300CE5949 /* CustomWindowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB41CB952B08008300CE5949 /* CustomWindowView.xib */; };
+		FB41CBA12B08008300CE5949 /* DialogSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB962B08008300CE5949 /* DialogSheet.swift */; };
+		FB41CBA22B08008300CE5949 /* CenterPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB41CB972B08008300CE5949 /* CenterPopUp.xib */; };
+		FB41CBA32B08008300CE5949 /* WindowCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB982B08008300CE5949 /* WindowCenter.swift */; };
+		FB41CBA42B08008300CE5949 /* DialogSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB41CB992B08008300CE5949 /* DialogSheet.xib */; };
+		FB41CBA52B08008300CE5949 /* CustomInfoCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB9A2B08008300CE5949 /* CustomInfoCenter.swift */; };
+		FB41CBA62B08008300CE5949 /* CategoryBottomSheetDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB9B2B08008300CE5949 /* CategoryBottomSheetDialog.swift */; };
+		FB41CBA72B08008300CE5949 /* CenterPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB9C2B08008300CE5949 /* CenterPopup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +105,18 @@
 		B37D42542AFC1DEF002F7479 /* RecycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleVC.swift; sourceTree = "<group>"; };
 		B37D42562AFC1EE9002F7479 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		B37D42582AFC1F76002F7479 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		FB41CB902B08006000CE5949 /* Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Center.swift; path = ../../../Desktop/Josafat/Center.swift; sourceTree = "<group>"; };
+		FB41CB922B08008200CE5949 /* CustomWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomWindowView.swift; path = ../../../Desktop/Josafat/CustomWindowView.swift; sourceTree = "<group>"; };
+		FB41CB932B08008300CE5949 /* CustomInfoCenters.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomInfoCenters.xib; path = ../../../Desktop/Josafat/CustomInfoCenters.xib; sourceTree = "<group>"; };
+		FB41CB942B08008300CE5949 /* StyleCenterPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleCenterPopUp.swift; path = ../../../Desktop/Josafat/StyleCenterPopUp.swift; sourceTree = "<group>"; };
+		FB41CB952B08008300CE5949 /* CustomWindowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomWindowView.xib; path = ../../../Desktop/Josafat/CustomWindowView.xib; sourceTree = "<group>"; };
+		FB41CB962B08008300CE5949 /* DialogSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DialogSheet.swift; path = ../../../Desktop/Josafat/DialogSheet.swift; sourceTree = "<group>"; };
+		FB41CB972B08008300CE5949 /* CenterPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CenterPopUp.xib; path = ../../../Desktop/Josafat/CenterPopUp.xib; sourceTree = "<group>"; };
+		FB41CB982B08008300CE5949 /* WindowCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WindowCenter.swift; path = ../../../Desktop/Josafat/WindowCenter.swift; sourceTree = "<group>"; };
+		FB41CB992B08008300CE5949 /* DialogSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DialogSheet.xib; path = ../../../Desktop/Josafat/DialogSheet.xib; sourceTree = "<group>"; };
+		FB41CB9A2B08008300CE5949 /* CustomInfoCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomInfoCenter.swift; path = ../../../Desktop/Josafat/CustomInfoCenter.swift; sourceTree = "<group>"; };
+		FB41CB9B2B08008300CE5949 /* CategoryBottomSheetDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryBottomSheetDialog.swift; path = ../../../Desktop/Josafat/CategoryBottomSheetDialog.swift; sourceTree = "<group>"; };
+		FB41CB9C2B08008300CE5949 /* CenterPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CenterPopup.swift; path = ../../../Desktop/Josafat/CenterPopup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +197,19 @@
 				83943EB52AF565D400E9E258 /* SignUpVC.swift */,
 				83582ADE2AF1A901006E57A8 /* Main.storyboard */,
 				83582AE32AF1A902006E57A8 /* LaunchScreen.storyboard */,
+				FB41CB902B08006000CE5949 /* Center.swift */,
 				83943EB72AF5A90800E9E258 /* Home.storyboard */,
+				FB41CB9B2B08008300CE5949 /* CategoryBottomSheetDialog.swift */,
+				FB41CB9C2B08008300CE5949 /* CenterPopup.swift */,
+				FB41CB972B08008300CE5949 /* CenterPopUp.xib */,
+				FB41CB9A2B08008300CE5949 /* CustomInfoCenter.swift */,
+				FB41CB932B08008300CE5949 /* CustomInfoCenters.xib */,
+				FB41CB922B08008200CE5949 /* CustomWindowView.swift */,
+				FB41CB952B08008300CE5949 /* CustomWindowView.xib */,
+				FB41CB962B08008300CE5949 /* DialogSheet.swift */,
+				FB41CB992B08008300CE5949 /* DialogSheet.xib */,
+				FB41CB942B08008300CE5949 /* StyleCenterPopUp.swift */,
+				FB41CB982B08008300CE5949 /* WindowCenter.swift */,
 				83943EB92AF5A91600E9E258 /* HomeVC.swift */,
 				B33858EF2AFAD95D00048E56 /* Map.storyboard */,
 				B33858F12AFADB2900048E56 /* MapVC.swift */,
@@ -325,14 +361,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37D42532AFC1CF5002F7479 /* Recycle.storyboard in Resources */,
+				FB41CBA22B08008300CE5949 /* CenterPopUp.xib in Resources */,
 				83582AE52AF1A902006E57A8 /* LaunchScreen.storyboard in Resources */,
 				B33858F02AFAD95D00048E56 /* Map.storyboard in Resources */,
+				FB41CBA02B08008300CE5949 /* CustomWindowView.xib in Resources */,
 				83582AE22AF1A902006E57A8 /* Assets.xcassets in Resources */,
 				83582AE02AF1A901006E57A8 /* Main.storyboard in Resources */,
 				83943EB82AF5A90800E9E258 /* Home.storyboard in Resources */,
 				B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */,
+				FB41CBA42B08008300CE5949 /* DialogSheet.xib in Resources */,
 				83582B112AF2F5E7006E57A8 /* splashScreenReecicla.png in Resources */,
 				832298F72AFFDC4600F3DF85 /* GoogleService-Info.plist in Resources */,
+				FB41CB9E2B08008300CE5949 /* CustomInfoCenters.xib in Resources */,
 				83582B0D2AF2C31A006E57A8 /* testViewController.xib in Resources */,
 				83C1343B2AFEBB66008FBFDB /* HistorialCollectionViewCell.xib in Resources */,
 			);
@@ -363,17 +403,25 @@
 				832298FF2AFFEF9F00F3DF85 /* Material.swift in Sources */,
 				83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */,
 				83C1343A2AFEBB66008FBFDB /* HistorialCollectionViewCell.swift in Sources */,
+				FB41CBA72B08008300CE5949 /* CenterPopup.swift in Sources */,
+				FB41CB9F2B08008300CE5949 /* StyleCenterPopUp.swift in Sources */,
 				83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */,
+				FB41CBA12B08008300CE5949 /* DialogSheet.swift in Sources */,
+				FB41CBA62B08008300CE5949 /* CategoryBottomSheetDialog.swift in Sources */,
 				B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */,
 				83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */,
 				832298FB2AFFE77700F3DF85 /* Recolecciones.swift in Sources */,
+				FB41CBA52B08008300CE5949 /* CustomInfoCenter.swift in Sources */,
 				832298FD2AFFE93100F3DF85 /* Recoleccion.swift in Sources */,
 				83943EBA2AF5A91600E9E258 /* HomeVC.swift in Sources */,
 				832299012AFFEFC200F3DF85 /* Recolector.swift in Sources */,
+				FB41CB912B08006000CE5949 /* Center.swift in Sources */,
 				B33858F22AFADB2900048E56 /* MapVC.swift in Sources */,
+				FB41CBA32B08008300CE5949 /* WindowCenter.swift in Sources */,
 				83943EB62AF565D400E9E258 /* SignUpVC.swift in Sources */,
 				83582B0F2AF2C332006E57A8 /* testViewController.swift in Sources */,
 				B37D42592AFC1F76002F7479 /* SettingsVC.swift in Sources */,
+				FB41CB9D2B08008300CE5949 /* CustomWindowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
