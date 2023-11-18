@@ -30,6 +30,7 @@ class RecycleViewController: UIViewController {
     static let green = UIColor(named: "AccentColor")
     static let red = UIColor(named: "ColorNegativo")
     static let light_green = UIColor(named: "light_green")
+    static let light_blue = UIColor(named: "light_blue")
     static let color_fondo = UIColor(named: "ColorDeFondo")
     
     // user id
@@ -149,7 +150,10 @@ class RecycleViewController: UIViewController {
             // se cambian las partes del Popup con la info de FB
             popUpEnProceso.nameRecolector.text = "\(curItem.recolector.nombre) \(curItem.recolector.apellidos)"
             popUpEnProceso.telefonoRecolector.text = curItem.recolector.telefono
-            popUpEnProceso.calificacionRecolector.text = String(format: "%.1f", curItem.recolector.suma_reseñas / curItem.recolector.cantidad_reseñas)
+            let averageRating = curItem.recolector.suma_reseñas / curItem.recolector.cantidad_reseñas
+            let formattedRating = averageRating.isNaN ? "0.0" : String(format: "%.1f", averageRating)
+            popUpEnProceso.calificacionRecolector.text = formattedRating
+
 
             
             popUpEnProceso.isUserInteractionEnabled = true
@@ -158,6 +162,9 @@ class RecycleViewController: UIViewController {
             self.view.addSubview(popUpEnProceso)
             
             popUpEnProceso.verDetallesBtn.addTarget(self, action: #selector(verDetallesBtn), for: .touchUpInside)
+            self.view.addSubview(popUpEnProceso)
+            
+            popUpEnProceso.cancelarOrden.addTarget(self, action: #selector(cancelarBtn), for: .touchUpInside)
             self.view.addSubview(popUpEnProceso)
             
             // Add tap gesture recognizer to handle taps outside the popup
@@ -355,6 +362,7 @@ class RecycleViewController: UIViewController {
     
     @objc func cancelarBtn(){
         popUpIniciada.removeFromSuperview()
+        popUpEnProceso.removeFromSuperview()
         showPopupCancelarOrden()
     }
     

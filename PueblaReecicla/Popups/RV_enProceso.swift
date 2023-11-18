@@ -20,6 +20,7 @@ class RV_enProceso: UIView {
     
     @IBOutlet weak var verDetallesBtn: ButtonStyle!
     @IBOutlet weak var continuarBtn: ButtonStyle!
+    @IBOutlet weak var cancelarOrden: ButtonStyle!
     
     @IBOutlet weak var scrollView: UIScrollView!
     
