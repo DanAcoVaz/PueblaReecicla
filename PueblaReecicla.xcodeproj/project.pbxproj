@@ -34,8 +34,6 @@
 		83943EBA2AF5A91600E9E258 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83943EB92AF5A91600E9E258 /* HomeVC.swift */; };
 		83C1343A2AFEBB66008FBFDB /* HistorialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */; };
 		83C1343B2AFEBB66008FBFDB /* HistorialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C134392AFEBB66008FBFDB /* HistorialCollectionViewCell.xib */; };
-		B33858F02AFAD95D00048E56 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33858EF2AFAD95D00048E56 /* Map.storyboard */; };
-		B33858F22AFADB2900048E56 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33858F12AFADB2900048E56 /* MapVC.swift */; };
 		B37D42532AFC1CF5002F7479 /* Recycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D42522AFC1CF5002F7479 /* Recycle.storyboard */; };
 		B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D42542AFC1DEF002F7479 /* RecycleVC.swift */; };
 		B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D42562AFC1EE9002F7479 /* Settings.storyboard */; };
@@ -52,6 +50,10 @@
 		FB41CBA52B08008300CE5949 /* CustomInfoCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB9A2B08008300CE5949 /* CustomInfoCenter.swift */; };
 		FB41CBA62B08008300CE5949 /* CategoryBottomSheetDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB9B2B08008300CE5949 /* CategoryBottomSheetDialog.swift */; };
 		FB41CBA72B08008300CE5949 /* CenterPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB9C2B08008300CE5949 /* CenterPopup.swift */; };
+		FB41CBAA2B0830DE00CE5949 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBA82B0830DE00CE5949 /* MapVC.swift */; };
+		FB41CBAB2B0830DE00CE5949 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB41CBA92B0830DE00CE5949 /* Map.storyboard */; };
+		FB41CBAE2B0839C700CE5949 /* Centro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBAD2B0839C700CE5949 /* Centro.swift */; };
+		FB41CBB02B083C5900CE5949 /* Centros.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBAF2B083C5900CE5949 /* Centros.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +101,6 @@
 		83943EB92AF5A91600E9E258 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialCollectionViewCell.swift; sourceTree = "<group>"; };
 		83C134392AFEBB66008FBFDB /* HistorialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistorialCollectionViewCell.xib; sourceTree = "<group>"; };
-		B33858EF2AFAD95D00048E56 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
-		B33858F12AFADB2900048E56 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		B37D42522AFC1CF5002F7479 /* Recycle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recycle.storyboard; sourceTree = "<group>"; };
 		B37D42542AFC1DEF002F7479 /* RecycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleVC.swift; sourceTree = "<group>"; };
 		B37D42562AFC1EE9002F7479 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -117,6 +117,10 @@
 		FB41CB9A2B08008300CE5949 /* CustomInfoCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomInfoCenter.swift; path = ../../../Desktop/Josafat/CustomInfoCenter.swift; sourceTree = "<group>"; };
 		FB41CB9B2B08008300CE5949 /* CategoryBottomSheetDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryBottomSheetDialog.swift; path = ../../../Desktop/Josafat/CategoryBottomSheetDialog.swift; sourceTree = "<group>"; };
 		FB41CB9C2B08008300CE5949 /* CenterPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CenterPopup.swift; path = ../../../Desktop/Josafat/CenterPopup.swift; sourceTree = "<group>"; };
+		FB41CBA82B0830DE00CE5949 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVC.swift; path = ../../../Desktop/Josafat/MapVC.swift; sourceTree = "<group>"; };
+		FB41CBA92B0830DE00CE5949 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Map.storyboard; path = ../../../Desktop/Josafat/Map.storyboard; sourceTree = "<group>"; };
+		FB41CBAD2B0839C700CE5949 /* Centro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centro.swift; sourceTree = "<group>"; };
+		FB41CBAF2B083C5900CE5949 /* Centros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centros.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,7 @@
 		83582AD72AF1A901006E57A8 /* PueblaReecicla */ = {
 			isa = PBXGroup;
 			children = (
+				FB41CBAC2B08353600CE5949 /* MapModels */,
 				832298F82AFFE75A00F3DF85 /* Models */,
 				83582AD82AF1A901006E57A8 /* AppDelegate.swift */,
 				83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */,
@@ -209,10 +214,10 @@
 				FB41CB962B08008300CE5949 /* DialogSheet.swift */,
 				FB41CB992B08008300CE5949 /* DialogSheet.xib */,
 				FB41CB942B08008300CE5949 /* StyleCenterPopUp.swift */,
+				FB41CBA92B0830DE00CE5949 /* Map.storyboard */,
+				FB41CBA82B0830DE00CE5949 /* MapVC.swift */,
 				FB41CB982B08008300CE5949 /* WindowCenter.swift */,
 				83943EB92AF5A91600E9E258 /* HomeVC.swift */,
-				B33858EF2AFAD95D00048E56 /* Map.storyboard */,
-				B33858F12AFADB2900048E56 /* MapVC.swift */,
 				B37D42542AFC1DEF002F7479 /* RecycleVC.swift */,
 				B37D42522AFC1CF5002F7479 /* Recycle.storyboard */,
 				83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */,
@@ -245,6 +250,15 @@
 				83582AFB2AF1A903006E57A8 /* PueblaReeciclaUITestsLaunchTests.swift */,
 			);
 			path = PueblaReeciclaUITests;
+			sourceTree = "<group>";
+		};
+		FB41CBAC2B08353600CE5949 /* MapModels */ = {
+			isa = PBXGroup;
+			children = (
+				FB41CBAD2B0839C700CE5949 /* Centro.swift */,
+				FB41CBAF2B083C5900CE5949 /* Centros.swift */,
+			);
+			path = MapModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,8 +376,8 @@
 			files = (
 				B37D42532AFC1CF5002F7479 /* Recycle.storyboard in Resources */,
 				FB41CBA22B08008300CE5949 /* CenterPopUp.xib in Resources */,
+				FB41CBAB2B0830DE00CE5949 /* Map.storyboard in Resources */,
 				83582AE52AF1A902006E57A8 /* LaunchScreen.storyboard in Resources */,
-				B33858F02AFAD95D00048E56 /* Map.storyboard in Resources */,
 				FB41CBA02B08008300CE5949 /* CustomWindowView.xib in Resources */,
 				83582AE22AF1A902006E57A8 /* Assets.xcassets in Resources */,
 				83582AE02AF1A901006E57A8 /* Main.storyboard in Resources */,
@@ -405,6 +419,8 @@
 				83C1343A2AFEBB66008FBFDB /* HistorialCollectionViewCell.swift in Sources */,
 				FB41CBA72B08008300CE5949 /* CenterPopup.swift in Sources */,
 				FB41CB9F2B08008300CE5949 /* StyleCenterPopUp.swift in Sources */,
+				FB41CBAA2B0830DE00CE5949 /* MapVC.swift in Sources */,
+				FB41CBAE2B0839C700CE5949 /* Centro.swift in Sources */,
 				83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */,
 				FB41CBA12B08008300CE5949 /* DialogSheet.swift in Sources */,
 				FB41CBA62B08008300CE5949 /* CategoryBottomSheetDialog.swift in Sources */,
@@ -416,11 +432,11 @@
 				83943EBA2AF5A91600E9E258 /* HomeVC.swift in Sources */,
 				832299012AFFEFC200F3DF85 /* Recolector.swift in Sources */,
 				FB41CB912B08006000CE5949 /* Center.swift in Sources */,
-				B33858F22AFADB2900048E56 /* MapVC.swift in Sources */,
 				FB41CBA32B08008300CE5949 /* WindowCenter.swift in Sources */,
 				83943EB62AF565D400E9E258 /* SignUpVC.swift in Sources */,
 				83582B0F2AF2C332006E57A8 /* testViewController.swift in Sources */,
 				B37D42592AFC1F76002F7479 /* SettingsVC.swift in Sources */,
+				FB41CBB02B083C5900CE5949 /* Centros.swift in Sources */,
 				FB41CB9D2B08008300CE5949 /* CustomWindowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
