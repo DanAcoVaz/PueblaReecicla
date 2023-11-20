@@ -330,7 +330,7 @@
         <!--Horario-->
         <scene sceneID="zaV-Xd-C3m">
             <objects>
-                <viewController storyboardIdentifier="Horario" title="Horario" interactionActivityTrackingBaseName="Horario" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5xu-e3-pt8" customClass="HorarioVC" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Horario" title="Horario" interactionActivityTrackingBaseName="Horario" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5xu-e3-pt8" customClass="HorarioVC" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DOh-f8-zZX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -339,10 +339,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eea-JT-wyK">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tA-h5-eLM" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="660"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="680"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_horario" translatesAutoresizingMaskIntoConstraints="NO" id="P89-XV-BRj">
                                                 <rect key="frame" x="151.66666666666666" y="20" width="90" height="90"/>
@@ -352,7 +352,7 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kd4-tm-CGe" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="584" width="353" height="50"/>
+                                                <rect key="frame" x="20" y="620" width="353" height="50"/>
                                                 <color key="backgroundColor" name="ColorSecundario"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="RVy-gv-KPN"/>
@@ -377,7 +377,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="finishHorarioSelection:" destination="5xu-e3-pt8" eventType="touchUpInside" id="4fW-uX-hHd"/>
+                                                    <action selector="finishHorario:" destination="5xu-e3-pt8" eventType="touchUpInside" id="SUN-XQ-eHz"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccionar Horario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGu-xc-ZvI">
@@ -387,7 +387,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formato de Entrega" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4t-9v-3Vj">
-                                                <rect key="frame" x="106.33333333333333" y="480" width="180.66666666666669" height="24"/>
+                                                <rect key="frame" x="106.33333333333333" y="504" width="180.66666666666669" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -524,7 +524,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="NKb-M7-A08" userLabel="botonesTipoEntrega">
-                                                <rect key="frame" x="20" y="524" width="353" height="40"/>
+                                                <rect key="frame" x="20" y="548" width="353" height="40"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gC6-6t-xwi" userLabel="enPersona" customClass="ViewStyle" customModule="PueblaReecicla" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="169" height="40"/>
@@ -597,8 +597,8 @@
                                                     <constraint firstAttribute="height" constant="40" id="2cP-C4-pvD"/>
                                                 </constraints>
                                             </stackView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Comentarios para el Recolector" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pp7-Gy-yiB">
-                                                <rect key="frame" x="20" y="310" width="353" height="150"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pp7-Gy-yiB">
+                                                <rect key="frame" x="20" y="322" width="353" height="150"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="YqL-Pn-DQL"/>
@@ -611,7 +611,7 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="pp7-Gy-yiB" secondAttribute="trailing" constant="20" id="05e-f1-gnZ"/>
-                                            <constraint firstItem="L4t-9v-3Vj" firstAttribute="top" secondItem="pp7-Gy-yiB" secondAttribute="bottom" constant="20" id="1EG-fs-SCm"/>
+                                            <constraint firstItem="L4t-9v-3Vj" firstAttribute="top" secondItem="pp7-Gy-yiB" secondAttribute="bottom" constant="32" id="1EG-fs-SCm"/>
                                             <constraint firstItem="dVe-JY-3AY" firstAttribute="leading" secondItem="7tA-h5-eLM" secondAttribute="leading" constant="20" id="1ZA-FJ-rdp"/>
                                             <constraint firstItem="pp7-Gy-yiB" firstAttribute="leading" secondItem="7tA-h5-eLM" secondAttribute="leading" constant="20" id="3uy-lp-WRD"/>
                                             <constraint firstItem="dVe-JY-3AY" firstAttribute="top" secondItem="ycH-Xy-Uar" secondAttribute="bottom" constant="16" id="8Gl-hf-Bud"/>
@@ -626,14 +626,14 @@
                                             <constraint firstItem="KjU-TA-uPi" firstAttribute="leading" secondItem="7tA-h5-eLM" secondAttribute="leading" constant="20" id="Ttg-hm-LIA"/>
                                             <constraint firstItem="L4t-9v-3Vj" firstAttribute="centerX" secondItem="7tA-h5-eLM" secondAttribute="centerX" id="bay-iz-yac"/>
                                             <constraint firstAttribute="trailing" secondItem="KjU-TA-uPi" secondAttribute="trailing" constant="20" id="bdi-t1-2do"/>
-                                            <constraint firstAttribute="height" constant="660" id="ctN-Xd-87N"/>
+                                            <constraint firstAttribute="height" constant="680" id="ctN-Xd-87N"/>
                                             <constraint firstItem="NKb-M7-A08" firstAttribute="leading" secondItem="7tA-h5-eLM" secondAttribute="leading" constant="20" id="d6r-Yj-2Zc"/>
                                             <constraint firstItem="ycH-Xy-Uar" firstAttribute="leading" secondItem="7tA-h5-eLM" secondAttribute="leading" constant="20" id="gey-eR-KpN"/>
-                                            <constraint firstItem="Kd4-tm-CGe" firstAttribute="top" secondItem="NKb-M7-A08" secondAttribute="bottom" constant="20" id="iAh-yd-Q4x"/>
+                                            <constraint firstItem="Kd4-tm-CGe" firstAttribute="top" secondItem="NKb-M7-A08" secondAttribute="bottom" constant="32" id="iAh-yd-Q4x"/>
                                             <constraint firstItem="cGu-xc-ZvI" firstAttribute="centerX" secondItem="7tA-h5-eLM" secondAttribute="centerX" id="iKy-1d-sx4"/>
                                             <constraint firstItem="KjU-TA-uPi" firstAttribute="top" secondItem="cGu-xc-ZvI" secondAttribute="bottom" constant="16" id="j5x-Wa-3Lo"/>
                                             <constraint firstItem="ycH-Xy-Uar" firstAttribute="top" secondItem="KjU-TA-uPi" secondAttribute="bottom" constant="20" id="mW0-qR-UtD"/>
-                                            <constraint firstItem="pp7-Gy-yiB" firstAttribute="top" secondItem="dVe-JY-3AY" secondAttribute="bottom" constant="20" id="osa-Am-h5W"/>
+                                            <constraint firstItem="pp7-Gy-yiB" firstAttribute="top" secondItem="dVe-JY-3AY" secondAttribute="bottom" constant="32" id="osa-Am-h5W"/>
                                             <constraint firstAttribute="trailing" secondItem="NKb-M7-A08" secondAttribute="trailing" constant="20" id="shM-M6-97P"/>
                                         </constraints>
                                     </view>
@@ -657,7 +657,7 @@
                             <constraint firstItem="1F9-PP-ePx" firstAttribute="trailing" secondItem="4e2-ed-eWd" secondAttribute="trailing" id="g8k-lp-cJT"/>
                             <constraint firstItem="eea-JT-wyK" firstAttribute="top" secondItem="4e2-ed-eWd" secondAttribute="top" id="hBB-R1-U2z"/>
                             <constraint firstAttribute="bottom" secondItem="1F9-PP-ePx" secondAttribute="bottom" id="lRh-cw-UxE"/>
-                            <constraint firstItem="eea-JT-wyK" firstAttribute="bottom" secondItem="4e2-ed-eWd" secondAttribute="bottom" id="nar-Vu-yYV"/>
+                            <constraint firstItem="eea-JT-wyK" firstAttribute="bottom" secondItem="4e2-ed-eWd" secondAttribute="bottom" constant="34" id="nar-Vu-yYV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Nueva recolección" id="4IG-Ge-HHX">
@@ -679,6 +679,176 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcB-ui-GIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1090.8396946564885" y="3.5211267605633805"/>
+        </scene>
+        <!--Direccion-->
+        <scene sceneID="AJg-pR-8pr">
+            <objects>
+                <viewController storyboardIdentifier="Direccion" title="Direccion" interactionActivityTrackingBaseName="Direccion" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gKQ-KT-fDT" customClass="DireccionVC" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hGO-Iq-uag">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="hlc-So-cEp">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ie-Jv-7x8">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCg-d9-kvb" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dEB-WU-WIx">
+                                                <rect key="frame" x="20" y="24" width="353" height="738"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNq-nY-ar3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esu-tI-XLk">
+                                                        <rect key="frame" x="0.0" y="64" width="353" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número Exterior/Interior" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOm-0p-95I">
+                                                        <rect key="frame" x="0.0" y="128" width="353" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f8F-9L-syZ">
+                                                        <rect key="frame" x="0.0" y="192" width="353" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colonia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLP-hk-dys">
+                                                        <rect key="frame" x="0.0" y="256" width="353" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhd-lg-cl8">
+                                                        <rect key="frame" x="0.0" y="320" width="353" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Municipio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbp-Rd-OEg">
+                                                        <rect key="frame" x="0.0" y="384" width="353" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WaK-06-QwZ">
+                                                        <rect key="frame" x="0.0" y="448" width="353" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Código Postal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4O-Ox-YcK">
+                                                        <rect key="frame" x="0.0" y="512" width="353" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-wk-stq">
+                                                        <rect key="frame" x="0.0" y="576" width="353" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="postal-code"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVd-Hd-xbr">
+                                                        <rect key="frame" x="0.0" y="640" width="353" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7BN-SK-DL2">
+                                                        <rect key="frame" x="0.0" y="704" width="353" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OH5-TA-Hbb" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="800" width="353" height="50"/>
+                                                <color key="backgroundColor" name="ColorSecundario"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="If9-8v-DAG"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="cPs-ST-9QA"/>
+                                                </constraints>
+                                                <color key="tintColor" name="ColorSecundario"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Continuar"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="finishDireccionSelection:" destination="gKQ-KT-fDT" eventType="touchUpInside" id="18K-0f-tRs"/>
+                                                    <action selector="finishHorario:" destination="5xu-e3-pt8" eventType="touchUpInside" id="hwR-3p-XhM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="dEB-WU-WIx" secondAttribute="trailing" constant="20" id="6p3-2O-dUU"/>
+                                            <constraint firstAttribute="trailing" secondItem="OH5-TA-Hbb" secondAttribute="trailing" constant="20" id="73F-AJ-iZy"/>
+                                            <constraint firstItem="OH5-TA-Hbb" firstAttribute="leading" secondItem="tCg-d9-kvb" secondAttribute="leading" constant="20" id="Y9u-r9-399"/>
+                                            <constraint firstItem="dEB-WU-WIx" firstAttribute="top" secondItem="tCg-d9-kvb" secondAttribute="top" constant="24" id="aAN-w1-9WP"/>
+                                            <constraint firstItem="OH5-TA-Hbb" firstAttribute="top" secondItem="dEB-WU-WIx" secondAttribute="bottom" constant="38" id="eTQ-iL-vpY"/>
+                                            <constraint firstAttribute="height" constant="800" id="hpf-0G-DXt"/>
+                                            <constraint firstItem="dEB-WU-WIx" firstAttribute="leading" secondItem="tCg-d9-kvb" secondAttribute="leading" constant="20" id="vlC-dn-7fi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tCg-d9-kvb" secondAttribute="bottom" id="CNn-rJ-jtU"/>
+                                    <constraint firstAttribute="trailing" secondItem="tCg-d9-kvb" secondAttribute="trailing" id="dqx-c9-tsv"/>
+                                    <constraint firstItem="tCg-d9-kvb" firstAttribute="width" secondItem="7Ie-Jv-7x8" secondAttribute="width" id="haG-nY-xPk"/>
+                                    <constraint firstItem="tCg-d9-kvb" firstAttribute="top" secondItem="7Ie-Jv-7x8" secondAttribute="top" id="o9n-vl-USN"/>
+                                    <constraint firstItem="tCg-d9-kvb" firstAttribute="leading" secondItem="7Ie-Jv-7x8" secondAttribute="leading" id="sV5-Bm-cgO"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hCs-3N-K2E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Ie-Jv-7x8" firstAttribute="top" secondItem="hCs-3N-K2E" secondAttribute="top" id="6qr-4m-zTX"/>
+                            <constraint firstItem="hCs-3N-K2E" firstAttribute="bottom" secondItem="hlc-So-cEp" secondAttribute="bottom" id="7Db-Qg-ZgW"/>
+                            <constraint firstItem="hlc-So-cEp" firstAttribute="top" secondItem="hCs-3N-K2E" secondAttribute="top" id="I1p-31-Yl3"/>
+                            <constraint firstItem="7Ie-Jv-7x8" firstAttribute="trailing" secondItem="hCs-3N-K2E" secondAttribute="trailing" id="MT8-sA-Yq8"/>
+                            <constraint firstItem="hCs-3N-K2E" firstAttribute="trailing" secondItem="hlc-So-cEp" secondAttribute="trailing" id="bv4-zv-ua7"/>
+                            <constraint firstItem="7Ie-Jv-7x8" firstAttribute="leading" secondItem="hCs-3N-K2E" secondAttribute="leading" id="g69-oO-88y"/>
+                            <constraint firstItem="7Ie-Jv-7x8" firstAttribute="bottom" secondItem="hCs-3N-K2E" secondAttribute="bottom" id="gw0-9X-8bR"/>
+                            <constraint firstItem="hlc-So-cEp" firstAttribute="leading" secondItem="hCs-3N-K2E" secondAttribute="leading" id="uIg-ug-czm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ingresar Dirección" id="7M0-01-S3S">
+                        <barButtonItem key="backBarButtonItem" title="  " id="rxd-i9-JlN"/>
+                    </navigationItem>
+                    <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="CalleField" destination="esu-tI-XLk" id="7ns-tb-2Z0"/>
+                        <outlet property="codigoPostalField" destination="l5V-wk-stq" id="DsW-Ov-v4D"/>
+                        <outlet property="coloniaField" destination="vhd-lg-cl8" id="l6o-Zk-9Hr"/>
+                        <outlet property="municipioField" destination="WaK-06-QwZ" id="NyR-hf-51t"/>
+                        <outlet property="numeroField" destination="f8F-9L-syZ" id="lCd-eI-fs6"/>
+                        <outlet property="telefonoField" destination="7BN-SK-DL2" id="L9x-Oj-ihQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4t-gN-VMZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1942.7480916030534" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

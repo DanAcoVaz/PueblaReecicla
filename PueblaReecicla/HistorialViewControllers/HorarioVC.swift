@@ -26,7 +26,7 @@ class HorarioVC: UIViewController {
     @IBOutlet var mainView: UIView!
     
     var isDayOver: Bool = false
-    var lessThan1HrLeft: Bool = false
+    var isBeforeDayStart: Bool = false
     var curDate: String = ""
     let calendar = Calendar.current
     
@@ -39,6 +39,8 @@ class HorarioVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         self.curDate = formatDate(date: Date())
         //fechaFieldPicker.layer.borderColor = UIColor.white.cgColor
         fechaFieldPicker.borderStyle = .none
@@ -49,6 +51,10 @@ class HorarioVC: UIViewController {
         comentariosField.layer.borderColor = RecycleViewController.color_fondo?.cgColor
         comentariosField.layer.borderWidth = 1.0
         comentariosField.layer.cornerRadius = 10.0
+        comentariosField.delegate = self
+        comentariosField.text = "Comentarios para el Recolector"
+        comentariosField.textColor = UIColor.gray
+        
         // applies shadow to all views
         applyShadow(view: comentariosField)
         applyShadow(view: fechaBtnView)
@@ -80,16 +86,7 @@ class HorarioVC: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(mainViewTapped(_:)))
             mainView.addGestureRecognizer(tapGesture)
         
-        // Se consigue la hora actual
-        let components = Calendar.current.dateComponents([.hour, .minute], from: Date())
-        if let hour = components.hour {
-            // Check if the current time is after 19:00
-            if (hour > 18) {
-                isDayOver = true
-            }
-        } else {
-            print("Error extracting components from the current date.")
-        }
+        self.isDayOver = checkIfDayIsOver()
         
         // se establece el Datepicker
         datePicker.datePickerMode = .date
@@ -115,7 +112,26 @@ class HorarioVC: UIViewController {
             let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date())
             fechaFieldPicker.text = formatDate(date: tomorrow!)
             datePicker.minimumDate = tomorrow
-            
+        } else {
+            // fecha
+            fechaFieldPicker.text = formatDate(date: Date()) // todays Date
+            datePicker.minimumDate = Date()
+        }
+        
+        updateTimePickers()
+        
+        timeIniFieldPicker.inputView = timeIniPicker
+        timeEndFieldPicker.inputView = timeEndPicker
+        fechaFieldPicker.inputView = datePicker
+    }
+    
+    private func notSameDay() -> Bool {
+        let dateSelected = fechaFieldPicker.text
+        return !(dateSelected == self.curDate)
+    }
+    
+    private func updateTimePickers() {
+        if(self.isDayOver || notSameDay()) {
             // time picker de Inicio
             let minimumDateIni = calendar.date(bySettingHour: 7, minute: 0, second: 0, of: Date())
             let maximumDateIni = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: Date())
@@ -126,42 +142,59 @@ class HorarioVC: UIViewController {
             
             // time picker de Final
             let minimumDateEnd = calendar.date(bySettingHour: 8, minute: 0, second: 0, of: Date())
-            let maximumDateEnd = calendar.date(bySettingHour: 18, minute: 59, second: 0, of: Date())
+            let maximumDateEnd = calendar.date(bySettingHour: 19, minute: 0, second: 0, of: Date())
             timeEndPicker.maximumDate = maximumDateEnd
             timeEndPicker.minimumDate = minimumDateEnd
             timeEndPicker.date = minimumDateEnd!
             timeEndFieldPicker.text = formatTime(date: minimumDateEnd!)
-        } else {
-            // fecha
-            fechaFieldPicker.text = formatDate(date: Date()) // todays Date
-            datePicker.minimumDate = Date()
-            
+        } 
+        else {
             // time picker de Inicio
-            let minimumDateIni = Date()
+            var minimumDateIni = Date()
+            
+            if (self.isBeforeDayStart) {
+                minimumDateIni = calendar.date(bySettingHour: 7, minute: 0, second: 0, of: Date())!
+            } else {
+                minimumDateIni = checkIfTimeIniIsInRange(minimumDateIni: Date())
+            }
+            
             let maximumDateIni = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: Date())
             timeIniPicker.maximumDate = maximumDateIni
             timeIniPicker.minimumDate = minimumDateIni
             timeIniPicker.date = minimumDateIni
-            timeIniFieldPicker.text = formatTime(date: Date())
+            timeIniFieldPicker.text = formatTime(date: minimumDateIni)
             
             // time picker de Final
+            var minimumDateEnd = Calendar.current.date(byAdding: .hour, value: 1, to: Date())
             
-            let minimumDateEnd = Calendar.current.date(byAdding: .hour, value: 1, to: Date())
-            let maximumDateEnd = calendar.date(bySettingHour: 18, minute: 59, second: 0, of: Date())
+            minimumDateEnd = checkIfTimeEndIsInRange(minimumDateEnd: minimumDateEnd!)
+            
+            let maximumDateEnd = calendar.date(bySettingHour: 19, minute: 0, second: 0, of: Date())
             timeEndPicker.maximumDate = maximumDateEnd
             timeEndPicker.minimumDate = minimumDateEnd
             timeEndPicker.date = minimumDateEnd!
-            timeEndFieldPicker.text = formatTime(date: Date())
+            timeEndFieldPicker.text = formatTime(date: minimumDateEnd ?? Date())
         }
-        
-        timeIniFieldPicker.inputView = timeIniPicker
-        timeEndFieldPicker.inputView = timeEndPicker
-        fechaFieldPicker.inputView = datePicker
     }
     
-    private func notSameDay() -> Bool {
-        let dateSelected = fechaFieldPicker.text
-        return dateSelected == self.curDate
+    private func checkIfTimeIniIsInRange (minimumDateIni: Date) -> Date {
+        let componentsDateIni = Calendar.current.dateComponents([.hour, .minute], from: minimumDateIni)
+        if (componentsDateIni.hour! < 7) {
+            return calendar.date(bySettingHour: 7, minute: 0, second: 0, of: Date())!
+        } else if (componentsDateIni.hour! >= 18 && componentsDateIni.minute! > 0) {
+            return calendar.date(bySettingHour: 18, minute: 0, second: 0, of: Date())!
+        }
+        return Date()
+    }
+    
+    private func checkIfTimeEndIsInRange (minimumDateEnd: Date) -> Date {
+        let componentsDateIni = Calendar.current.dateComponents([.hour, .minute], from: minimumDateEnd)
+        if (componentsDateIni.hour! < 8) {
+            return calendar.date(bySettingHour: 8, minute: 0, second: 0, of: Date())!
+        } else if ((componentsDateIni.hour! == 19 && componentsDateIni.minute! > 0) || componentsDateIni.hour! > 19) {
+            return calendar.date(bySettingHour: 19, minute: 0, second: 0, of: Date())!
+        }
+        return Calendar.current.date(byAdding: .hour, value: 1, to: Date())!
     }
     
     @objc func timeIniPickerValueChanged(sender: UIDatePicker) {
@@ -169,7 +202,7 @@ class HorarioVC: UIViewController {
     }
     
     @objc func timeEndPickerValueChanged(sender: UIDatePicker) {
-        timeIniFieldPicker.text = formatTime(date: sender.date)
+        timeEndFieldPicker.text = formatTime(date: sender.date)
     }
     
     @objc func fechaBtnViewTapped() {
@@ -181,6 +214,8 @@ class HorarioVC: UIViewController {
      @objc func dateChange(sender: UIDatePicker) {
          // Your code for timeIniBtn tap event
          fechaFieldPicker.text = formatDate(date: sender.date)
+         self.isDayOver = checkIfDayIsOver()
+         updateTimePickers()
      }
     
     func formatDate(date: Date) -> String {
@@ -208,6 +243,26 @@ class HorarioVC: UIViewController {
         
         // Create a date from components
         return calendar.date(from: customDateComponents)
+    }
+    
+    private func checkIfDayIsOver() -> Bool {
+        // Se consigue la hora actual
+        let components = Calendar.current.dateComponents([.hour, .minute], from: Date())
+        if let hour = components.hour, let minute = components.minute {
+            
+            if (hour < 7) {
+                self.isBeforeDayStart = true
+            } else{
+                self.isBeforeDayStart = false
+            }
+            
+            if (hour >= 18 && minute > 0) {
+                return true
+            } else {return false}
+        } else {
+            print("Error extracting components from the current date.")
+            return false
+        }
     }
     
     func formatTime(date: Date) -> String {
@@ -275,27 +330,32 @@ class HorarioVC: UIViewController {
     }
     
     func validateTimeFields() -> Bool {
-        // Get the selected time from the timeIniPicker and timeEndPicker
-        let timeIni = timeIniPicker.date
-        let timeEnd = timeEndPicker.date
+        // Get the current date components
+        let currentComponents = calendar.dateComponents([.hour, .minute], from: Date())
 
         // Check if the end time is after the start time
-        if timeEnd <= timeIni {
-            showAlert(message: "La hora de finalización debe ser después de la hora de inicio")
+        if timeEndPicker.date <= timeIniPicker.date {
+            showAlert(message: "La hora de finalización debe ser después de la hora de inicio.")
             return false
         }
         
         // Check if there is at least a 1-hour difference
-         let timeDifference = calendar.dateComponents([.hour], from: timeIni, to: timeEnd)
-         if let hours = timeDifference.hour, hours < 1 {
-             showAlert(message: "La recolección debe tener al menos 60 minutos de tiempo disponible")
-             return false
-         }
+        let timeDifference = calendar.dateComponents([.hour], from: timeIniPicker.date, to: timeEndPicker.date)
+        if let hours = timeDifference.hour, hours < 1 {
+            showAlert(message: "La recolección debe tener al menos 60 minutos de tiempo disponible.")
+            return false
+        }
 
-        // Optionally, you can add more specific time range validation logic here if needed.
+        // Check if the end time is before 19:00
+        let sevenPM = calendar.date(bySettingHour: 19, minute: 0, second: 0, of: Date())!
+        if timeEndPicker.date > sevenPM {
+            showAlert(message: "La hora de finalización debe ser antes de las 19:00.")
+            return false
+        }
 
         return true
     }
+
 
     // Function to display an alert with a custom message
     func showAlert(message: String) {
@@ -305,9 +365,12 @@ class HorarioVC: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func finishHorarioSelection(_ sender: Any) {
+    @IBAction func finishHorario(_ sender: ButtonStyle) {
         if (validateTimeFields() && validateComentariosField()) {
-            print("success")
+            let storyboard = UIStoryboard(name: "Recycle", bundle: nil)
+            if let DireccionViewController = storyboard.instantiateViewController(withIdentifier: "Direccion") as? DireccionVC {
+                self.navigationController?.pushViewController(DireccionViewController, animated: true)
+            }
         }
     }
     
@@ -318,4 +381,24 @@ class HorarioVC: UIViewController {
         view.layer.shadowRadius = 2
     }
     
+    
 }
+
+extension HorarioVC: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.gray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+
+    func textViewDidChange(_ textView: UITextView) {
+        if textView.text == "Comentarios para el Recolector" {
+            // Reset the placeholder if the text view is currently empty or has placeholder text
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+}
+
+
