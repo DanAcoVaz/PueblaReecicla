@@ -22,6 +22,9 @@
 		8322990D2B006C3800F3DF85 /* RV_enProceso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322990B2B006C3800F3DF85 /* RV_enProceso.swift */; };
 		8322990E2B006C3800F3DF85 /* RV_enProceso.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8322990C2B006C3800F3DF85 /* RV_enProceso.xib */; };
 		832FD7512B0BF4740086D76B /* DireccionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD7502B0BF4740086D76B /* DireccionVC.swift */; };
+		832FD7532B0C07390086D76B /* VD_verFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD7522B0C07390086D76B /* VD_verFoto.swift */; };
+		832FD7572B0C07C90086D76B /* UBI_Explicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD7562B0C07C90086D76B /* UBI_Explicacion.swift */; };
+		832FD7592B0C07D50086D76B /* UBI_Explicacion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832FD7582B0C07D50086D76B /* UBI_Explicacion.xib */; };
 		83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582AD82AF1A901006E57A8 /* AppDelegate.swift */; };
 		83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */; };
 		83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582ADC2AF1A901006E57A8 /* ViewController.swift */; };
@@ -38,7 +41,6 @@
 		836130152B0556C00024E6A6 /* MaterialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836130132B0556C00024E6A6 /* MaterialCollectionViewCell.swift */; };
 		836130162B0556C00024E6A6 /* MaterialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836130142B0556C00024E6A6 /* MaterialCollectionViewCell.xib */; };
 		836130182B0692E00024E6A6 /* VD_verFoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836130172B0692E00024E6A6 /* VD_verFoto.xib */; };
-		8361301A2B0692EC0024E6A6 /* VD_verFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836130192B0692EC0024E6A6 /* VD_verFoto.swift */; };
 		8361301F2B06B6F30024E6A6 /* HorarioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8361301E2B06B6F30024E6A6 /* HorarioVC.swift */; };
 		836313CC2B02D48300382606 /* RV_completada.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836313CA2B02D48300382606 /* RV_completada.xib */; };
 		836313CD2B02D48300382606 /* RV_completada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836313CB2B02D48300382606 /* RV_completada.swift */; };
@@ -88,6 +90,9 @@
 		8322990B2B006C3800F3DF85 /* RV_enProceso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RV_enProceso.swift; sourceTree = "<group>"; };
 		8322990C2B006C3800F3DF85 /* RV_enProceso.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RV_enProceso.xib; sourceTree = "<group>"; };
 		832FD7502B0BF4740086D76B /* DireccionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DireccionVC.swift; sourceTree = "<group>"; };
+		832FD7522B0C07390086D76B /* VD_verFoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VD_verFoto.swift; sourceTree = "<group>"; };
+		832FD7562B0C07C90086D76B /* UBI_Explicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBI_Explicacion.swift; sourceTree = "<group>"; };
+		832FD7582B0C07D50086D76B /* UBI_Explicacion.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UBI_Explicacion.xib; sourceTree = "<group>"; };
 		83582AD52AF1A901006E57A8 /* PueblaReecicla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PueblaReecicla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83582AD82AF1A901006E57A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +113,6 @@
 		836130132B0556C00024E6A6 /* MaterialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCollectionViewCell.swift; sourceTree = "<group>"; };
 		836130142B0556C00024E6A6 /* MaterialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialCollectionViewCell.xib; sourceTree = "<group>"; };
 		836130172B0692E00024E6A6 /* VD_verFoto.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VD_verFoto.xib; sourceTree = "<group>"; };
-		836130192B0692EC0024E6A6 /* VD_verFoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VD_verFoto.swift; sourceTree = "<group>"; };
 		8361301E2B06B6F30024E6A6 /* HorarioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioVC.swift; sourceTree = "<group>"; };
 		836313CA2B02D48300382606 /* RV_completada.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RV_completada.xib; sourceTree = "<group>"; };
 		836313CB2B02D48300382606 /* RV_completada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RV_completada.swift; sourceTree = "<group>"; };
@@ -192,7 +196,9 @@
 				832299052B00325900F3DF85 /* RV_iniciada.xib */,
 				832299092B005B9F00F3DF85 /* Style.swift */,
 				836130172B0692E00024E6A6 /* VD_verFoto.xib */,
-				836130192B0692EC0024E6A6 /* VD_verFoto.swift */,
+				832FD7522B0C07390086D76B /* VD_verFoto.swift */,
+				832FD7562B0C07C90086D76B /* UBI_Explicacion.swift */,
+				832FD7582B0C07D50086D76B /* UBI_Explicacion.xib */,
 			);
 			path = Popups;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 				836130182B0692E00024E6A6 /* VD_verFoto.xib in Resources */,
 				836313DF2B042A6000382606 /* RV_cancelada.xib in Resources */,
 				836313CC2B02D48300382606 /* RV_completada.xib in Resources */,
+				832FD7592B0C07D50086D76B /* UBI_Explicacion.xib in Resources */,
 				83582AE22AF1A902006E57A8 /* Assets.xcassets in Resources */,
 				83582AE02AF1A901006E57A8 /* Main.storyboard in Resources */,
 				83943EB82AF5A90800E9E258 /* Home.storyboard in Resources */,
@@ -445,11 +452,12 @@
 				832298FF2AFFEF9F00F3DF85 /* Material.swift in Sources */,
 				83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */,
 				83C1343A2AFEBB66008FBFDB /* HistorialCollectionViewCell.swift in Sources */,
+				832FD7572B0C07C90086D76B /* UBI_Explicacion.swift in Sources */,
 				836130152B0556C00024E6A6 /* MaterialCollectionViewCell.swift in Sources */,
 				836313CD2B02D48300382606 /* RV_completada.swift in Sources */,
 				83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */,
 				8361301F2B06B6F30024E6A6 /* HorarioVC.swift in Sources */,
-				8361301A2B0692EC0024E6A6 /* VD_verFoto.swift in Sources */,
+				832FD7532B0C07390086D76B /* VD_verFoto.swift in Sources */,
 				832299082B003A2000F3DF85 /* RV_iniciada.swift in Sources */,
 				B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */,
 				832FD7512B0BF4740086D76B /* DireccionVC.swift in Sources */,

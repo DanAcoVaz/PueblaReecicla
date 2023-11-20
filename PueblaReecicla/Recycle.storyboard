@@ -683,7 +683,7 @@
         <!--Direccion-->
         <scene sceneID="AJg-pR-8pr">
             <objects>
-                <viewController storyboardIdentifier="Direccion" title="Direccion" interactionActivityTrackingBaseName="Direccion" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gKQ-KT-fDT" customClass="DireccionVC" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Direccion" title="Direccion" interactionActivityTrackingBaseName="Direccion" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gKQ-KT-fDT" customClass="DireccionVC" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hGO-Iq-uag">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -836,7 +836,6 @@
                     <navigationItem key="navigationItem" title="Ingresar Dirección" id="7M0-01-S3S">
                         <barButtonItem key="backBarButtonItem" title="  " id="rxd-i9-JlN"/>
                     </navigationItem>
-                    <size key="freeformSize" width="393" height="852"/>
                     <connections>
                         <outlet property="CalleField" destination="esu-tI-XLk" id="7ns-tb-2Z0"/>
                         <outlet property="codigoPostalField" destination="l5V-wk-stq" id="DsW-Ov-v4D"/>
@@ -849,6 +848,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4t-gN-VMZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1942.7480916030534" y="3.5211267605633805"/>
+        </scene>
+        <!--Materiales-->
+        <scene sceneID="qOL-o9-gZe">
+            <objects>
+                <viewController storyboardIdentifier="Materiales" title="Materiales" interactionActivityTrackingBaseName="Materiales" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TWl-N0-SVx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Why-HW-zQD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="ClT-Ns-euW">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xdd-Pe-o45"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xdd-Pe-o45" firstAttribute="bottom" secondItem="ClT-Ns-euW" secondAttribute="bottom" id="Y2O-Fg-YxO"/>
+                            <constraint firstItem="xdd-Pe-o45" firstAttribute="trailing" secondItem="ClT-Ns-euW" secondAttribute="trailing" id="fRB-xD-rIV"/>
+                            <constraint firstItem="ClT-Ns-euW" firstAttribute="leading" secondItem="xdd-Pe-o45" secondAttribute="leading" id="hJe-3z-AXb"/>
+                            <constraint firstItem="ClT-Ns-euW" firstAttribute="top" secondItem="xdd-Pe-o45" secondAttribute="top" id="oN6-Pg-WRf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ubicación" id="nsm-1I-KUD">
+                        <barButtonItem key="backBarButtonItem" title="  " id="7xD-gV-si2"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSy-Vg-fNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2801" y="4"/>
+        </scene>
+        <!--Ubicacion-->
+        <scene sceneID="4uC-Gp-IaA">
+            <objects>
+                <viewController storyboardIdentifier="Ubicacion" title="Ubicacion" interactionActivityTrackingBaseName="Ubicacion" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rg0-2A-uGi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yL5-op-eXy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="2y1-Go-0v3">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RLp-hP-QUb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RLp-hP-QUb" firstAttribute="bottom" secondItem="2y1-Go-0v3" secondAttribute="bottom" id="6jv-jl-ryD"/>
+                            <constraint firstItem="2y1-Go-0v3" firstAttribute="top" secondItem="RLp-hP-QUb" secondAttribute="top" id="FSZ-Rz-YhY"/>
+                            <constraint firstItem="RLp-hP-QUb" firstAttribute="trailing" secondItem="2y1-Go-0v3" secondAttribute="trailing" id="Nc9-er-iZS"/>
+                            <constraint firstItem="2y1-Go-0v3" firstAttribute="leading" secondItem="RLp-hP-QUb" secondAttribute="leading" id="lZe-MJ-QvH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ubicación" id="4Ww-dq-UDi">
+                        <barButtonItem key="backBarButtonItem" title="  " id="MAV-Jm-QPi"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQr-Me-fKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3602" y="4"/>
         </scene>
     </scenes>
     <resources>
