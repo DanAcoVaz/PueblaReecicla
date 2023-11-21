@@ -852,7 +852,7 @@
         <!--Materiales-->
         <scene sceneID="qOL-o9-gZe">
             <objects>
-                <viewController storyboardIdentifier="Materiales" title="Materiales" interactionActivityTrackingBaseName="Materiales" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TWl-N0-SVx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Materiales" title="Materiales" interactionActivityTrackingBaseName="Materiales" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TWl-N0-SVx" customClass="MaterialesVC" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Why-HW-zQD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -860,19 +860,79 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="ClT-Ns-euW">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                             </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFm-xQ-Uby" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                                <rect key="frame" x="20" y="748" width="353" height="50"/>
+                                <color key="backgroundColor" name="ColorSecundario"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Utw-aF-gne"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="kw2-9f-ewM"/>
+                                </constraints>
+                                <color key="tintColor" name="ColorSecundario"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Continuar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="finishDireccionSelection:" destination="gKQ-KT-fDT" eventType="touchUpInside" id="Bxq-aG-nxh"/>
+                                    <action selector="finishHorario:" destination="5xu-e3-pt8" eventType="touchUpInside" id="2mp-gh-mI3"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wE0-Lv-ddO">
+                                <rect key="frame" x="0.0" y="63" width="393" height="665"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="no8-Dy-8ID">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MaterialReciclarCollectionViewCell" id="bpK-sG-Vjm" customClass="MaterialCollectionViewCell" customModule="PueblaReecicla" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9k5-yf-9gj">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xdd-Pe-o45"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wE0-Lv-ddO" firstAttribute="top" secondItem="xdd-Pe-o45" secondAttribute="top" constant="4" id="1aM-w7-ZeU"/>
+                            <constraint firstItem="XFm-xQ-Uby" firstAttribute="leading" secondItem="xdd-Pe-o45" secondAttribute="leading" constant="20" id="Ap3-ru-g3F"/>
+                            <constraint firstItem="xdd-Pe-o45" firstAttribute="bottom" secondItem="XFm-xQ-Uby" secondAttribute="bottom" constant="20" id="G9W-q0-4Rr"/>
                             <constraint firstItem="xdd-Pe-o45" firstAttribute="bottom" secondItem="ClT-Ns-euW" secondAttribute="bottom" id="Y2O-Fg-YxO"/>
+                            <constraint firstItem="xdd-Pe-o45" firstAttribute="trailing" secondItem="wE0-Lv-ddO" secondAttribute="trailing" id="Zm9-BW-LDL"/>
                             <constraint firstItem="xdd-Pe-o45" firstAttribute="trailing" secondItem="ClT-Ns-euW" secondAttribute="trailing" id="fRB-xD-rIV"/>
                             <constraint firstItem="ClT-Ns-euW" firstAttribute="leading" secondItem="xdd-Pe-o45" secondAttribute="leading" id="hJe-3z-AXb"/>
+                            <constraint firstItem="wE0-Lv-ddO" firstAttribute="leading" secondItem="xdd-Pe-o45" secondAttribute="leading" id="lPM-nR-PgQ"/>
                             <constraint firstItem="ClT-Ns-euW" firstAttribute="top" secondItem="xdd-Pe-o45" secondAttribute="top" id="oN6-Pg-WRf"/>
+                            <constraint firstItem="xdd-Pe-o45" firstAttribute="trailing" secondItem="XFm-xQ-Uby" secondAttribute="trailing" constant="20" id="stK-Z2-7F2"/>
+                            <constraint firstItem="XFm-xQ-Uby" firstAttribute="top" secondItem="wE0-Lv-ddO" secondAttribute="bottom" constant="20" id="tyH-g6-Ssf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Ubicación" id="nsm-1I-KUD">
+                    <navigationItem key="navigationItem" title="Materiales a Reciclar" id="nsm-1I-KUD">
                         <barButtonItem key="backBarButtonItem" title="  " id="7xD-gV-si2"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="wE0-Lv-ddO" id="nq5-u0-x0G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSy-Vg-fNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

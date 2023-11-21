@@ -25,6 +25,10 @@
 		832FD7532B0C07390086D76B /* VD_verFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD7522B0C07390086D76B /* VD_verFoto.swift */; };
 		832FD7572B0C07C90086D76B /* UBI_Explicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD7562B0C07C90086D76B /* UBI_Explicacion.swift */; };
 		832FD7592B0C07D50086D76B /* UBI_Explicacion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832FD7582B0C07D50086D76B /* UBI_Explicacion.xib */; };
+		832FD75B2B0C0BE50086D76B /* MaterialesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD75A2B0C0BE50086D76B /* MaterialesVC.swift */; };
+		832FD75E2B0C14210086D76B /* MaterialReciclarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD75C2B0C14210086D76B /* MaterialReciclarCollectionViewCell.swift */; };
+		832FD75F2B0C14210086D76B /* MaterialReciclarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832FD75D2B0C14210086D76B /* MaterialReciclarCollectionViewCell.xib */; };
+		832FD7612B0D524B0086D76B /* HeaderMaterialCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD7602B0D524B0086D76B /* HeaderMaterialCollectionReusableView.swift */; };
 		83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582AD82AF1A901006E57A8 /* AppDelegate.swift */; };
 		83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */; };
 		83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582ADC2AF1A901006E57A8 /* ViewController.swift */; };
@@ -93,6 +97,10 @@
 		832FD7522B0C07390086D76B /* VD_verFoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VD_verFoto.swift; sourceTree = "<group>"; };
 		832FD7562B0C07C90086D76B /* UBI_Explicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBI_Explicacion.swift; sourceTree = "<group>"; };
 		832FD7582B0C07D50086D76B /* UBI_Explicacion.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UBI_Explicacion.xib; sourceTree = "<group>"; };
+		832FD75A2B0C0BE50086D76B /* MaterialesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialesVC.swift; sourceTree = "<group>"; };
+		832FD75C2B0C14210086D76B /* MaterialReciclarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialReciclarCollectionViewCell.swift; sourceTree = "<group>"; };
+		832FD75D2B0C14210086D76B /* MaterialReciclarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialReciclarCollectionViewCell.xib; sourceTree = "<group>"; };
+		832FD7602B0D524B0086D76B /* HeaderMaterialCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMaterialCollectionReusableView.swift; sourceTree = "<group>"; };
 		83582AD52AF1A901006E57A8 /* PueblaReecicla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PueblaReecicla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83582AD82AF1A901006E57A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,7 +234,6 @@
 		83582AD72AF1A901006E57A8 /* PueblaReecicla */ = {
 			isa = PBXGroup;
 			children = (
-				832298F82AFFE75A00F3DF85 /* Models */,
 				83582AD82AF1A901006E57A8 /* AppDelegate.swift */,
 				83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */,
 				83582ADC2AF1A901006E57A8 /* ViewController.swift */,
@@ -237,6 +244,7 @@
 				83943EB92AF5A91600E9E258 /* HomeVC.swift */,
 				B33858EF2AFAD95D00048E56 /* Map.storyboard */,
 				B33858F12AFADB2900048E56 /* MapVC.swift */,
+				832298F82AFFE75A00F3DF85 /* Models */,
 				832299022B002EA600F3DF85 /* Popups */,
 				8361300E2B046DA20024E6A6 /* HistorialViewControllers */,
 				B37D42542AFC1DEF002F7479 /* RecycleVC.swift */,
@@ -277,6 +285,7 @@
 				8361300F2B046E200024E6A6 /* VerDetallesVC.swift */,
 				8361301E2B06B6F30024E6A6 /* HorarioVC.swift */,
 				832FD7502B0BF4740086D76B /* DireccionVC.swift */,
+				832FD75A2B0C0BE50086D76B /* MaterialesVC.swift */,
 			);
 			path = HistorialViewControllers;
 			sourceTree = "<group>";
@@ -288,6 +297,9 @@
 				836130142B0556C00024E6A6 /* MaterialCollectionViewCell.xib */,
 				83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */,
 				83C134392AFEBB66008FBFDB /* HistorialCollectionViewCell.xib */,
+				832FD75C2B0C14210086D76B /* MaterialReciclarCollectionViewCell.swift */,
+				832FD75D2B0C14210086D76B /* MaterialReciclarCollectionViewCell.xib */,
+				832FD7602B0D524B0086D76B /* HeaderMaterialCollectionReusableView.swift */,
 			);
 			path = CollectionViewsElements;
 			sourceTree = "<group>";
@@ -407,6 +419,7 @@
 			files = (
 				B37D42532AFC1CF5002F7479 /* Recycle.storyboard in Resources */,
 				836130162B0556C00024E6A6 /* MaterialCollectionViewCell.xib in Resources */,
+				832FD75F2B0C14210086D76B /* MaterialReciclarCollectionViewCell.xib in Resources */,
 				836313D52B030E7800382606 /* RV_comp_sinCalif.xib in Resources */,
 				83582AE52AF1A902006E57A8 /* LaunchScreen.storyboard in Resources */,
 				B33858F02AFAD95D00048E56 /* Map.storyboard in Resources */,
@@ -462,6 +475,7 @@
 				B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */,
 				832FD7512B0BF4740086D76B /* DireccionVC.swift in Sources */,
 				83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */,
+				832FD7612B0D524B0086D76B /* HeaderMaterialCollectionReusableView.swift in Sources */,
 				8322990A2B005B9F00F3DF85 /* Style.swift in Sources */,
 				832298FB2AFFE77700F3DF85 /* Recolecciones.swift in Sources */,
 				8322990D2B006C3800F3DF85 /* RV_enProceso.swift in Sources */,
@@ -472,7 +486,9 @@
 				B33858F22AFADB2900048E56 /* MapVC.swift in Sources */,
 				836313D32B030E6300382606 /* RV_comp_sinCalif.swift in Sources */,
 				83943EB62AF565D400E9E258 /* SignUpVC.swift in Sources */,
+				832FD75B2B0C0BE50086D76B /* MaterialesVC.swift in Sources */,
 				83582B0F2AF2C332006E57A8 /* testViewController.swift in Sources */,
+				832FD75E2B0C14210086D76B /* MaterialReciclarCollectionViewCell.swift in Sources */,
 				B37D42592AFC1F76002F7479 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

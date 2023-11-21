@@ -330,9 +330,6 @@ class HorarioVC: UIViewController {
     }
     
     func validateTimeFields() -> Bool {
-        // Get the current date components
-        let currentComponents = calendar.dateComponents([.hour, .minute], from: Date())
-
         // Check if the end time is after the start time
         if timeEndPicker.date <= timeIniPicker.date {
             showAlert(message: "La hora de finalización debe ser después de la hora de inicio.")

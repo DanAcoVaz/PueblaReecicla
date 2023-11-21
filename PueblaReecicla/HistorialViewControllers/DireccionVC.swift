@@ -33,7 +33,10 @@ class DireccionVC: UIViewController {
     @IBAction func finishDireccionSelection(_ sender: Any) {
         if validateTextFields() {
             // All text fields are non-empty, perform your action here
-            print("All text fields are filled.")
+            let storyboard = UIStoryboard(name: "Recycle", bundle: nil)
+            if let MaterialesVC = storyboard.instantiateViewController(withIdentifier: "Materiales") as? MaterialesVC {
+                self.navigationController?.pushViewController(MaterialesVC, animated: true)
+            }
         }
     }
     
