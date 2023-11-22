@@ -20,11 +20,10 @@ class HeaderMaterialCollectionReusableView: UICollectionReusableView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        agregarMaterialBtn.cornerRadius = 50
-        agregarMaterialBtn.layer.shadowColor = UIColor.black.cgColor
+        /*agregarMaterialBtn.layer.shadowColor = UIColor.black.cgColor
         agregarMaterialBtn.layer.shadowOpacity = 0.5
         agregarMaterialBtn.layer.shadowOffset = CGSize(width: 0, height: 1)
-        agregarMaterialBtn.layer.shadowRadius = 2
+        agregarMaterialBtn.layer.shadowRadius = 2*/
     }
     
     public func configure(with fecha: String, horario: String) {

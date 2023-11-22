@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MaterialReciclarCollectionViewCell: UICollectionViewCell {
+class MaterialReciclarCollectionViewCell: UICollectionViewCell, UITableViewDataSource, UITableViewDelegate {
 
     static let identifier = "MaterialReciclarCollectionViewCell"
     
@@ -23,11 +23,27 @@ class MaterialReciclarCollectionViewCell: UICollectionViewCell {
     @IBOutlet var cantidadMaterial: UILabel!
     @IBOutlet var plusBtn: UIImageView!
     @IBOutlet var minusBtn: UIImageView!
-    @IBOutlet var unidadMaterial: ButtonStyle!
+    @IBOutlet var unidadMaterialBtn: ViewStyle!
+    @IBOutlet var unidadMaterialTxt: UILabel!
+    
+    var isDropdownVisible = false
+    
+    var overlayView: UIView?
+    
+    var data = ["Bolsas", "Bote", "Cajas", "Kilos"]
+    var tableView = UITableView()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    
+        // Set up the table view
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.delegate = self
+        tableView.dataSource = self
+
+        // Set up the dropdown button
+        let unidadMaterialTapGesture = UITapGestureRecognizer(target: self, action: #selector(dropdownButtonTapped))
+        unidadMaterialBtn.addGestureRecognizer(unidadMaterialTapGesture)
+           
         applyShadow(view: plusMinusBtn)
         applyShadow(view: tomarFotoBtn)
         applyShadow(view: eliminarBtn)
@@ -64,7 +80,97 @@ class MaterialReciclarCollectionViewCell: UICollectionViewCell {
         tomarFotoBtn.isUserInteractionEnabled = true
         let tomarFotoBtnTapGesture = UITapGestureRecognizer(target: self, action: #selector(tomarFotoBtnClick))
         tomarFotoBtn.addGestureRecognizer(tomarFotoBtnTapGesture)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsideDropdown))
+        tapGesture.cancelsTouchesInView = false
+        window?.addGestureRecognizer(tapGesture)
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return data.count
+     }
+
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+         cell.backgroundColor = RecycleViewController.green
+         cell.textLabel?.textColor = UIColor.white
+         cell.textLabel?.text = data[indexPath.row]
+         return cell
+     }
+    
+    @objc func handleTapOutsideDropdown() {
+        if isDropdownVisible {
+            hideDropdown()
+        }
+    }
+
+     // MARK: - UITableViewDelegate
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedOption = data[indexPath.row]
+        unidadMaterialTxt.text = selectedOption
+        // Add your custom logic here based on the selected option
+        hideDropdown()
+    }
+
+
+     // MARK: - Dropdown Handling
+
+    @objc func dropdownButtonTapped() {
+        if isDropdownVisible {
+            hideDropdown()
+        } else {
+            showDropdown()
+        }
+    }
+    
+
+    func showDropdown() {
+        print("Showing Dropdown")
+
+        // Get the frame of the unidadMaterialBtn relative to its superview
+        let buttonFrameInWindow = self.convert(unidadMaterialBtn.frame, to: nil)
+
+        // Calculate the horizontal center position for the dropdown
+        let dropdownX = buttonFrameInWindow.midX - unidadMaterialBtn.frame.size.width / 2.0
+
+        // Use the key window scene to get the window
+        guard let window = UIApplication.shared.connectedScenes
+            .filter({ $0.activationState == .foregroundActive })
+            .compactMap({ $0 as? UIWindowScene })
+            .first?.windows
+            .first(where: { $0.isKeyWindow }) else {
+                return
+        }
+
+        // Calculate the width of the dropdown (same as unidadMaterialBtn)
+        let dropdownWidth = unidadMaterialBtn.frame.size.width
+
+        // Set the frame of the dropdown
+        tableView.frame = CGRect(x: dropdownX + 22, y: buttonFrameInWindow.origin.y + buttonFrameInWindow.size.height + 12, width: dropdownWidth, height: CGFloat(data.count * 44))
+        tableView.reloadData()
+
+        // Add the dropdown to the window
+        window.addSubview(tableView)
+        
+        // Create and add the overlay view
+        overlayView = UIView(frame: window.bounds)
+        overlayView?.backgroundColor = UIColor.clear
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsideDropdown))
+        overlayView?.addGestureRecognizer(tapGesture)
+
+        window.addSubview(overlayView!)
+
+        isDropdownVisible = true
+    }
+
+
+     func hideDropdown() {
+         tableView.removeFromSuperview()
+         overlayView?.removeFromSuperview()
+         overlayView = nil
+         isDropdownVisible = false
+     }
     
     @objc func eliminarBtnClick() {
         eliminarBtnTapped?()
@@ -101,7 +207,7 @@ class MaterialReciclarCollectionViewCell: UICollectionViewCell {
         imgMaterial.image = imgM
         nombreMaterial.text = nombreM
         cantidadMaterial.text = cantidad
-        unidadMaterial.setTitle(unidad, for: .normal)
+        unidadMaterialTxt.text = unidad
     }
     
     static func nib() -> UINib {

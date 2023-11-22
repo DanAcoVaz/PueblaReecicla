@@ -28,20 +28,41 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="gnU-QD-NVy" userLabel="Left Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="206" height="180"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92B-Ek-82s" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APV-7I-5wr" userLabel="dropDownMenu" customClass="ViewStyle" customModule="PueblaReecicla" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="206" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bolsas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIe-fi-WoJ">
+                                                        <rect key="frame" x="12" y="10.333333333333334" width="48" height="19.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow_down" translatesAutoresizingMaskIntoConstraints="NO" id="MWG-rf-6rq">
+                                                        <rect key="frame" x="169" y="7.6666666666666679" width="25" height="25.000000000000004"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="w0Y-xX-7If"/>
+                                                            <constraint firstAttribute="width" secondItem="MWG-rf-6rq" secondAttribute="height" multiplier="15:15" id="wQD-K5-vdq"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="6h2-5P-6aY"/>
+                                                    <constraint firstItem="xIe-fi-WoJ" firstAttribute="centerY" secondItem="APV-7I-5wr" secondAttribute="centerY" id="5FY-tq-qdh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MWG-rf-6rq" secondAttribute="trailing" constant="12" id="BBh-PB-o29"/>
+                                                    <constraint firstItem="MWG-rf-6rq" firstAttribute="centerY" secondItem="APV-7I-5wr" secondAttribute="centerY" id="SYO-yv-x25"/>
+                                                    <constraint firstItem="xIe-fi-WoJ" firstAttribute="leading" secondItem="APV-7I-5wr" secondAttribute="leading" constant="12" id="X9u-5Y-zEd"/>
+                                                    <constraint firstAttribute="height" constant="40" id="iF8-P7-mSb"/>
                                                 </constraints>
-                                                <color key="tintColor" name="AccentColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Bolsas"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="ColorDeFondo"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                            </button>
+                                            </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="sQZ-sG-Hxr" userLabel="Plus/Minus Stack View">
                                                 <rect key="frame" x="0.0" y="65" width="206" height="40"/>
                                                 <subviews>
@@ -131,18 +152,18 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APV-7I-5wr" userLabel="eliminarBtn" customClass="ViewStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTM-b5-uqB" userLabel="eliminarBtn" customClass="ViewStyle" customModule="PueblaReecicla" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="130" width="206" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MWG-rf-6rq">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="B9x-aa-9IN">
                                                         <rect key="frame" x="12" y="11.999999999999989" width="25" height="25.333333333333339"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="25" id="w0Y-xX-7If"/>
-                                                            <constraint firstAttribute="width" secondItem="MWG-rf-6rq" secondAttribute="height" multiplier="15:15" id="wQD-K5-vdq"/>
+                                                            <constraint firstAttribute="height" constant="25" id="kvM-TO-DmV"/>
+                                                            <constraint firstAttribute="width" secondItem="B9x-aa-9IN" secondAttribute="height" multiplier="15:15" id="vcP-Nz-wb1"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eliminar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIe-fi-WoJ">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eliminar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnq-wT-8Gh">
                                                         <rect key="frame" x="78.333333333333314" y="15.333333333333341" width="57.333333333333343" height="19.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,12 +172,12 @@
                                                 </subviews>
                                                 <color key="backgroundColor" name="ColorNegativo"/>
                                                 <constraints>
-                                                    <constraint firstItem="xIe-fi-WoJ" firstAttribute="centerY" secondItem="APV-7I-5wr" secondAttribute="centerY" id="5FY-tq-qdh"/>
-                                                    <constraint firstItem="MWG-rf-6rq" firstAttribute="centerY" secondItem="APV-7I-5wr" secondAttribute="centerY" id="c13-4q-UkS"/>
-                                                    <constraint firstItem="xIe-fi-WoJ" firstAttribute="centerX" secondItem="APV-7I-5wr" secondAttribute="centerX" constant="4" id="coX-hO-ydh"/>
-                                                    <constraint firstItem="MWG-rf-6rq" firstAttribute="centerY" secondItem="APV-7I-5wr" secondAttribute="centerY" id="hzm-C3-8Vj"/>
-                                                    <constraint firstAttribute="height" constant="50" id="iF8-P7-mSb"/>
-                                                    <constraint firstItem="MWG-rf-6rq" firstAttribute="leading" secondItem="APV-7I-5wr" secondAttribute="leading" constant="12" id="kEi-6v-Xwb"/>
+                                                    <constraint firstItem="B9x-aa-9IN" firstAttribute="centerY" secondItem="oTM-b5-uqB" secondAttribute="centerY" id="CX9-9l-UkN"/>
+                                                    <constraint firstItem="Fnq-wT-8Gh" firstAttribute="centerY" secondItem="oTM-b5-uqB" secondAttribute="centerY" id="GHR-no-KQz"/>
+                                                    <constraint firstItem="Fnq-wT-8Gh" firstAttribute="centerX" secondItem="oTM-b5-uqB" secondAttribute="centerX" constant="4" id="SO2-WF-OMv"/>
+                                                    <constraint firstAttribute="height" constant="50" id="T2O-B2-BVn"/>
+                                                    <constraint firstItem="B9x-aa-9IN" firstAttribute="centerY" secondItem="oTM-b5-uqB" secondAttribute="centerY" id="rRy-vV-3KH"/>
+                                                    <constraint firstItem="B9x-aa-9IN" firstAttribute="leading" secondItem="oTM-b5-uqB" secondAttribute="leading" constant="12" id="zXn-68-UgC"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -202,26 +223,28 @@
             <size key="customSize" width="446" height="208"/>
             <connections>
                 <outlet property="cantidadMaterial" destination="EBy-SF-aio" id="HkX-xB-tXM"/>
-                <outlet property="eliminarBtn" destination="APV-7I-5wr" id="7uO-CF-UGn"/>
+                <outlet property="eliminarBtn" destination="oTM-b5-uqB" id="gEL-42-ypI"/>
                 <outlet property="imgMaterial" destination="9po-XS-E9d" id="R4x-dg-BFY"/>
                 <outlet property="minusBtn" destination="KXU-M0-y68" id="xyT-8J-9yO"/>
                 <outlet property="nombreMaterial" destination="sAb-hf-iUm" id="T0f-Vm-HV9"/>
                 <outlet property="plusBtn" destination="a8V-kl-jZc" id="wNl-h4-fGH"/>
                 <outlet property="plusMinusBtn" destination="sQZ-sG-Hxr" id="ac7-IJ-v0b"/>
                 <outlet property="tomarFotoBtn" destination="pad-zr-t1d" id="xNQ-RZ-ZL7"/>
-                <outlet property="unidadMaterial" destination="92B-Ek-82s" id="KD3-cH-oWn"/>
+                <outlet property="unidadMaterialBtn" destination="APV-7I-5wr" id="BfE-U1-hMv"/>
+                <outlet property="unidadMaterialTxt" destination="xIe-fi-WoJ" id="gv5-9y-kfS"/>
             </connections>
             <point key="canvasLocation" x="281.67938931297709" y="41.549295774647888"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
+        <image name="icon_arrow_down" width="401" height="401"/>
         <image name="material_aceite_auto" width="731" height="730"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash.fill" catalog="system" width="117" height="128"/>
         <namedColor name="AccentColor">
-            <color red="0.27843137254901962" green="0.72941176470588232" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ColorDeFondo">
             <color red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,7 +259,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
