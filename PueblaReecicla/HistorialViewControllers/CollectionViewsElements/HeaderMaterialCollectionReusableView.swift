@@ -8,9 +8,10 @@
 import UIKit
 
 class HeaderMaterialCollectionReusableView: UICollectionReusableView {
-        static let identifier = "HeaderMaterialCollectionReusableView"
-    
-    public func configure(){
-        
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
+    
 }
