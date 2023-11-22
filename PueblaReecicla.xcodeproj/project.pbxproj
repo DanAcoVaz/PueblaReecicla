@@ -54,6 +54,12 @@
 		FB41CBAB2B0830DE00CE5949 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB41CBA92B0830DE00CE5949 /* Map.storyboard */; };
 		FB41CBAE2B0839C700CE5949 /* Centro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBAD2B0839C700CE5949 /* Centro.swift */; };
 		FB41CBB02B083C5900CE5949 /* Centros.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBAF2B083C5900CE5949 /* Centros.swift */; };
+		FB41CBB52B0D6CE100CE5949 /* Categorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBB12B0D6CE100CE5949 /* Categorias.swift */; };
+		FB41CBB62B0D6CE100CE5949 /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBB22B0D6CE100CE5949 /* Categoria.swift */; };
+		FB41CBB72B0D6CE100CE5949 /* Favoritos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBB32B0D6CE100CE5949 /* Favoritos.swift */; };
+		FB41CBB82B0D6CE100CE5949 /* Favorito.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBB42B0D6CE100CE5949 /* Favorito.swift */; };
+		FB41CBBA2B0D6E0200CE5949 /* Materiales.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBB92B0D6E0200CE5949 /* Materiales.swift */; };
+		FB41CBBC2B0D6E1600CE5949 /* MaterialInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBBB2B0D6E1600CE5949 /* MaterialInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +127,12 @@
 		FB41CBA92B0830DE00CE5949 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Map.storyboard; path = ../../../Desktop/Josafat/Map.storyboard; sourceTree = "<group>"; };
 		FB41CBAD2B0839C700CE5949 /* Centro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centro.swift; sourceTree = "<group>"; };
 		FB41CBAF2B083C5900CE5949 /* Centros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centros.swift; sourceTree = "<group>"; };
+		FB41CBB12B0D6CE100CE5949 /* Categorias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categorias.swift; path = ../../../../Downloads/Categorias.swift; sourceTree = "<group>"; };
+		FB41CBB22B0D6CE100CE5949 /* Categoria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categoria.swift; path = ../../../../Downloads/Categoria.swift; sourceTree = "<group>"; };
+		FB41CBB32B0D6CE100CE5949 /* Favoritos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favoritos.swift; path = ../../../../Downloads/Favoritos.swift; sourceTree = "<group>"; };
+		FB41CBB42B0D6CE100CE5949 /* Favorito.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorito.swift; path = ../../../../Downloads/Favorito.swift; sourceTree = "<group>"; };
+		FB41CBB92B0D6E0200CE5949 /* Materiales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Materiales.swift; sourceTree = "<group>"; };
+		FB41CBBB2B0D6E1600CE5949 /* MaterialInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,7 +268,13 @@
 			isa = PBXGroup;
 			children = (
 				FB41CBAD2B0839C700CE5949 /* Centro.swift */,
+				FB41CBB22B0D6CE100CE5949 /* Categoria.swift */,
+				FB41CBB12B0D6CE100CE5949 /* Categorias.swift */,
+				FB41CBB42B0D6CE100CE5949 /* Favorito.swift */,
+				FB41CBB32B0D6CE100CE5949 /* Favoritos.swift */,
 				FB41CBAF2B083C5900CE5949 /* Centros.swift */,
+				FB41CBB92B0D6E0200CE5949 /* Materiales.swift */,
+				FB41CBBB2B0D6E1600CE5949 /* MaterialInfo.swift */,
 			);
 			path = MapModels;
 			sourceTree = "<group>";
@@ -417,19 +435,25 @@
 				832298FF2AFFEF9F00F3DF85 /* Material.swift in Sources */,
 				83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */,
 				83C1343A2AFEBB66008FBFDB /* HistorialCollectionViewCell.swift in Sources */,
+				FB41CBB52B0D6CE100CE5949 /* Categorias.swift in Sources */,
+				FB41CBB72B0D6CE100CE5949 /* Favoritos.swift in Sources */,
 				FB41CBA72B08008300CE5949 /* CenterPopup.swift in Sources */,
 				FB41CB9F2B08008300CE5949 /* StyleCenterPopUp.swift in Sources */,
 				FB41CBAA2B0830DE00CE5949 /* MapVC.swift in Sources */,
 				FB41CBAE2B0839C700CE5949 /* Centro.swift in Sources */,
 				83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */,
+				FB41CBBC2B0D6E1600CE5949 /* MaterialInfo.swift in Sources */,
 				FB41CBA12B08008300CE5949 /* DialogSheet.swift in Sources */,
 				FB41CBA62B08008300CE5949 /* CategoryBottomSheetDialog.swift in Sources */,
+				FB41CBBA2B0D6E0200CE5949 /* Materiales.swift in Sources */,
 				B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */,
 				83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */,
 				832298FB2AFFE77700F3DF85 /* Recolecciones.swift in Sources */,
 				FB41CBA52B08008300CE5949 /* CustomInfoCenter.swift in Sources */,
 				832298FD2AFFE93100F3DF85 /* Recoleccion.swift in Sources */,
 				83943EBA2AF5A91600E9E258 /* HomeVC.swift in Sources */,
+				FB41CBB62B0D6CE100CE5949 /* Categoria.swift in Sources */,
+				FB41CBB82B0D6CE100CE5949 /* Favorito.swift in Sources */,
 				832299012AFFEFC200F3DF85 /* Recolector.swift in Sources */,
 				FB41CB912B08006000CE5949 /* Center.swift in Sources */,
 				FB41CBA32B08008300CE5949 /* WindowCenter.swift in Sources */,

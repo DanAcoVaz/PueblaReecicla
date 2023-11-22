@@ -9,6 +9,9 @@ import Foundation
 import FirebaseFirestore
 
 class Centro {
+    
+  
+    
     var categoria: String
     var dias: [String]
     var direccion: String
@@ -22,6 +25,7 @@ class Centro {
     var nombre: String
     var num_telefonico: String
     var documentID: String
+    
     
     var dictionary: [String: Any] {
         return ["categoria": categoria, "dias": dias, "direccion": direccion, "estado": estado, "hora_apertura": hora_apertura, "hora_cierra": hora_cierre, "imagen": imagen, "latitud": latitud, "longitud": longitud, "materiales": materiales, "nombre": nombre, "num_telefonico": num_telefonico]
@@ -50,21 +54,23 @@ class Centro {
     
     convenience init(dictionary: [String: Any]) {
         
-        let categoria = dictionary["categoria"] as! String? ?? ""
-        let dias = dictionary["dias"] as! [String]? ?? []
-        let direccion = dictionary["direccion"] as! String? ?? ""
-        let estado = dictionary["estado"] as! Bool? ?? false
-        let hora_apertura = dictionary["hora_apertura"] as! String? ?? ""
-        let hora_cierre = dictionary["hora_cierre"] as! String? ?? ""
-        let imagen = dictionary["imagen"] as! String? ?? ""
-        let latitud = dictionary["latitud"] as! Double? ?? 0.0
-        let longitud = dictionary["longitud"] as! Double? ?? 0.0
-        let materiales = dictionary["materiales"] as! [String]? ?? []
-        let nombre = dictionary["nombre"] as! String? ?? ""
-        let num_telefonico = dictionary["num_telefonico"] as! String? ?? ""
+        let categoria = dictionary["categoria"] as? String ?? ""
+        let dias = dictionary["dias"] as? [String] ?? []
+        let direccion = dictionary["direccion"] as? String ?? ""
+        let estado = dictionary["estado"] as? Bool ?? false
+        let horaApertura = dictionary["hora_apertura"] as? String ?? ""
+        let horaCierre = dictionary["hora_cierra"] as? String ?? ""
+        let imagen = dictionary["imagen"] as? String ?? ""
+        let latitud = dictionary["latitud"] as? Double ?? 0.0
+        let longitud = dictionary["longitud"] as? Double ?? 0.0
+        let materiales = dictionary["materiales"] as? [String] ?? []
+        let nombre = dictionary["nombre"] as? String ?? ""
+        let numTelefonico = dictionary["num_telefonico"] as? String ?? ""
         
-        self.init(categoria: categoria, dias: dias, direccion: direccion, estado: estado, horaApertura: hora_apertura, horaCierre: hora_cierre, imagen: imagen, latitud: latitud, longitud: longitud, materiales: materiales, nombre: nombre, numTelefonico: num_telefonico, documentID: "")
+        self.init(categoria: categoria, dias: dias, direccion: direccion, estado: estado, horaApertura: horaApertura, horaCierre: horaCierre, imagen: imagen, latitud: latitud, longitud: longitud, materiales: materiales, nombre: nombre, numTelefonico: numTelefonico, documentID: "")
         
     }
+    
+    
     
 }

@@ -36,14 +36,11 @@ class Centros {
                     let centro = Centro(dictionary: document.data())
                     centro.documentID = document.documentID
                     self.Centros.append(centro)
-                    print(centro)
+                    print("ID: \(centro.documentID), Nombre: \(centro.nombre)")
                 }
             }
         }
-        
-        
-        print("Centros obtenidos:", self.Centros.count)
-        
     }
+    
     
 }
