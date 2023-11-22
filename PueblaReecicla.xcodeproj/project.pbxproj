@@ -59,6 +59,8 @@
 		83943EB62AF565D400E9E258 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83943EB52AF565D400E9E258 /* SignUpVC.swift */; };
 		83943EB82AF5A90800E9E258 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83943EB72AF5A90800E9E258 /* Home.storyboard */; };
 		83943EBA2AF5A91600E9E258 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83943EB92AF5A91600E9E258 /* HomeVC.swift */; };
+		83AB32B02B0EAC8B00FDBCF6 /* MTR_tomarFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB32AF2B0EAC8B00FDBCF6 /* MTR_tomarFoto.swift */; };
+		83AB32B22B0EACEF00FDBCF6 /* MTR_tomarFoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AB32B12B0EACEF00FDBCF6 /* MTR_tomarFoto.xib */; };
 		83C1343A2AFEBB66008FBFDB /* HistorialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */; };
 		83C1343B2AFEBB66008FBFDB /* HistorialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C134392AFEBB66008FBFDB /* HistorialCollectionViewCell.xib */; };
 		B33858F02AFAD95D00048E56 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33858EF2AFAD95D00048E56 /* Map.storyboard */; };
@@ -139,6 +141,8 @@
 		83943EB52AF565D400E9E258 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		83943EB72AF5A90800E9E258 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		83943EB92AF5A91600E9E258 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		83AB32AF2B0EAC8B00FDBCF6 /* MTR_tomarFoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTR_tomarFoto.swift; sourceTree = "<group>"; };
+		83AB32B12B0EACEF00FDBCF6 /* MTR_tomarFoto.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTR_tomarFoto.xib; sourceTree = "<group>"; };
 		83C134382AFEBB66008FBFDB /* HistorialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialCollectionViewCell.swift; sourceTree = "<group>"; };
 		83C134392AFEBB66008FBFDB /* HistorialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistorialCollectionViewCell.xib; sourceTree = "<group>"; };
 		B33858EF2AFAD95D00048E56 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 				832FD7522B0C07390086D76B /* VD_verFoto.swift */,
 				832FD7562B0C07C90086D76B /* UBI_Explicacion.swift */,
 				832FD7582B0C07D50086D76B /* UBI_Explicacion.xib */,
+				83AB32AF2B0EAC8B00FDBCF6 /* MTR_tomarFoto.swift */,
+				83AB32B12B0EACEF00FDBCF6 /* MTR_tomarFoto.xib */,
 			);
 			path = Popups;
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 				836313D52B030E7800382606 /* RV_comp_sinCalif.xib in Resources */,
 				832FD7652B0D62C80086D76B /* HeaderMaterialCollectionReusableView.xib in Resources */,
 				83582AE52AF1A902006E57A8 /* LaunchScreen.storyboard in Resources */,
+				83AB32B22B0EACEF00FDBCF6 /* MTR_tomarFoto.xib in Resources */,
 				B33858F02AFAD95D00048E56 /* Map.storyboard in Resources */,
 				836130182B0692E00024E6A6 /* VD_verFoto.xib in Resources */,
 				836313DF2B042A6000382606 /* RV_cancelada.xib in Resources */,
@@ -502,6 +509,7 @@
 				B33858F22AFADB2900048E56 /* MapVC.swift in Sources */,
 				836313D32B030E6300382606 /* RV_comp_sinCalif.swift in Sources */,
 				83943EB62AF565D400E9E258 /* SignUpVC.swift in Sources */,
+				83AB32B02B0EAC8B00FDBCF6 /* MTR_tomarFoto.swift in Sources */,
 				832FD75B2B0C0BE50086D76B /* MaterialesVC.swift in Sources */,
 				83582B0F2AF2C332006E57A8 /* testViewController.swift in Sources */,
 				832FD75E2B0C14210086D76B /* MaterialReciclarCollectionViewCell.swift in Sources */,

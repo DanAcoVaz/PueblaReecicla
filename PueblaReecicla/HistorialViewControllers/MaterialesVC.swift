@@ -14,8 +14,11 @@ class MaterialesVC: UIViewController {
     
     var materialArray: [Material] = []
     
+    var popUpTomarFoto: MTR_tomarFoto!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.popUpTomarFoto = MTR_tomarFoto(frame: self.view.frame, inView: self)
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.layer.frame.width - 16,
@@ -46,9 +49,28 @@ extension MaterialesVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MaterialReciclarCollectionViewCell.identifier, for: indexPath) as! MaterialReciclarCollectionViewCell
         
+        self.popUpTomarFoto.container.customize()
+        
         cell.tomarFotoBtnTapped = { [self] in
             // Handle the button tap here
             print("Tomar Foto")
+            
+            self.popUpTomarFoto.isUserInteractionEnabled = true
+            
+            // funciones para botones de los popups
+            self.popUpTomarFoto.verGaleriaBtn.addTarget(self, action: #selector(self.verGaleriaBtn), for: .touchUpInside)
+            self.view.addSubview(self.popUpTomarFoto)
+            
+            self.popUpTomarFoto.cancelarBtn.addTarget(self, action: #selector(self.cancelarBtn), for: .touchUpInside)
+            self.view.addSubview(self.popUpTomarFoto)
+            
+            self.popUpTomarFoto.tomarFotoBtn.addTarget(self, action: #selector(self.tomarFotoBtn), for: .touchUpInside)
+            self.view.addSubview(self.popUpTomarFoto)
+            
+            // Add tap gesture recognizer to handle taps outside the popup
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleTapOutsidePopup))
+            tapGestureRecognizer.cancelsTouchesInView = false
+            self.popUpTomarFoto.addGestureRecognizer(tapGestureRecognizer)
             
         }
         
@@ -79,6 +101,30 @@ extension MaterialesVC: UICollectionViewDataSource {
         return cell
     }
     
+    @objc func tomarFotoBtn(){
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+    
+    @objc func verGaleriaBtn(){
+        self.popUpTomarFoto.imgMaterial.isHidden = !self.popUpTomarFoto.imgMaterial.isHidden
+    }
+    
+    @objc func handleTapOutsidePopup(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            let location = sender.location(in: popUpTomarFoto.container)
+            if !popUpTomarFoto.container.bounds.contains(location) {
+                popUpTomarFoto.removeFromSuperview()
+            }
+        }
+    }
+    
+    @objc func cancelarBtn(){
+        self.popUpTomarFoto.removeFromSuperview()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderMaterialCollectionReusableView.identifier, for: indexPath) as! HeaderMaterialCollectionReusableView
         
@@ -104,6 +150,25 @@ extension MaterialesVC: UICollectionViewDataSource {
         CGSize(width: view.frame.size.width, height: 200)
     }
     
+}
+
+extension MaterialesVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            self.popUpTomarFoto.imgMaterial.image = UIImage(systemName: "xmark.icloud.fill")
+            return
+        }
+        
+        self.popUpTomarFoto.imgMaterial.image = image
+    }
 }
 
 // función para definir los margenes de cada recolección
