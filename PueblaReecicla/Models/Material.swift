@@ -22,7 +22,7 @@ class Material {
 
     convenience init(dictionary: [String: Any]) {
         self.init(
-            cantidad: dictionary["cantidad"] as? Int ?? 0,
+            cantidad: dictionary["cantidad"] as? Int ?? 1,
             fotoUrl: dictionary["fotoUrl"] as? String ?? "",
             nombre: dictionary["nombre"] as? String ?? "",
             unidad: dictionary["unidad"] as? String ?? ""

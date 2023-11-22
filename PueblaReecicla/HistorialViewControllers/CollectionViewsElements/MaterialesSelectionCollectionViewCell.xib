@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MaterialesSelectionCollectionViewCell" id="gTV-IL-0wX" customClass="MaterialesSelectionCollectionViewCell" customModule="PueblaReecicla" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="256" height="231"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="256" height="231"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="ndk-uT-Xze">
+                        <rect key="frame" x="0.0" y="0.0" width="256" height="231"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="V3K-Lu-udu">
+                                <rect key="frame" x="12" y="12" width="232" height="207"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="material_aceite_auto" translatesAutoresizingMaskIntoConstraints="NO" id="Vhz-6d-kDR">
+                                        <rect key="frame" x="41" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Vhz-6d-kDR" secondAttribute="height" multiplier="1:1" id="JYe-q5-wSM"/>
+                                            <constraint firstAttribute="height" constant="150" id="fhc-xP-i99"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aceite de Auto" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6td-Py-dHX">
+                                        <rect key="frame" x="50.666666666666657" y="162" width="131" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" name="ColorSecundario"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V3K-Lu-udu" firstAttribute="leading" secondItem="ndk-uT-Xze" secondAttribute="leading" constant="12" id="3mx-jx-hXS"/>
+                            <constraint firstAttribute="trailing" secondItem="V3K-Lu-udu" secondAttribute="trailing" constant="12" id="HWl-g9-fXg"/>
+                            <constraint firstItem="V3K-Lu-udu" firstAttribute="top" secondItem="ndk-uT-Xze" secondAttribute="top" constant="12" id="Tsf-qi-cgi"/>
+                            <constraint firstAttribute="bottom" secondItem="V3K-Lu-udu" secondAttribute="bottom" constant="12" id="Wlg-DZ-oNb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ndk-uT-Xze" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="G93-7G-9jS"/>
+                <constraint firstItem="ndk-uT-Xze" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LIF-L1-qGf"/>
+                <constraint firstAttribute="bottom" secondItem="ndk-uT-Xze" secondAttribute="bottom" id="W7S-jU-w3k"/>
+                <constraint firstAttribute="trailing" secondItem="ndk-uT-Xze" secondAttribute="trailing" id="bXh-eH-dQq"/>
+            </constraints>
+            <size key="customSize" width="256" height="231"/>
+            <connections>
+                <outlet property="imgMaterial" destination="Vhz-6d-kDR" id="XzG-6F-jGT"/>
+                <outlet property="nombreMaterial" destination="6td-Py-dHX" id="n7p-hp-aH8"/>
+            </connections>
+            <point key="canvasLocation" x="212.21374045801525" y="49.647887323943664"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="material_aceite_auto" width="731" height="730"/>
+        <namedColor name="ColorSecundario">
+            <color red="0.26666666666666666" green="0.53725490196078429" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

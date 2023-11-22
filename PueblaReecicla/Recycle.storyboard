@@ -848,7 +848,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4t-gN-VMZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1942.7480916030534" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="2802" y="-10"/>
         </scene>
         <!--Materiales-->
         <scene sceneID="qOL-o9-gZe">
@@ -937,7 +937,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSy-Vg-fNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2801" y="4"/>
+            <point key="canvasLocation" x="3673" y="4"/>
         </scene>
         <!--Ubicacion-->
         <scene sceneID="4uC-Gp-IaA">
@@ -966,7 +966,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQr-Me-fKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3602" y="4"/>
+            <point key="canvasLocation" x="1946" y="4"/>
+        </scene>
+        <!--MaterialesSelection-->
+        <scene sceneID="mq2-aI-d2S">
+            <objects>
+                <viewController storyboardIdentifier="MaterialesSelection" title="MaterialesSelection" interactionActivityTrackingBaseName="MaterialesSelection" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bOC-Yq-XLq" customClass="MaterialesSelectionVC" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dH7-tO-xEI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="CRc-uO-gWz">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uil-hI-jsl">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hAE-F5-9Bb">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MaterialReciclarCollectionViewCell" id="aJm-in-qBO" customClass="MaterialCollectionViewCell" customModule="PueblaReecicla" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ejw-OT-jne">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3GQ-jr-WYe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3GQ-jr-WYe" firstAttribute="bottom" secondItem="Uil-hI-jsl" secondAttribute="bottom" id="K3O-um-Ahe"/>
+                            <constraint firstItem="3GQ-jr-WYe" firstAttribute="bottom" secondItem="CRc-uO-gWz" secondAttribute="bottom" id="OqV-vo-i9a"/>
+                            <constraint firstItem="3GQ-jr-WYe" firstAttribute="trailing" secondItem="CRc-uO-gWz" secondAttribute="trailing" id="PeX-oh-4lH"/>
+                            <constraint firstItem="Uil-hI-jsl" firstAttribute="leading" secondItem="3GQ-jr-WYe" secondAttribute="leading" id="aAz-sR-8J1"/>
+                            <constraint firstItem="Uil-hI-jsl" firstAttribute="top" secondItem="3GQ-jr-WYe" secondAttribute="top" id="gK4-2F-cCt"/>
+                            <constraint firstItem="CRc-uO-gWz" firstAttribute="top" secondItem="3GQ-jr-WYe" secondAttribute="top" id="hiQ-o8-A5I"/>
+                            <constraint firstItem="3GQ-jr-WYe" firstAttribute="trailing" secondItem="Uil-hI-jsl" secondAttribute="trailing" id="ois-NS-XTj"/>
+                            <constraint firstItem="CRc-uO-gWz" firstAttribute="leading" secondItem="3GQ-jr-WYe" secondAttribute="leading" id="vJO-de-a13"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Elegir Materiales" id="ZbU-f4-por">
+                        <barButtonItem key="backBarButtonItem" title="  " id="1oi-Lc-UTB"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="Uil-hI-jsl" id="SUK-DV-h7f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="02w-Y6-NaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3673" y="709"/>
         </scene>
     </scenes>
     <resources>
@@ -981,7 +1037,7 @@
         <image name="img_reciclaje" width="120" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
-            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.27843137254901962" green="0.72941176470588232" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ColorDeFondo">
             <color red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

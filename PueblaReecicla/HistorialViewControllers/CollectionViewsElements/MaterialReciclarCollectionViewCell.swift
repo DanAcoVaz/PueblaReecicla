@@ -23,10 +23,11 @@ class MaterialReciclarCollectionViewCell: UICollectionViewCell {
     @IBOutlet var cantidadMaterial: UILabel!
     @IBOutlet var plusBtn: UIImageView!
     @IBOutlet var minusBtn: UIImageView!
+    @IBOutlet var unidadMaterial: ButtonStyle!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+    
         applyShadow(view: plusMinusBtn)
         applyShadow(view: tomarFotoBtn)
         applyShadow(view: eliminarBtn)
@@ -55,6 +56,22 @@ class MaterialReciclarCollectionViewCell: UICollectionViewCell {
         minusBtn.isUserInteractionEnabled = true
         let minusBtnTapGesture = UITapGestureRecognizer(target: self, action: #selector(minusBtnTapped))
         minusBtn.addGestureRecognizer(minusBtnTapGesture)
+        
+        eliminarBtn.isUserInteractionEnabled = true
+        let eliminarBtnTapGesture = UITapGestureRecognizer(target: self, action: #selector(eliminarBtnClick))
+        eliminarBtn.addGestureRecognizer(eliminarBtnTapGesture)
+        
+        tomarFotoBtn.isUserInteractionEnabled = true
+        let tomarFotoBtnTapGesture = UITapGestureRecognizer(target: self, action: #selector(tomarFotoBtnClick))
+        tomarFotoBtn.addGestureRecognizer(tomarFotoBtnTapGesture)
+    }
+    
+    @objc func eliminarBtnClick() {
+        eliminarBtnTapped?()
+    }
+    
+    @objc func tomarFotoBtnClick() {
+        tomarFotoBtnTapped?()
     }
     
     @objc func plusBtnTapped() {
@@ -80,9 +97,11 @@ class MaterialReciclarCollectionViewCell: UICollectionViewCell {
         view.layer.shadowRadius = 2
     }
 
-    public func configure(with imgM: UIImage, nombreM: String) {
+    public func configure(with imgM: UIImage, nombreM: String, cantidad: String, unidad: String) {
         imgMaterial.image = imgM
         nombreMaterial.text = nombreM
+        cantidadMaterial.text = cantidad
+        unidadMaterial.setTitle(unidad, for: .normal)
     }
     
     static func nib() -> UINib {

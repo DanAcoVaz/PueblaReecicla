@@ -27,12 +27,6 @@ class MaterialesVC: UIViewController {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     }
-
-    
-    func didSelectMaterial(_ selectedMaterial: Material) {
-        materialArray.append(selectedMaterial)
-        collectionView.reloadData()
-    }
 }
 
 // función para manejar el click en una de las recolecciones
@@ -59,14 +53,28 @@ extension MaterialesVC: UICollectionViewDataSource {
         }
         
         cell.eliminarBtnTapped = { [weak self] in
-            // Handle the button tap here
-            print("Eliminar Material")
-            
+           
+            // Check if the index is within the valid range
+            guard let indexPath = self?.collectionView.indexPath(for: cell),
+                  indexPath.item < (self?.materialArray.count)! else {
+                print("Invalid index or material array is empty")
+                return
+            }
+
+            // Remove the corresponding material from the array
+            self?.materialArray.remove(at: indexPath.item)
+
+            // Update the collection view by deleting the specific item
+            self?.collectionView.performBatchUpdates({
+                self?.collectionView.deleteItems(at: [indexPath])
+            }, completion: { _ in
+                // Optionally, you can perform any additional actions after the update
+            })
         }
 
         let material = materialArray[indexPath.item]
         // Assuming you have a configure method in MaterialReciclarCollectionViewCell
-        cell.configure(with: UIImage(named: getMaterialIcon(materialName: material.nombre)!)!, nombreM: material.nombre)
+        cell.configure(with: UIImage(named: getMaterialIcon(materialName: material.nombre)!)!, nombreM: material.nombre, cantidad: String(material.cantidad), unidad: material.unidad)
 
         return cell
     }
@@ -76,18 +84,14 @@ extension MaterialesVC: UICollectionViewDataSource {
         
         // Set up the closure to handle the tap action
         header.agregarMaterialBtnTapped = { [weak self] in
-            // Handle the button tap here
-            print("Agregar Material Button Tapped")
             // Instantiate the MaterialesSelectionVC from the storyboard
-            if let selectionVC = self?.storyboard?.instantiateViewController(withIdentifier: "MaterialesSelectionVC") as? MaterialesVC {
-                // Pass the existing array of materials to MaterialesSelectionVC
-                //selectionVC.materialsForSelection = self?.materialArray ?? []
+            if let selectionVC = self?.storyboard?.instantiateViewController(withIdentifier: "MaterialesSelection") as? MaterialesSelectionVC {
                 
-                // Step 10: Set the delegate
-                //selectionVC.selectionDelegate = self
-                
-                // Present MaterialesSelectionVC
-                self?.present(selectionVC, animated: true, completion: nil)
+                // Set the delegate
+                selectionVC.selectionDelegate = self
+
+                // Push MaterialesSelectionVC onto the navigation stack
+                self?.navigationController?.pushViewController(selectionVC, animated: true)
             }
         }
         
@@ -107,6 +111,19 @@ extension MaterialesVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width - 16 // Adjust left and right margins
         return CGSize(width: width, height: 220)
+    }
+}
+
+extension MaterialesVC: MaterialesSelectionDelegate {
+    func didSelectMaterial(_ selectedMaterial: MaterialSelectionItem) {
+        // Add the selected material to your array
+        materialArray.append(Material(cantidad: 1, fotoUrl: selectedMaterial.imageName, nombre: selectedMaterial.name, unidad: "Bolsas"))
+
+        // Calculate the index path for the newly added item
+        let newIndexPath = IndexPath(item: materialArray.count - 1, section: 0)
+
+        // Insert the new item into the collection view
+        collectionView.insertItems(at: [newIndexPath])
     }
 }
 

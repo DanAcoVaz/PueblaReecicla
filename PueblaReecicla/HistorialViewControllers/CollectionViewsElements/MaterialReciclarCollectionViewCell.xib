@@ -209,6 +209,7 @@
                 <outlet property="plusBtn" destination="a8V-kl-jZc" id="wNl-h4-fGH"/>
                 <outlet property="plusMinusBtn" destination="sQZ-sG-Hxr" id="ac7-IJ-v0b"/>
                 <outlet property="tomarFotoBtn" destination="pad-zr-t1d" id="xNQ-RZ-ZL7"/>
+                <outlet property="unidadMaterial" destination="92B-Ek-82s" id="KD3-cH-oWn"/>
             </connections>
             <point key="canvasLocation" x="281.67938931297709" y="41.549295774647888"/>
         </collectionViewCell>

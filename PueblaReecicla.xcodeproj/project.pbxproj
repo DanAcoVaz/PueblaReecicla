@@ -30,6 +30,9 @@
 		832FD75F2B0C14210086D76B /* MaterialReciclarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832FD75D2B0C14210086D76B /* MaterialReciclarCollectionViewCell.xib */; };
 		832FD7642B0D62C80086D76B /* HeaderMaterialCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD7622B0D62C80086D76B /* HeaderMaterialCollectionReusableView.swift */; };
 		832FD7652B0D62C80086D76B /* HeaderMaterialCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832FD7632B0D62C80086D76B /* HeaderMaterialCollectionReusableView.xib */; };
+		832FD7672B0D87270086D76B /* MaterialesSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD7662B0D87270086D76B /* MaterialesSelectionVC.swift */; };
+		832FD76A2B0D88840086D76B /* MaterialesSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FD7682B0D88840086D76B /* MaterialesSelectionCollectionViewCell.swift */; };
+		832FD76B2B0D88840086D76B /* MaterialesSelectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832FD7692B0D88840086D76B /* MaterialesSelectionCollectionViewCell.xib */; };
 		83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582AD82AF1A901006E57A8 /* AppDelegate.swift */; };
 		83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */; };
 		83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83582ADC2AF1A901006E57A8 /* ViewController.swift */; };
@@ -103,6 +106,9 @@
 		832FD75D2B0C14210086D76B /* MaterialReciclarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialReciclarCollectionViewCell.xib; sourceTree = "<group>"; };
 		832FD7622B0D62C80086D76B /* HeaderMaterialCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMaterialCollectionReusableView.swift; sourceTree = "<group>"; };
 		832FD7632B0D62C80086D76B /* HeaderMaterialCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderMaterialCollectionReusableView.xib; sourceTree = "<group>"; };
+		832FD7662B0D87270086D76B /* MaterialesSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialesSelectionVC.swift; sourceTree = "<group>"; };
+		832FD7682B0D88840086D76B /* MaterialesSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialesSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		832FD7692B0D88840086D76B /* MaterialesSelectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialesSelectionCollectionViewCell.xib; sourceTree = "<group>"; };
 		83582AD52AF1A901006E57A8 /* PueblaReecicla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PueblaReecicla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83582AD82AF1A901006E57A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83582ADA2AF1A901006E57A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -288,6 +294,7 @@
 				8361301E2B06B6F30024E6A6 /* HorarioVC.swift */,
 				832FD7502B0BF4740086D76B /* DireccionVC.swift */,
 				832FD75A2B0C0BE50086D76B /* MaterialesVC.swift */,
+				832FD7662B0D87270086D76B /* MaterialesSelectionVC.swift */,
 			);
 			path = HistorialViewControllers;
 			sourceTree = "<group>";
@@ -303,6 +310,8 @@
 				832FD75D2B0C14210086D76B /* MaterialReciclarCollectionViewCell.xib */,
 				832FD7622B0D62C80086D76B /* HeaderMaterialCollectionReusableView.swift */,
 				832FD7632B0D62C80086D76B /* HeaderMaterialCollectionReusableView.xib */,
+				832FD7682B0D88840086D76B /* MaterialesSelectionCollectionViewCell.swift */,
+				832FD7692B0D88840086D76B /* MaterialesSelectionCollectionViewCell.xib */,
 			);
 			path = CollectionViewsElements;
 			sourceTree = "<group>";
@@ -436,6 +445,7 @@
 				83943EB82AF5A90800E9E258 /* Home.storyboard in Resources */,
 				8322990E2B006C3800F3DF85 /* RV_enProceso.xib in Resources */,
 				B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */,
+				832FD76B2B0D88840086D76B /* MaterialesSelectionCollectionViewCell.xib in Resources */,
 				83582B112AF2F5E7006E57A8 /* splashScreenReecicla.png in Resources */,
 				832298F72AFFDC4600F3DF85 /* GoogleService-Info.plist in Resources */,
 				832299062B00325900F3DF85 /* RV_iniciada.xib in Resources */,
@@ -473,6 +483,7 @@
 				836130152B0556C00024E6A6 /* MaterialCollectionViewCell.swift in Sources */,
 				836313CD2B02D48300382606 /* RV_completada.swift in Sources */,
 				83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */,
+				832FD7672B0D87270086D76B /* MaterialesSelectionVC.swift in Sources */,
 				8361301F2B06B6F30024E6A6 /* HorarioVC.swift in Sources */,
 				832FD7532B0C07390086D76B /* VD_verFoto.swift in Sources */,
 				832299082B003A2000F3DF85 /* RV_iniciada.swift in Sources */,
@@ -483,6 +494,7 @@
 				8322990A2B005B9F00F3DF85 /* Style.swift in Sources */,
 				832298FB2AFFE77700F3DF85 /* Recolecciones.swift in Sources */,
 				8322990D2B006C3800F3DF85 /* RV_enProceso.swift in Sources */,
+				832FD76A2B0D88840086D76B /* MaterialesSelectionCollectionViewCell.swift in Sources */,
 				832298FD2AFFE93100F3DF85 /* Recoleccion.swift in Sources */,
 				836130102B046E200024E6A6 /* VerDetallesVC.swift in Sources */,
 				83943EBA2AF5A91600E9E258 /* HomeVC.swift in Sources */,
