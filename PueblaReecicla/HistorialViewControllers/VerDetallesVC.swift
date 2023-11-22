@@ -72,8 +72,6 @@ extension VerDetallesVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MaterialCollectionViewCell.identifier, for: indexPath) as! MaterialCollectionViewCell
         
-        self.popUpVerFoto = VD_verFoto(frame: self.view.frame, inView: self)
-        
         // Access the current material key
         let material = materiales["material_\(indexPath.item)"]
         

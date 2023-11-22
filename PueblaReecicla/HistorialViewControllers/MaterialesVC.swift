@@ -7,9 +7,12 @@
 
 import UIKit
 
+
 class MaterialesVC: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
+    
+    var materialArray: [Material] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +22,17 @@ class MaterialesVC: UIViewController {
         height: 220)
         collectionView.collectionViewLayout = layout
         
+        self.collectionView.register(HeaderMaterialCollectionReusableView.nib(), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderMaterialCollectionReusableView.identifier)
         self.collectionView.register(MaterialReciclarCollectionViewCell.nib(), forCellWithReuseIdentifier: MaterialReciclarCollectionViewCell.identifier)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     }
 
+    
+    func didSelectMaterial(_ selectedMaterial: Material) {
+        materialArray.append(selectedMaterial)
+        collectionView.reloadData()
+    }
 }
 
 // función para manejar el click en una de las recolecciones
@@ -37,19 +46,58 @@ extension MaterialesVC: UICollectionViewDelegate {
 // función para establecer los valores decada recolección en el collection view
 extension MaterialesVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return materialArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MaterialReciclarCollectionViewCell.identifier, for: indexPath) as! MaterialReciclarCollectionViewCell
         
+        cell.tomarFotoBtnTapped = { [self] in
+            // Handle the button tap here
+            print("Tomar Foto")
+            
+        }
         
-    
-        let imgMaterial = UIImage(named: getMaterialIcon(materialName: "Aceite de Auto")!)
-        
-        cell.configure(with: imgMaterial!, nombreM: "Aceite de Auto")
-        
+        cell.eliminarBtnTapped = { [weak self] in
+            // Handle the button tap here
+            print("Eliminar Material")
+            
+        }
+
+        let material = materialArray[indexPath.item]
+        // Assuming you have a configure method in MaterialReciclarCollectionViewCell
+        cell.configure(with: UIImage(named: getMaterialIcon(materialName: material.nombre)!)!, nombreM: material.nombre)
+
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderMaterialCollectionReusableView.identifier, for: indexPath) as! HeaderMaterialCollectionReusableView
+        
+        // Set up the closure to handle the tap action
+        header.agregarMaterialBtnTapped = { [weak self] in
+            // Handle the button tap here
+            print("Agregar Material Button Tapped")
+            // Instantiate the MaterialesSelectionVC from the storyboard
+            if let selectionVC = self?.storyboard?.instantiateViewController(withIdentifier: "MaterialesSelectionVC") as? MaterialesVC {
+                // Pass the existing array of materials to MaterialesSelectionVC
+                //selectionVC.materialsForSelection = self?.materialArray ?? []
+                
+                // Step 10: Set the delegate
+                //selectionVC.selectionDelegate = self
+                
+                // Present MaterialesSelectionVC
+                self?.present(selectionVC, animated: true, completion: nil)
+            }
+        }
+        
+        header.configure(with: "99/99/1111", horario: "99:00")
+        
+        return header
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        CGSize(width: view.frame.size.width, height: 200)
     }
     
 }

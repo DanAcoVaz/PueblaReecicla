@@ -685,20 +685,20 @@
             <objects>
                 <viewController storyboardIdentifier="Direccion" title="Direccion" interactionActivityTrackingBaseName="Direccion" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gKQ-KT-fDT" customClass="DireccionVC" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hGO-Iq-uag">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1100"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="hlc-So-cEp">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="1007"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ie-Jv-7x8">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="1007"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCg-d9-kvb" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="700"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dEB-WU-WIx">
-                                                <rect key="frame" x="20" y="24" width="353" height="738"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="dEB-WU-WIx">
+                                                <rect key="frame" x="20" y="24" width="353" height="683"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNq-nY-ar3">
                                                         <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
@@ -707,69 +707,69 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esu-tI-XLk">
-                                                        <rect key="frame" x="0.0" y="64" width="353" height="34"/>
+                                                        <rect key="frame" x="0.0" y="59" width="353" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número Exterior/Interior" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOm-0p-95I">
-                                                        <rect key="frame" x="0.0" y="128" width="353" height="34"/>
+                                                        <rect key="frame" x="0.0" y="118" width="353" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f8F-9L-syZ">
-                                                        <rect key="frame" x="0.0" y="192" width="353" height="34"/>
+                                                        <rect key="frame" x="0.0" y="177" width="353" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" textContentType="tel"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colonia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLP-hk-dys">
-                                                        <rect key="frame" x="0.0" y="256" width="353" height="34"/>
+                                                        <rect key="frame" x="0.0" y="236" width="353" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhd-lg-cl8">
-                                                        <rect key="frame" x="0.0" y="320" width="353" height="34"/>
+                                                        <rect key="frame" x="0.0" y="295" width="353" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Municipio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbp-Rd-OEg">
-                                                        <rect key="frame" x="0.0" y="384" width="353" height="34"/>
+                                                        <rect key="frame" x="0.0" y="354" width="353" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WaK-06-QwZ">
-                                                        <rect key="frame" x="0.0" y="448" width="353" height="34"/>
+                                                        <rect key="frame" x="0.0" y="413" width="353" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Código Postal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4O-Ox-YcK">
-                                                        <rect key="frame" x="0.0" y="512" width="353" height="34"/>
+                                                        <rect key="frame" x="0.0" y="472" width="353" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-wk-stq">
-                                                        <rect key="frame" x="0.0" y="576" width="353" height="34"/>
+                                                        <rect key="frame" x="0.0" y="531" width="353" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" textContentType="postal-code"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVd-Hd-xbr">
-                                                        <rect key="frame" x="0.0" y="640" width="353" height="34"/>
+                                                        <rect key="frame" x="0.0" y="590" width="353" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7BN-SK-DL2">
-                                                        <rect key="frame" x="0.0" y="704" width="353" height="34"/>
+                                                        <rect key="frame" x="0.0" y="649" width="353" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" textContentType="tel"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OH5-TA-Hbb" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="800" width="353" height="50"/>
+                                                <rect key="frame" x="20" y="745" width="353" height="50"/>
                                                 <color key="backgroundColor" name="ColorSecundario"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="If9-8v-DAG"/>
@@ -806,7 +806,7 @@
                                             <constraint firstItem="OH5-TA-Hbb" firstAttribute="leading" secondItem="tCg-d9-kvb" secondAttribute="leading" constant="20" id="Y9u-r9-399"/>
                                             <constraint firstItem="dEB-WU-WIx" firstAttribute="top" secondItem="tCg-d9-kvb" secondAttribute="top" constant="24" id="aAN-w1-9WP"/>
                                             <constraint firstItem="OH5-TA-Hbb" firstAttribute="top" secondItem="dEB-WU-WIx" secondAttribute="bottom" constant="38" id="eTQ-iL-vpY"/>
-                                            <constraint firstAttribute="height" constant="800" id="hpf-0G-DXt"/>
+                                            <constraint firstAttribute="height" constant="700" id="hpf-0G-DXt"/>
                                             <constraint firstItem="dEB-WU-WIx" firstAttribute="leading" secondItem="tCg-d9-kvb" secondAttribute="leading" constant="20" id="vlC-dn-7fi"/>
                                         </constraints>
                                     </view>
@@ -836,6 +836,7 @@
                     <navigationItem key="navigationItem" title="Ingresar Dirección" id="7M0-01-S3S">
                         <barButtonItem key="backBarButtonItem" title="  " id="rxd-i9-JlN"/>
                     </navigationItem>
+                    <size key="freeformSize" width="393" height="1100"/>
                     <connections>
                         <outlet property="CalleField" destination="esu-tI-XLk" id="7ns-tb-2Z0"/>
                         <outlet property="codigoPostalField" destination="l5V-wk-stq" id="DsW-Ov-v4D"/>

@@ -30,7 +30,7 @@ class RV_completada: UIView {
                 let imgName = (starButton.tag < rating ? "icon_star" : "icon_star_empty")
                 starButton.setImage(UIImage(named: imgName), for: .normal)
             }
-            print("new Rating: \(rating)")
+            // print("new Rating: \(rating)")
         }
     }
     
