@@ -52,7 +52,7 @@ class Recoleccion {
         let horaRecoleccionInicio = dictionary["horaRecoleccionInicio"] as! String? ?? ""
         let idUsuarioCliente = dictionary["idUsuarioCliente"] as! String? ?? ""
         let materialesData = dictionary["materiales"] as! [String: [String: Any]]? ?? [:]
-        let timeStamp = dictionary["timeStamp"] as! Int? ?? 0
+        let timeStamp = (dictionary["timeStamp"] as? Int? ?? 0) ?? Int(truncating: NSNumber(0))
         let recolectada = dictionary["recolectada"] as! Bool? ?? false
         let recolectorData = dictionary["recolector"] as! [String: Any]? ?? [:]
 

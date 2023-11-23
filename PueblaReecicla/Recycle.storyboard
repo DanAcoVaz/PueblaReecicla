@@ -889,6 +889,7 @@
                                 <connections>
                                     <action selector="finishDireccionSelection:" destination="gKQ-KT-fDT" eventType="touchUpInside" id="Bxq-aG-nxh"/>
                                     <action selector="finishHorario:" destination="5xu-e3-pt8" eventType="touchUpInside" id="2mp-gh-mI3"/>
+                                    <action selector="finishRecoleccion:" destination="TWl-N0-SVx" eventType="touchUpInside" id="Xlc-j0-0RI"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wE0-Lv-ddO">

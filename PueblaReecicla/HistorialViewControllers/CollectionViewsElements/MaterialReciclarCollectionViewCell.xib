@@ -230,6 +230,7 @@
                 <outlet property="plusBtn" destination="a8V-kl-jZc" id="wNl-h4-fGH"/>
                 <outlet property="plusMinusBtn" destination="sQZ-sG-Hxr" id="ac7-IJ-v0b"/>
                 <outlet property="tomarFotoBtn" destination="pad-zr-t1d" id="xNQ-RZ-ZL7"/>
+                <outlet property="tomarFotoBtnTxt" destination="cwE-CU-bZM" id="fUr-mQ-jvz"/>
                 <outlet property="unidadMaterialBtn" destination="APV-7I-5wr" id="BfE-U1-hMv"/>
                 <outlet property="unidadMaterialTxt" destination="xIe-fi-WoJ" id="gv5-9y-kfS"/>
             </connections>

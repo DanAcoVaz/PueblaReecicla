@@ -33,6 +33,18 @@ class DireccionVC: UIViewController {
     @IBAction func finishDireccionSelection(_ sender: Any) {
         if validateTextFields() {
             // All text fields are non-empty, perform your action here
+            
+            // Save data to the shared data model
+            BundleRecoleccion.shared.calle = CalleField.text ?? ""
+            BundleRecoleccion.shared.numero = numeroField.text ?? ""
+            BundleRecoleccion.shared.colonia = coloniaField.text ?? ""
+            BundleRecoleccion.shared.municipio = municipioField.text ?? ""
+            BundleRecoleccion.shared.codigoPostal = codigoPostalField.text ?? ""
+            BundleRecoleccion.shared.telefono = telefonoField.text ?? ""
+
+            let direccion = "\(CalleField.text ?? "") \(numeroField.text ?? ""), Colonia \(coloniaField.text ?? ""), \(municipioField.text ?? ""), Código Postal \(codigoPostalField.text ?? "")"
+            BundleRecoleccion.shared.direccionCompleta = direccion
+            
             let storyboard = UIStoryboard(name: "Recycle", bundle: nil)
             if let MaterialesVC = storyboard.instantiateViewController(withIdentifier: "Materiales") as? MaterialesVC {
                 self.navigationController?.pushViewController(MaterialesVC, animated: true)
@@ -79,6 +91,10 @@ class DireccionVC: UIViewController {
                 
                 let phoneData = document.data()?["telefono"] as? String
                 let telefono = phoneData ?? ""
+                
+                let nombres = document.data()?["nombres"] as? String
+                let apellidos = document.data()?["apellidos"] as? String
+                BundleRecoleccion.shared.nombreCompleto = "\(nombres ?? "") \(apellidos ?? "")"
                 
                 // Set the retrieved data into the respective text fields
                 self.CalleField.text = calle

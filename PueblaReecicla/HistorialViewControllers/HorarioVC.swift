@@ -225,6 +225,12 @@ class HorarioVC: UIViewController {
         return formatter.string(from: date)
     }
     
+    func formatDateToDDMMYYYY(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        return formatter.string(from: date)
+    }
+    
     func createCustomDate(year: Int? = nil, month: Int? = nil, day: Int? = nil, hour: Int? = nil, minute: Int? = nil, second: Int? = nil) -> Date? {
         // Get the current calendar
         let calendar = Calendar.current
@@ -343,8 +349,11 @@ class HorarioVC: UIViewController {
             return false
         }
 
-        // Check if the end time is before 19:00
-        let sevenPM = calendar.date(bySettingHour: 19, minute: 0, second: 0, of: Date())!
+        // Check if the end time is after 19:00
+        let calendar = Calendar.current
+        let endComponents = calendar.dateComponents([.year, .month, .day], from: timeEndPicker.date)
+        let sevenPM = calendar.date(bySettingHour: 19, minute: 0, second: 0, of: calendar.date(from: endComponents)!)!
+
         if timeEndPicker.date > sevenPM {
             showAlert(message: "La hora de finalización debe ser antes de las 19:00.")
             return false
@@ -364,9 +373,17 @@ class HorarioVC: UIViewController {
     
     @IBAction func finishHorario(_ sender: ButtonStyle) {
         if (validateTimeFields() && validateComentariosField()) {
+            // Set values in the shared data container
+            BundleRecoleccion.shared.selectedDate = formatDateToDDMMYYYY(date: datePicker.date)
+            BundleRecoleccion.shared.timeIni = formatTime(date: timeIniPicker.date)
+            BundleRecoleccion.shared.timeEnd = formatTime(date: timeEndPicker.date)
+            BundleRecoleccion.shared.commentaries = comentariosField.text ?? ""
+            BundleRecoleccion.shared.enPersonaSelected = enPersonaSelected
+
+            // Navigate to the next view controller
             let storyboard = UIStoryboard(name: "Recycle", bundle: nil)
-            if let DireccionViewController = storyboard.instantiateViewController(withIdentifier: "Direccion") as? DireccionVC {
-                self.navigationController?.pushViewController(DireccionViewController, animated: true)
+            if let direccionViewController = storyboard.instantiateViewController(withIdentifier: "Direccion") as? DireccionVC {
+                self.navigationController?.pushViewController(direccionViewController, animated: true)
             }
         }
     }

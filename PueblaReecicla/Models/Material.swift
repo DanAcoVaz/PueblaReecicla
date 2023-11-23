@@ -6,18 +6,23 @@
 //
 
 import Foundation
+import UIKit
 
 class Material {
     var cantidad: Int
     var fotoUrl: String
     var nombre: String
     var unidad: String
+    var fotoMaterial: UIImage?
+    var indexPath: [IndexPath]?
 
     init(cantidad: Int, fotoUrl: String, nombre: String, unidad: String) {
         self.cantidad = cantidad
         self.fotoUrl = fotoUrl
         self.nombre = nombre
         self.unidad = unidad
+        self.fotoMaterial = nil
+        self.indexPath = nil
     }
 
     convenience init(dictionary: [String: Any]) {

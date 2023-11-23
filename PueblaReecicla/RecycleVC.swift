@@ -373,7 +373,7 @@ class RecycleViewController: UIViewController {
             // Check if HomeVC is a UITabBarController
             if let tabBarController = HomeVC as? UITabBarController {
                 // Assuming HomeVC is a UITabBarController
-                tabBarController.selectedIndex = 1 // Change 2 to the index of the tab you want to select
+                tabBarController.selectedIndex = 3 // Change 3 to the index of the tab you want to select
                 print(HomeVC)
                 print(tabBarController)
                 print(tabBarController.selectedIndex)

@@ -5,6 +5,10 @@
 //  Created by Administrador on 20/11/23.
 //
 
+import Photos
+import PhotosUI
+import FirebaseFirestore
+import FirebaseStorage
 import UIKit
 
 
@@ -15,6 +19,9 @@ class MaterialesVC: UIViewController {
     var materialArray: [Material] = []
     
     var popUpTomarFoto: MTR_tomarFoto!
+    
+    var curMaterial: Material?
+    var curCell: MaterialReciclarCollectionViewCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +37,162 @@ class MaterialesVC: UIViewController {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     }
+    
+    @IBAction func finishRecoleccion(_ sender: Any) {
+        // Check if the collection view has at least 1 item
+        if materialArray.isEmpty {
+            // Display an alert indicating that there are no items to finish
+            let alertController = UIAlertController(title: "Error", message: "Debe seleccionar mínimo 1 material", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Continuar", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+
+        // Create the first popup with Cancel and Confirm buttons
+        let confirmAlertController = UIAlertController(title: "Confirmar Orden", message: "¿Deseas confirmar la orden?", preferredStyle: .alert)
+        
+        confirmAlertController.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        
+        confirmAlertController.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { [weak self] (_) in
+            // Call the function to present the second popup
+            self?.presentConfirmPopup()
+            self?.sendDataToDBRecolecciones()
+        }))
+        
+        // Present the first popup
+        present(confirmAlertController, animated: true, completion: nil)
+    }
+    
+    // Function to present the second popup
+    func presentConfirmPopup() {
+        // Create the second popup with Continue button
+        let continueAlertController = UIAlertController(title: "Orden de Reciclaje", message: """
+        Tu orden está siendo procesada
+
+        Te enviaremos una notificación cuando encontremos un recolector.
+        """, preferredStyle: .alert)
+        
+        continueAlertController.addAction(UIAlertAction(title: "Continuar", style: .default, handler: { [weak self] (_) in
+            // Call the function to go to the next view controller
+            self?.goToHomeTabViewController()
+        }))
+        
+        // Present the second popup
+        present(continueAlertController, animated: true, completion: nil)
+    }
+
+    // Function to go to the HomeTab view controller
+    func goToHomeTabViewController() {
+        // Instantiate the HomeTab view controller
+        if let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeTab") {
+            // Check if HomeVC is a UITabBarController
+            if let tabBarController = homeVC as? UITabBarController {
+                // Assuming HomeVC is a UITabBarController
+                tabBarController.selectedIndex = 2 // Change 2 to the index of the tab you want to select
+                homeVC.modalPresentationStyle = .fullScreen
+                navigationController?.present(homeVC, animated: true)
+            } else {
+                print("HomeVC is not a UITabBarController")
+            }
+        } else {
+            print("Failed to instantiate HomeVC")
+        }
+    }
+    
+    // Function to send data to Firestore for recolecciones
+    private func sendDataToDBRecolecciones() {
+        // Assuming you have Firestore and Storage configured
+        let db = Firestore.firestore()
+        let storage = Storage.storage()
+        
+        var recoleccionData: [String: Any] = [
+            "fechaRecoleccion": BundleRecoleccion.shared.selectedDate,
+            "horaRecoleccionFinal": BundleRecoleccion.shared.timeEnd,
+            "horaRecoleccionInicio": BundleRecoleccion.shared.timeIni,
+            "comentarios": BundleRecoleccion.shared.commentaries,
+            "latitud": BundleRecoleccion.shared.latitud,
+            "longitud": BundleRecoleccion.shared.longitud,
+            "enPersona": BundleRecoleccion.shared.enPersonaSelected,
+            "timeStamp": Int64(Date().timeIntervalSince1970 * 1000),
+            "idUsuarioCliente": RecycleViewController.userID,
+            "recolectada": false,
+            "calificado": false,
+            "estado": RecycleViewController.iniciada
+        ]
+
+        var materialesMap: [String: [String: Any]] = [:]
+
+        for (count, material) in materialArray.enumerated() {
+            let materialData: [String: Any] = [
+                "nombre": material.nombre,
+                "unidad": material.unidad,
+                "cantidad": material.cantidad,
+                "fotoUrl": ""
+            ]
+            let materialId = "material_\(count)"
+            materialesMap[materialId] = materialData
+        }
+
+        recoleccionData["materiales"] = materialesMap
+
+        
+        let recolectorData: [String: Any] = [
+            "id": "",
+            "nombre": "",
+            "apellidos": "",
+            "telefono": "",
+            "fotoUrl": "",
+            "cantidad_reseñas": 0,
+            "suma_reseñas": 0
+        ]
+
+        recoleccionData["recolector"] = recolectorData
+
+        // Create a dictionary with user data
+        var userData: [String: Any] = [:]
+        userData["nombreCompleto"] = BundleRecoleccion.shared.nombreCompleto
+        userData["telefono"] = BundleRecoleccion.shared.telefono
+        userData["direccion"] = BundleRecoleccion.shared.direccionCompleta
+
+        recoleccionData["userInfo"] = userData
+
+
+        let recoleccionesCollection = db.collection("recolecciones")
+        
+        recoleccionesCollection.addDocument(data: recoleccionData) { error in
+            if let error = error {
+                print("Error adding document: \(error)")
+            } else {
+                print("Document added successfully")
+            }
+        }
+    }
+
+    
+    func formatDate(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "es_MX") // Set the locale to Spanish
+        formatter.dateFormat = "E. dd 'de' MMM 'de' yyyy" // Define the desired date format
+        return formatter.string(from: date)
+    }
+    
+    func translateDateFormat(_ dateString: String) -> String? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+
+        guard let date = formatter.date(from: dateString) else {
+            print("Failed to parse the input date.")
+            return "nil"
+        }
+
+        formatter.locale = Locale(identifier: "es_MX") // Set the locale to Spanish
+        formatter.dateFormat = "E. dd 'de' MMM 'de' yyyy"
+
+        return formatter.string(from: date)
+    }
+    
+    // FIN DE LA CLASE MaterialesVC
+    // ----------------------------
 }
 
 // función para manejar el click en una de las recolecciones
@@ -48,12 +211,33 @@ extension MaterialesVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MaterialReciclarCollectionViewCell.identifier, for: indexPath) as! MaterialReciclarCollectionViewCell
+        let material = materialArray[indexPath.item]
         
         self.popUpTomarFoto.container.customize()
+        
+        if (material.fotoMaterial != nil) {
+            self.popUpTomarFoto.imgMaterial.isHidden = false
+            self.popUpTomarFoto.imgMaterial.image = self.curMaterial?.fotoMaterial
+            cell.tomarFotoBtnTxt.text = "Ver Foto"
+        } else {
+            self.popUpTomarFoto.imgMaterial.isHidden = true
+            cell.tomarFotoBtnTxt.text = "Tomar Foto"
+        }
         
         cell.tomarFotoBtnTapped = { [self] in
             // Handle the button tap here
             print("Tomar Foto")
+            self.curMaterial = material
+            self.curCell = cell
+            
+            if (material.fotoMaterial != nil) {
+                self.popUpTomarFoto.imgMaterial.isHidden = false
+                self.popUpTomarFoto.imgMaterial.image = self.curMaterial?.fotoMaterial
+                cell.tomarFotoBtnTxt.text = "Ver Foto"
+            } else {
+                self.popUpTomarFoto.imgMaterial.isHidden = true
+                cell.tomarFotoBtnTxt.text = "Tomar Foto"
+            }
             
             self.popUpTomarFoto.isUserInteractionEnabled = true
             
@@ -90,12 +274,14 @@ extension MaterialesVC: UICollectionViewDataSource {
             self?.collectionView.performBatchUpdates({
                 self?.collectionView.deleteItems(at: [indexPath])
             }, completion: { _ in
-                // Optionally, you can perform any additional actions after the update
+                // additional actions after the update
             })
         }
+        
+        cell.unidadMaterialBtnTapped = { [] in
+            material.unidad = cell.unidadMaterialTxt.text ?? ""
+        }
 
-        let material = materialArray[indexPath.item]
-        // Assuming you have a configure method in MaterialReciclarCollectionViewCell
         cell.configure(with: UIImage(named: getMaterialIcon(materialName: material.nombre)!)!, nombreM: material.nombre, cantidad: String(material.cantidad), unidad: material.unidad)
 
         return cell
@@ -109,7 +295,12 @@ extension MaterialesVC: UICollectionViewDataSource {
     }
     
     @objc func verGaleriaBtn(){
-        self.popUpTomarFoto.imgMaterial.isHidden = !self.popUpTomarFoto.imgMaterial.isHidden
+        var config = PHPickerConfiguration(photoLibrary: .shared())
+        config.selectionLimit = 1
+        config.filter = .images
+        let vc = PHPickerViewController(configuration: config)
+        vc.delegate = self
+        present(vc, animated: true)
     }
     
     @objc func handleTapOutsidePopup(_ sender: UITapGestureRecognizer) {
@@ -141,7 +332,10 @@ extension MaterialesVC: UICollectionViewDataSource {
             }
         }
         
-        header.configure(with: "99/99/1111", horario: "99:00")
+        let fecha = BundleRecoleccion.shared.selectedDate
+        let horario = BundleRecoleccion.shared.timeEnd
+        
+        header.configure(with: translateDateFormat(fecha)!, horario: horario)
         
         return header
     }
@@ -150,6 +344,34 @@ extension MaterialesVC: UICollectionViewDataSource {
         CGSize(width: view.frame.size.width, height: 200)
     }
     
+}
+
+extension MaterialesVC: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true, completion: nil)
+        let group = DispatchGroup()
+        
+        results.forEach{ result in
+            group.enter()
+            self.popUpTomarFoto.imgMaterial.isHidden = false
+            self.popUpTomarFoto.imgMaterial.image = UIImage(named: "icon_loading")
+            self.curCell?.tomarFotoBtnTxt.text = "Ver Foto"
+            
+            result.itemProvider.loadObject(ofClass: UIImage.self) { reading, error in
+                defer {
+                    group.leave()
+                }
+                guard let image = reading as? UIImage, error == nil else {
+                    return
+                }
+                self.curMaterial!.fotoMaterial = image
+            }
+        }
+        
+        group.notify(queue: .main) {
+            self.popUpTomarFoto.imgMaterial.image = self.curMaterial?.fotoMaterial
+        }
+    }
 }
 
 extension MaterialesVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -164,9 +386,10 @@ extension MaterialesVC: UIImagePickerControllerDelegate, UINavigationControllerD
         
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
             self.popUpTomarFoto.imgMaterial.image = UIImage(systemName: "xmark.icloud.fill")
+            self.curMaterial?.fotoMaterial = nil
             return
         }
-        
+        self.curMaterial?.fotoMaterial = image
         self.popUpTomarFoto.imgMaterial.image = image
     }
 }

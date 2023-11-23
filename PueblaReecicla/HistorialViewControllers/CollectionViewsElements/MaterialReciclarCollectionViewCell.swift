@@ -13,12 +13,15 @@ class MaterialReciclarCollectionViewCell: UICollectionViewCell, UITableViewDataS
     
     var tomarFotoBtnTapped: (() -> Void)?
     var eliminarBtnTapped: (() -> Void)?
+    var unidadMaterialBtnTapped: (() -> Void)?
     
     
     @IBOutlet var imgMaterial: UIImageView!
     @IBOutlet var nombreMaterial: UILabel!
     @IBOutlet var plusMinusBtn: UIStackView!
     @IBOutlet var tomarFotoBtn: ViewStyle!
+    @IBOutlet var tomarFotoBtnTxt: UILabel!
+    
     @IBOutlet var eliminarBtn: ViewStyle!
     @IBOutlet var cantidadMaterial: UILabel!
     @IBOutlet var plusBtn: UIImageView!
@@ -108,7 +111,9 @@ class MaterialReciclarCollectionViewCell: UICollectionViewCell, UITableViewDataS
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedOption = data[indexPath.row]
+        print("selected: \(selectedOption)")
         unidadMaterialTxt.text = selectedOption
+        //self.unidadMaterialBtnTapped?()
         // Add your custom logic here based on the selected option
         hideDropdown()
     }
@@ -149,9 +154,6 @@ class MaterialReciclarCollectionViewCell: UICollectionViewCell, UITableViewDataS
         // Set the frame of the dropdown
         tableView.frame = CGRect(x: dropdownX + 22, y: buttonFrameInWindow.origin.y + buttonFrameInWindow.size.height + 12, width: dropdownWidth, height: CGFloat(data.count * 44))
         tableView.reloadData()
-
-        // Add the dropdown to the window
-        window.addSubview(tableView)
         
         // Create and add the overlay view
         overlayView = UIView(frame: window.bounds)
@@ -160,6 +162,9 @@ class MaterialReciclarCollectionViewCell: UICollectionViewCell, UITableViewDataS
         overlayView?.addGestureRecognizer(tapGesture)
 
         window.addSubview(overlayView!)
+        
+        // Add the dropdown to the window
+        window.addSubview(tableView)
 
         isDropdownVisible = true
     }

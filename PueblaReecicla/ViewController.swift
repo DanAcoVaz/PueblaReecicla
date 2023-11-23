@@ -12,11 +12,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var signUpLbl: UILabel!
+    
+    static var recolector: Recolector?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+        // Do any additional setup after loading the view. 
         emailTxt.delegate = self
         emailTxt.backgroundColor = .white
         emailTxt.textColor = .black
