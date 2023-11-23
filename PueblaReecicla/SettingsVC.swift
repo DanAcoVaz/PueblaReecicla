@@ -35,4 +35,10 @@ class SettingsViewController: UIViewController {
         navigationController?.pushViewController(sociosVC!, animated: true)
     }
     
+    @IBAction func goToProfile(_ sender: Any) {
+        let perfilVC = storyboard?.instantiateViewController(withIdentifier: "Perfil") as? PerfilViewController
+        navigationController?.pushViewController(perfilVC!, animated: true)
+    }
+    
+    
 }

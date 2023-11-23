@@ -86,6 +86,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="goToProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SUC-E4-1wJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -5986,6 +5989,158 @@ Cg
             </objects>
             <point key="canvasLocation" x="5245" y="4"/>
         </scene>
+        <!--Perfil-->
+        <scene sceneID="bcG-Tt-vbI">
+            <objects>
+                <viewController storyboardIdentifier="Perfil" title="Perfil" id="EUB-HB-D68" customClass="PerfilViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dRI-1h-MVB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="FIP-ky-J2M">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0BW-LU-tA9">
+                                <rect key="frame" x="71.666666666666686" y="57.666666666666686" width="250" height="481.00000000000006"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre(s)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5B4-NA-Hnh">
+                                        <rect key="frame" x="0.0" y="0.0" width="100.33333333333333" height="23"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T7P-AE-MFY">
+                                        <rect key="frame" x="0.0" y="43.000000000000007" width="250" height="33.999999999999993"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="eP0-hb-KB6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido(s)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mh-er-etQ">
+                                        <rect key="frame" x="0.0" y="97" width="103.33333333333333" height="23"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ANs-Oc-BZx">
+                                        <rect key="frame" x="0.0" y="140" width="250" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="dG5-QV-raK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo Electrónico" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gj-JB-DWr">
+                                        <rect key="frame" x="0.0" y="194" width="180.33333333333334" height="23"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SuH-NL-F34">
+                                        <rect key="frame" x="0.0" y="237.00000000000003" width="250" height="33.999999999999972"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="AMq-qO-c6J"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn3-kr-g1o">
+                                        <rect key="frame" x="0.0" y="291" width="82" height="23"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="739-Mb-SFc">
+                                        <rect key="frame" x="0.0" y="334" width="250" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="gaO-Sa-xDK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de Nacimiento" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRP-eC-ZVB">
+                                        <rect key="frame" x="0.0" y="388" width="200.33333333333334" height="23"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="bYm-7J-dOd">
+                                        <rect key="frame" x="0.0" y="431" width="250" height="50"/>
+                                    </datePicker>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bYm-7J-dOd" firstAttribute="centerX" secondItem="0BW-LU-tA9" secondAttribute="centerX" id="Mhg-PV-tiQ"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtS-QO-p2v">
+                                <rect key="frame" x="56.666666666666657" y="589" width="280" height="57.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="qZs-K0-Pym"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule" buttonSize="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Guardar Cambios">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="24" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.2784313725" green="0.72941176470000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDF-I3-d3c">
+                                <rect key="frame" x="56.666666666666657" y="674" width="280" height="57.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="eid-2n-aiM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule" buttonSize="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Cerrar Sesión">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="24" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" name="ColorNegativo"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dbv-0P-cAA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FIP-ky-J2M" firstAttribute="centerY" secondItem="dRI-1h-MVB" secondAttribute="centerY" id="5vw-Dl-bFT"/>
+                            <constraint firstItem="FIP-ky-J2M" firstAttribute="centerX" secondItem="dRI-1h-MVB" secondAttribute="centerX" id="8tS-Hq-ZQg"/>
+                            <constraint firstAttribute="bottom" secondItem="FIP-ky-J2M" secondAttribute="bottom" id="HDG-sr-bbF"/>
+                            <constraint firstItem="FIP-ky-J2M" firstAttribute="leading" secondItem="dRI-1h-MVB" secondAttribute="leading" id="KgV-aS-PRU"/>
+                            <constraint firstAttribute="trailing" secondItem="FIP-ky-J2M" secondAttribute="trailing" id="Oro-t5-6Z6"/>
+                            <constraint firstItem="0BW-LU-tA9" firstAttribute="centerY" secondItem="dRI-1h-MVB" secondAttribute="centerY" multiplier="0.7" id="Pgk-Ff-bme"/>
+                            <constraint firstItem="DDF-I3-d3c" firstAttribute="centerY" secondItem="dRI-1h-MVB" secondAttribute="centerY" multiplier="1.65" id="ep1-gg-GOr"/>
+                            <constraint firstItem="VtS-QO-p2v" firstAttribute="centerY" secondItem="dRI-1h-MVB" secondAttribute="centerY" multiplier="1.45" id="fNU-pC-TzB"/>
+                            <constraint firstItem="0BW-LU-tA9" firstAttribute="centerX" secondItem="dRI-1h-MVB" secondAttribute="centerX" id="iMh-aJ-gog"/>
+                            <constraint firstItem="FIP-ky-J2M" firstAttribute="top" secondItem="dRI-1h-MVB" secondAttribute="top" id="pe2-Hl-PTy"/>
+                            <constraint firstItem="VtS-QO-p2v" firstAttribute="centerX" secondItem="dRI-1h-MVB" secondAttribute="centerX" id="sH4-9g-Za8"/>
+                            <constraint firstItem="DDF-I3-d3c" firstAttribute="centerX" secondItem="dRI-1h-MVB" secondAttribute="centerX" id="zXX-Ju-oIM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bdayPicker" destination="bYm-7J-dOd" id="XJT-uh-qfc"/>
+                        <outlet property="emailTxt" destination="SuH-NL-F34" id="usa-bi-TLf"/>
+                        <outlet property="lastnameTxt" destination="ANs-Oc-BZx" id="bsp-YZ-Yxu"/>
+                        <outlet property="nameTxt" destination="T7P-AE-MFY" id="gXz-9N-Jy2"/>
+                        <outlet property="phoneTxt" destination="739-Mb-SFc" id="lrq-0O-HzL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sEa-IG-sXX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5939.6946564885493" y="3.5211267605633805"/>
+        </scene>
     </scenes>
     <resources>
         <image name="FONDO-B-PRESENTA" width="1414" height="2508"/>
@@ -6016,6 +6171,9 @@ Cg
         </namedColor>
         <namedColor name="ColorLetras">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorNegativo">
+            <color red="0.89411764705882357" green="0.11764705882352941" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

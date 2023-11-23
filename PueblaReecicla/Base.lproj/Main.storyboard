@@ -75,7 +75,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="xRE-1z-zbA"/>
                                 </constraints>
-                                <color key="tintColor" name="ColorNegativo"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule" buttonSize="large">
                                     <attributedString key="attributedTitle">
@@ -87,6 +86,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseBackgroundColor" name="ColorNegativo"/>
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQb-rn-bAA">
@@ -94,7 +94,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="5OI-vC-8ZN"/>
                                 </constraints>
-                                <color key="tintColor" red="0.27843137254901962" green="0.72941176470588232" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule" buttonSize="large">
                                     <backgroundConfiguration key="background"/>
@@ -108,6 +107,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseBackgroundColor" red="0.2784313725" green="0.72941176470000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PBH-5t-Sh0"/>
@@ -344,7 +344,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="6VJ-1g-gRO"/>
                                 </constraints>
-                                <color key="tintColor" red="0.2784313725" green="0.72941176470000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule" buttonSize="large">
                                     <backgroundConfiguration key="background"/>
@@ -358,6 +357,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseBackgroundColor" red="0.2784313725" green="0.72941176470000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="signUpTap:" destination="VwD-EM-NeQ" eventType="touchUpInside" id="akS-9F-29n"/>
