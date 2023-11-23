@@ -27,5 +27,7 @@
 	<string>El permiso de la cámara es necesario.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>El permiso de la galería es necesario.</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

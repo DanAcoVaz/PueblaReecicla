@@ -90,15 +90,7 @@ class RecycleViewController: UIViewController {
         // CANCELADA
         self.popUpCancelada = RV_cancelada(frame: self.view.frame, inView: self)
         
-        let imgFondoBlanco : UIImageView = {
-            let iv = UIImageView()
-            iv.image = UIImage(named:"FONDO-B-PRESENTA")
-            iv.contentMode = .scaleAspectFill
-            return iv
-        }()
-        
         // se configura el collection view
-        collectionView.backgroundView = imgFondoBlanco
         collectionView.register(HistorialCollectionViewCell.nib(), forCellWithReuseIdentifier: HistorialCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self

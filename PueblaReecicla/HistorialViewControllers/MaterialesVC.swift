@@ -103,7 +103,7 @@ class MaterialesVC: UIViewController {
     private func sendDataToDBRecolecciones() {
         // Assuming you have Firestore and Storage configured
         let db = Firestore.firestore()
-        let storage = Storage.storage()
+        //let storage = Storage.storage()
         
         var recoleccionData: [String: Any] = [
             "fechaRecoleccion": BundleRecoleccion.shared.selectedDate,
@@ -280,6 +280,7 @@ extension MaterialesVC: UICollectionViewDataSource {
         
         cell.unidadMaterialBtnTapped = { [] in
             material.unidad = cell.unidadMaterialTxt.text ?? ""
+            material.cantidad = Int(cell.cantidadMaterial.text!) ?? 1
         }
 
         cell.configure(with: UIImage(named: getMaterialIcon(materialName: material.nombre)!)!, nombreM: material.nombre, cantidad: String(material.cantidad), unidad: material.unidad)
@@ -418,10 +419,10 @@ extension MaterialesVC: MaterialesSelectionDelegate {
 private func getMaterialIcon(materialName: String) -> String? {
     // Define an array of tuples with material names and corresponding image resource names
     let materialData: [(name: String, imageName: String)] = [
-        ("Aceite de Auto", "material_aceite_auto"),
+        ("Aceite Auto", "material_aceite_auto"),
         ("Aceite Usado", "material_aceite_usado"),
         ("Árbol", "material_arbol"),
-        ("Baterías", "material_baterias"),
+        ("Baterias", "material_baterias"),
         ("Bicicletas", "material_bici"),
         ("Botellas", "material_botellas"),
         ("Cartón", "material_carton"),
@@ -429,10 +430,12 @@ private func getMaterialIcon(materialName: String) -> String? {
         ("Escombros", "material_escombro"),
         ("Industriales", "material_industriales"),
         ("Juguetes", "material_juguetes"),
+        ("Lata Chilera", "material_metal"),
+        ("Lata", "material_metal"),
         ("Libros", "material_libros"),
         ("Llantas", "material_llantas"),
         ("Madera", "material_madera"),
-        ("Medicinas", "material_medicina"),
+        ("Medicina", "material_medicina"),
         ("Metal", "material_metal"),
         ("Orgánico", "material_organico"),
         ("Pallets", "material_pallets"),
@@ -441,7 +444,7 @@ private func getMaterialIcon(materialName: String) -> String? {
         ("Plásticos", "material_plasticos"),
         ("Ropa", "material_ropa"),
         ("Tapitas", "material_tapitas"),
-        ("Tetra Pack", "material_tetrapack"),
+        ("Tetrapack", "material_tetrapack"),
         ("Toner", "material_toner"),
         ("Voluminoso", "material_voluminoso")
     ]

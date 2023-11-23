@@ -377,7 +377,8 @@ class HorarioVC: UIViewController {
             BundleRecoleccion.shared.selectedDate = formatDateToDDMMYYYY(date: datePicker.date)
             BundleRecoleccion.shared.timeIni = formatTime(date: timeIniPicker.date)
             BundleRecoleccion.shared.timeEnd = formatTime(date: timeEndPicker.date)
-            BundleRecoleccion.shared.commentaries = comentariosField.text ?? ""
+            let comentarios = comentariosField.text != "Comentarios para el Recolector" ? comentariosField.text : ""
+            BundleRecoleccion.shared.commentaries = comentarios ?? ""
             BundleRecoleccion.shared.enPersonaSelected = enPersonaSelected
 
             // Navigate to the next view controller

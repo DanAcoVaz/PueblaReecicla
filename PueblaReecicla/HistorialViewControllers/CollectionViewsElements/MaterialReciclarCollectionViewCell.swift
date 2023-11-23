@@ -113,7 +113,7 @@ class MaterialReciclarCollectionViewCell: UICollectionViewCell, UITableViewDataS
         let selectedOption = data[indexPath.row]
         print("selected: \(selectedOption)")
         unidadMaterialTxt.text = selectedOption
-        //self.unidadMaterialBtnTapped?()
+        self.unidadMaterialBtnTapped?()
         // Add your custom logic here based on the selected option
         hideDropdown()
     }

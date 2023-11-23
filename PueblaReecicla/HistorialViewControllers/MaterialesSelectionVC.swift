@@ -36,10 +36,10 @@ class MaterialesSelectionVC: UIViewController {
     
     private func getMaterialNames() -> [String] {
         let materialData: [(name: String, _)] = [
-            ("Aceite de Auto", "material_aceite_auto"),
+            ("Aceite Auto", "material_aceite_auto"),
             ("Aceite Usado", "material_aceite_usado"),
             ("Árbol", "material_arbol"),
-            ("Baterías", "material_baterias"),
+            ("Baterias", "material_baterias"),
             ("Bicicletas", "material_bici"),
             ("Botellas", "material_botellas"),
             ("Cartón", "material_carton"),
@@ -47,10 +47,12 @@ class MaterialesSelectionVC: UIViewController {
             ("Escombros", "material_escombro"),
             ("Industriales", "material_industriales"),
             ("Juguetes", "material_juguetes"),
+            ("Lata Chilera", "material_metal"),
+            ("Lata", "material_metal"),
             ("Libros", "material_libros"),
             ("Llantas", "material_llantas"),
             ("Madera", "material_madera"),
-            ("Medicinas", "material_medicina"),
+            ("Medicina", "material_medicina"),
             ("Metal", "material_metal"),
             ("Orgánico", "material_organico"),
             ("Pallets", "material_pallets"),
@@ -59,7 +61,7 @@ class MaterialesSelectionVC: UIViewController {
             ("Plásticos", "material_plasticos"),
             ("Ropa", "material_ropa"),
             ("Tapitas", "material_tapitas"),
-            ("Tetra Pack", "material_tetrapack"),
+            ("Tetrapack", "material_tetrapack"),
             ("Toner", "material_toner"),
             ("Voluminoso", "material_voluminoso")
         ]
@@ -109,10 +111,10 @@ extension MaterialesSelectionVC: UICollectionViewDelegateFlowLayout {
 private func getMaterialIcon(materialName: String) -> String? {
     // Define an array of tuples with material names and corresponding image resource names
     let materialData: [(name: String, imageName: String)] = [
-        ("Aceite de Auto", "material_aceite_auto"),
+        ("Aceite Auto", "material_aceite_auto"),
         ("Aceite Usado", "material_aceite_usado"),
         ("Árbol", "material_arbol"),
-        ("Baterías", "material_baterias"),
+        ("Baterias", "material_baterias"),
         ("Bicicletas", "material_bici"),
         ("Botellas", "material_botellas"),
         ("Cartón", "material_carton"),
@@ -120,10 +122,12 @@ private func getMaterialIcon(materialName: String) -> String? {
         ("Escombros", "material_escombro"),
         ("Industriales", "material_industriales"),
         ("Juguetes", "material_juguetes"),
+        ("Lata Chilera", "material_metal"),
+        ("Lata", "material_metal"),
         ("Libros", "material_libros"),
         ("Llantas", "material_llantas"),
         ("Madera", "material_madera"),
-        ("Medicinas", "material_medicina"),
+        ("Medicina", "material_medicina"),
         ("Metal", "material_metal"),
         ("Orgánico", "material_organico"),
         ("Pallets", "material_pallets"),
@@ -132,7 +136,7 @@ private func getMaterialIcon(materialName: String) -> String? {
         ("Plásticos", "material_plasticos"),
         ("Ropa", "material_ropa"),
         ("Tapitas", "material_tapitas"),
-        ("Tetra Pack", "material_tetrapack"),
+        ("Tetrapack", "material_tetrapack"),
         ("Toner", "material_toner"),
         ("Voluminoso", "material_voluminoso")
     ]

@@ -32,7 +32,7 @@
                                 <constraint firstAttribute="height" constant="60" id="lbD-Kc-FZq"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" name="ColorLetras"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_loading" translatesAutoresizingMaskIntoConstraints="NO" id="2BX-b8-OsG">
@@ -53,6 +53,7 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Ver Galería">
                                 <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="baseBackgroundColor" name="ColorSecundario"/>
                             </buttonConfiguration>
                             <userDefinedRuntimeAttributes>
@@ -78,6 +79,7 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Tomar Foto">
                                 <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="baseBackgroundColor" name="AccentColor"/>
                             </buttonConfiguration>
                             <userDefinedRuntimeAttributes>
@@ -103,6 +105,7 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Regresar">
                                 <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="baseBackgroundColor" name="ColorNegativo"/>
                             </buttonConfiguration>
                             <userDefinedRuntimeAttributes>
@@ -119,19 +122,19 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cU8-md-Sga" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
-                            <rect key="frame" x="113.33333333333334" y="490" width="106.66666666666666" height="0.0"/>
+                            <rect key="frame" x="105" y="490" width="123.33333333333331" height="0.0"/>
                             <color key="backgroundColor" name="ColorSecundario"/>
                             <constraints>
                                 <constraint firstAttribute="height" id="67t-eK-Esm"/>
                             </constraints>
                             <color key="tintColor" name="ColorSecundario"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                            <buttonConfiguration key="configuration" style="filled" title="placeholder">
                                 <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="baseBackgroundColor" name="AccentColor"/>
                             </buttonConfiguration>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Continuar"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="placeholder"/>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="25"/>
                                 </userDefinedRuntimeAttribute>
@@ -175,6 +178,9 @@
         <image name="icon_loading" width="255" height="255"/>
         <namedColor name="AccentColor">
             <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorLetras">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ColorNegativo">
             <color red="0.89411764705882357" green="0.11764705882352941" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
