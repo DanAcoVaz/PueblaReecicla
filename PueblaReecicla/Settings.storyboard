@@ -920,7 +920,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osb-QU-l5p">
                                 <rect key="frame" x="16" y="156.66666666666669" width="361" height="643.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Es la primera aplicación móvil en México que promueve el reciclaje inclusivo; dignifica el trabajo de los recolectores voluntarios y fomenta la igualdad de género; con autoempleo y el emprendimiento de los recolectores; ayudamos significativamente a mejorar sus condiciones de vida y la de sus familias; fomentando una cultura ambiental en todos los que usamos la Aplicación.
+                                <string key="text">Es la primera aplicación móvil en México que promueve el reciclaje inclusivo; dignifica el trabajo de los recolectores voluntarios y fomenta la igualdad de género; con autoempleo y el emprendimiento de los recolectores; ayudamos significativamente a mejorar sus condiciones de vida y la de sus familias; fomentando una cultura ambiental en todos los que usamos la Aplicación.
 
 REECICLA¡ es una herramienta en mapa que identifica los puntos verdes de tu ciudad donde puedes reciclar, tu decides si donando o recibiendo un pago por ellos; con un directorio verde, todo en un mismo lugar.
 
@@ -934,7 +934,7 @@ REECICLA¡ es una herramienta en mapa que identifica los puntos verdes de tu ciu
 
 -Satisface la economía circular y colaborativa.
 
--Fomenta la cultura de cuidado del ambiente.</mutableString>
+-Fomenta la cultura de cuidado del ambiente.</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1113,7 +1113,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">La aplicación funciona como un canal para la realización de ciertas actividades descritas más adelante con el objeto de facilitar el acceso a la persona (el usuario) que desea reciclar desde casa apoyando a que le brinde el servicio, un recolector voluntario, quién tiene dicha actividad como ingreso de vida; adicionalmente la aplicación es un mapa y un directorio verde en tu comunidad.</mutableString>
+                                        <string key="content">La aplicación funciona como un canal para la realización de ciertas actividades descritas más adelante con el objeto de facilitar el acceso a la persona (el usuario) que desea reciclar desde casa apoyando a que le brinde el servicio, un recolector voluntario, quién tiene dicha actividad como ingreso de vida; adicionalmente la aplicación es un mapa y un directorio verde en tu comunidad.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1142,7 +1142,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">El usuario se compromete a leer los términos y condiciones aquí establecidas, previamente a la descarga de la aplicación, por tanto, en caso de realizar la instalación se entiende que cuenta con el conocimiento integral de este documento y la consecuente aceptación de la totalidad de sus estipulaciones.</mutableString>
+                                        <string key="content">El usuario se compromete a leer los términos y condiciones aquí establecidas, previamente a la descarga de la aplicación, por tanto, en caso de realizar la instalación se entiende que cuenta con el conocimiento integral de este documento y la consecuente aceptación de la totalidad de sus estipulaciones.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1171,7 +1171,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">El Usuario reconoce que el ingreso de su información personal y los datos que contiene la aplicación a su disposición, son exclusivamente utilizados respecto a los productos activos y/o servicios que acepta con Reecicla¡, patrocinadores y/o asociados dentro de la aplicación móvil, en el entendido de que la realizan de manera voluntaria, quienes optan por acceder a esta aplicación en México o desde fuera del territorio nacional, lo hacen por iniciativa propia y son responsables del cumplimiento de las leyes locales, en la medida en que dichas leyes sean aplicables en su correspondiente país. En caso de que se acceda por parte de menores de edad, deben contar con la supervisión de un adulto en todo momento desde la descarga y durante el uso de la aplicación, en el evento en que no se cumpla esta condición, le agradecemos no hacer uso de la aplicación.</mutableString>
+                                        <string key="content">El Usuario reconoce que el ingreso de su información personal y los datos que contiene la aplicación a su disposición, son exclusivamente utilizados respecto a los productos activos y/o servicios que acepta con Reecicla¡, patrocinadores y/o asociados dentro de la aplicación móvil, en el entendido de que la realizan de manera voluntaria, quienes optan por acceder a esta aplicación en México o desde fuera del territorio nacional, lo hacen por iniciativa propia y son responsables del cumplimiento de las leyes locales, en la medida en que dichas leyes sean aplicables en su correspondiente país. En caso de que se acceda por parte de menores de edad, deben contar con la supervisión de un adulto en todo momento desde la descarga y durante el uso de la aplicación, en el evento en que no se cumpla esta condición, le agradecemos no hacer uso de la aplicación.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1362,7 +1362,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">podrá adicionar, modificar o eliminar las funcionalidades en cualquier momento, lo cual acepta el usuario mediante la instalación de la aplicación. En todo caso, al momento de realizar dichas modificaciones se notificarán al usuario a través de la misma aplicación móvil una vez inicie sesión.</mutableString>
+                                        <string key="content">podrá adicionar, modificar o eliminar las funcionalidades en cualquier momento, lo cual acepta el usuario mediante la instalación de la aplicación. En todo caso, al momento de realizar dichas modificaciones se notificarán al usuario a través de la misma aplicación móvil una vez inicie sesión.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1477,7 +1477,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">El usuario deberá contar con un dispositivo móvil inteligente (Smartphone) o tableta con sistema operativo Android o IOS, cualquiera de estos con acceso a internet, ambos seguros y confiables. Reecicla¡ no será responsable por la seguridad de los equipos Smartphone propiedad de los usuarios utilizados para el acceso al canal, ni por la disponibilidad del servicio en los dispositivos en los cuales se descargue la aplicación.</mutableString>
+                                        <string key="content">El usuario deberá contar con un dispositivo móvil inteligente (Smartphone) o tableta con sistema operativo Android o IOS, cualquiera de estos con acceso a internet, ambos seguros y confiables. Reecicla¡ no será responsable por la seguridad de los equipos Smartphone propiedad de los usuarios utilizados para el acceso al canal, ni por la disponibilidad del servicio en los dispositivos en los cuales se descargue la aplicación.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1506,7 +1506,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">En la forma permitida por la ley, los materiales de la aplicación se suministran sin garantía de ningún género, expresa o implícita, incluyendo sin limitación las garantías de calidad satisfactoria, comerciabilidad, adecuación para un fin particular o no infracción, por tanto, </mutableString>
+                                        <string key="content">En la forma permitida por la ley, los materiales de la aplicación se suministran sin garantía de ningún género, expresa o implícita, incluyendo sin limitación las garantías de calidad satisfactoria, comerciabilidad, adecuación para un fin particular o no infracción, por tanto, </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1562,7 +1562,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Para acceder al portal, EL CLIENTE contará con Usuario y Clave, que lo identifica en su relación con la aplicación móvil Puebla Reeclicla¡, los cuales serán los mismos utilizados en el portal web www.reecicla.com.  Adicional a lo anterior no se requerirá a EL CLIENTE registrar preguntas de seguridad, sin embargo lo podrá solicitar en lo futuro. En su caso, dichas preguntas de seguridad podrán ser solicitadas al momento de intentar ingresar a la aplicación. En el caso de información de perfil, sólo cuando el usuario ingrese desde un equipo registrado no se solicitará responder las preguntas definidas con anterioridad.</mutableString>
+                                        <string key="content">Para acceder al portal, EL CLIENTE contará con Usuario y Clave, que lo identifica en su relación con la aplicación móvil Puebla Reeclicla¡, los cuales serán los mismos utilizados en el portal web www.reecicla.com.  Adicional a lo anterior no se requerirá a EL CLIENTE registrar preguntas de seguridad, sin embargo lo podrá solicitar en lo futuro. En su caso, dichas preguntas de seguridad podrán ser solicitadas al momento de intentar ingresar a la aplicación. En el caso de información de perfil, sólo cuando el usuario ingrese desde un equipo registrado no se solicitará responder las preguntas definidas con anterioridad.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1769,7 +1769,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">(b) Reproducir, copiar, representar, utilizar, distribuir, transformar o modificar los contenidos de la aplicación, por cualquier procedimiento o sobre cualquier soporte, total o parcial, o permitir el acceso del público a través de cualquier modalidad de comunicación pública;</mutableString>
+                                        <string key="content">(b) Reproducir, copiar, representar, utilizar, distribuir, transformar o modificar los contenidos de la aplicación, por cualquier procedimiento o sobre cualquier soporte, total o parcial, o permitir el acceso del público a través de cualquier modalidad de comunicación pública;</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1891,7 +1891,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">(d) Suprimir, eludir o manipular el derecho de autor y demás datos identificativos de los derechos de autor incorporados a los contenidos, así como los dispositivos técnicos de protección, o cualesquiera mecanismos de información que pudieren tener los contenidos;</mutableString>
+                                        <string key="content">(d) Suprimir, eludir o manipular el derecho de autor y demás datos identificativos de los derechos de autor incorporados a los contenidos, así como los dispositivos técnicos de protección, o cualesquiera mecanismos de información que pudieren tener los contenidos;</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1952,7 +1952,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">(e) Emplear los contenidos y, en particular, la información de cualquier clase obtenida a través de la aplicación para distribuir, transmitir, remitir, modificar, rehusar o reportar la publicidad o los contenidos de esta con fines de venta directa o con cualquier otra clase de finalidad comercial, mensajes no solicitados dirigidos a una pluralidad de personas con independencia de su finalidad, así como comercializar o divulgar de cualquier modo dicha información;</mutableString>
+                                        <string key="content">(e) Emplear los contenidos y, en particular, la información de cualquier clase obtenida a través de la aplicación para distribuir, transmitir, remitir, modificar, rehusar o reportar la publicidad o los contenidos de esta con fines de venta directa o con cualquier otra clase de finalidad comercial, mensajes no solicitados dirigidos a una pluralidad de personas con independencia de su finalidad, así como comercializar o divulgar de cualquier modo dicha información;</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2073,7 +2073,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">g) Utilizar la aplicación y los contenidos con fines lícitos y/o ilícitos, contrarios a lo establecido en estos Términos y Condiciones, o al uso mismo de la aplicación, que sean lesivos de los derechos e intereses de terceros, o que de cualquier forma puedan dañar, inutilizar, sobrecargar o deteriorar la aplicación y los contenidos o impedir la normal utilización o disfrute de esta y de los contenidos por parte de los usuarios.</mutableString>
+                                        <string key="content">g) Utilizar la aplicación y los contenidos con fines lícitos y/o ilícitos, contrarios a lo establecido en estos Términos y Condiciones, o al uso mismo de la aplicación, que sean lesivos de los derechos e intereses de terceros, o que de cualquier forma puedan dañar, inutilizar, sobrecargar o deteriorar la aplicación y los contenidos o impedir la normal utilización o disfrute de esta y de los contenidos por parte de los usuarios.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2144,7 +2144,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Todo el material informático, gráfico, publicitario, fotográfico, de multimedia, audiovisual y de diseño, así como todos los contenidos, textos y bases de datos puestos a su disposición en esta aplicación están protegidos por derechos de autor y/o propiedad industrial cuyo titular es Green Carson, S. de R.L. de C.V. o sus compañías filiales, asociadas, patrocinadoras, vinculadas o subsidiarias, en algunos casos, de terceros que han autorizado su uso o explotación. Igualmente, el uso en la aplicación de algunos materiales de propiedad de terceros se encuentra expresamente autorizado por la ley o por dichos terceros. Todos los contenidos en la aplicación están protegidos por las normas sobre derecho de autor y por todas las normas nacionales e internacionales que le sean aplicables.</mutableString>
+                                        <string key="content">Todo el material informático, gráfico, publicitario, fotográfico, de multimedia, audiovisual y de diseño, así como todos los contenidos, textos y bases de datos puestos a su disposición en esta aplicación están protegidos por derechos de autor y/o propiedad industrial cuyo titular es Green Carson, S. de R.L. de C.V. o sus compañías filiales, asociadas, patrocinadoras, vinculadas o subsidiarias, en algunos casos, de terceros que han autorizado su uso o explotación. Igualmente, el uso en la aplicación de algunos materiales de propiedad de terceros se encuentra expresamente autorizado por la ley o por dichos terceros. Todos los contenidos en la aplicación están protegidos por las normas sobre derecho de autor y por todas las normas nacionales e internacionales que le sean aplicables.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2173,7 +2173,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Exceptuando lo expresamente estipulado en estos Términos y Condiciones, queda prohibido todo acto de copia, reproducción, modificación, creación de trabajos derivados, venta o distribución, exhibición de los contenidos de esta aplicación, de manera o por medio alguno, incluyendo, más no limitado a, medios electrónicos, mecánicos, de fotocopiado, de grabación o de cualquier otra índole, sin el permiso previo y por escrito de Skandia o del titular de los respectivos derechos.</mutableString>
+                                        <string key="content">Exceptuando lo expresamente estipulado en estos Términos y Condiciones, queda prohibido todo acto de copia, reproducción, modificación, creación de trabajos derivados, venta o distribución, exhibición de los contenidos de esta aplicación, de manera o por medio alguno, incluyendo, más no limitado a, medios electrónicos, mecánicos, de fotocopiado, de grabación o de cualquier otra índole, sin el permiso previo y por escrito de Skandia o del titular de los respectivos derechos.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2202,7 +2202,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">En ningún caso estos Términos y Condiciones confieren derechos, licencias ni autorizaciones para realizar los actos anteriormente prohibidos. Cualquier uso no autorizado de los contenidos constituirá una violación del presente documento y a las normas vigentes sobre derechos de autor, a las normas vigentes nacionales e internacionales sobre Propiedad Industrial, y a cualquier otra que sea aplicable.</mutableString>
+                                        <string key="content">En ningún caso estos Términos y Condiciones confieren derechos, licencias ni autorizaciones para realizar los actos anteriormente prohibidos. Cualquier uso no autorizado de los contenidos constituirá una violación del presente documento y a las normas vigentes sobre derechos de autor, a las normas vigentes nacionales e internacionales sobre Propiedad Industrial, y a cualquier otra que sea aplicable.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2384,7 +2384,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content"> no interfiere, no toma decisiones, ni garantiza las relaciones que los usuarios lleguen a sostener o las vinculaciones con terceros que pauten y/o promocionen sus productos y/o servicios. Estas marcas de terceros se utilizan solamente para identificar los productos y servicios de sus respectivos propietarios y el patrocinio o el aval por parte de </mutableString>
+                                        <string key="content"> no interfiere, no toma decisiones, ni garantiza las relaciones que los usuarios lleguen a sostener o las vinculaciones con terceros que pauten y/o promocionen sus productos y/o servicios. Estas marcas de terceros se utilizan solamente para identificar los productos y servicios de sus respectivos propietarios y el patrocinio o el aval por parte de </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2782,7 +2782,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Con la descarga de la APP usted acepta y autoriza que Green Carson, S. de R.L. de C.V., utilice sus datos en calidad de responsable del tratamiento para fines derivados de la ejecución de la APP.  Green Carson, S. de R.L. de C.V. informa que podrá ejercer sus derechos a conocer, actualizar, rectificar y suprimir su información personal; así como el derecho a revocar el consentimiento otorgado para el tratamiento de datos personales previstos en los artículos 15 y 16 de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y su Reglamento; observando nuestra política de tratamiento de información disponible también en: </mutableString>
+                                        <string key="content">Con la descarga de la APP usted acepta y autoriza que Green Carson, S. de R.L. de C.V., utilice sus datos en calidad de responsable del tratamiento para fines derivados de la ejecución de la APP.  Green Carson, S. de R.L. de C.V. informa que podrá ejercer sus derechos a conocer, actualizar, rectificar y suprimir su información personal; así como el derecho a revocar el consentimiento otorgado para el tratamiento de datos personales previstos en los artículos 15 y 16 de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y su Reglamento; observando nuestra política de tratamiento de información disponible también en: </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2949,7 +2949,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content"> de manera total, y sin limitación los derechos sobre las imagenes que por el uso de la aplicación realice el Usuario inherentes al mismo, renunciando a los derechos patrimoniales de autor, de manera voluntaria, previa, explicita, informada e inequívoca.​​​</mutableString>
+                                        <string key="content"> de manera total, y sin limitación los derechos sobre las imagenes que por el uso de la aplicación realice el Usuario inherentes al mismo, renunciando a los derechos patrimoniales de autor, de manera voluntaria, previa, explicita, informada e inequívoca.​​​</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3115,7 +3115,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content"> no será responsable por: a) Fuerza mayor o caso fortuito; b) Por la pérdida, extravío o hurto de su dispositivo móvil que implique el acceso de terceros a la aplicación móvil; c) Por errores en la digitación o accesos por parte del cliente; d) Por los perjuicios, lucro cesante, daño emergente, morales, y en general sumas a cargo de </mutableString>
+                                        <string key="content"> no será responsable por: a) Fuerza mayor o caso fortuito; b) Por la pérdida, extravío o hurto de su dispositivo móvil que implique el acceso de terceros a la aplicación móvil; c) Por errores en la digitación o accesos por parte del cliente; d) Por los perjuicios, lucro cesante, daño emergente, morales, y en general sumas a cargo de </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3309,7 +3309,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content"> podrá modificar los presentes términos y condiciones, avisando a los usuarios de la aplicación mediante publicación en la página web www.reecicla.com o mediante la difusión de las modificación por algún medio electrónico, redes sociales, SMS y/o correo electrónico, lo cual se entenderá aceptado por el usuario si éste continua con el uso de la aplicación.​</mutableString>
+                                        <string key="content"> podrá modificar los presentes términos y condiciones, avisando a los usuarios de la aplicación mediante publicación en la página web www.reecicla.com o mediante la difusión de las modificación por algún medio electrónico, redes sociales, SMS y/o correo electrónico, lo cual se entenderá aceptado por el usuario si éste continua con el uso de la aplicación.​</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3492,7 +3492,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Una dirección de Protocolo de Internet (IP) es un conjunto de números que se asigna automáticamente a su o dispositivo móvil cuando usted accede a su proveedor de servicios de internet, o a través de la red de área local (LAN) de su organización o la red de área amplia (WAN). Los servidores web automáticamente identifican su dispositivo móvil por la dirección IP asignada a él durante su sesión en línea.</mutableString>
+                                        <string key="content">Una dirección de Protocolo de Internet (IP) es un conjunto de números que se asigna automáticamente a su o dispositivo móvil cuando usted accede a su proveedor de servicios de internet, o a través de la red de área local (LAN) de su organización o la red de área amplia (WAN). Los servidores web automáticamente identifican su dispositivo móvil por la dirección IP asignada a él durante su sesión en línea.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3534,7 +3534,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">podrán recolectar direcciones IP para propósitos de administración de sistemas y para auditar el uso de nuestro sitio, todo lo anterior de acuerdo con la autorización de protección de datos que se suscribe para tal efecto. Normalmente no vinculamos la dirección IP de un usuario con la información personal de ese usuario, lo que significa que cada sesión de usuario se registra, pero el usuario sigue siendo anónimo para nosotros. Sin embargo, podemos usar las direcciones IP para identificar a los usuarios de nuestro sitio cuando sea necesario con el objeto de para exigir el cumplimiento de los términos de uso del sitio, o para proteger nuestro servicio, sitio u otros usuarios.</mutableString>
+                                        <string key="content">podrán recolectar direcciones IP para propósitos de administración de sistemas y para auditar el uso de nuestro sitio, todo lo anterior de acuerdo con la autorización de protección de datos que se suscribe para tal efecto. Normalmente no vinculamos la dirección IP de un usuario con la información personal de ese usuario, lo que significa que cada sesión de usuario se registra, pero el usuario sigue siendo anónimo para nosotros. Sin embargo, podemos usar las direcciones IP para identificar a los usuarios de nuestro sitio cuando sea necesario con el objeto de para exigir el cumplimiento de los términos de uso del sitio, o para proteger nuestro servicio, sitio u otros usuarios.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3630,7 +3630,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">tiene implementados mecanismos de seguridad que aseguran la protección de la información personal, así como los accesos únicamente al personal y sistemas autorizados, también contra la pérdida, uso indebido y alteración de sus datos de usuario bajo nuestro control.</mutableString>
+                                        <string key="content">tiene implementados mecanismos de seguridad que aseguran la protección de la información personal, así como los accesos únicamente al personal y sistemas autorizados, también contra la pérdida, uso indebido y alteración de sus datos de usuario bajo nuestro control.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21176470820000001" green="0.21176470820000001" blue="0.21176470820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3851,7 +3851,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Green Carson, S. de R.L. de C.V (en lo sucesivo Reecicla¡) es una sociedad mercantil constituida de conformidad con las Leyes de los Estados Unidos Mexicanos, con domicilio ubicado en calle Melchor Ocampo No. 37 oficina 1, Col. Ampliación Momoxpan, San Pedro Cholula, Puebla, C.P.72760, es la responsable del tratamiento y protección de sus datos personales en cumplimiento a lo dispuesto en los artículos 2 XXVIII, 15 y 16 de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y su Reglamento; que recopila, utiliza y protege los datos personales de sus usuarios de acuerdo con las disposiciones de ésta Política de Privacidad.</mutableString>
+                                        <string key="content">Green Carson, S. de R.L. de C.V (en lo sucesivo Reecicla¡) es una sociedad mercantil constituida de conformidad con las Leyes de los Estados Unidos Mexicanos, con domicilio ubicado en calle Melchor Ocampo No. 37 oficina 1, Col. Ampliación Momoxpan, San Pedro Cholula, Puebla, C.P.72760, es la responsable del tratamiento y protección de sus datos personales en cumplimiento a lo dispuesto en los artículos 2 XXVIII, 15 y 16 de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y su Reglamento; que recopila, utiliza y protege los datos personales de sus usuarios de acuerdo con las disposiciones de ésta Política de Privacidad.</string>
                                         <attributes>
                                             <font key="NSFont" size="14.666666984558105" name="Helvetica"/>
                                             <real key="NSKern" value="0.0"/>
@@ -5290,7 +5290,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Usted puede acceder a los datos personales que poseemos, detalles de tratamiento, a la rectificación en el caso de ser inexactos o incompletos, a cancelarlos al término de la ejecución de la relación comercial, o bien cuando a su consideración no sean necesarios para alguna de las finalidades contenidas en la presente política de Privacidad y en específico, el Aviso de Provacidad y finalmente oponerse al tratamiento y cesión o trasnferencia nacional o onternacional de sus datos de carácter personal, dirigiendo un escrito o correo electrónico confirme a los términos indicados en el presente aviso.</mutableString>
+                                        <string key="content">Usted puede acceder a los datos personales que poseemos, detalles de tratamiento, a la rectificación en el caso de ser inexactos o incompletos, a cancelarlos al término de la ejecución de la relación comercial, o bien cuando a su consideración no sean necesarios para alguna de las finalidades contenidas en la presente política de Privacidad y en específico, el Aviso de Provacidad y finalmente oponerse al tratamiento y cesión o trasnferencia nacional o onternacional de sus datos de carácter personal, dirigiendo un escrito o correo electrónico confirme a los términos indicados en el presente aviso.</string>
                                         <attributes>
                                             <font key="NSFont" size="14.666666984558105" name="Helvetica"/>
                                             <real key="NSKern" value="0.0"/>
@@ -5471,7 +5471,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Los datos personales recogidos por Reecicla¡ podrán ser cedidos sin necesidade de su consentimiento entre empresas afiliadas, patrocinadores y/o asociados; y en su caso, a terceros directa o indirectamente implicados, exclusivamente para el cumplimiento de las obligaciones derivadas de la correcta prestación de los servicios que ofrecemos, tales como la contratación de diversos servicios tecnológicos, que pueden ser empresas que se dediquen al desarrollo y consultoría de tecnologías de la información, mailing para la actualización y mejora de procesos, entre otros fines similares a los anteriores; o bien, cuando sea requerido, a autoridades competentes en el área de Datos Personales si los mismos son solicitados mediante un oficio debidamente notificado, fundado y motivado.</mutableString>
+                                        <string key="content">Los datos personales recogidos por Reecicla¡ podrán ser cedidos sin necesidade de su consentimiento entre empresas afiliadas, patrocinadores y/o asociados; y en su caso, a terceros directa o indirectamente implicados, exclusivamente para el cumplimiento de las obligaciones derivadas de la correcta prestación de los servicios que ofrecemos, tales como la contratación de diversos servicios tecnológicos, que pueden ser empresas que se dediquen al desarrollo y consultoría de tecnologías de la información, mailing para la actualización y mejora de procesos, entre otros fines similares a los anteriores; o bien, cuando sea requerido, a autoridades competentes en el área de Datos Personales si los mismos son solicitados mediante un oficio debidamente notificado, fundado y motivado.</string>
                                         <attributes>
                                             <font key="NSFont" size="14.666666984558105" name="Helvetica"/>
                                             <real key="NSKern" value="0.0"/>
@@ -5681,7 +5681,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Ésta Política de Privacidad también cubre el tratamiento de los datos personales que los socios comerciales de Reecicla¡ comparte con sus socios comerciales. Esta Política de privacidad no se aplica a las prácticas de terceros y sus sitios, servicios o aplicaciones que Reecicla¡ no posee ni controla, ni a personas que Reecicla¡ no emplea ni administra (Terceros). Si bien intentamos brindar el acceso sólo a aquéllos Terceros que comparten nuestro respecto por su privacidad, no podemos asumir la responsabilidad por el contenido, las acciones o las políticas de privacidad de Terceros. Le recomendamos que revise detenidamente las póliticas de privacidad de los Terceros a los que acceda.</mutableString>
+                                        <string key="content">Ésta Política de Privacidad también cubre el tratamiento de los datos personales que los socios comerciales de Reecicla¡ comparte con sus socios comerciales. Esta Política de privacidad no se aplica a las prácticas de terceros y sus sitios, servicios o aplicaciones que Reecicla¡ no posee ni controla, ni a personas que Reecicla¡ no emplea ni administra (Terceros). Si bien intentamos brindar el acceso sólo a aquéllos Terceros que comparten nuestro respecto por su privacidad, no podemos asumir la responsabilidad por el contenido, las acciones o las políticas de privacidad de Terceros. Le recomendamos que revise detenidamente las póliticas de privacidad de los Terceros a los que acceda.</string>
                                         <attributes>
                                             <font key="NSFont" size="14.666666984558105" name="Helvetica"/>
                                             <real key="NSKern" value="0.0"/>
@@ -6015,7 +6015,7 @@ Cg
                                             <constraint firstAttribute="width" constant="250" id="eP0-hb-KB6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="given-name"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido(s)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mh-er-etQ">
                                         <rect key="frame" x="0.0" y="97" width="103.33333333333333" height="23"/>
@@ -6029,7 +6029,7 @@ Cg
                                             <constraint firstAttribute="width" constant="250" id="dG5-QV-raK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="family-name"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo Electrónico" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gj-JB-DWr">
                                         <rect key="frame" x="0.0" y="194" width="180.33333333333334" height="23"/>
@@ -6043,7 +6043,7 @@ Cg
                                             <constraint firstAttribute="width" constant="250" id="AMq-qO-c6J"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn3-kr-g1o">
                                         <rect key="frame" x="0.0" y="291" width="82" height="23"/>
@@ -6057,7 +6057,7 @@ Cg
                                             <constraint firstAttribute="width" constant="250" id="gaO-Sa-xDK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de Nacimiento" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRP-eC-ZVB">
                                         <rect key="frame" x="0.0" y="388" width="200.33333333333334" height="23"/>
@@ -6065,8 +6065,11 @@ Cg
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="bYm-7J-dOd">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYm-7J-dOd">
                                         <rect key="frame" x="0.0" y="431" width="250" height="50"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="722458117.09908402">
+                                            <!--2023-11-23 18:48:37 +0000-->
+                                        </date>
                                     </datePicker>
                                 </subviews>
                                 <constraints>
@@ -6091,6 +6094,9 @@ Cg
                                     </attributedString>
                                     <color key="baseBackgroundColor" red="0.2784313725" green="0.72941176470000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="updateDataTap:" destination="EUB-HB-D68" eventType="touchUpInside" id="dKs-JC-m8n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDF-I3-d3c">
                                 <rect key="frame" x="56.666666666666657" y="674" width="280" height="57.666666666666629"/>
@@ -6110,6 +6116,9 @@ Cg
                                     </attributedString>
                                     <color key="baseBackgroundColor" name="ColorNegativo"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeSessionTap:" destination="EUB-HB-D68" eventType="touchUpInside" id="GPs-Rc-BOU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dbv-0P-cAA"/>
@@ -6167,7 +6176,7 @@ Cg
         <image name="shield.checkerboard" catalog="system" width="128" height="121"/>
         <image name="tecnologico-de-monterrey-blue" width="1600" height="421"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ColorLetras">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
