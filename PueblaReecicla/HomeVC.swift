@@ -10,6 +10,7 @@ import FirebaseAuth
 
 enum ProviderType: String {
     case basic
+    case google
 }
 
 class HomeViewController: UIViewController {
@@ -39,28 +40,44 @@ class HomeViewController: UIViewController {
         
         //navToolbar.layer.borderColor = UIColor.black.cgColor
         //navToolbar.layer.borderWidth = 1
+        let defaults = UserDefaults.standard
+        if let email = defaults.value(forKey: "email") as? String{
+            print("logged in and saved in user defaults")
+        }
+        else {
+            print("no user saved in user defaults")
+        }
         
         if let currentUser = Auth.auth().currentUser {
             print("Esta Logeado")
             print(currentUser.email)
             print(currentUser.displayName)
             print(currentUser.uid)
+            if ((currentUser.isEmailVerified)){
+                print("Verified")
+            }
+            else {
+                print("Not verified")
+            }
         } else {
             print("No esta Logeado")
         }
-        
         
     }
     @IBAction func closeSessionButtonAction(_ sender: Any) {
         // Cerrar sesión en Firebase
                 do {
+                    let defaults = UserDefaults.standard
+                    defaults.removeObject(forKey: "email")
+                    defaults.synchronize()
+                    
                     try Auth.auth().signOut()
                     
                     // Después de cerrar sesión, puedes navegar a la pantalla de inicio o realizar otras acciones necesarias.
                     
                     // Por ejemplo, puedes navegar a la pantalla de inicio de sesión:
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "ViewController")
+                    let vc = storyboard.instantiateViewController(withIdentifier: "LoginTab")
                     
                     vc.modalPresentationStyle = .overFullScreen
                     self.present(vc, animated: true)

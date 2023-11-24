@@ -8,17 +8,20 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import GoogleSignIn
+import FirebaseCore
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var signUpLbl: UILabel!
+    @IBOutlet weak var googleSignInButton: GIDSignInButton!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        googleSignInButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onGoogleLoginTap)))
         
         emailTxt.delegate = self
         emailTxt.backgroundColor = .white
@@ -38,6 +41,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         navigationItem.backButtonDisplayMode = .minimal
         
+        let defaults = UserDefaults.standard
+        
+        if let email = defaults.value(forKey: "email") as? String {
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "HomeTab")
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -50,7 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBAction func signUpTap(_ sender: UITapGestureRecognizer) {
-        let signUpVC = storyboard?.instantiateViewController(withIdentifier: "SignUp") as? SignUpViewController
+        let signUpVC = storyboard?.instantiateViewController(withIdentifier: "CompletarDatos") as? CompleteDataVC
         navigationController?.pushViewController(signUpVC!, animated: true)
     }
     
@@ -72,10 +83,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                 print("Error al obtener documentos: \(error)")
                             } else {
                                 if let document = document, document.exists {
-                                    let storyboard = UIStoryboard(name: "Home", bundle: nil)
-                                    let vc = storyboard.instantiateViewController(withIdentifier: "HomeTab")
-                                    vc.modalPresentationStyle = .overFullScreen
-                                    self.present(vc, animated: true)
+                                    if let user = Auth.auth().currentUser{
+                                        if user.isEmailVerified{
+                                            let defaults = UserDefaults.standard
+                                            defaults.set(email, forKey: "email")
+                                            defaults.synchronize()
+                                            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                                            let vc = storyboard.instantiateViewController(withIdentifier: "HomeTab")
+                                            vc.modalPresentationStyle = .overFullScreen
+                                            self.present(vc, animated: true)
+                                        }
+                                        else {
+                                            let alert = UIAlertController(title: "Error", message: "El correo electrónico no está verificado. Verifícalo", preferredStyle: .alert)
+                                                                                        alert.addAction(UIAlertAction(title: "OK", style: .destructive))
+                                                                                        self.present(alert, animated: true)
+                                        }
+                                    }
                                 } else {
                                     print("Documento no encontrado")
                                     do {
@@ -106,6 +129,81 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+    }
+    
+    @objc func onGoogleLoginTap() {
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
+            guard error == nil else {
+                return
+            }
+
+            guard let user = result?.user,
+                  let idToken = user.idToken?.tokenString else {
+                return
+            }
+
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
+
+            Auth.auth().signIn(with: credential) { authResult, error in
+                guard error == nil else {
+                    return
+                }
+
+                // Check if the user is new
+                if let isNewUser = authResult?.additionalUserInfo?.isNewUser, isNewUser {
+                    // Perform actions for a new user
+                    print("New user signed in.")
+                    // Get the user's UID
+                    guard let uid = Auth.auth().currentUser?.uid,
+                          let email = Auth.auth().currentUser?.email else {
+                        return
+                    }
+
+                    // Create a reference to the "usuarios" collection and the user's document
+                    let usersCollection = Firestore.firestore().collection("usuarios")
+                    let userDocument = usersCollection.document(uid)
+
+                    // Set initial values for additional fields
+                    let userData: [String: Any] = [
+                        "nombre": "",
+                        "apellidos": "",
+                        "correo": email,
+                        "telefono": "",
+                        "fechaNacimiento": "",
+                        "rank_points": 0,
+                        "highest1": 0,
+                    ]
+
+                    // Set the data in Firestore
+                    userDocument.setData(userData, merge: true)
+                    let currentUser = Auth.auth().currentUser
+                    let defaults = UserDefaults.standard
+                    defaults.set(email, forKey: "email")
+                    defaults.synchronize()
+                    
+                    self.goToCD()
+                    
+                } else {
+                    // Perform actions for an existing user
+                    print("Existing user signed in.")
+                    let currentUser = Auth.auth().currentUser
+                    let email = currentUser?.email
+                    let defaults = UserDefaults.standard
+                    defaults.set(email, forKey: "email")
+                    defaults.synchronize()
+
+                    let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "HomeTab")
+                    vc.modalPresentationStyle = .overFullScreen
+                    self.present(vc, animated: true)
+                }
+            }
+        }
+    }
+    
+    func goToCD(){
+        let signUpVC = storyboard?.instantiateViewController(withIdentifier: "CompletarDatos") as? CompleteDataVC
+        navigationController?.pushViewController(signUpVC!, animated: true)
     }
     
 }
