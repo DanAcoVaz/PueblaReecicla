@@ -13,7 +13,7 @@ import UIKit
 
 
 class MaterialesVC: UIViewController {
-
+ 
     @IBOutlet var collectionView: UICollectionView!
     
     var materialArray: [Material] = []
@@ -65,6 +65,7 @@ class MaterialesVC: UIViewController {
     
     // Function to present the second popup
     func presentConfirmPopup() {
+        
         // Create the second popup with Continue button
         let continueAlertController = UIAlertController(title: "Orden de Reciclaje", message: """
         Tu orden está siendo procesada
@@ -103,7 +104,7 @@ class MaterialesVC: UIViewController {
     private func sendDataToDBRecolecciones() {
         // Assuming you have Firestore and Storage configured
         let db = Firestore.firestore()
-        //let storage = Storage.storage()
+        let storage = Storage.storage()
         
         var recoleccionData: [String: Any] = [
             "fechaRecoleccion": BundleRecoleccion.shared.selectedDate,
@@ -158,12 +159,117 @@ class MaterialesVC: UIViewController {
 
 
         let recoleccionesCollection = db.collection("recolecciones")
-        
-        recoleccionesCollection.addDocument(data: recoleccionData) { error in
+        let recoleccionId = recoleccionesCollection.document().documentID
+        // Use setData to set the data in the document
+        recoleccionesCollection.document(recoleccionId).setData(recoleccionData) { [self] error in
             if let error = error {
-                print("Error adding document: \(error)")
+                print("Error setting document data: \(error)")
             } else {
-                print("Document added successfully")
+                print("Document data set successfully")
+
+                // After the recolección document data is set, you can update it with the photo URL.
+                for (count, material) in self.materialArray.enumerated() {
+                    if let fotoMaterial = material.fotoMaterial {
+                        uploadPictureToFirebase(image: fotoMaterial, count: count, recoleccionId: recoleccionId)
+                    }
+                }
+            }
+        }
+
+    }
+
+    // Function to upload photos of materials to Firebase
+    func uploadPictureToFirebase(image: UIImage, count: Int, recoleccionId: String) {
+        // Convert the UIImage to Data
+        guard let imageData = image.jpegData(compressionQuality: 0.5) else {
+            print("Failed to convert UIImage to Data.")
+            return
+        }
+        
+        let randomKey = UUID().uuidString
+
+        // Create a unique filename for the image using recoleccionId and count
+        let filename = "\(randomKey).jpg"
+
+        // Reference to the Firebase Storage
+        let storageRef = Storage.storage().reference()
+
+        // Reference to the image file in Firebase Storage
+        let imageRef = storageRef.child("fotosMateriales/\(filename)")
+
+        // Upload the image data to Firebase Storage
+        let uploadTask = imageRef.putData(imageData, metadata: nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                if let error = error {
+                    print("Error uploading image: \(error)")
+                }
+                return
+            }
+
+            // Image uploaded successfully
+            print("Image uploaded successfully.")
+
+            // Get the download URL
+            imageRef.downloadURL { [self] (url, error) in
+                if let error = error {
+                    print("Error getting download URL: \(error)")
+                } else {
+                    // URL of the uploaded image
+                    if let downloadURL = url {
+                        print("Download URL: \(downloadURL.absoluteString)")
+                            
+                        self.setFotoEvidenciaForItem(downloadURL.absoluteString, count: count, recoleccionId: recoleccionId)
+                    }
+                }
+            }
+        }
+
+        // Add a progress observer if needed
+        uploadTask.observe(.progress) { snapshot in
+            // You can use snapshot.progress to get the upload progress
+            // For example, let percentComplete = 100.0 * Double(snapshot.progress!.completedUnitCount) / Double(snapshot.progress!.totalUnitCount)
+            // Update UI with the upload progress if needed
+        }
+
+        // Add a completion observer to check for the upload completion
+        uploadTask.observe(.success) { snapshot in
+            // Handle successful upload completion
+        }
+
+        // Add an error observer to handle upload failures
+        uploadTask.observe(.failure) { snapshot in
+            if let error = snapshot.error {
+                print("Error uploading image: \(error)")
+            }
+        }
+    }
+    
+    // Function to set the photo URL for a material in Swift
+    func setFotoEvidenciaForItem(_ imageURL: String, count: Int, recoleccionId: String) {
+        if count >= 0 && count < materialArray.count {
+            materialArray[count].fotoUrl = imageURL
+            collectionView.reloadItems(at: [IndexPath(item: count, section: 0)])
+            // Save the material to the database here if needed
+            updateMaterialWithFotoUrl(imageURL, count, recoleccionId)
+        }
+    }
+
+    // Function to update the material in Firestore with the photo URL in Swift
+    func updateMaterialWithFotoUrl(_ imageURL: String, _ count: Int, _ recoleccionId: String) {
+        // Initialize a Firestore DocumentReference for the recolección document
+        let recoleccionRef = Firestore.firestore().collection("recolecciones").document(recoleccionId)
+
+        // Update a specific material (e.g., "material_0") within the recolección document
+        let materialKey = "material_\(count)" // Replace with the actual material key
+
+        var updateData = [String: Any]()
+        updateData["materiales.\(materialKey).fotoUrl"] = imageURL
+
+        recoleccionRef.updateData(updateData) { error in
+            if let error = error {
+                print("Error updating material photo URL: \(error)")
+            } else {
+                print("Material photo URL updated successfully.")
             }
         }
     }
