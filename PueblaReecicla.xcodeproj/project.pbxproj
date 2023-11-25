@@ -40,6 +40,11 @@
 		B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D42542AFC1DEF002F7479 /* RecycleVC.swift */; };
 		B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D42562AFC1EE9002F7479 /* Settings.storyboard */; };
 		B37D42592AFC1F76002F7479 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D42582AFC1F76002F7479 /* SettingsVC.swift */; };
+		FB0ACB692B11740A00EF24B5 /* TutorialVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0ACB682B11740A00EF24B5 /* TutorialVC1.swift */; };
+		FB0ACB6B2B117FFD00EF24B5 /* TutorialVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0ACB6A2B117FFD00EF24B5 /* TutorialVC2.swift */; };
+		FB0ACB6D2B11803900EF24B5 /* TutorialVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0ACB6C2B11803900EF24B5 /* TutorialVC3.swift */; };
+		FB0ACB6F2B11805900EF24B5 /* TutorialVC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0ACB6E2B11805900EF24B5 /* TutorialVC4.swift */; };
+		FB0ACB712B11807200EF24B5 /* TutorialVC5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0ACB702B11807200EF24B5 /* TutorialVC5.swift */; };
 		FB7EEF802B0E8A19006875E2 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = FB7EEF7F2B0E8A19006875E2 /* GoogleSignIn */; };
 		FB7EEF822B0E8A19006875E2 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FB7EEF812B0E8A19006875E2 /* GoogleSignInSwift */; };
 		FBA8E1242B06DC340091638D /* LaunchScreen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA8E1232B06DC340091638D /* LaunchScreen2.storyboard */; };
@@ -97,6 +102,11 @@
 		B37D42542AFC1DEF002F7479 /* RecycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleVC.swift; sourceTree = "<group>"; };
 		B37D42562AFC1EE9002F7479 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		B37D42582AFC1F76002F7479 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		FB0ACB682B11740A00EF24B5 /* TutorialVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC1.swift; sourceTree = "<group>"; };
+		FB0ACB6A2B117FFD00EF24B5 /* TutorialVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC2.swift; sourceTree = "<group>"; };
+		FB0ACB6C2B11803900EF24B5 /* TutorialVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC3.swift; sourceTree = "<group>"; };
+		FB0ACB6E2B11805900EF24B5 /* TutorialVC4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC4.swift; sourceTree = "<group>"; };
+		FB0ACB702B11807200EF24B5 /* TutorialVC5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC5.swift; sourceTree = "<group>"; };
 		FBA8E1232B06DC340091638D /* LaunchScreen2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen2.storyboard; sourceTree = "<group>"; };
 		FBADDA092B102C5000F36C39 /* CompleteDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteDataVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +210,11 @@
 				832298EB2AFEED2D00F3DF85 /* HistorialItemCell.xib */,
 				FBA8E1232B06DC340091638D /* LaunchScreen2.storyboard */,
 				FBADDA092B102C5000F36C39 /* CompleteDataVC.swift */,
+				FB0ACB682B11740A00EF24B5 /* TutorialVC1.swift */,
+				FB0ACB6A2B117FFD00EF24B5 /* TutorialVC2.swift */,
+				FB0ACB6C2B11803900EF24B5 /* TutorialVC3.swift */,
+				FB0ACB6E2B11805900EF24B5 /* TutorialVC4.swift */,
+				FB0ACB702B11807200EF24B5 /* TutorialVC5.swift */,
 			);
 			path = PueblaReecicla;
 			sourceTree = "<group>";
@@ -376,7 +391,9 @@
 			files = (
 				832298FF2AFFEF9F00F3DF85 /* Material.swift in Sources */,
 				83582ADD2AF1A901006E57A8 /* ViewController.swift in Sources */,
+				FB0ACB6D2B11803900EF24B5 /* TutorialVC3.swift in Sources */,
 				83C1343A2AFEBB66008FBFDB /* HistorialCollectionViewCell.swift in Sources */,
+				FB0ACB6B2B117FFD00EF24B5 /* TutorialVC2.swift in Sources */,
 				83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */,
 				B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */,
 				FBADDA0A2B102C5000F36C39 /* CompleteDataVC.swift in Sources */,
@@ -384,11 +401,14 @@
 				832298FB2AFFE77700F3DF85 /* Recolecciones.swift in Sources */,
 				832298FD2AFFE93100F3DF85 /* Recoleccion.swift in Sources */,
 				83943EBA2AF5A91600E9E258 /* HomeVC.swift in Sources */,
+				FB0ACB692B11740A00EF24B5 /* TutorialVC1.swift in Sources */,
 				832299012AFFEFC200F3DF85 /* Recolector.swift in Sources */,
 				B33858F22AFADB2900048E56 /* MapVC.swift in Sources */,
 				83943EB62AF565D400E9E258 /* SignUpVC.swift in Sources */,
 				83582B0F2AF2C332006E57A8 /* testViewController.swift in Sources */,
 				B37D42592AFC1F76002F7479 /* SettingsVC.swift in Sources */,
+				FB0ACB712B11807200EF24B5 /* TutorialVC5.swift in Sources */,
+				FB0ACB6F2B11805900EF24B5 /* TutorialVC4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

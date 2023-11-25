@@ -81,7 +81,7 @@ class CompleteDataVC: UIViewController {
             alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { action in
                 self.updateFirestoreUserData()
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "LoginTab")
+                let vc = storyboard.instantiateViewController(withIdentifier: "Tutorial1")
                 vc.modalPresentationStyle = .overFullScreen
                 self.present(vc, animated: true)
             }))

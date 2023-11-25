@@ -18,6 +18,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var signUpLbl: UILabel!
     @IBOutlet weak var googleSignInButton: GIDSignInButton!
     
+    static var myp:Bool = false
+    static var googleSI:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -61,7 +64,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBAction func signUpTap(_ sender: UITapGestureRecognizer) {
-        let signUpVC = storyboard?.instantiateViewController(withIdentifier: "CompletarDatos") as? CompleteDataVC
+        let signUpVC = storyboard?.instantiateViewController(withIdentifier: "SignUp") as? SignUpViewController
         navigationController?.pushViewController(signUpVC!, animated: true)
     }
     
@@ -202,6 +205,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func goToCD(){
+        ViewController.googleSI = true
         let signUpVC = storyboard?.instantiateViewController(withIdentifier: "CompletarDatos") as? CompleteDataVC
         navigationController?.pushViewController(signUpVC!, animated: true)
     }

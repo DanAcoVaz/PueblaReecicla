@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="splashScreenReecicla.png" translatesAutoresizingMaskIntoConstraints="NO" id="IGY-60-khi">
-                                <rect key="frame" x="0.0" y="-54" width="393" height="906"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashScreenReecicla" translatesAutoresizingMaskIntoConstraints="NO" id="IGY-60-khi">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ikj-17-6Bb"/>
@@ -26,7 +26,9 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="IGY-60-khi" secondAttribute="trailing" id="1Hj-fl-xE7"/>
                             <constraint firstItem="IGY-60-khi" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="7rF-MW-v6w"/>
+                            <constraint firstItem="IGY-60-khi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Cld-tj-3fQ"/>
                             <constraint firstItem="IGY-60-khi" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="o6l-wa-GSI"/>
+                            <constraint firstItem="IGY-60-khi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ubY-E0-zbP"/>
                             <constraint firstAttribute="bottom" secondItem="IGY-60-khi" secondAttribute="bottom" id="ujy-4j-7e2"/>
                         </constraints>
                     </view>
@@ -37,7 +39,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splashScreenReecicla.png" width="176.85589599609375" height="383"/>
+        <image name="splashScreenReecicla" width="1125" height="2436"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

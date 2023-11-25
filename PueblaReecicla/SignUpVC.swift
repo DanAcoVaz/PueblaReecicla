@@ -148,8 +148,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     func showActivateAccountAlert(email: String, password: String) {
         let activateAlert = UIAlertController(title: "Activa tu cuenta", message: "Te hemos enviado un correo de verificación al correo que proporcionaste. Verifica tu correo para poder iniciar sesión" , preferredStyle: .alert)
         activateAlert.addAction(UIAlertAction(title: "Continuar", style: .default, handler: { [weak activateAlert] (_) in
+            ViewController.myp = true
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "LoginTab")
+            let vc = storyboard.instantiateViewController(withIdentifier: "Tutorial1")
             vc.modalPresentationStyle = .overFullScreen
             self.present(vc, animated: true)
         }))
