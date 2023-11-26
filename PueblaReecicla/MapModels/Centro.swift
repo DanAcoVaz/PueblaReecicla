@@ -5,8 +5,8 @@
 //  Created by Alumno on 17/11/23.
 //
 
-import Foundation
 import FirebaseFirestore
+import MapKit
 
 class Centro {
     
@@ -25,6 +25,11 @@ class Centro {
     var nombre: String
     var num_telefonico: String
     var documentID: String
+    
+    var GeoPoint: CLLocationCoordinate2D
+    var Annotation: Center
+    var MapContext: MKMapView!
+    
     
     
     var dictionary: [String: Any] {
@@ -46,6 +51,14 @@ class Centro {
             self.nombre = nombre
             self.num_telefonico = numTelefonico
             self.documentID = documentID
+            
+            self.GeoPoint = CLLocationCoordinate2D(latitude: self.latitud, longitude: self.longitud)
+        self.Annotation = Center(title: self.nombre, coordinate: self.GeoPoint, image: self.imagen, telefono: self.num_telefonico, FavoriteCenter: false, categoria: self.categoria, days: self.dias, direction: self.direccion, Open: self.hora_apertura, Close: self.hora_cierre, Latitud: self.latitud, Longitud: self.longitud, Materiales: self.materiales)
+            
+    }
+    
+    func addToMap() {
+        self.MapContext.addAnnotation(self.Annotation)
     }
     
     convenience init() {

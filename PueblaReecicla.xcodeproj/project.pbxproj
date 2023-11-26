@@ -44,12 +44,10 @@
 		FB41CB9F2B08008300CE5949 /* StyleCenterPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB942B08008300CE5949 /* StyleCenterPopUp.swift */; };
 		FB41CBA02B08008300CE5949 /* CustomWindowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB41CB952B08008300CE5949 /* CustomWindowView.xib */; };
 		FB41CBA12B08008300CE5949 /* DialogSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB962B08008300CE5949 /* DialogSheet.swift */; };
-		FB41CBA22B08008300CE5949 /* CenterPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB41CB972B08008300CE5949 /* CenterPopUp.xib */; };
 		FB41CBA32B08008300CE5949 /* WindowCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB982B08008300CE5949 /* WindowCenter.swift */; };
 		FB41CBA42B08008300CE5949 /* DialogSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB41CB992B08008300CE5949 /* DialogSheet.xib */; };
 		FB41CBA52B08008300CE5949 /* CustomInfoCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB9A2B08008300CE5949 /* CustomInfoCenter.swift */; };
 		FB41CBA62B08008300CE5949 /* CategoryBottomSheetDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB9B2B08008300CE5949 /* CategoryBottomSheetDialog.swift */; };
-		FB41CBA72B08008300CE5949 /* CenterPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CB9C2B08008300CE5949 /* CenterPopup.swift */; };
 		FB41CBAA2B0830DE00CE5949 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBA82B0830DE00CE5949 /* MapVC.swift */; };
 		FB41CBAB2B0830DE00CE5949 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB41CBA92B0830DE00CE5949 /* Map.storyboard */; };
 		FB41CBAE2B0839C700CE5949 /* Centro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBAD2B0839C700CE5949 /* Centro.swift */; };
@@ -60,6 +58,10 @@
 		FB41CBB82B0D6CE100CE5949 /* Favorito.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBB42B0D6CE100CE5949 /* Favorito.swift */; };
 		FB41CBBA2B0D6E0200CE5949 /* Materiales.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBB92B0D6E0200CE5949 /* Materiales.swift */; };
 		FB41CBBC2B0D6E1600CE5949 /* MaterialInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBBB2B0D6E1600CE5949 /* MaterialInfo.swift */; };
+		FB41CBC32B12B9E800CE5949 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBC12B12B9E800CE5949 /* CollectionTableViewCell.swift */; };
+		FB41CBC42B12B9E800CE5949 /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB41CBC22B12B9E800CE5949 /* CollectionTableViewCell.xib */; };
+		FB41CBC72B12BA1E00CE5949 /* CategoriaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41CBC52B12BA1E00CE5949 /* CategoriaCollectionViewCell.swift */; };
+		FB41CBC82B12BA1E00CE5949 /* CategoriaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB41CBC62B12BA1E00CE5949 /* CategoriaCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,12 +119,10 @@
 		FB41CB942B08008300CE5949 /* StyleCenterPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleCenterPopUp.swift; path = ../../../Desktop/Josafat/StyleCenterPopUp.swift; sourceTree = "<group>"; };
 		FB41CB952B08008300CE5949 /* CustomWindowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomWindowView.xib; path = ../../../Desktop/Josafat/CustomWindowView.xib; sourceTree = "<group>"; };
 		FB41CB962B08008300CE5949 /* DialogSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DialogSheet.swift; path = ../../../Desktop/Josafat/DialogSheet.swift; sourceTree = "<group>"; };
-		FB41CB972B08008300CE5949 /* CenterPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CenterPopUp.xib; path = ../../../Desktop/Josafat/CenterPopUp.xib; sourceTree = "<group>"; };
 		FB41CB982B08008300CE5949 /* WindowCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WindowCenter.swift; path = ../../../Desktop/Josafat/WindowCenter.swift; sourceTree = "<group>"; };
 		FB41CB992B08008300CE5949 /* DialogSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DialogSheet.xib; path = ../../../Desktop/Josafat/DialogSheet.xib; sourceTree = "<group>"; };
 		FB41CB9A2B08008300CE5949 /* CustomInfoCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomInfoCenter.swift; path = ../../../Desktop/Josafat/CustomInfoCenter.swift; sourceTree = "<group>"; };
 		FB41CB9B2B08008300CE5949 /* CategoryBottomSheetDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryBottomSheetDialog.swift; path = ../../../Desktop/Josafat/CategoryBottomSheetDialog.swift; sourceTree = "<group>"; };
-		FB41CB9C2B08008300CE5949 /* CenterPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CenterPopup.swift; path = ../../../Desktop/Josafat/CenterPopup.swift; sourceTree = "<group>"; };
 		FB41CBA82B0830DE00CE5949 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVC.swift; path = ../../../Desktop/Josafat/MapVC.swift; sourceTree = "<group>"; };
 		FB41CBA92B0830DE00CE5949 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Map.storyboard; path = ../../../Desktop/Josafat/Map.storyboard; sourceTree = "<group>"; };
 		FB41CBAD2B0839C700CE5949 /* Centro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centro.swift; sourceTree = "<group>"; };
@@ -133,6 +133,10 @@
 		FB41CBB42B0D6CE100CE5949 /* Favorito.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorito.swift; path = ../../../../Downloads/Favorito.swift; sourceTree = "<group>"; };
 		FB41CBB92B0D6E0200CE5949 /* Materiales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Materiales.swift; sourceTree = "<group>"; };
 		FB41CBBB2B0D6E1600CE5949 /* MaterialInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialInfo.swift; sourceTree = "<group>"; };
+		FB41CBC12B12B9E800CE5949 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		FB41CBC22B12B9E800CE5949 /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
+		FB41CBC52B12BA1E00CE5949 /* CategoriaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaCollectionViewCell.swift; sourceTree = "<group>"; };
+		FB41CBC62B12BA1E00CE5949 /* CategoriaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriaCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 		83582AD72AF1A901006E57A8 /* PueblaReecicla */ = {
 			isa = PBXGroup;
 			children = (
+				FB41CBBF2B12B98800CE5949 /* CollectionCell */,
+				FB41CBBE2B12B97F00CE5949 /* Table Cell */,
 				FB41CBAC2B08353600CE5949 /* MapModels */,
 				832298F82AFFE75A00F3DF85 /* Models */,
 				83582AD82AF1A901006E57A8 /* AppDelegate.swift */,
@@ -217,8 +223,6 @@
 				FB41CB902B08006000CE5949 /* Center.swift */,
 				83943EB72AF5A90800E9E258 /* Home.storyboard */,
 				FB41CB9B2B08008300CE5949 /* CategoryBottomSheetDialog.swift */,
-				FB41CB9C2B08008300CE5949 /* CenterPopup.swift */,
-				FB41CB972B08008300CE5949 /* CenterPopUp.xib */,
 				FB41CB9A2B08008300CE5949 /* CustomInfoCenter.swift */,
 				FB41CB932B08008300CE5949 /* CustomInfoCenters.xib */,
 				FB41CB922B08008200CE5949 /* CustomWindowView.swift */,
@@ -277,6 +281,24 @@
 				FB41CBBB2B0D6E1600CE5949 /* MaterialInfo.swift */,
 			);
 			path = MapModels;
+			sourceTree = "<group>";
+		};
+		FB41CBBE2B12B97F00CE5949 /* Table Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FB41CBC12B12B9E800CE5949 /* CollectionTableViewCell.swift */,
+				FB41CBC22B12B9E800CE5949 /* CollectionTableViewCell.xib */,
+			);
+			path = "Table Cell";
+			sourceTree = "<group>";
+		};
+		FB41CBBF2B12B98800CE5949 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				FB41CBC52B12BA1E00CE5949 /* CategoriaCollectionViewCell.swift */,
+				FB41CBC62B12BA1E00CE5949 /* CategoriaCollectionViewCell.xib */,
+			);
+			path = CollectionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,16 +415,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37D42532AFC1CF5002F7479 /* Recycle.storyboard in Resources */,
-				FB41CBA22B08008300CE5949 /* CenterPopUp.xib in Resources */,
 				FB41CBAB2B0830DE00CE5949 /* Map.storyboard in Resources */,
 				83582AE52AF1A902006E57A8 /* LaunchScreen.storyboard in Resources */,
 				FB41CBA02B08008300CE5949 /* CustomWindowView.xib in Resources */,
 				83582AE22AF1A902006E57A8 /* Assets.xcassets in Resources */,
 				83582AE02AF1A901006E57A8 /* Main.storyboard in Resources */,
+				FB41CBC82B12BA1E00CE5949 /* CategoriaCollectionViewCell.xib in Resources */,
 				83943EB82AF5A90800E9E258 /* Home.storyboard in Resources */,
 				B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */,
 				FB41CBA42B08008300CE5949 /* DialogSheet.xib in Resources */,
 				83582B112AF2F5E7006E57A8 /* splashScreenReecicla.png in Resources */,
+				FB41CBC42B12B9E800CE5949 /* CollectionTableViewCell.xib in Resources */,
 				832298F72AFFDC4600F3DF85 /* GoogleService-Info.plist in Resources */,
 				FB41CB9E2B08008300CE5949 /* CustomInfoCenters.xib in Resources */,
 				83582B0D2AF2C31A006E57A8 /* testViewController.xib in Resources */,
@@ -437,7 +460,7 @@
 				83C1343A2AFEBB66008FBFDB /* HistorialCollectionViewCell.swift in Sources */,
 				FB41CBB52B0D6CE100CE5949 /* Categorias.swift in Sources */,
 				FB41CBB72B0D6CE100CE5949 /* Favoritos.swift in Sources */,
-				FB41CBA72B08008300CE5949 /* CenterPopup.swift in Sources */,
+				FB41CBC72B12BA1E00CE5949 /* CategoriaCollectionViewCell.swift in Sources */,
 				FB41CB9F2B08008300CE5949 /* StyleCenterPopUp.swift in Sources */,
 				FB41CBAA2B0830DE00CE5949 /* MapVC.swift in Sources */,
 				FB41CBAE2B0839C700CE5949 /* Centro.swift in Sources */,
@@ -458,6 +481,7 @@
 				FB41CB912B08006000CE5949 /* Center.swift in Sources */,
 				FB41CBA32B08008300CE5949 /* WindowCenter.swift in Sources */,
 				83943EB62AF565D400E9E258 /* SignUpVC.swift in Sources */,
+				FB41CBC32B12B9E800CE5949 /* CollectionTableViewCell.swift in Sources */,
 				83582B0F2AF2C332006E57A8 /* testViewController.swift in Sources */,
 				B37D42592AFC1F76002F7479 /* SettingsVC.swift in Sources */,
 				FB41CBB02B083C5900CE5949 /* Centros.swift in Sources */,

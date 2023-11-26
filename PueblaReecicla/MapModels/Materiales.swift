@@ -12,6 +12,7 @@ import FirebaseCore
 class Materiales {
     
     var materiales: [ MaterialInfo ] = []
+    var MaterialsMap: [String: Int] = [:]
     let db:Firestore!
     
     init() {
@@ -32,13 +33,24 @@ class Materiales {
             }
 
             self.materiales = []
+            var counter = 0
             
             for document in snapshot.documents {
+                
                 let material = MaterialInfo(dictionary: document.data())
                 material.documentID = document.documentID
                 self.materiales.append(material)
-                print("ID: \(material.documentID), Nombre: \(material.imageUrl)") // Print Info
+                
+                let nombreMaterial = material.documentID
+                self.MaterialsMap[nombreMaterial] = counter
+                
+                //print("ID: \(material.documentID), URL: //\(material.imageUrl)") // Print Info
+                counter += 1
             }
+            
+            //for (key, value) in self.MaterialsMap {
+              //  print("Clave: \(key), Valor: \(value)")
+            //}
             
         }
         
