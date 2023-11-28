@@ -19,7 +19,7 @@ class FAQTableViewCell: UITableViewCell {
     @IBOutlet weak var answerLbl: UILabel!
     @IBOutlet weak var arrowBtn: UIButton!
     
-    var isTapped = false
+    var isTapped = true
     
     @IBAction func dropBtn(_ sender: Any) {
         if isTapped == false {
