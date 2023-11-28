@@ -14,7 +14,7 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var lastnameTxt: UITextField!
-    @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var emailTxt: UILabel!
     @IBOutlet weak var phoneTxt: UITextField!
     @IBOutlet weak var bdayPicker: UIDatePicker!
     
@@ -23,7 +23,7 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         
         var myTextFields = [UITextField]()
-        myTextFields = [nameTxt, lastnameTxt, emailTxt, phoneTxt]
+        myTextFields = [nameTxt, lastnameTxt, phoneTxt]
 
             for item in myTextFields {
                 item.setPreferences()
@@ -34,7 +34,7 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
             let docRef = Firestore.firestore().collection("usuarios").document(uid)
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
-                    if let nombre = document.data()?["nombre"] as? String {
+                    if let nombre = document.data()?["nombres"] as? String {
                         self.nameTxt.text = nombre
                     }
                     if let apellido = document.data()?["apellidos"] as? String {
@@ -76,8 +76,6 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
     @IBAction func updateDataTap(_ sender: Any) {
         if (nameTxt.text!.isEmpty || lastnameTxt.text!.isEmpty || emailTxt.text!.isEmpty || phoneTxt.text!.isEmpty) {
             setDestructiveAlert(alertTitle: "Error", alertMessage: "Hay campos vacios")
-        } else if !emailTxt.isValidEmail() {
-            setDestructiveAlert(alertTitle: "Error", alertMessage: "Correo electrónico no válido")
         } else if !phoneTxt.isValidPhoneNumber() {
             setDestructiveAlert(alertTitle: "Error", alertMessage: "Número de teléfono inválido. Debe tener 10 dígitos.")
         } else {
@@ -92,9 +90,8 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
     
     func updateData(){
         let data: [String: Any] = [
-            "nombre": nameTxt.text!,
+            "nombres": nameTxt.text!,
             "apellidos": lastnameTxt.text!,
-            "correo": emailTxt.text!,
             "telefono": phoneTxt.text!,
             "fechaNacimiento": bdayPicker.date
         ]
