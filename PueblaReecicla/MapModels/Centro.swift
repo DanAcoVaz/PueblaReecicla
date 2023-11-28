@@ -29,6 +29,7 @@ class Centro {
     var GeoPoint: CLLocationCoordinate2D
     var Annotation: Center
     var MapContext: MKMapView!
+    var MaterialesCentro: [MaterialInfo]!
     
     
     
@@ -52,13 +53,18 @@ class Centro {
             self.num_telefonico = numTelefonico
             self.documentID = documentID
             
+        self.MaterialesCentro = []
             self.GeoPoint = CLLocationCoordinate2D(latitude: self.latitud, longitude: self.longitud)
-        self.Annotation = Center(title: self.nombre, coordinate: self.GeoPoint, image: self.imagen, telefono: self.num_telefonico, FavoriteCenter: false, categoria: self.categoria, days: self.dias, direction: self.direccion, Open: self.hora_apertura, Close: self.hora_cierre, Latitud: self.latitud, Longitud: self.longitud, Materiales: self.materiales)
+        self.Annotation = Center(title: self.nombre, coordinate: self.GeoPoint, image: self.imagen, telefono: self.num_telefonico, FavoriteCenter: false, categoria: self.categoria, days: self.dias, direction: self.direccion, Open: self.hora_apertura, Close: self.hora_cierre, Latitud: self.latitud, Longitud: self.longitud)
             
     }
     
     func addToMap() {
         self.MapContext.addAnnotation(self.Annotation)
+    }
+    
+    func addMaterialesCentroToCenter() {
+        self.Annotation.CenterMateriales = self.MaterialesCentro
     }
     
     convenience init() {
@@ -72,7 +78,7 @@ class Centro {
         let direccion = dictionary["direccion"] as? String ?? ""
         let estado = dictionary["estado"] as? Bool ?? false
         let horaApertura = dictionary["hora_apertura"] as? String ?? ""
-        let horaCierre = dictionary["hora_cierra"] as? String ?? ""
+        let horaCierre = dictionary["hora_cierre"] as? String ?? ""
         let imagen = dictionary["imagen"] as? String ?? ""
         let latitud = dictionary["latitud"] as? Double ?? 0.0
         let longitud = dictionary["longitud"] as? Double ?? 0.0

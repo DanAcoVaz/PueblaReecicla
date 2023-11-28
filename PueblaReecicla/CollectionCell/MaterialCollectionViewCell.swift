@@ -1,19 +1,19 @@
 //
-//  CategoriaCollectionViewCell.swift
+//  MaterialCollectionViewCell.swift
 //  PueblaReecicla
 //
-//  Created by Alumno on 27/11/23.
+//  Created by Alumno on 28/11/23.
 //
 
 import UIKit
 
-class CategoriaCollectionViewCell: UICollectionViewCell {
-    
+class MaterialCollectionViewCell: UICollectionViewCell {
+
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var textNameCenter: UILabel!
     
     var imageurl: String!
-    static let identifier = "CategoriaCollectionViewCell"
+    static let identifier = "MaterialCollectionViewCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,7 +27,7 @@ class CategoriaCollectionViewCell: UICollectionViewCell {
     }
     
     static func nib() -> UINib {
-        return UINib(nibName: "CategoriaCollectionViewCell", bundle: nil)
+        return UINib(nibName: "MaterialCollectionViewCell", bundle: nil)
     }
     
     func loadImageFromURL() {
@@ -62,4 +62,5 @@ class CategoriaCollectionViewCell: UICollectionViewCell {
         }
         
     }
+
 }

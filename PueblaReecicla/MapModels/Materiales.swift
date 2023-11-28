@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseCore
+import MapKit
 
 class Materiales {
     
@@ -19,7 +20,7 @@ class Materiales {
         self.db = Firestore.firestore()
     }
     
-    func loadData() {
+    func loadData(Father: MapViewController) {
         
         db.collection("materiales").getDocuments { (QuerySnapshot, error) in
             if let error = error {
@@ -48,11 +49,16 @@ class Materiales {
                 counter += 1
             }
             
-            //for (key, value) in self.MaterialsMap {
-              //  print("Clave: \(key), Valor: \(value)")
-            //}
+            /*for (key, value) in self.MaterialsMap {
+              print("Clave: \(key), Valor: \(value)")
+            }*/
+            
+            
+            Father.Centers.LoadData(Map: Father.MapOS, Mate: self)
             
         }
+        
+        
         
     }
     
