@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Es necesario el uso de la cámara para tomar las fotos necesarias</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Es necesario acceder a su biblioteca de imagenes para obtener las imagenes necesarias</string>
 </dict>
 </plist>

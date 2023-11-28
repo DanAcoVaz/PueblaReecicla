@@ -104,14 +104,6 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
                 else {
                     print("Document successfully updated")
                 }
-                currentUser.updateEmail(to: self.emailTxt.text!) { error in
-                    if let error = error {
-                        print(error)
-                    } else {
-                        print("CHANGED")
-                    }
-                }
-                
             }
         }
         navigationController?.popViewController(animated: true)
