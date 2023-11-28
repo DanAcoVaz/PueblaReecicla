@@ -118,6 +118,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="goToFAQ:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yRZ-1F-Pi0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -6148,7 +6151,7 @@ Cg
         <!--Preguntas Frecuentes-->
         <scene sceneID="dWj-AM-sNV">
             <objects>
-                <viewController storyboardIdentifier="Preguntas" title="Preguntas Frecuentes" id="RVW-1B-BXY" customClass="PrivacidadViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Preguntas" title="Preguntas Frecuentes" id="RVW-1B-BXY" customClass="PreguntasFrecuentesViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K0f-aT-u7S">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -6156,18 +6159,31 @@ Cg
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="nzf-Su-kQs">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iYr-3Y-6NC">
+                                <rect key="frame" x="10" y="69" width="373" height="739"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TuD-5d-2R2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="iYr-3Y-6NC" firstAttribute="leading" secondItem="TuD-5d-2R2" secondAttribute="leading" constant="10" id="18W-8s-Pfb"/>
+                            <constraint firstItem="iYr-3Y-6NC" firstAttribute="centerX" secondItem="K0f-aT-u7S" secondAttribute="centerX" id="2gC-Rw-tGD"/>
                             <constraint firstItem="nzf-Su-kQs" firstAttribute="top" secondItem="K0f-aT-u7S" secondAttribute="top" id="930-D6-Xpq"/>
                             <constraint firstItem="nzf-Su-kQs" firstAttribute="centerX" secondItem="K0f-aT-u7S" secondAttribute="centerX" id="9vs-Nc-aIt"/>
                             <constraint firstItem="nzf-Su-kQs" firstAttribute="leading" secondItem="K0f-aT-u7S" secondAttribute="leading" id="LgQ-D4-AQD"/>
                             <constraint firstItem="nzf-Su-kQs" firstAttribute="centerY" secondItem="K0f-aT-u7S" secondAttribute="centerY" id="Y1d-Jv-Qbg"/>
+                            <constraint firstItem="TuD-5d-2R2" firstAttribute="bottom" secondItem="iYr-3Y-6NC" secondAttribute="bottom" constant="10" id="ZBj-E9-CPG"/>
                             <constraint firstAttribute="bottom" secondItem="nzf-Su-kQs" secondAttribute="bottom" id="eaG-4S-9Ia"/>
                             <constraint firstAttribute="trailing" secondItem="nzf-Su-kQs" secondAttribute="trailing" id="txu-QM-qga"/>
+                            <constraint firstItem="TuD-5d-2R2" firstAttribute="trailing" secondItem="iYr-3Y-6NC" secondAttribute="trailing" constant="10" id="wEg-s1-x5x"/>
+                            <constraint firstItem="iYr-3Y-6NC" firstAttribute="top" secondItem="TuD-5d-2R2" secondAttribute="top" constant="10" id="wc1-A9-5MH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="iYr-3Y-6NC" id="gps-gs-iFU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZO-aU-dpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

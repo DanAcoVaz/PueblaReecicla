@@ -44,6 +44,9 @@
 		B31486152B0F216C00BDC4AA /* PerfilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31486142B0F216C00BDC4AA /* PerfilVC.swift */; };
 		B33858F02AFAD95D00048E56 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33858EF2AFAD95D00048E56 /* Map.storyboard */; };
 		B33858F22AFADB2900048E56 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33858F12AFADB2900048E56 /* MapVC.swift */; };
+		B3695E8B2B15A6DD00A9B882 /* PreguntasFrecuentesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3695E8A2B15A6DD00A9B882 /* PreguntasFrecuentesVC.swift */; };
+		B3695E8E2B15C59D00A9B882 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3695E8C2B15C59D00A9B882 /* FAQTableViewCell.swift */; };
+		B3695E8F2B15C59D00A9B882 /* FAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3695E8D2B15C59D00A9B882 /* FAQTableViewCell.xib */; };
 		B37D42532AFC1CF5002F7479 /* Recycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D42522AFC1CF5002F7479 /* Recycle.storyboard */; };
 		B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D42542AFC1DEF002F7479 /* RecycleVC.swift */; };
 		B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D42562AFC1EE9002F7479 /* Settings.storyboard */; };
@@ -106,6 +109,9 @@
 		B31486142B0F216C00BDC4AA /* PerfilVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilVC.swift; sourceTree = "<group>"; };
 		B33858EF2AFAD95D00048E56 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		B33858F12AFADB2900048E56 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		B3695E8A2B15A6DD00A9B882 /* PreguntasFrecuentesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreguntasFrecuentesVC.swift; sourceTree = "<group>"; };
+		B3695E8C2B15C59D00A9B882 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
+		B3695E8D2B15C59D00A9B882 /* FAQTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAQTableViewCell.xib; sourceTree = "<group>"; };
 		B37D42522AFC1CF5002F7479 /* Recycle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recycle.storyboard; sourceTree = "<group>"; };
 		B37D42542AFC1DEF002F7479 /* RecycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleVC.swift; sourceTree = "<group>"; };
 		B37D42562AFC1EE9002F7479 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -209,6 +215,9 @@
 				B314860E2B0F11FA00BDC4AA /* IniciativaVC.swift */,
 				B31486102B0F190000BDC4AA /* TerminosVC.swift */,
 				B31486122B0F1D1000BDC4AA /* PrivacidadVC.swift */,
+				B3695E8A2B15A6DD00A9B882 /* PreguntasFrecuentesVC.swift */,
+				B3695E8C2B15C59D00A9B882 /* FAQTableViewCell.swift */,
+				B3695E8D2B15C59D00A9B882 /* FAQTableViewCell.xib */,
 				83582AE12AF1A902006E57A8 /* Assets.xcassets */,
 				83582AE62AF1A902006E57A8 /* Info.plist */,
 				83582B0C2AF2C31A006E57A8 /* testViewController.xib */,
@@ -356,6 +365,7 @@
 				B33858F02AFAD95D00048E56 /* Map.storyboard in Resources */,
 				83582AE22AF1A902006E57A8 /* Assets.xcassets in Resources */,
 				83582AE02AF1A901006E57A8 /* Main.storyboard in Resources */,
+				B3695E8F2B15C59D00A9B882 /* FAQTableViewCell.xib in Resources */,
 				83943EB82AF5A90800E9E258 /* Home.storyboard in Resources */,
 				B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */,
 				83582B112AF2F5E7006E57A8 /* splashScreenReecicla.png in Resources */,
@@ -404,9 +414,11 @@
 				B314860D2B0EF03C00BDC4AA /* SociosVC.swift in Sources */,
 				B314860B2B0EEA4E00BDC4AA /* InformacionVC.swift in Sources */,
 				B33858F22AFADB2900048E56 /* MapVC.swift in Sources */,
+				B3695E8B2B15A6DD00A9B882 /* PreguntasFrecuentesVC.swift in Sources */,
 				83943EB62AF565D400E9E258 /* SignUpVC.swift in Sources */,
 				B31486112B0F190000BDC4AA /* TerminosVC.swift in Sources */,
 				83582B0F2AF2C332006E57A8 /* testViewController.swift in Sources */,
+				B3695E8E2B15C59D00A9B882 /* FAQTableViewCell.swift in Sources */,
 				B37D42592AFC1F76002F7479 /* SettingsVC.swift in Sources */,
 				B31486152B0F216C00BDC4AA /* PerfilVC.swift in Sources */,
 				B31486132B0F1D1000BDC4AA /* PrivacidadVC.swift in Sources */,

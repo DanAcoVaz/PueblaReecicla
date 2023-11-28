@@ -70,6 +70,11 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         navigationController?.pushViewController(perfilVC!, animated: true)
     }
     
+    @IBAction func goToFAQ(_ sender: Any) {
+        let preguntasVC = storyboard?.instantiateViewController(withIdentifier: "Preguntas") as? PreguntasFrecuentesViewController
+        navigationController?.pushViewController(preguntasVC!, animated: true)
+    }
+    
     //Functions that handles the action sheet
     
     @IBAction func addBtnPress(_ sender: Any) {
