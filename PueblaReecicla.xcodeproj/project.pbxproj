@@ -47,6 +47,8 @@
 		B3695E8B2B15A6DD00A9B882 /* PreguntasFrecuentesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3695E8A2B15A6DD00A9B882 /* PreguntasFrecuentesVC.swift */; };
 		B3695E8E2B15C59D00A9B882 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3695E8C2B15C59D00A9B882 /* FAQTableViewCell.swift */; };
 		B3695E8F2B15C59D00A9B882 /* FAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3695E8D2B15C59D00A9B882 /* FAQTableViewCell.xib */; };
+		B3695E922B166A3000A9B882 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3695E902B166A3000A9B882 /* NewsCollectionViewCell.swift */; };
+		B3695E932B166A3000A9B882 /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3695E912B166A3000A9B882 /* NewsCollectionViewCell.xib */; };
 		B37D42532AFC1CF5002F7479 /* Recycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D42522AFC1CF5002F7479 /* Recycle.storyboard */; };
 		B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D42542AFC1DEF002F7479 /* RecycleVC.swift */; };
 		B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D42562AFC1EE9002F7479 /* Settings.storyboard */; };
@@ -112,6 +114,8 @@
 		B3695E8A2B15A6DD00A9B882 /* PreguntasFrecuentesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreguntasFrecuentesVC.swift; sourceTree = "<group>"; };
 		B3695E8C2B15C59D00A9B882 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
 		B3695E8D2B15C59D00A9B882 /* FAQTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAQTableViewCell.xib; sourceTree = "<group>"; };
+		B3695E902B166A3000A9B882 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		B3695E912B166A3000A9B882 /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
 		B37D42522AFC1CF5002F7479 /* Recycle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recycle.storyboard; sourceTree = "<group>"; };
 		B37D42542AFC1DEF002F7479 /* RecycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleVC.swift; sourceTree = "<group>"; };
 		B37D42562AFC1EE9002F7479 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 				83582AE32AF1A902006E57A8 /* LaunchScreen.storyboard */,
 				83943EB72AF5A90800E9E258 /* Home.storyboard */,
 				83943EB92AF5A91600E9E258 /* HomeVC.swift */,
+				B3695E902B166A3000A9B882 /* NewsCollectionViewCell.swift */,
+				B3695E912B166A3000A9B882 /* NewsCollectionViewCell.xib */,
 				B33858EF2AFAD95D00048E56 /* Map.storyboard */,
 				B33858F12AFADB2900048E56 /* MapVC.swift */,
 				B37D42542AFC1DEF002F7479 /* RecycleVC.swift */,
@@ -367,6 +373,7 @@
 				83582AE02AF1A901006E57A8 /* Main.storyboard in Resources */,
 				B3695E8F2B15C59D00A9B882 /* FAQTableViewCell.xib in Resources */,
 				83943EB82AF5A90800E9E258 /* Home.storyboard in Resources */,
+				B3695E932B166A3000A9B882 /* NewsCollectionViewCell.xib in Resources */,
 				B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */,
 				83582B112AF2F5E7006E57A8 /* splashScreenReecicla.png in Resources */,
 				FBA8E1242B06DC340091638D /* LaunchScreen2.storyboard in Resources */,
@@ -422,6 +429,7 @@
 				B37D42592AFC1F76002F7479 /* SettingsVC.swift in Sources */,
 				B31486152B0F216C00BDC4AA /* PerfilVC.swift in Sources */,
 				B31486132B0F1D1000BDC4AA /* PrivacidadVC.swift in Sources */,
+				B3695E922B166A3000A9B882 /* NewsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
