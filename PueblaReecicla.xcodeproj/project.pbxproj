@@ -53,6 +53,7 @@
 		B37D42552AFC1DEF002F7479 /* RecycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D42542AFC1DEF002F7479 /* RecycleVC.swift */; };
 		B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D42562AFC1EE9002F7479 /* Settings.storyboard */; };
 		B37D42592AFC1F76002F7479 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D42582AFC1F76002F7479 /* SettingsVC.swift */; };
+		B3C70E742B17264A009A6368 /* DetallesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C70E732B17264A009A6368 /* DetallesVC.swift */; };
 		FBA8E1242B06DC340091638D /* LaunchScreen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA8E1232B06DC340091638D /* LaunchScreen2.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,7 @@
 		B37D42542AFC1DEF002F7479 /* RecycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleVC.swift; sourceTree = "<group>"; };
 		B37D42562AFC1EE9002F7479 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		B37D42582AFC1F76002F7479 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		B3C70E732B17264A009A6368 /* DetallesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesVC.swift; sourceTree = "<group>"; };
 		FBA8E1232B06DC340091638D /* LaunchScreen2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen2.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +234,7 @@
 				832298F62AFFDC4600F3DF85 /* GoogleService-Info.plist */,
 				832298EB2AFEED2D00F3DF85 /* HistorialItemCell.xib */,
 				FBA8E1232B06DC340091638D /* LaunchScreen2.storyboard */,
+				B3C70E732B17264A009A6368 /* DetallesVC.swift */,
 			);
 			path = PueblaReecicla;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				83582ADB2AF1A901006E57A8 /* SceneDelegate.swift in Sources */,
 				832298FB2AFFE77700F3DF85 /* Recolecciones.swift in Sources */,
 				832298FD2AFFE93100F3DF85 /* Recoleccion.swift in Sources */,
+				B3C70E742B17264A009A6368 /* DetallesVC.swift in Sources */,
 				83943EBA2AF5A91600E9E258 /* HomeVC.swift in Sources */,
 				832299012AFFEFC200F3DF85 /* Recolector.swift in Sources */,
 				B314860F2B0F11FA00BDC4AA /* IniciativaVC.swift in Sources */,

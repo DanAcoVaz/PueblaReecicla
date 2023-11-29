@@ -173,6 +173,96 @@
             </objects>
             <point key="canvasLocation" x="-596.18320610687022" y="-137.32394366197184"/>
         </scene>
+        <!--Noticia-->
+        <scene sceneID="6lj-EF-zJB">
+            <objects>
+                <viewController storyboardIdentifier="Detalles" title="Noticia" id="YBO-Ca-caF" customClass="DetallesViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f1i-Y1-mb9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="x5L-qJ-4GH">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="companypng" translatesAutoresizingMaskIntoConstraints="NO" id="Weo-9K-9x5">
+                                <rect key="frame" x="0.0" y="-4.6666666666666714" width="390" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="3Wr-2G-adZ"/>
+                                    <constraint firstAttribute="width" constant="390" id="Hvq-l6-3XN"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2gh-ny-AdM">
+                                <rect key="frame" x="10" y="183" width="370" height="595.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8D-e2-rAQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="OV4-XK-Zvq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" name="ColorLetras"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9f-uM-o8a">
+                                        <rect key="frame" x="0.0" y="120" width="370" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="rLR-5X-upD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" name="ColorDeFondo"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Cargando..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2e7-pq-xJ8">
+                                        <rect key="frame" x="0.0" y="150.00000000000003" width="370" height="445.66666666666674"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="ColorLetras"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="W9f-uM-o8a" secondAttribute="trailing" id="8IR-Dq-bnE"/>
+                                    <constraint firstItem="W9f-uM-o8a" firstAttribute="leading" secondItem="2gh-ny-AdM" secondAttribute="leading" id="FJx-5i-hhw"/>
+                                    <constraint firstItem="O8D-e2-rAQ" firstAttribute="leading" secondItem="2gh-ny-AdM" secondAttribute="leading" id="IR6-Wo-MaN"/>
+                                    <constraint firstAttribute="bottom" secondItem="2e7-pq-xJ8" secondAttribute="bottom" id="LO1-f4-4RY"/>
+                                    <constraint firstItem="2e7-pq-xJ8" firstAttribute="leading" secondItem="2gh-ny-AdM" secondAttribute="leading" id="Myj-CE-Exw"/>
+                                    <constraint firstItem="O8D-e2-rAQ" firstAttribute="top" secondItem="2gh-ny-AdM" secondAttribute="top" id="XTB-9M-m1i"/>
+                                    <constraint firstAttribute="trailing" secondItem="2e7-pq-xJ8" secondAttribute="trailing" id="gTh-WF-0ZC"/>
+                                    <constraint firstAttribute="trailing" secondItem="O8D-e2-rAQ" secondAttribute="trailing" id="hOU-K0-Srd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="25K-rS-PEM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="x5L-qJ-4GH" secondAttribute="trailing" id="34K-54-lBj"/>
+                            <constraint firstItem="25K-rS-PEM" firstAttribute="bottom" secondItem="2gh-ny-AdM" secondAttribute="bottom" constant="39.329999999999998" id="JQ1-hd-jXY"/>
+                            <constraint firstItem="Weo-9K-9x5" firstAttribute="centerX" secondItem="f1i-Y1-mb9" secondAttribute="centerX" id="Jkm-Ko-5Bc"/>
+                            <constraint firstItem="Weo-9K-9x5" firstAttribute="centerY" secondItem="f1i-Y1-mb9" secondAttribute="centerY" multiplier="0.2" id="X1e-l3-hoU"/>
+                            <constraint firstItem="25K-rS-PEM" firstAttribute="trailing" secondItem="2gh-ny-AdM" secondAttribute="trailing" constant="10" id="Y0a-ie-ARz"/>
+                            <constraint firstItem="2gh-ny-AdM" firstAttribute="leading" secondItem="25K-rS-PEM" secondAttribute="leading" constant="10" id="YTj-qu-eER"/>
+                            <constraint firstAttribute="bottom" secondItem="x5L-qJ-4GH" secondAttribute="bottom" id="bDJ-7v-CaM"/>
+                            <constraint firstItem="Weo-9K-9x5" firstAttribute="leading" secondItem="f1i-Y1-mb9" secondAttribute="leading" id="nd5-dI-wBq"/>
+                            <constraint firstAttribute="trailing" secondItem="Weo-9K-9x5" secondAttribute="trailing" id="pxq-CP-eIp"/>
+                            <constraint firstItem="x5L-qJ-4GH" firstAttribute="leading" secondItem="f1i-Y1-mb9" secondAttribute="leading" id="tpk-HI-HTi"/>
+                            <constraint firstItem="x5L-qJ-4GH" firstAttribute="top" secondItem="f1i-Y1-mb9" secondAttribute="top" id="wfX-Nl-78L"/>
+                            <constraint firstItem="x5L-qJ-4GH" firstAttribute="centerX" secondItem="f1i-Y1-mb9" secondAttribute="centerX" id="xpf-5r-bfH"/>
+                            <constraint firstItem="2gh-ny-AdM" firstAttribute="top" secondItem="Weo-9K-9x5" secondAttribute="bottom" constant="7.6666666666666856" id="z9p-qF-sMr"/>
+                            <constraint firstItem="x5L-qJ-4GH" firstAttribute="centerY" secondItem="f1i-Y1-mb9" secondAttribute="centerY" id="zG0-Ox-cfi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authorTxt" destination="W9f-uM-o8a" id="lRx-9C-dQ7"/>
+                        <outlet property="bannerImg" destination="Weo-9K-9x5" id="zDx-fr-ABa"/>
+                        <outlet property="bodyTxt" destination="2e7-pq-xJ8" id="QPn-s7-Dzc"/>
+                        <outlet property="titleTxt" destination="O8D-e2-rAQ" id="2ii-DQ-MWk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4v-1M-Ddu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.58778625954199" y="-137.32394366197184"/>
+        </scene>
         <!--Map-->
         <scene sceneID="9Bk-WM-YAY">
             <objects>
@@ -207,8 +297,15 @@
     <resources>
         <image name="FONDO-B-PRESENTA" width="1414" height="2508"/>
         <image name="Home" width="30" height="30"/>
+        <image name="companypng" width="1454" height="686"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorDeFondo">
+            <color red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorLetras">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -80,6 +80,8 @@ class HomeViewController: UIViewController {
         collection.collectionViewLayout = layout
         
         collection.register(NewsCollectionViewCell.nib(), forCellWithReuseIdentifier: NewsCollectionViewCell.identifier)
+        
+        navigationItem.backButtonDisplayMode = .minimal
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -132,6 +134,12 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        let detallesVC = storyboard?.instantiateViewController(withIdentifier: "Detalles") as? DetallesViewController
+        detallesVC?.newsTitle = noticias[indexPath.row].title
+        detallesVC?.author = noticias[indexPath.row].autor
+        detallesVC?.body = noticias[indexPath.row].cuerpo
+        detallesVC?.imageUrl = noticias[indexPath.row].imagen
+        navigationController?.pushViewController(detallesVC!, animated: true)
         print("Tapped on item")
     }
 }
