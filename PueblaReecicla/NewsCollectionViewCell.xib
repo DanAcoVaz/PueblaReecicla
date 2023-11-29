@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="224" height="66"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgN-Em-jRu">
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vgN-Em-jRu">
                         <rect key="frame" x="0.0" y="0.0" width="224" height="66"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_loading-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="jhT-3i-yve">
@@ -28,22 +28,22 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="amw-HB-RbQ">
-                                <rect key="frame" x="100" y="0.0" width="124" height="66"/>
+                                <rect key="frame" x="110" y="0.0" width="114" height="66"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkC-pV-k4B">
-                                        <rect key="frame" x="0.0" y="0.0" width="124" height="28.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="28.666666666666668"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                         <color key="textColor" name="ColorLetras"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dx-No-Byu">
-                                        <rect key="frame" x="0.0" y="18.666666666666664" width="124" height="28.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="18.666666666666664" width="114" height="28.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" name="ColorLetras"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUK-4i-gIb">
-                                        <rect key="frame" x="0.0" y="37.333333333333336" width="124" height="28.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="37.333333333333336" width="114" height="28.666666666666664"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <color key="textColor" name="ColorDeFondo"/>
                                         <nil key="highlightedColor"/>
