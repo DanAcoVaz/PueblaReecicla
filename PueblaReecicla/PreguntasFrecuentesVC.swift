@@ -13,13 +13,17 @@ struct Question {
 }
 
 let faqs = [
-    Question(title: "FAQ 1", answer: "Esta seria la respuesta a la primera pregunta frecuente"),
-    Question(title: "FAQ 2", answer: "Respuesta numero dos a la faq numero 2"),
-    Question(title: "FAQ 3", answer: "Probemos con una respuesta corta"),
-    Question(title: "FAQ LARGO", answer: "Esta seria la respuesta muy muy muy muy muy larga que probablemente responderia a la FAQ complicada, asi que esta respuesta se podria considerar una respuesta bastanteee larga, asi que esperemos que la cell se resizee apropiadamente")
+    Question(title: "¿Qué es Puebla Reecicla?", answer: "Puebla Reecicla es una aplicación para la recolección de materiales a la puerta de la casa por personas capacitadas y con la mejor atención y en el tiempo más rápido."),
+    Question(title: "¿Qué puedo ver en el mapa?", answer: "Puedes ver los centros de recolección asociados con Green Carson, a los cuales puedes acudir a entregar tus desechos. Puedes consultar información esencial de cada centro, como su ubicación y los tipos de materiales que reciben."),
+    Question(title: "¿Cómo utilizar los filtros del mapa?", answer: "Puedes personalizar tu búsqueda de centros de recolección eligiendo un tipo de centro en específico, haciendo que solo se muestren los centros de ese tipo. Puedes desactivar el filtro en el momento que desees."),
+    Question(title: "¿Cómo agendo una recolección?", answer: "En el menú Reciclaje, da click en el botón de + para agendar una nueva recolección, necesitarás seleccionar la fecha, horario y formato de entrega, y tendrás la opción de agregar algún comentario para el recolector. Posteriormente necesitarás introducir tu dirección y ubicación. Finalmente, debes elegir los materiales de tu recolección, de los cuales puedes introducir las cantidades y anexar imágenes. Finalmente, debes confirmar tu orden"),
+    Question(title: "¿Puedo calificar a mi recolector?", answer: "Si, para ello, la recolección debe estar completada y no se debe haber calificado al recolector en esa recolección"),
+    Question(title: "¿Puedo cancelar una recolección?", answer: "Si, solo se puede cancelar si la recolección está en Iniciada o en Proceso."),
+    Question(title: "¿Cómo poner una foto de perfil?", answer: "En el menú Ajustes da clic en el botón + ubicado debajo del ícono circular. Puedes subir una foto desde tu cámara o desde la galería de fotos de tu dispositivo. Antes asegúrate de tener activado para esta aplicación los permisos de acceso a la cámara y fotos."),
+    Question(title: "¿Puedo modificar mi información?", answer: "Si, en la sección Ajustes -> Perfil, puedes consultar la información con la que te registraste y también modificarla si la deseas, únicamente no puedes modificar tu correo y tu contraseña.")
 ]
 
-class PreguntasFrecuentesViewController: UIViewController, UITableViewDataSource {
+class PreguntasFrecuentesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -30,6 +34,7 @@ class PreguntasFrecuentesViewController: UIViewController, UITableViewDataSource
         overrideUserInterfaceStyle = .light
         
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.backgroundColor = UIColor.clear
         tableView.register(FAQTableViewCell.nib(), forCellReuseIdentifier: FAQTableViewCell.identifier)
         tableView.estimatedRowHeight = 44
@@ -45,25 +50,12 @@ class PreguntasFrecuentesViewController: UIViewController, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FAQTableViewCell.identifier, for: indexPath) as! FAQTableViewCell
-        
         cell.configure(with: faqs[indexPath.row])
-
-        /*
-        let content = faqs[indexPath.row]
-        var listContentConfiguration = UIListContentConfiguration.cell()
-        listContentConfiguration.text = content.title
-        //listContentConfiguration.secondaryText = nil
-        //listContentConfiguration.image = UIImage(systemName: "chevron.down")
-        
-        cell.contentConfiguration = listContentConfiguration
-        */
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("cell selected")
         if let cell = tableView.cellForRow(at: indexPath) as? FAQTableViewCell {
-            print("doing selection")
             //Toggle label visibility and change button icon
             cell.answerLbl.isHidden = !cell.answerLbl.isHidden
             if cell.answerLbl.isHidden {
@@ -76,7 +68,6 @@ class PreguntasFrecuentesViewController: UIViewController, UITableViewDataSource
             tableView.beginUpdates()
             tableView.endUpdates()
         }
-        print("finished selecting")
     }
 
 }

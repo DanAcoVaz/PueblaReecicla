@@ -21,18 +21,6 @@ class FAQTableViewCell: UITableViewCell {
     
     var isTapped = true
     
-    @IBAction func dropBtn(_ sender: Any) {
-        if isTapped == false {
-            isTapped = true
-            arrowBtn.setImage(UIImage(systemName: "chevron.up"), for: .normal)
-            answerLbl.isHidden = false
-        } else {
-            isTapped = false
-            arrowBtn.setImage(UIImage(systemName: "chevron.down"), for: .normal)
-            answerLbl.isHidden = true
-        }
-    }
-    
     func configure(with Question: Question) {
         questionLbl.text = Question.title
         answerLbl.text = Question.answer

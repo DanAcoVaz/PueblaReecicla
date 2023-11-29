@@ -323,14 +323,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="AZx-jc-Pug">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="u1u-hr-0uL">
-                                <rect key="frame" x="46.333333333333343" y="85" width="300.66666666666663" height="256"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="u1u-hr-0uL">
+                                <rect key="frame" x="10" y="74" width="373" height="278"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9M7-gw-sMY">
-                                        <rect key="frame" x="0.0" y="0.0" width="300.66666666666669" height="65.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="72.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaX-rf-Sf5">
-                                                <rect key="frame" x="0.0" y="0.0" width="300.66666666666669" height="27.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="30.666666666666668"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Teléfono">
                                                         <attributes>
@@ -342,25 +342,32 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoH-xb-tcq">
-                                                <rect key="frame" x="0.0" y="37.666666666666671" width="300.66666666666669" height="27.666666666666671"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lH1-oJ-SLf">
+                                                <rect key="frame" x="0.0" y="40.666666666666671" width="350" height="32"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="0yd-Zk-9qc"/>
+                                                    <constraint firstAttribute="height" constant="32" id="2Iu-Bs-Js9"/>
+                                                </constraints>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="51-47336 / 222.5333.5356">
+                                                    <fragment content="51-47336 / 222 5333 5356">
                                                         <attributes>
                                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="24" name="Helvetica"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
+                                            </textView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4P2-Y4-XD4">
-                                        <rect key="frame" x="0.0" y="95.333333333333343" width="300.66666666666669" height="65.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="102.66666666666666" width="350" height="72.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5M-B2-RCF">
-                                                <rect key="frame" x="0.0" y="0.0" width="300.66666666666669" height="27.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="30.666666666666668"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Correo">
                                                         <attributes>
@@ -372,26 +379,32 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzs-hp-aNc">
-                                                <rect key="frame" x="0.0" y="37.666666666666657" width="300.66666666666669" height="27.666666666666671"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H9j-pb-fbx">
+                                                <rect key="frame" x="0.0" y="40.666666666666686" width="350" height="32"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="87P-Bj-9SB"/>
+                                                    <constraint firstAttribute="width" constant="350" id="YdK-ql-kQo"/>
+                                                </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment content="contacto@greencarson.com">
                                                         <attributes>
                                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="24" name="Helvetica"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                                            </textView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dN2-jT-0K2">
-                                        <rect key="frame" x="0.0" y="190.66666666666669" width="300.66666666666669" height="65.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="205.33333333333331" width="350" height="72.666666666666686"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYd-YA-WZQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="300.66666666666669" height="27.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="27.666666666666668"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Página Web">
                                                         <attributes>
@@ -403,19 +416,25 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33c-Ml-jom">
-                                                <rect key="frame" x="0.0" y="37.666666666666629" width="300.66666666666669" height="27.666666666666671"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bv7-2I-Fds">
+                                                <rect key="frame" x="0.0" y="37.666666666666686" width="350" height="35"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="9nC-6w-O55"/>
+                                                    <constraint firstAttribute="width" constant="350" id="kBF-aj-GBk"/>
+                                                </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment content="greencarson.com">
                                                         <attributes>
                                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="24" name="Helvetica"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                            </textView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -426,11 +445,12 @@
                         <constraints>
                             <constraint firstItem="AZx-jc-Pug" firstAttribute="centerY" secondItem="XGs-CD-HB3" secondAttribute="centerY" id="8bg-NU-pU3"/>
                             <constraint firstItem="AZx-jc-Pug" firstAttribute="top" secondItem="XGs-CD-HB3" secondAttribute="top" id="Fq8-1f-VZt"/>
+                            <constraint firstItem="Iki-RT-nfq" firstAttribute="trailing" secondItem="u1u-hr-0uL" secondAttribute="trailing" constant="10" id="GZE-WR-594"/>
                             <constraint firstItem="AZx-jc-Pug" firstAttribute="leading" secondItem="XGs-CD-HB3" secondAttribute="leading" id="LoZ-6R-BoP"/>
                             <constraint firstItem="AZx-jc-Pug" firstAttribute="centerX" secondItem="XGs-CD-HB3" secondAttribute="centerX" id="Ogv-Z7-RvV"/>
-                            <constraint firstItem="u1u-hr-0uL" firstAttribute="centerY" secondItem="XGs-CD-HB3" secondAttribute="centerY" multiplier="0.5" id="k1q-Jg-mYC"/>
+                            <constraint firstItem="u1u-hr-0uL" firstAttribute="centerY" secondItem="XGs-CD-HB3" secondAttribute="centerY" multiplier="0.5" id="Qnk-7E-xbJ"/>
+                            <constraint firstItem="u1u-hr-0uL" firstAttribute="leading" secondItem="Iki-RT-nfq" secondAttribute="leading" constant="10" id="mzZ-Ib-vCj"/>
                             <constraint firstAttribute="bottom" secondItem="AZx-jc-Pug" secondAttribute="bottom" id="npV-YP-CMR"/>
-                            <constraint firstItem="u1u-hr-0uL" firstAttribute="centerX" secondItem="XGs-CD-HB3" secondAttribute="centerX" id="oD4-AC-qg4"/>
                             <constraint firstAttribute="trailing" secondItem="AZx-jc-Pug" secondAttribute="trailing" id="zig-h7-FdJ"/>
                         </constraints>
                     </view>
@@ -6215,7 +6235,7 @@ Cg
         <image name="shield.checkerboard" catalog="system" width="128" height="121"/>
         <image name="tecnologico-de-monterrey-blue" width="1600" height="421"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ColorLetras">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

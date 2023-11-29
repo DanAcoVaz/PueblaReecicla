@@ -113,10 +113,16 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
             PHPhotoLibrary.requestAuthorization({ (status: PHAuthorizationStatus) -> Void in ()})
         }
         
-        if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
-        } else {
-            let alert = UIAlertController(title: "Error", message: "No tenemos permiso para acceder a tus fotos", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .destructive))
+        if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.denied {
+            let alert = UIAlertController(title: "Error", message: "Habilita el permiso para acceder a tu cámara y galería", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancelar", style: .default))
+            alert.addAction(UIAlertAction(title: "Ajustes", style: .cancel) { _ in
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: { _ in
+                        //Handle
+                    })
+                }
+            })
             self.present(alert, animated: true)
         }
     }

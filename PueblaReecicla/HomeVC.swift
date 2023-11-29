@@ -20,13 +20,6 @@ struct noticia {
     let cuerpo: String
     let imagen: String
 }
-/*
-let noticiasProvisionales = [
-    noticia(title: "Titulo 1", autor: "Autor 1", cuerpo: "Cuerpo 1", imagen: UIImage(named: "icon_loading-removebg-preview")!),
-    noticia(title: "Tit", autor: "Au", cuerpo: "Cuerpo", imagen: UIImage(named: "icon_loading-removebg-preview")!),
-    noticia(title: "Titulo bastante y cuando digo bastante, me refiero bastante Largo", autor: "Un Autor bastante largo", cuerpo: "Esta seria la respuesta muy muy muy muy muy larga que probablemente responderia a la FAQ complicada, asi que esta respuesta se podria considerar una respuesta bastanteee larga, asi que esperemos que la cell se resizee apropiadamente", imagen: UIImage(named: "icon_loading-removebg-preview")!),
-    noticia(title: "Prueba", autor: "Yo", cuerpo: "Prueba pa ver si jala lo de contar documents", imagen: UIImage(named: "icon_loading-removebg-preview")!)
-]*/
 
 let noticiaPlaceholder = noticia(title: "Cargando...", autor: "Cargando...", cuerpo: "Cargando...", imagen: "icon_loading-removebg-preview")
 
@@ -40,7 +33,6 @@ class HomeViewController: UIViewController {
     public var provider: ProviderType?
     
     let db = Firestore.firestore().collection("noticias")
-    var numberDocuments = 0
     var noticias: [noticia] = []
     var finishedLoading = false
     
@@ -114,15 +106,11 @@ class HomeViewController: UIViewController {
             else
             {
                 for document in querySnapshot!.documents {
-                    self.numberDocuments += 1
             
                     self.noticias.append(noticia(title: (document.data()["titulo"] as? String)!, autor: (document.data()["autor"] as? String)!, cuerpo: (document.data()["cuerpo"] as? String)!, imagen: (document.data()["imagen"] as? String)!))
                     print(self.noticias)
-                    //print("\(document.documentID) => \(document.data())");
                 }
-
-                print("Count = \(String(describing: self.numberDocuments))");
-                //print(self.noticias)
+                
                 self.finishedLoading = true
                 self.collection.reloadData()
             }
@@ -146,7 +134,6 @@ extension HomeViewController: UICollectionViewDelegate {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //return numberDocuments!
         return noticias.count
     }
     
