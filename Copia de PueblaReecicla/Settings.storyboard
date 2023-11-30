@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mb2-jB-mbl">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SettingsNav-->
+        <scene sceneID="kez-yR-kvr">
+            <objects>
+                <navigationController storyboardIdentifier="SettingsNav" title="SettingsNav" id="mb2-jB-mbl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ajustes" image="Settings" landscapeImage="Settings" largeContentSizeImage="Settings" selectedImage="Settings" id="DyL-ya-9Q9">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CWF-bt-JVf">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.2666666667" green="0.53725490200000003" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.2784313725" green="0.72941176470000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.2666666667" green="0.53725490200000003" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </textAttributes>
+                            <textAttributes key="largeTitleTextAttributes">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Ke3-lU-QtS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iF2-RZ-ci4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-815" y="4"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController title="Settings" id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="g5Q-ot-BIu">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w20-L1-9Vp">
+                                <rect key="frame" x="108.66666666666669" y="21" width="176" height="33"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Hola &lt;Usuario&gt;">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Avenir-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGX-dT-J2i">
+                                <rect key="frame" x="132.66666666666666" y="357.33333333333331" width="127.66666666666666" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cerrar Sesión" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" name="ColorNegativo"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeSessionButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="piN-9u-9vR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g5Q-ot-BIu" secondAttribute="trailing" id="0BC-Lw-vS5"/>
+                            <constraint firstItem="g5Q-ot-BIu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HHq-e6-biS"/>
+                            <constraint firstItem="w20-L1-9Vp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Umc-Q3-0dj"/>
+                            <constraint firstItem="g5Q-ot-BIu" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="WY4-x9-RZz"/>
+                            <constraint firstItem="g5Q-ot-BIu" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="dCD-Ak-V0b"/>
+                            <constraint firstItem="dGX-dT-J2i" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="jLM-fu-Th8"/>
+                            <constraint firstAttribute="bottom" secondItem="g5Q-ot-BIu" secondAttribute="bottom" id="juE-3N-d6p"/>
+                            <constraint firstItem="g5Q-ot-BIu" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="o65-kI-poY"/>
+                            <constraint firstItem="dGX-dT-J2i" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tCr-9U-hO9"/>
+                            <constraint firstItem="w20-L1-9Vp" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.1" id="zbr-iO-FwX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ajustes" id="3qB-48-Ctq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FONDO-B-PRESENTA" width="1414" height="2508"/>
+        <image name="Settings" width="30" height="30"/>
+        <namedColor name="AccentColor">
+            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorNegativo">
+            <color red="0.89411764705882357" green="0.11764705882352941" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fu0-il-fnY">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeTab-->
+        <scene sceneID="fgy-yF-qoi">
+            <objects>
+                <tabBarController storyboardIdentifier="HomeTab" title="HomeTab" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fu0-il-fnY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="DUv-Pg-Gx8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="AccentColor"/>
+                        <tabBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
+                            <color key="selectionIndicatorTintColor" name="AccentColor"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="l45-hV-FRk" kind="relationship" relationship="viewControllers" id="rO7-c5-ODg"/>
+                        <segue destination="H90-q3-UPf" kind="relationship" relationship="viewControllers" id="acT-Jd-eTV"/>
+                        <segue destination="2pd-uQ-Sr5" kind="relationship" relationship="viewControllers" id="Ibl-FH-fC5"/>
+                        <segue destination="H10-ws-pKZ" kind="relationship" relationship="viewControllers" id="ZBd-Pc-pVi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ebf-P8-R4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2199" y="-137"/>
+        </scene>
+        <!--Inicio-->
+        <scene sceneID="eFO-jO-VJ9">
+            <objects>
+                <navigationController id="l45-hV-FRk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inicio" image="Home" landscapeImage="Home" largeContentSizeImage="Home" selectedImage="Home" id="lZm-IY-jsL">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CwQ-Le-oI2">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.2666666667" green="0.53725490200000003" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.2784313725" green="0.72941176470000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.2666666667" green="0.53725490200000003" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </textAttributes>
+                            <textAttributes key="largeTitleTextAttributes">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="3Za-mO-iSG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zKu-Mn-efN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1399" y="-137"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Home" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="PueblaReecicla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="FONDO-B-PRESENTA" translatesAutoresizingMaskIntoConstraints="NO" id="ApK-zC-UXA">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9a-dO-VPo">
+                                <rect key="frame" x="105" y="20" width="183" height="33"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Hola">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Avenir-Heavy"/>
+                                            <font key="NSOriginalFont" size="17" name="ArialHebrewScholar-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Avenir-Heavy"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="&lt;">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Avenir-Heavy"/>
+                                            <font key="NSOriginalFont" size="17" name="AppleColorEmoji"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Usuario">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Avenir-Heavy"/>
+                                            <font key="NSOriginalFont" size="17" name="ArialHebrewScholar-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="&gt;!">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Avenir-Heavy"/>
+                                            <font key="NSOriginalFont" size="17" name="AppleColorEmoji"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ApK-zC-UXA" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="0dZ-YK-3O3"/>
+                            <constraint firstItem="ApK-zC-UXA" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="6eV-lZ-guv"/>
+                            <constraint firstItem="r9a-dO-VPo" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" multiplier="0.7" constant="59" id="78j-sf-AgG"/>
+                            <constraint firstAttribute="trailing" secondItem="ApK-zC-UXA" secondAttribute="trailing" id="Niu-kd-Tnt"/>
+                            <constraint firstAttribute="bottom" secondItem="ApK-zC-UXA" secondAttribute="bottom" id="Rfe-xv-V2T"/>
+                            <constraint firstItem="r9a-dO-VPo" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.15" constant="-20" id="m2r-Lv-t9d"/>
+                            <constraint firstItem="ApK-zC-UXA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="sJO-SW-Kzy"/>
+                            <constraint firstItem="ApK-zC-UXA" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="tWg-zj-azD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inicio" id="2Y3-2Y-ZXg"/>
+                    <connections>
+                        <outlet property="HelloTxt" destination="r9a-dO-VPo" id="Tm0-eE-419"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-596.18320610687022" y="-137.32394366197184"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="9Bk-WM-YAY">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MapNav" storyboardName="Map" id="H90-q3-UPf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="9zQ-j2-SgR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8s-FL-JkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1804" y="208"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="XJ9-Wo-aZl">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SettingsNav" storyboardName="Settings" id="H10-ws-pKZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="FLP-DF-XYw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPa-Kn-sZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2570" y="208"/>
+        </scene>
+        <!--Recycle-->
+        <scene sceneID="lCj-Gy-oSU">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="RecycleNav" storyboardName="Recycle" id="2pd-uQ-Sr5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8mM-aR-Cld"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whx-bw-PbU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2200" y="299"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FONDO-B-PRESENTA" width="1414" height="2508"/>
+        <image name="Home" width="30" height="30"/>
+        <namedColor name="AccentColor">
+            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

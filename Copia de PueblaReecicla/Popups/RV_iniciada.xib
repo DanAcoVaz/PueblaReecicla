@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RV_iniciada" customModule="PueblaReecicla" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelarBtn" destination="THS-8K-4O6" id="dyU-51-29S"/>
+                <outlet property="container" destination="SNk-LH-eBL" id="tUP-vt-UxA"/>
+                <outlet property="continuarBtn" destination="nwe-cJ-Paa" id="uyk-6s-fZS"/>
+                <outlet property="verDetallesBtn" destination="0V3-X4-EHW" id="03A-Xp-Ew1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNk-LH-eBL" customClass="ViewStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                    <rect key="frame" x="30" y="209" width="333" height="400"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="Lo sentimos, aún no se ha encontrado un Recolector, el estado de la recolección cambiará tan rápido como encontremos uno." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzU-8a-CBy">
+                            <rect key="frame" x="20" y="68.666666666666686" width="293" height="86"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" name="ColorLetras"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V3-X4-EHW" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                            <rect key="frame" x="20" y="178.66666666666669" width="293" height="50"/>
+                            <color key="backgroundColor" name="ColorSecundario"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="MvB-O9-2xk"/>
+                                <constraint firstAttribute="height" constant="50" id="eLd-Po-ns7"/>
+                            </constraints>
+                            <color key="tintColor" name="ColorSecundario"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Ver Detalles">
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" name="ColorSecundario"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ver Detalles"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THS-8K-4O6" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                            <rect key="frame" x="20" y="244.66666666666669" width="293" height="50"/>
+                            <color key="backgroundColor" name="ColorNegativo"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="iXh-cX-IX6"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="iz8-rR-gqa"/>
+                            </constraints>
+                            <color key="tintColor" name="ColorNegativo"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Cancelar Orden">
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" name="ColorNegativo"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Cancelar Orden"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwe-cJ-Paa" customClass="ButtonStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                            <rect key="frame" x="20" y="310.66666666666663" width="293" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Bfc-H5-nhh"/>
+                                <constraint firstAttribute="height" constant="50" id="kot-q5-qpK"/>
+                            </constraints>
+                            <color key="tintColor" name="AccentColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Continuar"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Orden de Reciclaje" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A57-JK-mX1">
+                            <rect key="frame" x="36.666666666666686" y="24" width="260" height="28.666666666666671"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="260" id="2Ps-5U-TzV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <color key="textColor" name="ColorLetras"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bzU-8a-CBy" secondAttribute="trailing" constant="20" id="3lx-wz-bGS"/>
+                        <constraint firstItem="bzU-8a-CBy" firstAttribute="top" secondItem="A57-JK-mX1" secondAttribute="bottom" constant="16" id="6Md-2h-god"/>
+                        <constraint firstItem="nwe-cJ-Paa" firstAttribute="top" secondItem="THS-8K-4O6" secondAttribute="bottom" constant="16" id="GHa-3z-QFR"/>
+                        <constraint firstItem="nwe-cJ-Paa" firstAttribute="leading" secondItem="SNk-LH-eBL" secondAttribute="leading" constant="20" id="J6i-rS-lUW"/>
+                        <constraint firstItem="A57-JK-mX1" firstAttribute="centerX" secondItem="SNk-LH-eBL" secondAttribute="centerX" id="LlD-Ze-9Z6"/>
+                        <constraint firstItem="THS-8K-4O6" firstAttribute="leading" secondItem="SNk-LH-eBL" secondAttribute="leading" constant="20" id="MGd-yb-jTz"/>
+                        <constraint firstAttribute="height" constant="400" id="Uli-QH-KYr"/>
+                        <constraint firstItem="bzU-8a-CBy" firstAttribute="leading" secondItem="SNk-LH-eBL" secondAttribute="leading" constant="20" id="Vza-ZV-khc"/>
+                        <constraint firstItem="0V3-X4-EHW" firstAttribute="top" secondItem="bzU-8a-CBy" secondAttribute="bottom" constant="24" id="hmG-uM-0H9"/>
+                        <constraint firstItem="THS-8K-4O6" firstAttribute="top" secondItem="0V3-X4-EHW" secondAttribute="bottom" constant="16" id="mB5-Rz-n3O"/>
+                        <constraint firstAttribute="trailing" secondItem="nwe-cJ-Paa" secondAttribute="trailing" constant="20" id="mwa-dx-jf9"/>
+                        <constraint firstAttribute="trailing" secondItem="THS-8K-4O6" secondAttribute="trailing" constant="20" id="oDV-2K-NMV"/>
+                        <constraint firstItem="A57-JK-mX1" firstAttribute="top" secondItem="SNk-LH-eBL" secondAttribute="top" constant="24" id="rV0-4H-fea"/>
+                        <constraint firstItem="0V3-X4-EHW" firstAttribute="leading" secondItem="SNk-LH-eBL" secondAttribute="leading" constant="20" id="sBV-o1-v4p"/>
+                        <constraint firstAttribute="trailing" secondItem="0V3-X4-EHW" secondAttribute="trailing" constant="20" id="wgo-li-dY0"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.34851998050196642" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="SNk-LH-eBL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="N18-NZ-ZlT"/>
+                <constraint firstItem="SNk-LH-eBL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ot9-lg-XgY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SNk-LH-eBL" secondAttribute="trailing" constant="30" id="jVF-Rj-r9z"/>
+                <constraint firstItem="SNk-LH-eBL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="150" id="tdJ-aj-EZx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="127" y="-7"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.27799999713897705" green="0.72899997234344482" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorLetras">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorNegativo">
+            <color red="0.89411764705882357" green="0.11764705882352941" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorSecundario">
+            <color red="0.26666666666666666" green="0.53725490196078429" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

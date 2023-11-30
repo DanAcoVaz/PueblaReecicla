@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomWindowView" customModule="PueblaReecicla" customModuleProvider="target">
+            <connections>
+                <outlet property="centerFavoriteLable" destination="j2c-d3-hvv" id="PuP-1f-u6c"/>
+                <outlet property="centerFavoriteLogo" destination="q6H-qA-OKs" id="AeW-11-YQf"/>
+                <outlet property="centerImageView" destination="Gug-LA-79j" id="U2e-VU-QbS"/>
+                <outlet property="centerNameLabel" destination="jGO-Ty-BY6" id="uMW-0s-Zow"/>
+                <outlet property="centerPhoneLabel" destination="NDC-ah-m50" id="ppn-Kf-c9r"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomWindowView" customModule="PueblaReecicla" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="233"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K9d-mC-R41" customClass="ViewCenterStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="233"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NDC-ah-m50">
+                            <rect key="frame" x="37" y="144" width="95" height="14"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="ZPA-f6-zRF" appends="YES" id="sR3-7n-lra"/>
+                            </connections>
+                        </label>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j2c-d3-hvv">
+                            <rect key="frame" x="37" y="173" width="95" height="14"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <gestureRecognizers/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="mPI-Cr-Alz" appends="YES" id="KZb-22-sLY"/>
+                            </connections>
+                        </label>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="llamada-de-voz" translatesAutoresizingMaskIntoConstraints="NO" id="5uG-iL-Pax">
+                            <rect key="frame" x="16" y="144" width="13" height="14"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="ZPA-f6-zRF" appends="YES" id="NQB-E3-uG1"/>
+                            </connections>
+                        </imageView>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="favorito" translatesAutoresizingMaskIntoConstraints="NO" id="q6H-qA-OKs">
+                            <rect key="frame" x="16" y="173" width="13" height="14"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="q9E-Vk-G0O" appends="YES" id="n3L-S5-PbY"/>
+                            </connections>
+                        </imageView>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mas" translatesAutoresizingMaskIntoConstraints="NO" id="OHr-oE-54t">
+                            <rect key="frame" x="16" y="199" width="13" height="14"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="AKQ-BD-QE7" appends="YES" id="tTT-qn-NAK"/>
+                            </connections>
+                        </imageView>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Centro" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jGO-Ty-BY6">
+                            <rect key="frame" x="8" y="105" width="124" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tGO-v6-Ef7">
+                            <rect key="frame" x="37" y="199" width="95" height="13"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <gestureRecognizers/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="SPh-sX-eNx" appends="YES" id="E44-KT-efu"/>
+                            </connections>
+                        </label>
+                        <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo.artframe" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gug-LA-79j" customClass="ImageViewStyle" customModule="PueblaReecicla" customModuleProvider="target">
+                            <rect key="frame" x="16" y="12" width="108" height="81"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                    <size key="value" width="0.0" height="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-166.41221374045801" y="-21.47887323943662"/>
+        </view>
+        <tapGestureRecognizer id="q9E-Vk-G0O">
+            <connections>
+                <action selector="handleTap:" destination="-1" id="AE9-Kf-oVc"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="mPI-Cr-Alz">
+            <connections>
+                <action selector="handleTap:" destination="-1" id="MPl-XJ-zk6"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="AKQ-BD-QE7">
+            <connections>
+                <action selector="handleTapMore:" destination="-1" id="Zqj-8i-rjG"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="SPh-sX-eNx">
+            <connections>
+                <action selector="handleTapMore:" destination="-1" id="Ykb-Ab-5EO"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="ZPA-f6-zRF">
+            <connections>
+                <action selector="handleCellphone:" destination="-1" id="d58-el-IHy"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="favorito" width="64" height="64"/>
+        <image name="llamada-de-voz" width="64" height="64"/>
+        <image name="mas" width="64" height="64"/>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
