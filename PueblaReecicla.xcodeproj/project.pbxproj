@@ -95,11 +95,9 @@
 		FB35C3092B194DBD00820EB6 /* Centro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35C2F22B194DBC00820EB6 /* Centro.swift */; };
 		FB35C30A2B194DBD00820EB6 /* DialogSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB35C2F32B194DBC00820EB6 /* DialogSheet.xib */; };
 		FB35C30B2B194DBD00820EB6 /* DialogSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35C2F42B194DBC00820EB6 /* DialogSheet.swift */; };
-		FB35C30C2B194DBD00820EB6 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB35C2F52B194DBC00820EB6 /* Map.storyboard */; };
 		FB35C30D2B194DBD00820EB6 /* MaterialInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35C2F62B194DBC00820EB6 /* MaterialInfo.swift */; };
 		FB35C30E2B194DBD00820EB6 /* CustomInfoCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35C2F72B194DBC00820EB6 /* CustomInfoCenter.swift */; };
 		FB35C30F2B194DBD00820EB6 /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35C2F82B194DBC00820EB6 /* Categoria.swift */; };
-		FB35C3102B194DBD00820EB6 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35C2F92B194DBC00820EB6 /* MapVC.swift */; };
 		FB35C3112B194DBD00820EB6 /* CategoriaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB35C2FA2B194DBC00820EB6 /* CategoriaCollectionViewCell.xib */; };
 		FB35C3122B194DBD00820EB6 /* CategoriaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35C2FB2B194DBC00820EB6 /* CategoriaCollectionViewCell.swift */; };
 		FB35C3132B194DBD00820EB6 /* MapMaterialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB35C2FC2B194DBC00820EB6 /* MapMaterialCollectionViewCell.xib */; };
@@ -114,6 +112,8 @@
 		FB35C31C2B194DBD00820EB6 /* CustomWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35C3052B194DBD00820EB6 /* CustomWindowView.swift */; };
 		FB35C31D2B194DBD00820EB6 /* CustomInfoCenters.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB35C3062B194DBD00820EB6 /* CustomInfoCenters.xib */; };
 		FB35C31E2B194DBD00820EB6 /* Centros.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35C3072B194DBD00820EB6 /* Centros.swift */; };
+		FB35C3212B1976CB00820EB6 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB35C31F2B1976CB00820EB6 /* Map.storyboard */; };
+		FB35C3222B1976CB00820EB6 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35C3202B1976CB00820EB6 /* MapVC.swift */; };
 		FBC5F8462B155DAE0059DB23 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = FBC5F8452B155DAE0059DB23 /* GoogleSignIn */; };
 		FBC5F8482B155DAE0059DB23 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBC5F8472B155DAE0059DB23 /* GoogleSignInSwift */; };
 /* End PBXBuildFile section */
@@ -224,11 +224,9 @@
 		FB35C2F22B194DBC00820EB6 /* Centro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Centro.swift; sourceTree = "<group>"; };
 		FB35C2F32B194DBC00820EB6 /* DialogSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogSheet.xib; sourceTree = "<group>"; };
 		FB35C2F42B194DBC00820EB6 /* DialogSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogSheet.swift; sourceTree = "<group>"; };
-		FB35C2F52B194DBC00820EB6 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Map.storyboard; path = "../../../Desktop/Archivos Merge/MapModels/Map.storyboard"; sourceTree = "<group>"; };
 		FB35C2F62B194DBC00820EB6 /* MaterialInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialInfo.swift; sourceTree = "<group>"; };
 		FB35C2F72B194DBC00820EB6 /* CustomInfoCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInfoCenter.swift; sourceTree = "<group>"; };
 		FB35C2F82B194DBC00820EB6 /* Categoria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
-		FB35C2F92B194DBC00820EB6 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVC.swift; path = "../../../Desktop/Archivos Merge/MapModels/MapVC.swift"; sourceTree = "<group>"; };
 		FB35C2FA2B194DBC00820EB6 /* CategoriaCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriaCollectionViewCell.xib; sourceTree = "<group>"; };
 		FB35C2FB2B194DBC00820EB6 /* CategoriaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriaCollectionViewCell.swift; sourceTree = "<group>"; };
 		FB35C2FC2B194DBC00820EB6 /* MapMaterialCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapMaterialCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -243,6 +241,8 @@
 		FB35C3052B194DBD00820EB6 /* CustomWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWindowView.swift; sourceTree = "<group>"; };
 		FB35C3062B194DBD00820EB6 /* CustomInfoCenters.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomInfoCenters.xib; sourceTree = "<group>"; };
 		FB35C3072B194DBD00820EB6 /* Centros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Centros.swift; sourceTree = "<group>"; };
+		FB35C31F2B1976CB00820EB6 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		FB35C3202B1976CB00820EB6 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +335,8 @@
 				83A066632B1121D800488DF6 /* Popups */,
 				83A0663F2B11212600488DF6 /* HistorialViewControllers */,
 				B37D42542AFC1DEF002F7479 /* RecycleVC.swift */,
+				FB35C31F2B1976CB00820EB6 /* Map.storyboard */,
+				FB35C3202B1976CB00820EB6 /* MapVC.swift */,
 				FB35C2F82B194DBC00820EB6 /* Categoria.swift */,
 				FB35C2FB2B194DBC00820EB6 /* CategoriaCollectionViewCell.swift */,
 				FB35C2FA2B194DBC00820EB6 /* CategoriaCollectionViewCell.xib */,
@@ -348,8 +350,6 @@
 				FB35C2FF2B194DBD00820EB6 /* CustomWindowView.xib */,
 				FB35C2F42B194DBC00820EB6 /* DialogSheet.swift */,
 				FB35C2F32B194DBC00820EB6 /* DialogSheet.xib */,
-				FB35C2F52B194DBC00820EB6 /* Map.storyboard */,
-				FB35C2F92B194DBC00820EB6 /* MapVC.swift */,
 				FB35C3022B194DBD00820EB6 /* MapMaterialCollectionViewCell.swift */,
 				FB35C2FC2B194DBC00820EB6 /* MapMaterialCollectionViewCell.xib */,
 				FB35C3032B194DBD00820EB6 /* Materiales.swift */,
@@ -610,10 +610,10 @@
 				83A066772B1121EF00488DF6 /* RV_cancelada.xib in Resources */,
 				83582AE02AF1A901006E57A8 /* Main.storyboard in Resources */,
 				FB35C3162B194DBD00820EB6 /* CustomWindowView.xib in Resources */,
+				FB35C3212B1976CB00820EB6 /* Map.storyboard in Resources */,
 				83943EB82AF5A90800E9E258 /* Home.storyboard in Resources */,
 				B37D42572AFC1EE9002F7479 /* Settings.storyboard in Resources */,
 				83582B112AF2F5E7006E57A8 /* splashScreenReecicla.png in Resources */,
-				FB35C30C2B194DBD00820EB6 /* Map.storyboard in Resources */,
 				83A066792B1121EF00488DF6 /* MTR_tomarFoto.xib in Resources */,
 				FB35C3112B194DBD00820EB6 /* CategoriaCollectionViewCell.xib in Resources */,
 				FB35C31D2B194DBD00820EB6 /* CustomInfoCenters.xib in Resources */,
@@ -672,10 +672,10 @@
 				83A066782B1121EF00488DF6 /* RV_iniciada.swift in Sources */,
 				FB35C3122B194DBD00820EB6 /* CategoriaCollectionViewCell.swift in Sources */,
 				83A066472B11216D00488DF6 /* HorarioVC.swift in Sources */,
+				FB35C3222B1976CB00820EB6 /* MapVC.swift in Sources */,
 				83582AD92AF1A901006E57A8 /* AppDelegate.swift in Sources */,
 				FB35C3142B194DBD00820EB6 /* Center.swift in Sources */,
 				83AB24C52B156D7D001E36A5 /* TutorialVC4.swift in Sources */,
-				FB35C3102B194DBD00820EB6 /* MapVC.swift in Sources */,
 				83AB24C62B156D7D001E36A5 /* TutorialVC2.swift in Sources */,
 				83AB24C92B156D7D001E36A5 /* CompleteDataVC.swift in Sources */,
 				83A0664B2B11216D00488DF6 /* VerDetallesVC.swift in Sources */,
