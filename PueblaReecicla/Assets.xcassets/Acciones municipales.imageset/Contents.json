@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "Acciones municipales.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Acciones municipales.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

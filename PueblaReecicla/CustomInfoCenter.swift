@@ -76,10 +76,26 @@ class CustomInfoCenter: UIView, UICollectionViewDelegate, UICollectionViewDataSo
     
     @IBAction func MapsMapLink(_ sender: Any) {
         print("Mapa de Maps")
+        let la = String(self.Latitud)
+        let lo = String(self.Longitud)
+        let urlString = "https://www.google.com/maps?q=" + la + "," + lo
+
+        if let url = URL(string: urlString) {
+            print(url)
+            UIApplication.shared.open(url)
+        }
     }
     
     @IBAction func WazeMapLink(_ sender: Any) {
         print("Mapa de Waze")
+        let la = String(self.Latitud)
+        let lo = String(self.Longitud)
+        let urlString = "https://waze.com/ul?ll=" + la + "," + lo + "&navigate=yes"
+        
+        if let url = URL(string: urlString) {
+            print(url)
+            UIApplication.shared.open(url)
+        }
     }
     
     @IBAction func ClosePopup(_ sender: Any) {

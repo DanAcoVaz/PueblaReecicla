@@ -56,10 +56,6 @@ class HomeViewController: UIViewController {
                 }
             }
             
-            print("Esta Logeado")
-            print(currentUser.email as Any)
-            print(currentUser.displayName as Any)
-            print(currentUser.uid)
         } else {
             print("No esta Logeado")
         }
@@ -108,7 +104,7 @@ class HomeViewController: UIViewController {
                 for document in querySnapshot!.documents {
             
                     self.noticias.append(noticia(title: (document.data()["titulo"] as? String)!, autor: (document.data()["autor"] as? String)!, cuerpo: (document.data()["cuerpo"] as? String)!, imagen: (document.data()["imagen"] as? String)!))
-                    print(self.noticias)
+
                 }
                 
                 self.finishedLoading = true

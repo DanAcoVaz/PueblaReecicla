@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "Estación de carga.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Estación de carga.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "Reparacón.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Reparacón.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
